@@ -2,7 +2,8 @@ check_PROGRAMS = check_sdl_toolset
 check_sdl_toolset_SOURCES = dummy.cc main.cc
 check_sdl_toolset_LDADD = ../src/libsdl_toolset.a
 AM_CPPFLAGS = ${BOOST_CPPFLAGS}
-AM_LDFLAGS = ${BOOST_LDFLAGS}
+AM_CXXFLAGS = ${SDL2_CFLAGS} ${SDL2_TTF_CFLAGS}
+AM_LDFLAGS = ${BOOST_LDFLAGS} ${SDL2_LIBS} ${SDL2_TTF_LIBS}
 
 check: check-am
 	./$(check_PROGRAMS)
