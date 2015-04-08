@@ -6,8 +6,7 @@ AM_CXXFLAGS = ${SDL2_CFLAGS} ${SDL2_TTF_CFLAGS}
 AM_LDFLAGS = ${BOOST_LDFLAGS} ${SDL2_LIBS} ${SDL2_TTF_LIBS}
 
 noinst_LIBRARIES = libsdl_toolset.a
-libsdl_toolset_a_SOURCES = dummy.cc dummy.hh \
-                           height_fwd.hh height.hh height.cc \
+libsdl_toolset_a_SOURCES = height_fwd.hh height.hh height.cc \
                            point_fwd.hh point.hh point.cc \
                            rectangle_fwd.hh rectangle.hh rectangle.cc \
                            renderer_creation_error.hh renderer_creation_error.cc \
