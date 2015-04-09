@@ -9,12 +9,12 @@ rectangle::rectangle(point p, width w, height h)
 : p{std::move(p)}, w{w}, h{h} {}
 
 bool intersect(rectangle const& a, rectangle const& b) {
-  return inside(a.p, b) || inside(point{a.p.x + a.w, a.p.y + a.h}, b)
-         || crossing(a.p, b) || crossing(point{a.p.x + a.w, a.p.y + a.h}, b);
+  return inside(a.p, b) || inside(bottom_right(a), b) || crossing(a.p, b)
+         || crossing(bottom_right(a), b);
 }
 
 bool outside(rectangle const& a, rectangle const& b) {
-  return outside(a.p, b) && outside(point{a.p.x + a.w, a.p.y + a.h}, b);
+  return outside(a.p, b) && outside(bottom_right(a), b);
 }
 
 point bottom_right(rectangle const& r) {
