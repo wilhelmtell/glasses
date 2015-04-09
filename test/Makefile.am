@@ -3,6 +3,7 @@ check_sdl_toolset_SOURCES = main.cc \
                             height.cc \
                             point.cc \
                             point_crossing.cc \
+                            point_inside.cc \
                             point_io.hh point_io.tcc \
                             point_outside.cc \
                             rectangle.cc \
