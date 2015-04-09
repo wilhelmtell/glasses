@@ -16,6 +16,7 @@ public:
 bool operator==(point const& lhs, point const& rhs);
 bool operator!=(point const& lhs, point const& rhs);
 
+bool crossing(point const& p, rectangle const& b);
 bool outside(point const& p, rectangle const& b);
 bool inside(point const& p, rectangle const& b);
 }
