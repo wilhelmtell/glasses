@@ -9,7 +9,8 @@ rectangle::rectangle(point p, width w, height h)
 : p{std::move(p)}, w{w}, h{h} {}
 
 bool intersect(rectangle const& a, rectangle const& b) {
-  return outside(a.p, b) || outside(point{a.w, a.h}, b);
+  return inside(a.p, b) || inside(point{a.p.x + a.w, a.p.y + a.h}, b)
+         || crossing(a.p, b) || crossing(point{a.p.x + a.w, a.p.y + a.h}, b);
 }
 
 bool outside(rectangle const& a, rectangle const& b) {
