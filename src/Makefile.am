@@ -3,7 +3,6 @@ libsdl_toolset_a_SOURCES = height_fwd.hh height.hh height.cc \
                            point_fwd.hh point.hh point.cc \
                            rectangle_fwd.hh rectangle.hh rectangle.cc \
                            renderer_creation_error.hh renderer_creation_error.cc \
-                           sdl.hh sdl.cc \
                            sdl_renderer.hh sdl_renderer.cc \
                            sdl_surface_fwd.hh sdl_surface.hh sdl_surface.cc \
                            sdl_system.hh sdl_system.cc \
