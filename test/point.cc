@@ -1,4 +1,5 @@
 #include <catch/catch.hpp>
+#include "point_io.hh"
 #include "../src/point.hh"
 #include "../src/rectangle.hh"
 #include "../src/width.hh"
