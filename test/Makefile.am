@@ -4,6 +4,7 @@ check_sdl_toolset_SOURCES = main.cc \
                             point.cc \
                             point_io.hh point_io.tcc \
                             rectangle.cc \
+                            rectangle_bottom_right.cc \
                             width.cc
 check_sdl_toolset_LDADD = ../src/libsdl_toolset.a
 AM_CPPFLAGS = ${BOOST_CPPFLAGS}
