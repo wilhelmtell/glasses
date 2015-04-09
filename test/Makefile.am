@@ -2,6 +2,7 @@ check_PROGRAMS = check_sdl_toolset
 check_sdl_toolset_SOURCES = main.cc \
                             height.cc \
                             point.cc \
+                            point_crossing.cc \
                             point_io.hh point_io.tcc \
                             rectangle.cc \
                             rectangle_bottom_right.cc \
