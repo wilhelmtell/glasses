@@ -12,8 +12,8 @@ libsdl_toolset_a_SOURCES = height_fwd.hh height.hh height.cc \
                            sdl_texture_fwd.hh sdl_texture.hh sdl_texture.cc \
                            sdl_ttf_font_fwd.hh sdl_ttf_font.hh sdl_ttf_font.cc \
                            sdl_ttf_font_open_error.hh sdl_ttf_font_open_error.cc \
-                           sdl_ttf_system.hh sdl_ttf_system.cc \
-                           sdl_ttf_system_fwd.hh sdl_ttf_system_init_error.hh sdl_ttf_system_init_error.cc \
+                           sdl_ttf_system_fwd.hh sdl_ttf_system.hh sdl_ttf_system.cc \
+                           sdl_ttf_system_init_error.hh sdl_ttf_system_init_error.cc \
                            width_fwd.hh width.hh width.cc \
                            window_creation_error.hh window_creation_error.cc
 
