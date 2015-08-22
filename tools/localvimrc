@@ -1,4 +1,4 @@
 let g:ctrlp_custom_ignore = {
-      \ 'file': '\v<(autom4te\.cache/.*|\.deps|Makefile(\.in)?|aclocal\.m4|ar-lib|compile|config(ure|\.(cache|h(\.in\~?)?|log|status|guess|sub))|depcomp|install-sh|missing|src/sdl_toolset|test/check_sdl_toolset|stamp-h1)$|\.(o|a|sw[op])$',
-      \ 'dir': '\v^autom4te\.cache$',
+      \ 'file': '\v\.(o|a|sw[op])$|<(CMakeCache\.txt|cmake_install.cmake|Makefile|config\.h|sdl_toolset|libsdl_toolset\.a|check_sdl_toolset|\.ninja_(deps|log)|(build|rules)\.ninja)$',
+      \ 'dir': '\v<(CMakeFiles|(check_)?sdl_toolset\.dSYM)$',
       \ }
