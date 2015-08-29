@@ -31,11 +31,6 @@ add_executable(check_sdl_toolset test/main.cc
                test/rectangle_intersect.cc
                test/rectangle_outside.cc
                test/width.cc)
-add_custom_target(check
-                  COMMAND check_sdl_toolset
-                  DEPENDS check_sdl_toolset
-                  WORKING_DIRECTORY "${PROJECT_BINARY_DIR}"
-                  COMMENT "Running unit tests")
 
 configure_file(
   "${PROJECT_SOURCE_DIR}/config.h.in"
