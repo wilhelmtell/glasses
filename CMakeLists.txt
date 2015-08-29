@@ -46,6 +46,14 @@ set_target_properties(sdl_toolset_lib check_sdl_toolset PROPERTIES
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wextra -pedantic -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
+include(FindPkgConfig)
+pkg_search_module(SDL2 REQUIRED sdl2)
+pkg_search_module(SDL2TTF REQUIRED SDL2_ttf>=2.0.12)
+if(SDL2_FOUND)
+  include_directories(${SDL2_INCLUDE_DIRS} ${SDL2TTF_INCLUDE_DIRS})
+  target_link_libraries(check_sdl_toolset ${SDL3_LIBRARIES} ${SDL2TTF_LIBRARIES})
+endif()
+
 include_directories("${PROJECT_BINARY_DIR}")
 
 target_link_libraries(check_sdl_toolset sdl_toolset_lib)
