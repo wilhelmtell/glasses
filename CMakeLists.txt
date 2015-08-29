@@ -39,7 +39,6 @@ configure_file(
 
 set_target_properties(sdl_toolset_lib PROPERTIES
                       OUTPUT_NAME sdl_toolset)
-set_target_properties(check_sdl_toolset PROPERTIES OUTPUT_NAME check_sdl_toolset)
 set_target_properties(sdl_toolset_lib check_sdl_toolset PROPERTIES
                       CXX_STANDARD 14
                       CXX_STANDARD_REQUIRED true
