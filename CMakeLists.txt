@@ -19,7 +19,6 @@ add_library(sdl_toolset_lib
             src/sdl_system0_fwd.hh src/sdl_system0.hh src/sdl_system0.cc
             src/sdl_system_fwd.hh src/sdl_system.hh src/sdl_system.cc
             src/sdl_system_init_error.hh src/sdl_system_init_error.cc
-            src/sdl_texture_creation_error.hh src/sdl_texture_creation_error.cc
             src/sdl_texture_fwd.hh src/sdl_texture.hh src/sdl_texture.cc
             src/sdl_timer_subsystem_fwd.hh src/sdl_timer_subsystem.hh src/sdl_timer_subsystem.cc
             src/sdl_ttf_font_fwd.hh src/sdl_ttf_font.hh src/sdl_ttf_font.cc
@@ -29,6 +28,7 @@ add_library(sdl_toolset_lib
             src/sdl_video_subsystem_fwd.hh src/sdl_video_subsystem.hh src/sdl_video_subsystem.cc
             src/sdl_window_fwd.hh src/sdl_window.hh src/sdl_window.cc
             src/surface_creation_error_fwd.hh src/surface_creation_error.hh src/surface_creation_error.cc
+            src/texture_creation_error_fwd.hh src/texture_creation_error.hh src/texture_creation_error.cc
             src/width_fwd.hh src/width.hh src/width.cc
             src/window_creation_error.hh src/window_creation_error.cc)
 add_executable(check_sdl_toolset test/main.cc
