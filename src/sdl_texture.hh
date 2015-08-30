@@ -8,7 +8,6 @@
 
 namespace tls {
 struct sdl_texture {
-  explicit sdl_texture(SDL_Texture* t);
   sdl_texture(sdl_renderer& r, sdl_surface& s);
 
   SDL_Texture* get() const;
