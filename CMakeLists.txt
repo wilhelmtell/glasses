@@ -3,6 +3,7 @@ project(sdl_toolset VERSION 0.0.0.1)
 
 add_library(sdl_toolset_lib
             src/height_fwd.hh src/height.hh src/height.cc
+            src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc src/logical_scope_guard.cc
             src/point_fwd.hh src/point.hh src/point.cc
             src/rectangle_fwd.hh src/rectangle.hh src/rectangle.cc
             src/renderer_creation_error.hh src/renderer_creation_error.cc
@@ -17,11 +18,11 @@ add_library(sdl_toolset_lib
             src/sdl_ttf_system_fwd.hh src/sdl_ttf_system.hh src/sdl_ttf_system.cc
             src/sdl_ttf_system_init_error.hh src/sdl_ttf_system_init_error.cc
             src/sdl_window_fwd.hh src/sdl_window.hh src/sdl_window.cc
-            src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc src/logical_scope_guard.cc
             src/width_fwd.hh src/width.hh src/width.cc
             src/window_creation_error.hh src/window_creation_error.cc)
 add_executable(check_sdl_toolset test/main.cc
                test/height.cc
+               test/logical_scope_guard.cc
                test/point.cc
                test/point_crossing.cc
                test/point_inside.cc
@@ -31,7 +32,6 @@ add_executable(check_sdl_toolset test/main.cc
                test/rectangle_bottom_right.cc
                test/rectangle_intersect.cc
                test/rectangle_outside.cc
-               test/logical_scope_guard.cc
                test/width.cc)
 
 configure_file(
