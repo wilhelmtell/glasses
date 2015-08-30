@@ -33,7 +33,8 @@ add_library(sdl_toolset_lib
             src/width_fwd.hh src/width.hh src/width.cc
             src/window_creation_error.hh src/window_creation_error.cc
             src/window_fwd.hh src/window.hh src/window.cc)
-add_executable(check_sdl_toolset test/main.cc
+
+add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
                test/height.cc
                test/logical_cleanup.cc
                test/logical_init.cc
@@ -47,6 +48,10 @@ add_executable(check_sdl_toolset test/main.cc
                test/rectangle_intersect.cc
                test/rectangle_outside.cc
                test/width.cc)
+
+add_dependencies(check_sdl_toolset sdl_toolset_lib)
+add_custom_target(check DEPENDS check_sdl_toolset)
+add_custom_command(TARGET check_sdl_toolset POST_BUILD COMMAND check_sdl_toolset)
 
 configure_file(
   "${PROJECT_SOURCE_DIR}/config.h.in"
