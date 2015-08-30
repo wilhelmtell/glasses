@@ -8,7 +8,6 @@
 namespace tls {
 struct sdl_surface {
   explicit sdl_surface(std::string const& bmp_filename);
-  explicit sdl_surface(SDL_Surface* s);
 
   SDL_Surface* get() const;
 
