@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.2.2)
 project(sdl_toolset VERSION 0.0.0.1)
 
 add_library(sdl_toolset_lib
+            src/detail/sdl_system_fwd.hh src/detail/sdl_system.hh src/detail/sdl_system.cc
             src/height_fwd.hh src/height.hh src/height.cc
             src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc src/logical_scope_guard.cc
             src/point_fwd.hh src/point.hh src/point.cc

@@ -1,14 +1,14 @@
 #ifndef TLS_SDL_SYSTEM_HH_
 #define TLS_SDL_SYSTEM_HH_
 
-#include "logical_scope_guard.hh"
+#include "detail/sdl_system.hh"
 
 namespace tls {
 struct sdl_system {
   sdl_system();
 
 private:
-  logical_scope_guard guard;
+  detail::sdl_system sys;
 };
 }
 
