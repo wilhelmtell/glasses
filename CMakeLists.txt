@@ -11,6 +11,7 @@ add_library(sdl_toolset_lib
             src/sdl_renderer.hh src/sdl_renderer.cc
             src/sdl_surface_fwd.hh src/sdl_surface.hh src/sdl_surface.cc
             src/sdl_system.hh src/sdl_system.cc
+            src/sdl_system0_fwd.hh src/sdl_system0.hh src/sdl_system0.cc
             src/sdl_system_init_error.hh src/sdl_system_init_error.cc
             src/sdl_texture_creation_error.hh src/sdl_texture_creation_error.cc
             src/sdl_texture_fwd.hh src/sdl_texture.hh src/sdl_texture.cc
