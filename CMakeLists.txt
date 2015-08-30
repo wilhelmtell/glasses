@@ -37,7 +37,6 @@ add_executable(check_sdl_toolset test/main.cc
                test/height.cc
                test/logical_cleanup.cc
                test/logical_init.cc
-               test/logical_scope_guard.cc
                test/point.cc
                test/point_crossing.cc
                test/point_inside.cc
