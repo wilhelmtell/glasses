@@ -58,4 +58,3 @@ TEST_CASE("two points with different x and y are different") {
     REQUIRE(!(a == b));
   }
 }
-
