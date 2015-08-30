@@ -3,6 +3,7 @@
 
 #include "detail/sdl_system.hh"
 
+// Initialize all SDL subsystems
 namespace tls {
 struct sdl_system {
   sdl_system();
