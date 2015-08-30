@@ -1,5 +1,6 @@
 #include "system.hh"
 #include <SDL2/SDL.h>
+#include "../logical_cleanup.hh"
 #include "../system_init_error.hh"
 #include <functional>
 
@@ -12,6 +13,6 @@ void init_or_throw(int const& flags) {
 namespace tls {
 namespace detail {
 system::system(int const& flags)
-: guard(std::bind(&init_or_throw, flags), &SDL_Quit) {}
+: guard(std::bind(&init_or_throw, flags), logical_cleanup(&SDL_Quit)) {}
 }
 }
