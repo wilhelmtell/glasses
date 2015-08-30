@@ -53,7 +53,7 @@ add_dependencies(check_sdl_toolset sdl_toolset_lib)
 
 # nothing produces a file named enough_testing, so tests always run.
 add_custom_command(OUTPUT enough_testing
-  COMMAND check_sdl_toolset
+  COMMAND check_sdl_toolset --reporter compact
   COMMENT Testing)
 add_custom_target(check DEPENDS enough_testing)
 
