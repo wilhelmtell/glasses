@@ -9,6 +9,7 @@ add_library(sdl_toolset_lib
             src/haptic_subsystem_fwd.hh src/haptic_subsystem.hh src/haptic_subsystem.cc
             src/height_fwd.hh src/height.hh src/height.cc
             src/joystick_subsystem_fwd.hh src/joystick_subsystem.hh src/joystick_subsystem.cc
+            src/logical_cleanup_fwd.hh src/logical_cleanup.hh src/logical_cleanup.cc
             src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc src/logical_scope_guard.cc
             src/minimal_system_fwd.hh src/minimal_system.hh src/minimal_system.cc
             src/point_fwd.hh src/point.hh src/point.cc
@@ -33,6 +34,7 @@ add_library(sdl_toolset_lib
             src/window_fwd.hh src/window.hh src/window.cc)
 add_executable(check_sdl_toolset test/main.cc
                test/height.cc
+               test/logical_cleanup.cc
                test/logical_scope_guard.cc
                test/point.cc
                test/point_crossing.cc
