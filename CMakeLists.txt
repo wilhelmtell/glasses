@@ -2,35 +2,35 @@ cmake_minimum_required(VERSION 3.2.2)
 project(sdl_toolset VERSION 0.0.0.1)
 
 add_library(sdl_toolset_lib
-            src/detail/sdl_system_fwd.hh src/detail/sdl_system.hh src/detail/sdl_system.cc
+            src/audio_subsystem_fwd.hh src/audio_subsystem.hh src/audio_subsystem.cc
+            src/detail/system_fwd.hh src/detail/system.hh src/detail/system.cc
+            src/events_subsystem_fwd.hh src/events_subsystem.hh src/events_subsystem.cc
+            src/gamecontroller_subsystem_fwd.hh src/gamecontroller_subsystem.hh src/gamecontroller_subsystem.cc
+            src/haptic_subsystem_fwd.hh src/haptic_subsystem.hh src/haptic_subsystem.cc
             src/height_fwd.hh src/height.hh src/height.cc
+            src/joystick_subsystem_fwd.hh src/joystick_subsystem.hh src/joystick_subsystem.cc
             src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc src/logical_scope_guard.cc
+            src/minimal_system_fwd.hh src/minimal_system.hh src/minimal_system.cc
             src/point_fwd.hh src/point.hh src/point.cc
             src/rectangle_fwd.hh src/rectangle.hh src/rectangle.cc
             src/renderer_creation_error.hh src/renderer_creation_error.cc
-            src/sdl_audio_subsystem_fwd.hh src/sdl_audio_subsystem.hh src/sdl_audio_subsystem.cc
-            src/sdl_events_subsystem_fwd.hh src/sdl_events_subsystem.hh src/sdl_events_subsystem.cc
-            src/sdl_gamecontroller_subsystem_fwd.hh src/sdl_gamecontroller_subsystem.hh src/sdl_gamecontroller_subsystem.cc
-            src/sdl_haptic_subsystem_fwd.hh src/sdl_haptic_subsystem.hh src/sdl_haptic_subsystem.cc
-            src/sdl_joystick_subsystem_fwd.hh src/sdl_joystick_subsystem.hh src/sdl_joystick_subsystem.cc
-            src/sdl_minimal_system_fwd.hh src/sdl_minimal_system.hh src/sdl_minimal_system.cc
-            src/sdl_renderer_fwd.hh src/sdl_renderer.hh src/sdl_renderer.cc
-            src/sdl_subsystem_init_error.hh src/sdl_subsystem_init_error.cc
-            src/sdl_surface_fwd.hh src/sdl_surface.hh src/sdl_surface.cc
-            src/sdl_system_fwd.hh src/sdl_system.hh src/sdl_system.cc
-            src/sdl_system_init_error.hh src/sdl_system_init_error.cc
-            src/sdl_texture_fwd.hh src/sdl_texture.hh src/sdl_texture.cc
-            src/sdl_timer_subsystem_fwd.hh src/sdl_timer_subsystem.hh src/sdl_timer_subsystem.cc
-            src/sdl_ttf_font_fwd.hh src/sdl_ttf_font.hh src/sdl_ttf_font.cc
-            src/sdl_ttf_font_open_error.hh src/sdl_ttf_font_open_error.cc
-            src/sdl_ttf_system_fwd.hh src/sdl_ttf_system.hh src/sdl_ttf_system.cc
-            src/sdl_ttf_system_init_error.hh src/sdl_ttf_system_init_error.cc
-            src/sdl_video_subsystem_fwd.hh src/sdl_video_subsystem.hh src/sdl_video_subsystem.cc
-            src/sdl_window_fwd.hh src/sdl_window.hh src/sdl_window.cc
+            src/renderer_fwd.hh src/renderer.hh src/renderer.cc
+            src/subsystem_init_error.hh src/subsystem_init_error.cc
             src/surface_creation_error_fwd.hh src/surface_creation_error.hh src/surface_creation_error.cc
+            src/surface_fwd.hh src/surface.hh src/surface.cc
+            src/system_fwd.hh src/system.hh src/system.cc
+            src/system_init_error.hh src/system_init_error.cc
             src/texture_creation_error_fwd.hh src/texture_creation_error.hh src/texture_creation_error.cc
+            src/texture_fwd.hh src/texture.hh src/texture.cc
+            src/timer_subsystem_fwd.hh src/timer_subsystem.hh src/timer_subsystem.cc
+            src/ttf_font_fwd.hh src/ttf_font.hh src/ttf_font.cc
+            src/ttf_font_open_error.hh src/ttf_font_open_error.cc
+            src/ttf_system_fwd.hh src/ttf_system.hh src/ttf_system.cc
+            src/ttf_system_init_error.hh src/ttf_system_init_error.cc
+            src/video_subsystem_fwd.hh src/video_subsystem.hh src/video_subsystem.cc
             src/width_fwd.hh src/width.hh src/width.cc
-            src/window_creation_error.hh src/window_creation_error.cc)
+            src/window_creation_error.hh src/window_creation_error.cc
+            src/window_fwd.hh src/window.hh src/window.cc)
 add_executable(check_sdl_toolset test/main.cc
                test/height.cc
                test/logical_scope_guard.cc

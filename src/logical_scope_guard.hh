@@ -5,8 +5,9 @@
 
 namespace tls {
 struct logical_scope_guard {
-  using cleanup_type = std::function<void()>; // XXX: better use of type system?
-  using init_type = cleanup_type; // XXX: better use of type system?
+  using cleanup_type
+    = std::function<void()>;       // XXX: better use of type system?
+  using init_type = cleanup_type;  // XXX: better use of type system?
 
   logical_scope_guard() = default;
   explicit logical_scope_guard(cleanup_type cleanup);
