@@ -50,8 +50,12 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/width.cc)
 
 add_dependencies(check_sdl_toolset sdl_toolset_lib)
-add_custom_target(check DEPENDS check_sdl_toolset)
-add_custom_command(TARGET check_sdl_toolset POST_BUILD COMMAND check_sdl_toolset)
+
+# nothing produces a file named enough_testing, so tests always run.
+add_custom_command(OUTPUT enough_testing
+  COMMAND check_sdl_toolset
+  COMMENT Testing)
+add_custom_target(check DEPENDS enough_testing)
 
 configure_file("${PROJECT_SOURCE_DIR}/config.h.in" "${PROJECT_BINARY_DIR}/config.h")
 
