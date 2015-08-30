@@ -5,7 +5,7 @@
 
 namespace tls {
 struct sdl_system {
-  explicit sdl_system(int const& flags);
+  sdl_system();
 
 private:
   logical_scope_guard guard;
