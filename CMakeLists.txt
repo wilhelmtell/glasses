@@ -8,6 +8,11 @@ add_library(sdl_toolset_lib
             src/point_fwd.hh src/point.hh src/point.cc
             src/rectangle_fwd.hh src/rectangle.hh src/rectangle.cc
             src/renderer_creation_error.hh src/renderer_creation_error.cc
+            src/sdl_audio_subsystem_fwd.hh src/sdl_audio_subsystem.hh src/sdl_audio_subsystem.cc
+            src/sdl_events_subsystem_fwd.hh src/sdl_events_subsystem.hh src/sdl_events_subsystem.cc
+            src/sdl_gamecontroller_subsystem_fwd.hh src/sdl_gamecontroller_subsystem.hh src/sdl_gamecontroller_subsystem.cc
+            src/sdl_haptic_subsystem_fwd.hh src/sdl_haptic_subsystem.hh src/sdl_haptic_subsystem.cc
+            src/sdl_joystick_subsystem_fwd.hh src/sdl_joystick_subsystem.hh src/sdl_joystick_subsystem.cc
             src/sdl_renderer.hh src/sdl_renderer.cc
             src/sdl_subsystem_init_error.hh src/sdl_subsystem_init_error.cc
             src/sdl_surface_fwd.hh src/sdl_surface.hh src/sdl_surface.cc
@@ -16,6 +21,7 @@ add_library(sdl_toolset_lib
             src/sdl_system_init_error.hh src/sdl_system_init_error.cc
             src/sdl_texture_creation_error.hh src/sdl_texture_creation_error.cc
             src/sdl_texture_fwd.hh src/sdl_texture.hh src/sdl_texture.cc
+            src/sdl_timer_subsystem_fwd.hh src/sdl_timer_subsystem.hh src/sdl_timer_subsystem.cc
             src/sdl_ttf_font_fwd.hh src/sdl_ttf_font.hh src/sdl_ttf_font.cc
             src/sdl_ttf_font_open_error.hh src/sdl_ttf_font_open_error.cc
             src/sdl_ttf_system_fwd.hh src/sdl_ttf_system.hh src/sdl_ttf_system.cc
