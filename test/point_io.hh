@@ -6,7 +6,8 @@
 
 namespace tls {
 template <typename Ch, typename Tr>
-std::basic_ostream<Ch,Tr>& operator<<(std::basic_ostream<Ch, Tr>& o, point const& p);
+std::basic_ostream<Ch, Tr>& operator<<(std::basic_ostream<Ch, Tr>& o,
+                                       point const& p);
 }
 
 #include "point_io.tcc"

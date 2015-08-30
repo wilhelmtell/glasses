@@ -34,8 +34,7 @@ TEST_CASE("logical_init ctor") {
     REQUIRE(touched == 1);
   }
 
-  SECTION(
-    "init with init ctor inside scope, and a move-assign") {
+  SECTION("init with init ctor inside scope, and a move-assign") {
     int touched = 0;
     tls::logical_init init([&]() { ++touched; });
     tls::logical_init init2;
@@ -43,8 +42,7 @@ TEST_CASE("logical_init ctor") {
     REQUIRE(touched == 1);
   }
 
-  SECTION(
-    "init with init ctor outside scope, and a move-assign") {
+  SECTION("init with init ctor outside scope, and a move-assign") {
     int touched = 0;
     {
       tls::logical_init init([&]() { ++touched; });
