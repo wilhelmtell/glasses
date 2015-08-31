@@ -13,3 +13,4 @@ build.ninja
 sdl_toolset_challenge.dSYM/
 rules.ninja
 sdl_toolset.dSYM/
+*-*.tar.xz
