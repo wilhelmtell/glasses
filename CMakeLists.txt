@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.2.2)
 project(sdl_toolset VERSION 0.0.0.1)
+set(ARCHIVE_NAME "${CMAKE_PROJECT_NAME}-${PROJECT_VERSION}")
 
 add_library(sdl_toolset_lib
   src/audio_subsystem_fwd.hh src/audio_subsystem.hh src/audio_subsystem.cc
@@ -56,6 +57,13 @@ add_custom_command(OUTPUT enough_testing
   COMMAND check_sdl_toolset --reporter compact
   COMMENT Testing)
 add_custom_target(check DEPENDS enough_testing)
+
+add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
+  COMMAND git archive --format=tar --prefix="${ARCHIVE_NAME}"/ HEAD |xz -9 >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
+  DEPENDS check
+  WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+  COMMENT Archiving)
+add_custom_target(dist DEPENDS "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz")
 
 configure_file("${PROJECT_SOURCE_DIR}/config.h.in" "${PROJECT_BINARY_DIR}/config.h")
 
