@@ -1,7 +1,7 @@
 #ifndef TLS_POINT_HH_
 #define TLS_POINT_HH_
 
-#include "rectangle_fwd.hh"
+#include "positioned_rectangle_fwd.hh"
 
 namespace tls {
 struct point {
@@ -16,9 +16,9 @@ public:
 bool operator==(point const& lhs, point const& rhs);
 bool operator!=(point const& lhs, point const& rhs);
 
-bool crossing(point const& p, rectangle const& b);
-bool outside(point const& p, rectangle const& b);
-bool inside(point const& p, rectangle const& b);
+bool crossing(point const& p, positioned_rectangle const& b);
+bool outside(point const& p, positioned_rectangle const& b);
+bool inside(point const& p, positioned_rectangle const& b);
 }
 
 #endif

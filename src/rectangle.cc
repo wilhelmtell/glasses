@@ -2,22 +2,12 @@
 #include <utility>
 #include "dim/width.hh"
 #include "dim/height.hh"
-#include "point.hh"
 
 namespace tls {
-rectangle::rectangle(point p, dim::width w, dim::height h)
-: p{std::move(p)}, w{std::move(w)}, h{std::move(h)} {}
+rectangle::rectangle(dim::width w, dim::height h)
+: w(std::move(w)), h(std::move(h)) {}
 
-bool intersect(rectangle const& a, rectangle const& b) {
-  return inside(a.p, b) || inside(bottom_right(a), b) || crossing(a.p, b)
-         || crossing(bottom_right(a), b);
-}
+dim::width rectangle::width() const { return w; }
 
-bool outside(rectangle const& a, rectangle const& b) {
-  return outside(a.p, b) && outside(bottom_right(a), b);
-}
-
-point bottom_right(rectangle const& r) {
-  return point{r.p.x + r.w, r.p.y + r.h};
-}
+dim::height rectangle::height() const { return h; }
 }

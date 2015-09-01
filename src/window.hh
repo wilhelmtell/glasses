@@ -3,17 +3,15 @@
 
 #include <memory>
 #include <SDL2/SDL.h>
+#include "positioned_rectangle_fwd.hh"
 #include "rectangle_fwd.hh"
-#include "dim/width_fwd.hh"
-#include "dim/height_fwd.hh"
 
 namespace tls {
 struct window {
-  window(char const* const title, rectangle const& bounds, int const& flags);
   window(char const* const title,
-         dim::width w,
-         dim::height h,
+         positioned_rectangle const& bounds,
          int const& flags);
+  window(char const* const title, rectangle dimensions, int const& flags);
 
   SDL_Window* get() const;
 
