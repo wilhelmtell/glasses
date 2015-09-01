@@ -1,19 +1,23 @@
 #ifndef TLS_POSITIONED_RECTANGLE_HH_
 #define TLS_POSITIONED_RECTANGLE_HH_
 
-#include "dim/width.hh"
-#include "dim/height.hh"
+#include "rectangle.hh"
+#include "dim/width_fwd.hh"
+#include "dim/height_fwd.hh"
 #include "point.hh"
 
 namespace tls {
 struct positioned_rectangle {
   positioned_rectangle() = default;
-  positioned_rectangle(point p, dim::width w, dim::height h);
+  positioned_rectangle(point p, rectangle r);
 
-public:
+  point top_left() const;
+  dim::width width() const;
+  dim::height height() const;
+
+private:
   point p;
-  dim::width w;
-  dim::height h;
+  rectangle r;
 };
 
 bool intersect(positioned_rectangle const& a, positioned_rectangle const& b);

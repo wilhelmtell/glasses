@@ -14,13 +14,13 @@ TEST_CASE("bottom_right() of value-initialized positioned_rectangle") {
 TEST_CASE("bottom_right() of positioned_rectangle sitting on origin in Q3") {
   tls::point const x{3, 2};
   tls::positioned_rectangle const r{
-    tls::point{0, 0}, tls::dim::width{3}, tls::dim::height{2}};
+    tls::point{0, 0}, tls::rectangle{tls::dim::width{3}, tls::dim::height{2}}};
   REQUIRE(x == tls::bottom_right(r));
 }
 
 TEST_CASE("bottom_right() of positioned_rectangle in Q3") {
   tls::point const x{5, 5};
   tls::positioned_rectangle const r{
-    tls::point{2, 1}, tls::dim::width{3}, tls::dim::height{4}};
+    tls::point{2, 1}, tls::rectangle{tls::dim::width{3}, tls::dim::height{4}}};
   REQUIRE(x == tls::bottom_right(r));
 }
