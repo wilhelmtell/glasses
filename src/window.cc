@@ -27,4 +27,13 @@ window::window(char const* const title, rectangle dimensions, int const& flags)
     flags) {}
 
 SDL_Window* window::get() const { return w.get(); }
+
+window make_centered_window(char const* const title,
+                            rectangle r,
+                            int const& flags) {
+  return window(title,
+                positioned_rectangle(
+                  point(SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED), r),
+                flags);
+}
 }
