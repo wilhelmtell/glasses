@@ -19,6 +19,10 @@ private:
   using pointer = std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)>;
   pointer w;
 };
+
+window make_centered_window(char const* const title,
+                            rectangle r,
+                            int const& flags);
 }
 
 #endif
