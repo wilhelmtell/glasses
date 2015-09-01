@@ -1,7 +1,8 @@
-#ifndef TLS_HEIGHT_HH_
-#define TLS_HEIGHT_HH_
+#ifndef TLS_DIM_HEIGHT_HH_
+#define TLS_DIM_HEIGHT_HH_
 
 namespace tls {
+namespace dim {
 struct height {
   using value_type = int;
 
@@ -13,6 +14,7 @@ struct height {
 private:
   value_type value;
 };
+}
 }
 
 #endif
