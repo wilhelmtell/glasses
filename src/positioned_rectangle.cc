@@ -16,7 +16,7 @@ dim::height positioned_rectangle::height() const { return r.height(); }
 
 bool intersect(positioned_rectangle const& a, positioned_rectangle const& b) {
   return inside(top_left(a), b) || inside(bottom_right(a), b)
-         || crossing(top_left(a), b) || crossing(bottom_right(a), b);
+         || bounding(top_left(a), b) || bounding(bottom_right(a), b);
 }
 
 bool outside(positioned_rectangle const& a, positioned_rectangle const& b) {
