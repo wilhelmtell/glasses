@@ -15,15 +15,17 @@ dim::width positioned_rectangle::width() const { return r.width(); }
 dim::height positioned_rectangle::height() const { return r.height(); }
 
 bool intersect(positioned_rectangle const& a, positioned_rectangle const& b) {
-  return inside(a.top_left(), b) || inside(bottom_right(a), b)
-         || crossing(a.top_left(), b) || crossing(bottom_right(a), b);
+  return inside(top_left(a), b) || inside(bottom_right(a), b)
+         || crossing(top_left(a), b) || crossing(bottom_right(a), b);
 }
 
 bool outside(positioned_rectangle const& a, positioned_rectangle const& b) {
-  return outside(a.top_left(), b) && outside(bottom_right(a), b);
+  return outside(top_left(a), b) && outside(bottom_right(a), b);
 }
 
+point top_left(positioned_rectangle const& r) { return r.top_left(); }
+
 point bottom_right(positioned_rectangle const& r) {
-  return point{r.top_left().x + r.width(), r.top_left().y + r.height()};
+  return point{top_left(r).x + r.width(), top_left(r).y + r.height()};
 }
 }

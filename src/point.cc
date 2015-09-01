@@ -4,26 +4,26 @@
 namespace {
 bool crossing_top_bound(tls::point const& p,
                         tls::positioned_rectangle const& b) {
-  return p.x >= b.top_left().x && p.x <= b.top_left().x + b.width()
-         && p.y == b.top_left().y;
+  return p.x >= top_left(b).x && p.x <= top_left(b).x + b.width()
+         && p.y == top_left(b).y;
 }
 
 bool crossing_right_bound(tls::point const& p,
                           tls::positioned_rectangle const& b) {
-  return p.x == b.top_left().x + b.width() && p.y >= b.top_left().y
-         && p.y <= b.top_left().y + b.height();
+  return p.x == top_left(b).x + b.width() && p.y >= top_left(b).y
+         && p.y <= top_left(b).y + b.height();
 }
 
 bool crossing_bottom_bound(tls::point const& p,
                            tls::positioned_rectangle const& b) {
-  return p.x >= b.top_left().x && p.x <= b.top_left().x + b.width()
-         && p.y == b.top_left().y + b.height();
+  return p.x >= top_left(b).x && p.x <= top_left(b).x + b.width()
+         && p.y == top_left(b).y + b.height();
 }
 
 bool crossing_left_bound(tls::point const& p,
                          tls::positioned_rectangle const& b) {
-  return p.x == b.top_left().x && p.y >= b.top_left().y
-         && p.y <= b.top_left().y + b.height();
+  return p.x == top_left(b).x && p.y >= top_left(b).y
+         && p.y <= top_left(b).y + b.height();
 }
 }
 
@@ -42,8 +42,8 @@ bool crossing(point const& p, positioned_rectangle const& b) {
 }
 
 bool outside(point const& p, positioned_rectangle const& b) {
-  return p.x < b.top_left().x || p.x > b.top_left().x + b.width()
-         || p.y < b.top_left().y || p.y > b.top_left().y + b.height();
+  return p.x < top_left(b).x || p.x > top_left(b).x + b.width()
+         || p.y < top_left(b).y || p.y > top_left(b).y + b.height();
 }
 
 bool inside(point const& p, positioned_rectangle const& b) {

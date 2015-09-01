@@ -22,6 +22,7 @@ private:
 
 bool intersect(positioned_rectangle const& a, positioned_rectangle const& b);
 bool outside(positioned_rectangle const& a, positioned_rectangle const& b);
+point top_left(positioned_rectangle const& r);
 point bottom_right(positioned_rectangle const& r);
 }
 
