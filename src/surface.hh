@@ -6,7 +6,7 @@
 
 namespace tls {
 struct surface {
-  explicit surface(char const * const bmp_filename);
+  explicit surface(char const* const bmp_filename);
 
   SDL_Surface* get() const;
 

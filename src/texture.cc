@@ -6,7 +6,7 @@
 
 namespace {
 SDL_Texture* texture_from_bmp(tls::renderer& renderer,
-                              char const * const bmp_filename) {
+                              char const* const bmp_filename) {
   tls::surface surface(bmp_filename);
   return SDL_CreateTextureFromSurface(renderer.get(), surface.get());
 }
@@ -18,7 +18,7 @@ texture::texture(renderer& r, surface& s)
   if(!t) throw texture_creation_error(SDL_GetError());
 }
 
-texture::texture(renderer& r, char const * const bmp_filename)
+texture::texture(renderer& r, char const* const bmp_filename)
 : t(texture_from_bmp(r, bmp_filename), &SDL_DestroyTexture) {
   if(!t) throw texture_creation_error(SDL_GetError());
 }
