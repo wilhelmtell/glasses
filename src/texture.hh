@@ -9,7 +9,7 @@
 namespace tls {
 struct texture {
   texture(renderer& r, surface& s);
-  texture(renderer& r, char const * const bmp_filename);
+  texture(renderer& r, char const* const bmp_filename);
 
   SDL_Texture* get() const;
 
