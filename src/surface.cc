@@ -3,8 +3,8 @@
 #include "surface_creation_error.hh"
 
 namespace tls {
-surface::surface(std::string const& bmp_filename)
-: s(SDL_LoadBMP(bmp_filename.c_str()), &SDL_FreeSurface) {
+surface::surface(char const * const bmp_filename)
+: s(SDL_LoadBMP(bmp_filename), &SDL_FreeSurface) {
   if(!s) throw surface_creation_error(SDL_GetError());
 }
 

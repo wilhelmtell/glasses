@@ -5,12 +5,11 @@
 #include <SDL2/SDL.h>
 #include "surface_fwd.hh"
 #include "renderer_fwd.hh"
-#include <string>
 
 namespace tls {
 struct texture {
   texture(renderer& r, surface& s);
-  texture(renderer& r, std::string const& bmp_filename);
+  texture(renderer& r, char const * const bmp_filename);
 
   SDL_Texture* get() const;
 

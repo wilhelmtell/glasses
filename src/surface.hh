@@ -3,11 +3,10 @@
 
 #include <memory>
 #include <SDL2/SDL.h>
-#include <string>
 
 namespace tls {
 struct surface {
-  explicit surface(std::string const& bmp_filename);
+  explicit surface(char const * const bmp_filename);
 
   SDL_Surface* get() const;
 

@@ -4,8 +4,8 @@
 #include <cstddef>
 
 namespace tls {
-ttf_font::ttf_font(std::string const& name, std::size_t const& size)
-: f{TTF_OpenFont(name.c_str(), size), TTF_CloseFont} {
+ttf_font::ttf_font(char const * const name, std::size_t const& size)
+: f{TTF_OpenFont(name, size), TTF_CloseFont} {
   if(f == nullptr) throw ttf_font_open_error{TTF_GetError()};
 }
 
