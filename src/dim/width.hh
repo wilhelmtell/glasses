@@ -1,7 +1,8 @@
-#ifndef TLS_WIDTH_HH_
-#define TLS_WIDTH_HH_
+#ifndef TLS_DIM_WIDTH_HH_
+#define TLS_DIM_WIDTH_HH_
 
 namespace tls {
+namespace dim {
 struct width {
   using value_type = int;
 
@@ -13,6 +14,7 @@ struct width {
 private:
   value_type value;
 };
+}
 }
 
 #endif

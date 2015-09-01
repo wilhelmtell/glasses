@@ -1,8 +1,8 @@
 #include <catch/catch.hpp>
 #include "../src/rectangle.hh"
 #include "../src/point.hh"
-#include "../src/width.hh"
-#include "../src/height.hh"
+#include "../src/dim/width.hh"
+#include "../src/dim/height.hh"
 
 TEST_CASE("value-initialized rectangle has value-initialized state") {
   tls::rectangle const r{};
@@ -17,7 +17,8 @@ TEST_CASE("value-initialized rectangle has value-initialized state") {
 }
 
 TEST_CASE("rectangle \"zero\"-initialized has value-initialized state") {
-  tls::rectangle const r{tls::point{0, 0}, tls::width{0}, tls::height{0}};
+  tls::rectangle const r{
+    tls::point{0, 0}, tls::dim::width{0}, tls::dim::height{0}};
   SECTION("rectangle initialized to origin is at origin") {
     REQUIRE(0 == r.p.x);
     REQUIRE(0 == r.p.y);
@@ -29,7 +30,8 @@ TEST_CASE("rectangle \"zero\"-initialized has value-initialized state") {
 }
 
 TEST_CASE("direct-initialized rectangle has direct-initialized state") {
-  tls::rectangle const r{tls::point{3, 4}, tls::width{5}, tls::height{6}};
+  tls::rectangle const r{
+    tls::point{3, 4}, tls::dim::width{5}, tls::dim::height{6}};
   SECTION("direct-initialized rectangle is in position") {
     REQUIRE(3 == r.p.x);
     REQUIRE(4 == r.p.y);

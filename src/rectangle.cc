@@ -1,11 +1,11 @@
 #include "rectangle.hh"
 #include <utility>
-#include "width.hh"
-#include "height.hh"
+#include "dim/width.hh"
+#include "dim/height.hh"
 #include "point.hh"
 
 namespace tls {
-rectangle::rectangle(point p, width w, height h)
+rectangle::rectangle(point p, dim::width w, dim::height h)
 : p{std::move(p)}, w{std::move(w)}, h{std::move(h)} {}
 
 bool intersect(rectangle const& a, rectangle const& b) {

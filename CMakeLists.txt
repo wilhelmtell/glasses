@@ -5,10 +5,11 @@ set(ARCHIVE_NAME "${CMAKE_PROJECT_NAME}-${PROJECT_VERSION}")
 add_library(sdl_toolset_lib
   src/audio_subsystem_fwd.hh src/audio_subsystem.hh src/audio_subsystem.cc
   src/detail/system_fwd.hh src/detail/system.hh src/detail/system.cc
+  src/dim/height_fwd.hh src/dim/height.hh src/dim/height.cc
+  src/dim/width_fwd.hh src/dim/width.hh src/dim/width.cc
   src/events_subsystem_fwd.hh src/events_subsystem.hh src/events_subsystem.cc
   src/gamecontroller_subsystem_fwd.hh src/gamecontroller_subsystem.hh src/gamecontroller_subsystem.cc
   src/haptic_subsystem_fwd.hh src/haptic_subsystem.hh src/haptic_subsystem.cc
-  src/height_fwd.hh src/height.hh src/height.cc
   src/joystick_subsystem_fwd.hh src/joystick_subsystem.hh src/joystick_subsystem.cc
   src/logical_cleanup_fwd.hh src/logical_cleanup.hh src/logical_cleanup.cc
   src/logical_init_fwd.hh src/logical_init.hh src/logical_init.cc
@@ -31,12 +32,12 @@ add_library(sdl_toolset_lib
   src/ttf_system_fwd.hh src/ttf_system.hh src/ttf_system.cc
   src/ttf_system_init_error.hh src/ttf_system_init_error.cc
   src/video_subsystem_fwd.hh src/video_subsystem.hh src/video_subsystem.cc
-  src/width_fwd.hh src/width.hh src/width.cc
   src/window_creation_error.hh src/window_creation_error.cc
   src/window_fwd.hh src/window.hh src/window.cc)
 
 add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
-  test/height.cc
+  test/dim/height.cc
+  test/dim/width.cc
   test/logical_cleanup.cc
   test/logical_init.cc
   test/point.cc
@@ -47,8 +48,7 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/rectangle.cc
   test/rectangle_bottom_right.cc
   test/rectangle_intersect.cc
-  test/rectangle_outside.cc
-  test/width.cc)
+  test/rectangle_outside.cc)
 
 add_dependencies(check_sdl_toolset sdl_toolset_lib)
 
