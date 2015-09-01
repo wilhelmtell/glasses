@@ -42,7 +42,7 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/logical_cleanup.cc
   test/logical_init.cc
   test/point.cc
-  test/point_crossing.cc
+  test/point_bounding.cc
   test/point_inside.cc
   test/point_io.hh test/point_io.tcc
   test/point_outside.cc
