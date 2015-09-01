@@ -2,3 +2,4 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\v\.(o|a|sw[op])$|<(CMakeCache\.txt|cmake_install.cmake|Makefile|config\.h|sdl_toolset|libsdl_toolset\.a|check_sdl_toolset|\.ninja_(deps|log)|(build|rules)\.ninja|.*-.*\.tar\.xz)$',
       \ 'dir': '\v<(CMakeFiles|(check_)?sdl_toolset\.dSYM)$',
       \ }
+set grepprg=git\ grep\ -InH\ $*
