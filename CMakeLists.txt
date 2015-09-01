@@ -17,6 +17,7 @@ add_library(sdl_toolset_lib
   src/minimal_system_fwd.hh src/minimal_system.hh src/minimal_system.cc
   src/point_fwd.hh src/point.hh src/point.cc
   src/positioned_rectangle_fwd.hh src/positioned_rectangle.hh src/positioned_rectangle.cc
+  src/rectangle_fwd.hh src/rectangle.hh src/rectangle.cc
   src/renderer_creation_error.hh src/renderer_creation_error.cc
   src/renderer_fwd.hh src/renderer.hh src/renderer.cc
   src/subsystem_init_error.hh src/subsystem_init_error.cc
@@ -48,7 +49,8 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/positioned_rectangle.cc
   test/positioned_rectangle_bottom_right.cc
   test/positioned_rectangle_intersect.cc
-  test/positioned_rectangle_outside.cc)
+  test/positioned_rectangle_outside.cc
+  test/rectangle.cc)
 
 add_dependencies(check_sdl_toolset sdl_toolset_lib)
 
