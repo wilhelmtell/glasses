@@ -13,4 +13,5 @@ build.ninja
 sdl_toolset_challenge.dSYM/
 rules.ninja
 sdl_toolset.dSYM/
+install_manifest.txt
 *-*.tar.xz
