@@ -6,7 +6,6 @@ set(sdl_toolset_lib_PRIVATE_HEADERS
   src/detail/system_fwd.hh src/detail/system.hh)
 set(sdl_toolset_lib_PUBLIC_HEADERS
   src/audio_subsystem_fwd.hh src/audio_subsystem.hh
-  src/detail/system_fwd.hh src/detail/system.hh
   src/dim/height_fwd.hh src/dim/height.hh
   src/dim/width_fwd.hh src/dim/width.hh
   src/events_subsystem_fwd.hh src/events_subsystem.hh
