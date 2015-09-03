@@ -192,15 +192,15 @@ add_custom_target(check DEPENDS enough_testing)
 
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
   COMMAND git archive --format=zip --prefix="${ARCHIVE_NAME}"/ HEAD >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
-  DEPENDS check
+  DEPENDS check_sdl_toolset check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz"
   COMMAND git archive --format=tar --prefix="${ARCHIVE_NAME}"/ HEAD |gzip -9 >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz"
-  DEPENDS check
+  DEPENDS check_sdl_toolset check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
   COMMAND git archive --format=tar --prefix="${ARCHIVE_NAME}"/ HEAD |xz -9 >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
-  DEPENDS check
+  DEPENDS check_sdl_toolset check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
 add_custom_target(dist_zip
   DEPENDS "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip")
