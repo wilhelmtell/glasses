@@ -11,6 +11,9 @@ set(sdl_toolset_lib_PRIVATE_TLS_DIM_CLASS_DEFINITION_FILES
 set(sdl_toolset_lib_PRIVATE_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
 
+set(sdl_toolset_lib_PRIVATE_TLS_DIM_TRANSLATION_UNITS
+  "")
+
 set(sdl_toolset_lib_PUBLIC_TLS_DIM_FORWARD_DECLARATION_FILES
   src/dim/height_fwd.hh
   src/dim/width_fwd.hh)
@@ -22,7 +25,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_DIM_CLASS_DEFINITION_FILES
 set(sdl_toolset_lib_PUBLIC_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
 
-set(sdl_toolset_lib_TLS_DIM_TRANSLATION_UNITS
+set(sdl_toolset_lib_PUBLIC_TLS_DIM_TRANSLATION_UNITS
   src/dim/height.cc
   src/dim/width.cc)
 
@@ -34,6 +37,9 @@ set(sdl_toolset_lib_PRIVATE_TLS_CLASS_DEFINITION_FILES
 
 set(sdl_toolset_lib_PRIVATE_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
+
+set(sdl_toolset_lib_PRIVATE_TLS_TRANSLATION_UNITS
+  src/detail/system.cc)
 
 set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/audio_subsystem_fwd.hh
@@ -100,9 +106,8 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
 set(sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
 
-set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
+set(sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS
   src/audio_subsystem.cc
-  src/detail/system.cc
   src/events_subsystem.cc
   src/gamecontroller_subsystem.cc
   src/haptic_subsystem.cc
@@ -146,6 +151,10 @@ set(sdl_toolset_lib_TLS_DIM_HEADER_FILES
   ${sdl_toolset_lib_PRIVATE_TLS_DIM_HEADER_FILES}
   ${sdl_toolset_lib_PUBLIC_TLS_DIM_HEADER_FILES})
 
+set(sdl_toolset_lib_TLS_DIM_TRANSLATION_UNITS
+  ${sdl_toolset_lib_PRIVATE_TLS_DIM_TRANSLATION_UNITS}
+  ${sdl_toolset_lib_PUBLIC_TLS_DIM_TRANSLATION_UNITS})
+
 set(sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES
   ${sdl_toolset_lib_PRIVATE_TLS_FORWARD_DECLARATION_FILES}
   ${sdl_toolset_lib_PRIVATE_TLS_CLASS_DEFINITION_FILES}
@@ -155,6 +164,10 @@ set(sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES
   ${sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES}
   ${sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES}
   ${sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES})
+
+set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
+  ${sdl_toolset_lib_PRIVATE_TLS_TRANSLATION_UNITS}
+  ${sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS})
 
 set(sdl_toolset_lib_TLS_HEADER_FILES
   ${sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES}
