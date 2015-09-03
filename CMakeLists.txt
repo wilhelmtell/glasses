@@ -85,23 +85,23 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
   src/point.hh
   src/positioned_rectangle.hh
   src/rectangle.hh
-  src/renderer_creation_error.hh
   src/renderer.hh
+  src/renderer_creation_error.hh
   src/subsystem_init_error.hh
-  src/surface_creation_error.hh
   src/surface.hh
+  src/surface_creation_error.hh
   src/system.hh
   src/system_init_error.hh
-  src/texture_creation_error.hh
   src/texture.hh
+  src/texture_creation_error.hh
   src/timer_subsystem.hh
   src/ttf_font.hh
   src/ttf_font_open_error.hh
   src/ttf_system.hh
   src/ttf_system_init_error.hh
   src/video_subsystem.hh
-  src/window_creation_error.hh
-  src/window.hh)
+  src/window.hh
+  src/window_creation_error.hh)
 
 set(sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
@@ -119,23 +119,23 @@ set(sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS
   src/point.cc
   src/positioned_rectangle.cc
   src/rectangle.cc
-  src/renderer_creation_error.cc
   src/renderer.cc
+  src/renderer_creation_error.cc
   src/subsystem_init_error.cc
-  src/surface_creation_error.cc
   src/surface.cc
+  src/surface_creation_error.cc
   src/system.cc
   src/system_init_error.cc
-  src/texture_creation_error.cc
   src/texture.cc
+  src/texture_creation_error.cc
   src/timer_subsystem.cc
   src/ttf_font.cc
   src/ttf_font_open_error.cc
   src/ttf_system.cc
   src/ttf_system_init_error.cc
   src/video_subsystem.cc
-  src/window_creation_error.cc
-  src/window.cc)
+  src/window.cc
+  src/window_creation_error.cc)
 
 set(sdl_toolset_lib_PRIVATE_TLS_DIM_HEADER_FILES
   ${sdl_toolset_lib_PRIVATE_TLS_DIM_FORWARD_DECLARATION_FILES}
