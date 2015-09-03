@@ -3,10 +3,11 @@
 
 #include "detail/window.hh"
 #include "rectangle_fwd.hh"
+#include "title_fwd.hh"
 
 namespace tls {
 struct window {
-  window(char const* const title, rectangle dimensions);
+  window(title const& text, rectangle dimensions);
 
   SDL_Window* get() const;
 

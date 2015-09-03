@@ -71,6 +71,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/texture_creation_error_fwd.hh
   src/texture_fwd.hh
   src/timer_subsystem_fwd.hh
+  src/title_fwd.hh
   src/ttf_font_fwd.hh
   src/ttf_font_open_error_fwd.hh
   src/ttf_system_fwd.hh
@@ -106,6 +107,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
   src/texture.hh
   src/texture_creation_error.hh
   src/timer_subsystem.hh
+  src/title.hh
   src/ttf_font.hh
   src/ttf_font_open_error.hh
   src/ttf_system.hh
@@ -144,6 +146,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS
   src/texture.cc
   src/texture_creation_error.cc
   src/timer_subsystem.cc
+  src/title.cc
   src/ttf_font.cc
   src/ttf_font_open_error.cc
   src/ttf_system.cc
