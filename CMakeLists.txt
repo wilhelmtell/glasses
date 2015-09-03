@@ -184,11 +184,11 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
 
 add_dependencies(check_sdl_toolset sdl_toolset_lib)
 
-# nothing produces a file named enough_testing, so tests always run.
-add_custom_command(OUTPUT enough_testing
-  COMMAND check_sdl_toolset --reporter compact
+add_custom_command(OUTPUT tests_passed
+  COMMAND check_sdl_toolset --reporter compact && touch tests_passed
+  DEPENDS check_sdl_toolset
   COMMENT Testing)
-add_custom_target(check DEPENDS enough_testing)
+add_custom_target(check DEPENDS tests_passed)
 
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
   COMMAND git archive --format=zip --prefix="${ARCHIVE_NAME}"/ HEAD >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
