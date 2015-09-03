@@ -194,17 +194,17 @@ add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
   COMMAND git archive --format=zip --prefix="${ARCHIVE_NAME}"/ HEAD >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip"
   DEPENDS check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-  COMMENT Archiving ZIP)
+  COMMENT "Archiving ZIP")
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz"
   COMMAND git archive --format=tar --prefix="${ARCHIVE_NAME}"/ HEAD |gzip -9 >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.gz"
   DEPENDS check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-  COMMENT Archiving GZIP)
+  COMMENT "Archiving GZIP")
 add_custom_command(OUTPUT "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
   COMMAND git archive --format=tar --prefix="${ARCHIVE_NAME}"/ HEAD |xz -9 >"${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz" || rm "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.xz"
   DEPENDS check
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-  COMMENT Archiving XZ)
+  COMMENT "Archiving XZ")
 add_custom_target(dist_zip
   DEPENDS "${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.zip")
 add_custom_target(dist_gz
