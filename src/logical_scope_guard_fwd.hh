@@ -1,6 +1,8 @@
-#ifndef AM_UNIQUE_LOGICAL_RESOURCE_FWD_HH_
-#define AM_UNIQUE_LOGICAL_RESOURCE_FWD_HH_
+#ifndef TLS_LOGICAL_SCOPE_GUARD_FWD_HH_
+#define TLS_LOGICAL_SCOPE_GUARD_FWD_HH_
 
-struct unique_logical_resource;
+namespace tls {
+struct logical_scope_guard;
+}
 
 #endif
