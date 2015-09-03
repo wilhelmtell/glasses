@@ -179,8 +179,7 @@ add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/positioned_rectangle.cc
   test/positioned_rectangle_bottom_right.cc
   test/positioned_rectangle_intersect.cc
-  test/positioned_rectangle_outside.cc
-  test/rectangle.cc)
+  test/positioned_rectangle_outside.cc)
 
 add_dependencies(check_sdl_toolset sdl_toolset_lib)
 
