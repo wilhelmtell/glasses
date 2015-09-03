@@ -3,10 +3,11 @@
 
 #include "positioned_window.hh"
 #include "rectangle_fwd.hh"
+#include "title_fwd.hh"
 
 namespace tls {
 struct centered_window {
-  centered_window(char const* const title, rectangle const& bounds);
+  centered_window(title const& text, rectangle const& bounds);
 
 private:
   positioned_window w;

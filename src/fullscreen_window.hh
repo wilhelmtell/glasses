@@ -3,10 +3,11 @@
 
 #include "detail/window.hh"
 #include "rectangle_fwd.hh"
+#include "title_fwd.hh"
 
 namespace tls {
 struct fullscreen_window {
-  fullscreen_window(char const* const title, rectangle dimensions);
+  fullscreen_window(title const& text, rectangle dimensions);
 
 private:
   detail::window w;

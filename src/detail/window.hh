@@ -5,14 +5,15 @@
 #include <SDL2/SDL.h>
 #include "../positioned_rectangle_fwd.hh"
 #include "../rectangle_fwd.hh"
+#include "../title_fwd.hh"
 
 namespace tls {
 namespace detail {
 struct window {
-  window(char const* const title,
+  window(title const& text,
          positioned_rectangle const& bounds,
          int const& flags);
-  window(char const* const title, rectangle dimensions, int const& flags);
+  window(title const& text, rectangle dimensions, int const& flags);
 
   SDL_Window* get() const;
 

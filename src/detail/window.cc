@@ -4,13 +4,14 @@
 #include "../positioned_rectangle.hh"
 #include "../rectangle.hh"
 #include "../point.hh"
+#include "../title.hh"
 
 namespace tls {
 namespace detail {
-window::window(char const* const title,
+window::window(title const& text,
                positioned_rectangle const& bounds,
                int const& flags)
-: w{SDL_CreateWindow(title,
+: w{SDL_CreateWindow(text.c_str(),
                      bounds.top_left().x,
                      bounds.top_left().y,
                      bounds.width(),
@@ -20,9 +21,9 @@ window::window(char const* const title,
   if(w == nullptr) throw window_creation_error(SDL_GetError());
 }
 
-window::window(char const* const title, rectangle dimensions, int const& flags)
+window::window(title const& text, rectangle dimensions, int const& flags)
 : window(
-    title,
+    text,
     positioned_rectangle(
       point(SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED), dimensions),
     flags) {}

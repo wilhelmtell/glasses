@@ -4,11 +4,11 @@
 #include "detail/window.hh"
 #include "positioned_rectangle_fwd.hh"
 #include "rectangle_fwd.hh"
+#include "title_fwd.hh"
 
 namespace tls {
 struct positioned_window {
-  positioned_window(char const* const title,
-                    positioned_rectangle const& bounds);
+  positioned_window(title const& text, positioned_rectangle const& bounds);
 
 private:
   detail::window w;
