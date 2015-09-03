@@ -2,45 +2,101 @@ cmake_minimum_required(VERSION 3.2.2)
 project(sdl_toolset VERSION 0.0.0.1)
 set(ARCHIVE_NAME "${CMAKE_PROJECT_NAME}-${PROJECT_VERSION}")
 
-set(sdl_toolset_lib_PRIVATE_HEADERS
-  src/detail/system_fwd.hh src/detail/system.hh)
-set(sdl_toolset_lib_PUBLIC_HEADERS
-  src/audio_subsystem_fwd.hh src/audio_subsystem.hh
-  src/dim/height_fwd.hh src/dim/height.hh
-  src/dim/width_fwd.hh src/dim/width.hh
-  src/events_subsystem_fwd.hh src/events_subsystem.hh
-  src/gamecontroller_subsystem_fwd.hh src/gamecontroller_subsystem.hh
-  src/haptic_subsystem_fwd.hh src/haptic_subsystem.hh
-  src/joystick_subsystem_fwd.hh src/joystick_subsystem.hh
-  src/logical_cleanup_fwd.hh src/logical_cleanup.hh
-  src/logical_init_fwd.hh src/logical_init.hh
-  src/logical_scope_guard_fwd.hh src/logical_scope_guard.hh src/logical_scope_guard.tcc
-  src/minimal_system_fwd.hh src/minimal_system.hh
-  src/point_fwd.hh src/point.hh
-  src/positioned_rectangle_fwd.hh src/positioned_rectangle.hh
-  src/rectangle_fwd.hh src/rectangle.hh
+set(sdl_toolset_lib_PRIVATE_TLS_DIM_FORWARD_DECLARATION_FILES
+  "")
+
+set(sdl_toolset_lib_PRIVATE_TLS_DIM_CLASS_DEFINITION_FILES
+  "")
+
+set(sdl_toolset_lib_PRIVATE_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES
+  "")
+
+set(sdl_toolset_lib_PUBLIC_TLS_DIM_FORWARD_DECLARATION_FILES
+  src/dim/height_fwd.hh
+  src/dim/width_fwd.hh)
+
+set(sdl_toolset_lib_PUBLIC_TLS_DIM_CLASS_DEFINITION_FILES
+  src/dim/height.hh
+  src/dim/width.hh)
+
+set(sdl_toolset_lib_PUBLIC_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES
+  "")
+
+set(sdl_toolset_lib_TLS_DIM_TRANSLATION_UNITS
+  src/dim/height.cc
+  src/dim/width.cc)
+
+set(sdl_toolset_lib_PRIVATE_TLS_FORWARD_DECLARATION_FILES
+  src/detail/system_fwd.hh)
+
+set(sdl_toolset_lib_PRIVATE_TLS_CLASS_DEFINITION_FILES
+  src/detail/system.hh)
+
+set(sdl_toolset_lib_PRIVATE_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
+  "")
+
+set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
+  src/audio_subsystem_fwd.hh
+  src/events_subsystem_fwd.hh
+  src/gamecontroller_subsystem_fwd.hh
+  src/haptic_subsystem_fwd.hh
+  src/joystick_subsystem_fwd.hh
+  src/logical_cleanup_fwd.hh
+  src/logical_init_fwd.hh
+  src/logical_scope_guard_fwd.hh
+  src/minimal_system_fwd.hh
+  src/point_fwd.hh
+  src/positioned_rectangle_fwd.hh
+  src/rectangle_fwd.hh
+  src/renderer_fwd.hh
+  src/surface_creation_error_fwd.hh
+  src/surface_fwd.hh
+  src/system_fwd.hh
+  src/texture_creation_error_fwd.hh
+  src/texture_fwd.hh
+  src/timer_subsystem_fwd.hh
+  src/ttf_font_fwd.hh
+  src/ttf_system_fwd.hh
+  src/video_subsystem_fwd.hh
+  src/window_fwd.hh)
+
+set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
+  src/audio_subsystem.hh
+  src/events_subsystem.hh
+  src/gamecontroller_subsystem.hh
+  src/haptic_subsystem.hh
+  src/joystick_subsystem.hh
+  src/logical_cleanup.hh
+  src/logical_init.hh
+  src/logical_scope_guard.hh
+  src/minimal_system.hh
+  src/point.hh
+  src/positioned_rectangle.hh
+  src/rectangle.hh
   src/renderer_creation_error.hh
-  src/renderer_fwd.hh src/renderer.hh
+  src/renderer.hh
   src/subsystem_init_error.hh
-  src/surface_creation_error_fwd.hh src/surface_creation_error.hh
-  src/surface_fwd.hh src/surface.hh
-  src/system_fwd.hh src/system.hh
+  src/surface_creation_error.hh
+  src/surface.hh
+  src/system.hh
   src/system_init_error.hh
-  src/texture_creation_error_fwd.hh src/texture_creation_error.hh
-  src/texture_fwd.hh src/texture.hh
-  src/timer_subsystem_fwd.hh src/timer_subsystem.hh
-  src/ttf_font_fwd.hh src/ttf_font.hh
+  src/texture_creation_error.hh
+  src/texture.hh
+  src/timer_subsystem.hh
+  src/ttf_font.hh
   src/ttf_font_open_error.hh
-  src/ttf_system_fwd.hh src/ttf_system.hh
+  src/ttf_system.hh
   src/ttf_system_init_error.hh
-  src/video_subsystem_fwd.hh src/video_subsystem.hh
+  src/video_subsystem.hh
   src/window_creation_error.hh
-  src/window_fwd.hh src/window.hh)
-set(sdl_toolset_lib_TRANSLATION_UNITS
+  src/window.hh)
+
+set(sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
+  src/logical_scope_guard.tcc)
+
+set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
   src/audio_subsystem.cc
   src/detail/system.cc
-  src/dim/height.cc
-  src/dim/width.cc
   src/events_subsystem.cc
   src/gamecontroller_subsystem.cc
   src/haptic_subsystem.cc
@@ -69,10 +125,40 @@ set(sdl_toolset_lib_TRANSLATION_UNITS
   src/video_subsystem.cc
   src/window_creation_error.cc
   src/window.cc)
+
+set(sdl_toolset_lib_PRIVATE_TLS_DIM_HEADER_FILES
+  ${sdl_toolset_lib_PRIVATE_TLS_DIM_FORWARD_DECLARATION_FILES}
+  ${sdl_toolset_lib_PRIVATE_TLS_DIM_CLASS_DEFINITION_FILES}
+  ${sdl_toolset_lib_PRIVATE_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES})
+
+set(sdl_toolset_lib_PUBLIC_TLS_DIM_HEADER_FILES
+  ${sdl_toolset_lib_PUBLIC_TLS_DIM_FORWARD_DECLARATION_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_DIM_CLASS_DEFINITION_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_DIM_TEMPLATE_FUNCTION_DEFINITION_FILES})
+
+set(sdl_toolset_lib_TLS_DIM_HEADER_FILES
+  ${sdl_toolset_lib_PRIVATE_TLS_DIM_HEADER_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_DIM_HEADER_FILES})
+
+set(sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES
+  ${sdl_toolset_lib_PRIVATE_TLS_FORWARD_DECLARATION_FILES}
+  ${sdl_toolset_lib_PRIVATE_TLS_CLASS_DEFINITION_FILES}
+  ${sdl_toolset_lib_PRIVATE_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES})
+
+set(sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES
+  ${sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES})
+
+set(sdl_toolset_lib_TLS_HEADER_FILES
+  ${sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES}
+  ${sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES})
+
 add_library(sdl_toolset_lib
-  ${sdl_toolset_lib_PRIVATE_HEADERS}
-  ${sdl_toolset_lib_PUBLIC_HEADERS}
-  ${sdl_toolset_lib_TRANSLATION_UNITS})
+  ${sdl_toolset_lib_TLS_DIM_HEADER_FILES}
+  ${sdl_toolset_lib_TLS_DIM_TRANSLATION_UNITS}
+  ${sdl_toolset_lib_TLS_HEADER_FILES}
+  ${sdl_toolset_lib_TLS_TRANSLATION_UNITS})
 
 add_executable(check_sdl_toolset EXCLUDE_FROM_ALL test/main.cc
   test/dim/height.cc
@@ -129,7 +215,11 @@ target_link_libraries(check_sdl_toolset sdl_toolset_lib)
 
 install(TARGETS sdl_toolset_lib
   DESTINATION lib)
-install(FILES ${sdl_toolset_lib_PRIVATE_HEADERS}
+install(FILES ${sdl_toolset_lib_PRIVATE_TLS_DIM_HEADER_FILES}
+  DESTINATION include/sdl_toolset/detail/dim)
+install(FILES ${sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES}
   DESTINATION include/sdl_toolset/detail)
-install(FILES ${sdl_toolset_lib_PUBLIC_HEADERS}
+install(FILES ${sdl_toolset_lib_PUBLIC_TLS_DIM_HEADER_FILES}
+  DESTINATION include/sdl_toolset/dim)
+install(FILES ${sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES}
   DESTINATION include/sdl_toolset)
