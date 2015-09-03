@@ -120,7 +120,7 @@ pkg_search_module(SDL2 REQUIRED sdl2)
 pkg_search_module(SDL2TTF REQUIRED SDL2_ttf>=2.0.12)
 if(SDL2_FOUND)
   include_directories("${SDL2_INCLUDE_DIRS}" "${SDL2TTF_INCLUDE_DIRS}")
-  target_link_libraries(check_sdl_toolset "${SDL3_LIBRARIES}" "${SDL2TTF_LIBRARIES}")
+  target_link_libraries(check_sdl_toolset "${SDL2_LIBRARIES}" "${SDL2TTF_LIBRARIES}")
 endif()
 
 include_directories("${PROJECT_BINARY_DIR}")
