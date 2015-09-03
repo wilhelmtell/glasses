@@ -48,6 +48,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/audio_subsystem_fwd.hh
   src/centered_window_fwd.hh
   src/events_subsystem_fwd.hh
+  src/fullscreen_window_fwd.hh
   src/gamecontroller_subsystem_fwd.hh
   src/haptic_subsystem_fwd.hh
   src/joystick_subsystem_fwd.hh
@@ -81,6 +82,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
   src/audio_subsystem.hh
   src/centered_window.hh
   src/events_subsystem.hh
+  src/fullscreen_window.hh
   src/gamecontroller_subsystem.hh
   src/haptic_subsystem.hh
   src/joystick_subsystem.hh
@@ -117,6 +119,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS
   src/audio_subsystem.cc
   src/centered_window.cc
   src/events_subsystem.cc
+  src/fullscreen_window.cc
   src/gamecontroller_subsystem.cc
   src/haptic_subsystem.cc
   src/joystick_subsystem.cc
