@@ -1,28 +1,22 @@
 #ifndef TLS_WINDOW_HANDLE_HH_
 #define TLS_WINDOW_HANDLE_HH_
 
-#include <memory>
-#include <SDL2/SDL.h>
+#include "detail/window.hh"
 #include "positioned_rectangle_fwd.hh"
 #include "rectangle_fwd.hh"
 
 namespace tls {
 struct window {
-  window(char const* const title,
-         positioned_rectangle const& bounds,
-         int const& flags);
-  window(char const* const title, rectangle dimensions, int const& flags);
+  window(char const* const title, positioned_rectangle const& bounds);
+  window(char const* const title, rectangle dimensions);
 
   SDL_Window* get() const;
 
 private:
-  using pointer = std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)>;
-  pointer w;
+  detail::window w;
 };
 
-window make_centered_window(char const* const title,
-                            rectangle r,
-                            int const& flags);
+window make_centered_window(char const* const title, rectangle r);
 }
 
 #endif
