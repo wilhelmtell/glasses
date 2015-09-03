@@ -165,13 +165,13 @@ set(sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES
   ${sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES}
   ${sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES})
 
-set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
-  ${sdl_toolset_lib_PRIVATE_TLS_TRANSLATION_UNITS}
-  ${sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS})
-
 set(sdl_toolset_lib_TLS_HEADER_FILES
   ${sdl_toolset_lib_PRIVATE_TLS_HEADER_FILES}
   ${sdl_toolset_lib_PUBLIC_TLS_HEADER_FILES})
+
+set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
+  ${sdl_toolset_lib_PRIVATE_TLS_TRANSLATION_UNITS}
+  ${sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS})
 
 add_library(sdl_toolset_lib
   ${sdl_toolset_lib_TLS_DIM_HEADER_FILES}
