@@ -30,16 +30,19 @@ set(sdl_toolset_lib_PUBLIC_TLS_DIM_TRANSLATION_UNITS
   src/dim/width.cc)
 
 set(sdl_toolset_lib_PRIVATE_TLS_FORWARD_DECLARATION_FILES
-  src/detail/system_fwd.hh)
+  src/detail/system_fwd.hh
+  src/detail/window_fwd.hh)
 
 set(sdl_toolset_lib_PRIVATE_TLS_CLASS_DEFINITION_FILES
-  src/detail/system.hh)
+  src/detail/system.hh
+  src/detail/window.hh)
 
 set(sdl_toolset_lib_PRIVATE_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
   "")
 
 set(sdl_toolset_lib_PRIVATE_TLS_TRANSLATION_UNITS
-  src/detail/system.cc)
+  src/detail/system.cc
+  src/detail/window.cc)
 
 set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/audio_subsystem_fwd.hh
