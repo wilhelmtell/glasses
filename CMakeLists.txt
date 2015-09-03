@@ -48,16 +48,22 @@ set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/point_fwd.hh
   src/positioned_rectangle_fwd.hh
   src/rectangle_fwd.hh
+  src/renderer_creation_error_fwd.hh
   src/renderer_fwd.hh
+  src/subsystem_init_error_fwd.hh
   src/surface_creation_error_fwd.hh
   src/surface_fwd.hh
   src/system_fwd.hh
+  src/system_init_error_fwd.hh
   src/texture_creation_error_fwd.hh
   src/texture_fwd.hh
   src/timer_subsystem_fwd.hh
   src/ttf_font_fwd.hh
+  src/ttf_font_open_error_fwd.hh
   src/ttf_system_fwd.hh
+  src/ttf_system_init_error_fwd.hh
   src/video_subsystem_fwd.hh
+  src/window_creation_error_fwd.hh
   src/window_fwd.hh)
 
 set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
