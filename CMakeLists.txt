@@ -56,6 +56,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_FORWARD_DECLARATION_FILES
   src/minimal_system_fwd.hh
   src/point_fwd.hh
   src/positioned_rectangle_fwd.hh
+  src/positioned_window_fwd.hh
   src/rectangle_fwd.hh
   src/renderer_creation_error_fwd.hh
   src/renderer_fwd.hh
@@ -87,6 +88,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
   src/minimal_system.hh
   src/point.hh
   src/positioned_rectangle.hh
+  src/positioned_window.hh
   src/rectangle.hh
   src/renderer.hh
   src/renderer_creation_error.hh
@@ -121,6 +123,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_TRANSLATION_UNITS
   src/minimal_system.cc
   src/point.cc
   src/positioned_rectangle.cc
+  src/positioned_window.cc
   src/rectangle.cc
   src/renderer.cc
   src/renderer_creation_error.cc
