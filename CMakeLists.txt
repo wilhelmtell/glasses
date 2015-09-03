@@ -98,7 +98,7 @@ set(sdl_toolset_lib_PUBLIC_TLS_CLASS_DEFINITION_FILES
   src/window.hh)
 
 set(sdl_toolset_lib_PUBLIC_TLS_TEMPLATE_FUNCTION_DEFINITION_FILES
-  src/logical_scope_guard.tcc)
+  "")
 
 set(sdl_toolset_lib_TLS_TRANSLATION_UNITS
   src/audio_subsystem.cc

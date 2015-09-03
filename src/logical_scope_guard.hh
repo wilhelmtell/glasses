@@ -16,6 +16,4 @@ private:
 };
 }
 
-#include "logical_scope_guard.tcc"
-
 #endif
