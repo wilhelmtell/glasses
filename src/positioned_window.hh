@@ -13,8 +13,6 @@ struct positioned_window {
 private:
   detail::window w;
 };
-
-positioned_window make_centered_window(char const* const title, rectangle r);
 }
 
 #endif
