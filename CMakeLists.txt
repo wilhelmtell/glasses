@@ -47,6 +47,7 @@ set(glasses_lib_PRIVATE_GLS_TRANSLATION_UNITS
 set(glasses_lib_PUBLIC_GLS_FORWARD_DECLARATION_FILES
   src/audio_subsystem_fwd.hh
   src/centered_window_fwd.hh
+  src/event_dispatch_fwd.hh
   src/event_loop_fwd.hh
   src/events_subsystem_fwd.hh
   src/fullscreen_desktop_window_fwd.hh
@@ -84,6 +85,7 @@ set(glasses_lib_PUBLIC_GLS_FORWARD_DECLARATION_FILES
 set(glasses_lib_PUBLIC_GLS_CLASS_DEFINITION_FILES
   src/audio_subsystem.hh
   src/centered_window.hh
+  src/event_dispatch.hh
   src/event_loop.hh
   src/events_subsystem.hh
   src/fullscreen_desktop_window.hh
@@ -124,6 +126,7 @@ set(glasses_lib_PUBLIC_GLS_TEMPLATE_FUNCTION_DEFINITION_FILES
 set(glasses_lib_PUBLIC_GLS_TRANSLATION_UNITS
   src/audio_subsystem.cc
   src/centered_window.cc
+  src/event_dispatch.cc
   src/events_subsystem.cc
   src/fullscreen_desktop_window.cc
   src/fullscreen_window.cc
