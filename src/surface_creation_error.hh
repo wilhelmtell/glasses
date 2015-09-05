@@ -5,6 +5,7 @@
 
 namespace tls {
 struct surface_creation_error : std::runtime_error {
+  surface_creation_error() = default;
   explicit surface_creation_error(char const* const m);
 };
 }
