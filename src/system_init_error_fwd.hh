@@ -1,7 +1,7 @@
-#ifndef TLS_SYSTEM_INIT_ERROR_FWD_HH_
-#define TLS_SYSTEM_INIT_ERROR_FWD_HH_
+#ifndef GLS_SYSTEM_INIT_ERROR_FWD_HH_
+#define GLS_SYSTEM_INIT_ERROR_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct system_init_error;
 }
 

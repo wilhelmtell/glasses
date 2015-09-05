@@ -1,5 +1,5 @@
-#ifndef TLS_MINIMAL_SYSTEM_HH_
-#define TLS_MINIMAL_SYSTEM_HH_
+#ifndef GLS_MINIMAL_SYSTEM_HH_
+#define GLS_MINIMAL_SYSTEM_HH_
 
 #include "detail/system.hh"
 
@@ -12,12 +12,12 @@
 //  namespace user {
 //  struct system {
 //  private:
-//    tls::minimal_system sys;
-//    tls::video_subsystem;
-//    tls::timer_subsystem;
+//    gls::minimal_system sys;
+//    gls::video_subsystem;
+//    gls::timer_subsystem;
 //  };
 //  }
-namespace tls {
+namespace gls {
 struct minimal_system {
   minimal_system();
 

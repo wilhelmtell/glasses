@@ -1,6 +1,6 @@
 #include "width.hh"
 
-namespace tls {
+namespace gls {
 namespace dim {
 width::width(width::value_type value) : value{value} {}
 

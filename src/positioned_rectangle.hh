@@ -1,12 +1,12 @@
-#ifndef TLS_POSITIONED_RECTANGLE_HH_
-#define TLS_POSITIONED_RECTANGLE_HH_
+#ifndef GLS_POSITIONED_RECTANGLE_HH_
+#define GLS_POSITIONED_RECTANGLE_HH_
 
 #include "rectangle.hh"
 #include "dim/width_fwd.hh"
 #include "dim/height_fwd.hh"
 #include "point.hh"
 
-namespace tls {
+namespace gls {
 struct positioned_rectangle {
   positioned_rectangle() = default;
   positioned_rectangle(point p, rectangle r);

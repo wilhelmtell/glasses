@@ -1,6 +1,6 @@
 #include "height.hh"
 
-namespace tls {
+namespace gls {
 namespace dim {
 height::height(height::value_type value) : value{value} {}
 

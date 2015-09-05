@@ -1,7 +1,7 @@
-#ifndef TLS_RENDERER_FWD_HH_
-#define TLS_RENDERER_FWD_HH_
+#ifndef GLS_RENDERER_FWD_HH_
+#define GLS_RENDERER_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct renderer;
 }
 

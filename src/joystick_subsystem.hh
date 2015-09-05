@@ -1,7 +1,7 @@
-#ifndef TLS_JOYSTICK_SUBSYSTEM_HH_
-#define TLS_JOYSTICK_SUBSYSTEM_HH_
+#ifndef GLS_JOYSTICK_SUBSYSTEM_HH_
+#define GLS_JOYSTICK_SUBSYSTEM_HH_
 
-namespace tls {
+namespace gls {
 struct joystick_subsystem {
   joystick_subsystem();
 };

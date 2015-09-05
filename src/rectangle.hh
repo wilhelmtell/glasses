@@ -1,10 +1,10 @@
-#ifndef TLS_RECTANGLE_HH_
-#define TLS_RECTANGLE_HH_
+#ifndef GLS_RECTANGLE_HH_
+#define GLS_RECTANGLE_HH_
 
 #include "dim/width.hh"
 #include "dim/height.hh"
 
-namespace tls {
+namespace gls {
 struct rectangle {
   rectangle() = default;
   rectangle(dim::width w, dim::height h);

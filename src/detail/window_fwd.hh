@@ -1,7 +1,7 @@
-#ifndef TLS_DETAIL_WINDOW_FWD_HH_
-#define TLS_DETAIL_WINDOW_FWD_HH_
+#ifndef GLS_DETAIL_WINDOW_FWD_HH_
+#define GLS_DETAIL_WINDOW_FWD_HH_
 
-namespace tls {
+namespace gls {
 namespace detail {
 struct window;
 }

@@ -2,7 +2,7 @@
 #include <functional>
 #include <utility>
 
-namespace tls {
+namespace gls {
 logical_cleanup::logical_cleanup(std::function<void()> c) : c(std::move(c)) {}
 
 logical_cleanup::logical_cleanup(logical_cleanup&& rhs) : c(std::move(rhs.c)) {

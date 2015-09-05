@@ -1,7 +1,7 @@
-#ifndef TLS_WINDOW_FWD_HH_
-#define TLS_WINDOW_FWD_HH_
+#ifndef GLS_WINDOW_FWD_HH_
+#define GLS_WINDOW_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct window;
 }
 

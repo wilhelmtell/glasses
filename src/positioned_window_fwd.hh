@@ -1,7 +1,7 @@
-#ifndef TLS_POSITIONED_WINDOW_FWD_HH_
-#define TLS_POSITIONED_WINDOW_FWD_HH_
+#ifndef GLS_POSITIONED_WINDOW_FWD_HH_
+#define GLS_POSITIONED_WINDOW_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct positioned_window;
 }
 

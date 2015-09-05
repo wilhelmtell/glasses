@@ -1,7 +1,7 @@
-#ifndef TLS_EVENTS_SUBSYSTEM_HH_
-#define TLS_EVENTS_SUBSYSTEM_HH_
+#ifndef GLS_EVENTS_SUBSYSTEM_HH_
+#define GLS_EVENTS_SUBSYSTEM_HH_
 
-namespace tls {
+namespace gls {
 struct events_subsystem {
   events_subsystem();
 };

@@ -1,7 +1,7 @@
-#ifndef TLS_TTF_FONT_FWD_HH_
-#define TLS_TTF_FONT_FWD_HH_
+#ifndef GLS_TTF_FONT_FWD_HH_
+#define GLS_TTF_FONT_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct ttf_font;
 }
 

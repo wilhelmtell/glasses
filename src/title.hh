@@ -1,7 +1,7 @@
-#ifndef TLS_TITLE_HH_
-#define TLS_TITLE_HH_
+#ifndef GLS_TITLE_HH_
+#define GLS_TITLE_HH_
 
-namespace tls {
+namespace gls {
 struct title {
   title() = default;
   explicit title(char const* t);

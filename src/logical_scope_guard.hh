@@ -1,11 +1,11 @@
-#ifndef TLS_LOGICAL_SCOPE_GUARD_HH_
-#define TLS_LOGICAL_SCOPE_GUARD_HH_
+#ifndef GLS_LOGICAL_SCOPE_GUARD_HH_
+#define GLS_LOGICAL_SCOPE_GUARD_HH_
 
 #include <functional>
 #include "logical_cleanup.hh"
 #include "logical_init.hh"
 
-namespace tls {
+namespace gls {
 struct logical_scope_guard {
   logical_scope_guard() = default;
   explicit logical_scope_guard(logical_cleanup c);

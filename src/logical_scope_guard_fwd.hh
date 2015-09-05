@@ -1,7 +1,7 @@
-#ifndef TLS_LOGICAL_SCOPE_GUARD_FWD_HH_
-#define TLS_LOGICAL_SCOPE_GUARD_FWD_HH_
+#ifndef GLS_LOGICAL_SCOPE_GUARD_FWD_HH_
+#define GLS_LOGICAL_SCOPE_GUARD_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct logical_scope_guard;
 }
 

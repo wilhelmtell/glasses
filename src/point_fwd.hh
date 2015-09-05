@@ -1,7 +1,7 @@
-#ifndef TLS_POINT_FWD_HH_
-#define TLS_POINT_FWD_HH_
+#ifndef GLS_POINT_FWD_HH_
+#define GLS_POINT_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct point;
 }
 

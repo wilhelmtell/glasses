@@ -1,9 +1,9 @@
-#ifndef TLS_LOGICAL_CLEANUP_HH_
-#define TLS_LOGICAL_CLEANUP_HH_
+#ifndef GLS_LOGICAL_CLEANUP_HH_
+#define GLS_LOGICAL_CLEANUP_HH_
 
 #include <functional>
 
-namespace tls {
+namespace gls {
 struct logical_cleanup {
   logical_cleanup() = default;
   explicit logical_cleanup(std::function<void()> c);

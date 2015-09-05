@@ -1,7 +1,7 @@
-#ifndef TLS_AUDIO_SUBSYSTEM_HH_
-#define TLS_AUDIO_SUBSYSTEM_HH_
+#ifndef GLS_AUDIO_SUBSYSTEM_HH_
+#define GLS_AUDIO_SUBSYSTEM_HH_
 
-namespace tls {
+namespace gls {
 struct audio_subsystem {
   audio_subsystem();
 };

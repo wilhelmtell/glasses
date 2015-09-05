@@ -3,7 +3,7 @@
 #include "dim/width.hh"
 #include "dim/height.hh"
 
-namespace tls {
+namespace gls {
 rectangle::rectangle(dim::width w, dim::height h)
 : w(std::move(w)), h(std::move(h)) {}
 

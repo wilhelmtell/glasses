@@ -4,7 +4,7 @@
 #include "dim/height.hh"
 #include "point.hh"
 
-namespace tls {
+namespace gls {
 positioned_rectangle::positioned_rectangle(point p, rectangle r)
 : p{std::move(p)}, r(std::move(r)) {}
 

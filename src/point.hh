@@ -1,9 +1,9 @@
-#ifndef TLS_POINT_HH_
-#define TLS_POINT_HH_
+#ifndef GLS_POINT_HH_
+#define GLS_POINT_HH_
 
 #include "positioned_rectangle_fwd.hh"
 
-namespace tls {
+namespace gls {
 struct point {
   point() = default;
   point(int x, int y);
