@@ -6,7 +6,7 @@
 namespace tls {
 struct window_creation_error : std::runtime_error {
   window_creation_error() = default;
-  window_creation_error(char const* const m);
+  explicit window_creation_error(char const* const m);
 };
 }
 
