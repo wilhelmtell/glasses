@@ -3,7 +3,6 @@
 
 #include "detail/window.hh"
 #include "positioned_rectangle_fwd.hh"
-#include "rectangle_fwd.hh"
 #include "title_fwd.hh"
 
 namespace tls {
