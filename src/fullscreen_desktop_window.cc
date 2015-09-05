@@ -4,7 +4,6 @@
 #include "title.hh"
 
 namespace tls {
-fullscreen_desktop_window::fullscreen_desktop_window(title const& text,
-                                                     rectangle dimensions)
-: w(text, dimensions, SDL_WINDOW_FULLSCREEN_DESKTOP) {}
+fullscreen_desktop_window::fullscreen_desktop_window(title const& text)
+: w(text, rectangle(), SDL_WINDOW_FULLSCREEN_DESKTOP) {}
 }
