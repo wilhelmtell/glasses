@@ -5,6 +5,7 @@
 
 namespace tls {
 struct texture_creation_error : std::runtime_error {
+  texture_creation_error() = default;
   explicit texture_creation_error(char const* const m);
 };
 }
