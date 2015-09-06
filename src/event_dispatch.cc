@@ -20,4 +20,16 @@ void event_dispatch::quit() const { quit_signal(); }
 connection event_dispatch::on_quit(quit_slot_t const& op) {
   return quit_signal.connect(op);
 }
+
+void event_dispatch::keydown_0() const { keydown_0_signal(); }
+
+connection event_dispatch::on_keydown_0(keydown_0_slot_t const& op) {
+  return keydown_0_signal.connect(op);
+}
+
+void event_dispatch::keydown_1() const { keydown_1_signal(); }
+
+connection event_dispatch::on_keydown_1(keydown_1_slot_t const& op) {
+  return keydown_1_signal.connect(op);
+}
 }
