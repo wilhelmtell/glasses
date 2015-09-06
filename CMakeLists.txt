@@ -256,6 +256,11 @@ set_target_properties(glasses_lib check_glasses PROPERTIES
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wextra -pedantic -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
+find_package(Boost 1.58.0 REQUIRED COMPONENTS signals)
+include_directories("${Boost_INCLUDE_DIRS}")
+link_directories("${Boost_LIBRARY_DIRS}")
+target_link_libraries(check_glasses "${Boost_LIBRARIES}")
+
 include(FindPkgConfig)
 pkg_check_modules(SDL REQUIRED
   sdl2>=2.0.3
