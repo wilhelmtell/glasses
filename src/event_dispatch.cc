@@ -32,4 +32,52 @@ void event_dispatch::keydown_1() const { keydown_1_signal(); }
 connection event_dispatch::on_keydown_1(keydown_1_slot_t const& op) {
   return keydown_1_signal.connect(op);
 }
+
+void event_dispatch::keydown_2() const { keydown_2_signal(); }
+
+connection event_dispatch::on_keydown_2(keydown_2_slot_t const& op) {
+  return keydown_2_signal.connect(op);
+}
+
+void event_dispatch::keydown_3() const { keydown_3_signal(); }
+
+connection event_dispatch::on_keydown_3(keydown_3_slot_t const& op) {
+  return keydown_3_signal.connect(op);
+}
+
+void event_dispatch::keydown_4() const { keydown_4_signal(); }
+
+connection event_dispatch::on_keydown_4(keydown_4_slot_t const& op) {
+  return keydown_4_signal.connect(op);
+}
+
+void event_dispatch::keydown_5() const { keydown_5_signal(); }
+
+connection event_dispatch::on_keydown_5(keydown_5_slot_t const& op) {
+  return keydown_5_signal.connect(op);
+}
+
+void event_dispatch::keydown_6() const { keydown_6_signal(); }
+
+connection event_dispatch::on_keydown_6(keydown_6_slot_t const& op) {
+  return keydown_6_signal.connect(op);
+}
+
+void event_dispatch::keydown_7() const { keydown_7_signal(); }
+
+connection event_dispatch::on_keydown_7(keydown_7_slot_t const& op) {
+  return keydown_7_signal.connect(op);
+}
+
+void event_dispatch::keydown_8() const { keydown_8_signal(); }
+
+connection event_dispatch::on_keydown_8(keydown_8_slot_t const& op) {
+  return keydown_8_signal.connect(op);
+}
+
+void event_dispatch::keydown_9() const { keydown_9_signal(); }
+
+connection event_dispatch::on_keydown_9(keydown_9_slot_t const& op) {
+  return keydown_9_signal.connect(op);
+}
 }
