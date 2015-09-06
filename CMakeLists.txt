@@ -252,12 +252,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wextra -pedantic -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
 include(FindPkgConfig)
-pkg_search_module(SDL2 REQUIRED sdl2)
-pkg_search_module(SDL2TTF REQUIRED SDL2_ttf>=2.0.12)
-if(SDL2_FOUND)
-  include_directories("${SDL2_INCLUDE_DIRS}" "${SDL2TTF_INCLUDE_DIRS}")
-  target_link_libraries(check_glasses "${SDL2_LIBRARIES}" "${SDL2TTF_LIBRARIES}")
-endif()
+pkg_check_modules(SDL REQUIRED
+  sdl2>=2.0.3
+  SDL2_ttf>=2.0.12)
+include_directories("${SDL_INCLUDE_DIRS}")
+link_directories("${SDL_LIBRARY_DIRS}")
+target_link_libraries(check_glasses "${SDL_LIBRARIES}")
 
 include_directories("${PROJECT_BINARY_DIR}")
 
