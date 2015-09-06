@@ -35,10 +35,12 @@ set(glasses_lib_PRIVATE_GLS_FORWARD_DECLARATION_FILES
 
 set(glasses_lib_PRIVATE_GLS_CLASS_DEFINITION_FILES
   src/detail/system.hh
+  src/detail/translate_event.hh
   src/detail/translate_keydown_event.hh
   src/detail/window.hh)
 
 set(glasses_lib_PRIVATE_GLS_TEMPLATE_FUNCTION_DEFINITION_FILES
+  src/detail/translate_event.tcc
   src/detail/translate_keydown_event.tcc)
 
 set(glasses_lib_PRIVATE_GLS_TRANSLATION_UNITS
