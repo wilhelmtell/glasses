@@ -1,9 +1,9 @@
-#ifndef TLS_DETAIL_SYSTEM_HH_
-#define TLS_DETAIL_SYSTEM_HH_
+#ifndef GLS_DETAIL_SYSTEM_HH_
+#define GLS_DETAIL_SYSTEM_HH_
 
 #include "../logical_scope_guard.hh"
 
-namespace tls {
+namespace gls {
 namespace detail {
 struct system {
   explicit system(int const& flags);

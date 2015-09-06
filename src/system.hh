@@ -1,10 +1,10 @@
-#ifndef TLS_SYSTEM_HH_
-#define TLS_SYSTEM_HH_
+#ifndef GLS_SYSTEM_HH_
+#define GLS_SYSTEM_HH_
 
 #include "detail/system.hh"
 
 // Initialize all SDL subsystems
-namespace tls {
+namespace gls {
 struct system {
   system();
 

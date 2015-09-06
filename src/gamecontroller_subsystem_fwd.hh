@@ -1,7 +1,7 @@
-#ifndef TLS_GAMECONTROLLER_SUBSYSTEM_FWD_HH_
-#define TLS_GAMECONTROLLER_SUBSYSTEM_FWD_HH_
+#ifndef GLS_GAMECONTROLLER_SUBSYSTEM_FWD_HH_
+#define GLS_GAMECONTROLLER_SUBSYSTEM_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct gamecontroller_subsystem;
 }
 

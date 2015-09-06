@@ -1,5 +1,5 @@
-#ifndef TLS_DETAIL_WINDOW_HH_
-#define TLS_DETAIL_WINDOW_HH_
+#ifndef GLS_DETAIL_WINDOW_HH_
+#define GLS_DETAIL_WINDOW_HH_
 
 #include <memory>
 #include <SDL2/SDL.h>
@@ -7,7 +7,7 @@
 #include "../rectangle_fwd.hh"
 #include "../title_fwd.hh"
 
-namespace tls {
+namespace gls {
 namespace detail {
 struct window {
   window(title const& text,

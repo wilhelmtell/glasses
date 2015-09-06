@@ -1,11 +1,11 @@
-#ifndef TLS_RENDERER_HH_
-#define TLS_RENDERER_HH_
+#ifndef GLS_RENDERER_HH_
+#define GLS_RENDERER_HH_
 
 #include <memory>
 #include <SDL2/SDL.h>
 #include "window_fwd.hh"
 
-namespace tls {
+namespace gls {
 struct renderer {
   renderer(window const& w, int const& index, int const& flags);
 

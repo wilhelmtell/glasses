@@ -1,7 +1,7 @@
-#ifndef TLS_HAPTIC_SUBSYSTEM_FWD_HH_
-#define TLS_HAPTIC_SUBSYSTEM_FWD_HH_
+#ifndef GLS_HAPTIC_SUBSYSTEM_FWD_HH_
+#define GLS_HAPTIC_SUBSYSTEM_FWD_HH_
 
-namespace tls {
+namespace gls {
 struct haptic_subsystem;
 }
 

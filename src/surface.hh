@@ -1,10 +1,10 @@
-#ifndef TLS_SURFACE_HH_
-#define TLS_SURFACE_HH_
+#ifndef GLS_SURFACE_HH_
+#define GLS_SURFACE_HH_
 
 #include <memory>
 #include <SDL2/SDL.h>
 
-namespace tls {
+namespace gls {
 struct surface {
   explicit surface(char const* const bmp_filename);
 

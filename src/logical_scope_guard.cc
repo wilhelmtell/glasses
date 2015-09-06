@@ -3,7 +3,7 @@
 #include "logical_cleanup.hh"
 #include <utility>
 
-namespace tls {
+namespace gls {
 logical_scope_guard::logical_scope_guard(logical_cleanup c)
 : c(std::move(c)) {}
 

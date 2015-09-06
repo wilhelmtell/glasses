@@ -1,12 +1,12 @@
-#ifndef TLS_TEXTURE_HH_
-#define TLS_TEXTURE_HH_
+#ifndef GLS_TEXTURE_HH_
+#define GLS_TEXTURE_HH_
 
 #include <memory>
 #include <SDL2/SDL.h>
 #include "surface_fwd.hh"
 #include "renderer_fwd.hh"
 
-namespace tls {
+namespace gls {
 struct texture {
   texture(renderer& r, surface& s);
   texture(renderer& r, char const* const bmp_filename);

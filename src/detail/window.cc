@@ -6,7 +6,7 @@
 #include "../point.hh"
 #include "../title.hh"
 
-namespace tls {
+namespace gls {
 namespace detail {
 window::window(title const& text,
                positioned_rectangle const& bounds,

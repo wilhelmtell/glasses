@@ -3,7 +3,7 @@
 #include "rectangle.hh"
 #include "title.hh"
 
-namespace tls {
+namespace gls {
 window::window(title const& text, rectangle dimensions)
 : w(text, dimensions, 0) {}
 

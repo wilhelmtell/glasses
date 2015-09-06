@@ -1,7 +1,7 @@
-#ifndef TLS_DIM_HEIGHT_HH_
-#define TLS_DIM_HEIGHT_HH_
+#ifndef GLS_DIM_HEIGHT_HH_
+#define GLS_DIM_HEIGHT_HH_
 
-namespace tls {
+namespace gls {
 namespace dim {
 struct height {
   using value_type = int;

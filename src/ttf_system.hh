@@ -1,9 +1,9 @@
-#ifndef TLS_TTF_SYSTEM_HH_
-#define TLS_TTF_SYSTEM_HH_
+#ifndef GLS_TTF_SYSTEM_HH_
+#define GLS_TTF_SYSTEM_HH_
 
 #include "logical_scope_guard.hh"
 
-namespace tls {
+namespace gls {
 struct ttf_system {
   ttf_system();
 

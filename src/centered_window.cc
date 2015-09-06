@@ -4,7 +4,7 @@
 #include "point.hh"
 #include <SDL2/SDL.h>
 
-namespace tls {
+namespace gls {
 centered_window::centered_window(title const& text, rectangle const& bounds)
 : w(text,
     positioned_rectangle(point(SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED),
