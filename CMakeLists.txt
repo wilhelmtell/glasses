@@ -47,6 +47,8 @@ set(glasses_lib_PRIVATE_GLS_TRANSLATION_UNITS
 set(glasses_lib_PUBLIC_GLS_FORWARD_DECLARATION_FILES
   src/audio_subsystem_fwd.hh
   src/centered_window_fwd.hh
+  src/event_dispatch_fwd.hh
+  src/event_loop_fwd.hh
   src/events_subsystem_fwd.hh
   src/fullscreen_desktop_window_fwd.hh
   src/fullscreen_window_fwd.hh
@@ -83,6 +85,8 @@ set(glasses_lib_PUBLIC_GLS_FORWARD_DECLARATION_FILES
 set(glasses_lib_PUBLIC_GLS_CLASS_DEFINITION_FILES
   src/audio_subsystem.hh
   src/centered_window.hh
+  src/event_dispatch.hh
+  src/event_loop.hh
   src/events_subsystem.hh
   src/fullscreen_desktop_window.hh
   src/fullscreen_window.hh
@@ -117,11 +121,12 @@ set(glasses_lib_PUBLIC_GLS_CLASS_DEFINITION_FILES
   src/window_creation_error.hh)
 
 set(glasses_lib_PUBLIC_GLS_TEMPLATE_FUNCTION_DEFINITION_FILES
-  "")
+  src/event_loop.tcc)
 
 set(glasses_lib_PUBLIC_GLS_TRANSLATION_UNITS
   src/audio_subsystem.cc
   src/centered_window.cc
+  src/event_dispatch.cc
   src/events_subsystem.cc
   src/fullscreen_desktop_window.cc
   src/fullscreen_window.cc
@@ -250,6 +255,11 @@ set_target_properties(glasses_lib check_glasses PROPERTIES
   CXX_EXTENSIONS false)
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wextra -pedantic -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+
+find_package(Boost 1.58.0 REQUIRED COMPONENTS signals)
+include_directories("${Boost_INCLUDE_DIRS}")
+link_directories("${Boost_LIBRARY_DIRS}")
+target_link_libraries(check_glasses "${Boost_LIBRARIES}")
 
 include(FindPkgConfig)
 pkg_check_modules(SDL REQUIRED
