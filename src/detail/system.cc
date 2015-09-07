@@ -2,7 +2,6 @@
 #include <SDL2/SDL.h>
 #include "../logical_cleanup.hh"
 #include "../system_init_error.hh"
-#include <functional>
 
 namespace {
 void init_or_throw(int const& flags) {
@@ -13,7 +12,7 @@ void init_or_throw(int const& flags) {
 namespace gls {
 namespace detail {
 system::system(int const& flags)
-: guard(logical_init(std::bind(&init_or_throw, flags)),
+: guard(logical_init([&] { init_or_throw(flags); }),
         logical_cleanup(&SDL_Quit)) {}
 }
 }
