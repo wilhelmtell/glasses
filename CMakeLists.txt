@@ -249,6 +249,10 @@ add_custom_target(dist_xz
 add_custom_target(dist DEPENDS dist_zip dist_gz dist_xz
   COMMENT Archiving)
 
+execute_process(COMMAND git describe --dirty
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE PROJECT_VERSION_BUILD)
+
 configure_file("${PROJECT_SOURCE_DIR}/config.h.in" "${PROJECT_BINARY_DIR}/config.h")
 
 set_target_properties(glasses_lib PROPERTIES OUTPUT_NAME glasses)
