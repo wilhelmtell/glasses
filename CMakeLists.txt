@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2.2)
-project(glasses VERSION 0.0.0.1)
+project(glasses VERSION 0.2)
 set(ARCHIVE_NAME "${CMAKE_PROJECT_NAME}-${PROJECT_VERSION}")
 
 set(glasses_lib_PRIVATE_GLS_DIM_FORWARD_DECLARATION_FILES
