@@ -8,6 +8,13 @@ else()
   message(FATAL_ERROR "Error: Bash required but not found.")
 endif()
 
+find_program(SED_PROGRAM sed)
+if(SED_PROGRAM)
+  message(STATUS "Sed: ${SED_PROGRAM}")
+else()
+  message(FATAL_ERROR "Error: Sed required but not found.")
+endif()
+
 find_program(GIT_PROGRAM git)
 if(GIT_PROGRAM)
   message(STATUS "Git: ${GIT_PROGRAM}")
