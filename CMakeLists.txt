@@ -1,21 +1,24 @@
 cmake_minimum_required(VERSION 3.2.2)
 project(glasses)
 
-find_program(BASH_PROGRAM bash)
+find_program(BASH_PROGRAM bash
+  DOC "Path to the bash executable")
 if(BASH_PROGRAM)
   message(STATUS "Bash: ${BASH_PROGRAM}")
 else()
   message(FATAL_ERROR "Error: Bash required but not found.")
 endif()
 
-find_program(SED_PROGRAM sed)
+find_program(SED_PROGRAM sed
+  DOC "Path to the sed executable")
 if(SED_PROGRAM)
   message(STATUS "Sed: ${SED_PROGRAM}")
 else()
   message(FATAL_ERROR "Error: Sed required but not found.")
 endif()
 
-find_program(GIT_PROGRAM git)
+find_program(GIT_PROGRAM git
+  DOC "Path to the git executable")
 if(GIT_PROGRAM)
   message(STATUS "Git: ${GIT_PROGRAM}")
 else()
