@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.2.2)
 project(glasses)
 
 find_program(BASH_PROGRAM bash)
-if(NOT BASH_PROGRAM)
+if(BASH_PROGRAM)
+  message(STATUS "Bash: ${BASH_PROGRAM}")
+else()
   message(FATAL_ERROR "Error: Bash required but not found.")
 endif()
 
