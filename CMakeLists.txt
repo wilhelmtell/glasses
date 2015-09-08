@@ -2,8 +2,17 @@ cmake_minimum_required(VERSION 3.2.2)
 project(glasses)
 
 find_program(BASH_PROGRAM bash)
-if(NOT BASH_PROGRAM)
+if(BASH_PROGRAM)
+  message(STATUS "Bash: ${BASH_PROGRAM}")
+else()
   message(FATAL_ERROR "Error: Bash required but not found.")
+endif()
+
+find_program(GIT_PROGRAM git)
+if(GIT_PROGRAM)
+  message(STATUS "Git: ${GIT_PROGRAM}")
+else()
+  message(FATAL_ERROR "Error: Git required but not found.")
 endif()
 
 execute_process(COMMAND ${BASH_PROGRAM} ${CMAKE_SOURCE_DIR}/tools/version.bash raw
