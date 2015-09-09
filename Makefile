@@ -24,10 +24,7 @@ CHECK_GLASSES_MAIN_OBJECT_FILE := ${CHECK_GLASSES_MAIN_SOURCE_FILE:.cc=.o}
 CPPFLAGS := ${CPPFLAGS} $(foreach I,${INCLUDE_DIRECTORIES},-I$I)
 LDFLAGS := ${LDFLAGS} $(foreach D,${LIBRARY_DIRECTORIES},-L$D) $(foreach L,${LIBRARIES},-l$L)
 
-all: configure.cache libglasses.a
-
-configure.cache: configure
-	./configure
+all: libglasses.a
 
 libglasses.a: ${LIBGLASSES_OBJECT_FILES}
 	ar rcs $@ $^
@@ -45,7 +42,7 @@ clean:
 	rm -f config.hh ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
 
 distclean: clean
-	rm -f libglasses.a check_glasses configure.cache
+	rm -f libglasses.a check_glasses
 
 %.dep: %.cc
 	${CXX} ${CPPFLAGS} ${CXXFLAGS} -MG -MM -MP -MT$@ -MT${<:.cc=.o} $< >$@
