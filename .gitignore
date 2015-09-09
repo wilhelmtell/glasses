@@ -7,7 +7,6 @@ check_glasses
 check_glasses.dSYM
 libcheck_glasses.a
 tests_passed
-config.h
 *-*.tar.gz
 *-*.tar.xz
 *-*.zip

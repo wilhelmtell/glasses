@@ -3,7 +3,6 @@ prefix ?= ${HOME}/usr/local/stow/$(notdir ${CURDIR})
 .PHONY: all check clean distclean
 
 VERSION := $(shell bash tools/version.bash)
-CONFIG_H_IN := config.h.in
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 INCLUDE_DIRECTORIES :=
 LIBRARY_DIRECTORIES :=
@@ -39,7 +38,7 @@ check_glasses: ${CHECK_GLASSES_OBJECT_FILES} libglasses.a
 	${LINK.cc} libglasses.a ${CHECK_GLASSES_OBJECT_FILES} ${OUTPUT_OPTION}
 
 clean:
-	rm -f config.hh ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
+	rm -f ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
 
 distclean: clean
 	rm -f libglasses.a check_glasses
