@@ -6,7 +6,7 @@ VERSION := $(shell bash tools/version.bash)
 CONFIG_H_IN := config.h.in
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 LIBRARY_DIRECTORIES :=
-LIBRARIES :=
+LIBRARIES := boost_signals
 CXXFLAGS := ${CXXFLAGS} -std=c++14
 
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
