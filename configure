@@ -1,11 +1,24 @@
 #!/bin/bash
 
-cache() {
+# create a cache entry with a default value. default as in create a cache entry
+# unless the entry is already set. so, an entry like prefix will work since
+# this is a name make doesn't know of, but CXX will not, because make has an
+# implicit variable with that name (with a default value of g++).
+cache_default() {
   for pair in "$@";
   do
     local key=${pair%:*}
     local value="${pair#*:}"
     echo "$key ?= $value" >>configure.mk
+  done
+}
+
+cache_constant() {
+  for pair in "$@";
+  do
+    local key=${pair%:*}
+    local value="${pair#*:}"
+    echo "$key := $value" >>configure.mk
   done
 }
 
@@ -62,9 +75,10 @@ do
   shift
 done
 
-cache \
+cache_default \
   prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
-  CXX:"${CXX:-g++}" \
-  CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
   ALL_SOURCE_FILES:"${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}" \
   LIBRARIES:"${LIBRARIES:-boost_signals}"
+cache_constant \
+  CXX:"${CXX:-g++}" \
+  CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
