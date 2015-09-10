@@ -5,10 +5,7 @@ prefix ?= ${HOME}/usr/local/stow/$(notdir ${CURDIR})
 ## user-configurable data
 VERSION := $(shell bash tools/version.bash)
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
-INCLUDE_DIRECTORIES :=
-LIBRARY_DIRECTORIES :=
 LIBRARIES := boost_signals
-CPPFLAGS :=
 CXXFLAGS := ${CXXFLAGS} -std=c++14
 
 ## shouldn't need user tweaking
@@ -22,8 +19,7 @@ CHECK_GLASSES_OBJECT_FILES := ${CHECK_GLASSES_TRANSLATION_UNITS:.cc=.o}
 CHECK_GLASSES_DEPENDENCY_FILES := ${CHECK_GLASSES_TRANSLATION_UNITS:.cc=.dep}
 CHECK_GLASSES_MAIN_SOURCE_FILE := $(filter test/main.cc,${CHECK_GLASSES_TRANSLATION_UNITS})
 CHECK_GLASSES_MAIN_OBJECT_FILE := ${CHECK_GLASSES_MAIN_SOURCE_FILE:.cc=.o}
-CPPFLAGS := ${CPPFLAGS} $(foreach I,${INCLUDE_DIRECTORIES},-I$I)
-LDFLAGS := ${LDFLAGS} $(foreach D,${LIBRARY_DIRECTORIES},-L$D) $(foreach L,${LIBRARIES},-l$L)
+LDFLAGS := ${LDFLAGS} $(foreach L,${LIBRARIES},-l$L)
 
 all: libglasses.a
 
