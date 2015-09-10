@@ -30,6 +30,7 @@ do
     --help)
       sed "s|\$0|$0|g" configure.help
       shift $(($# - 1))
+      exit 0
       ;;
     --prefix)
       if [ $# -eq 1 ];
