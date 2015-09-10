@@ -5,7 +5,6 @@ cache() {
   do
     local key=${pair%:*}
     local value="${pair#*:}"
-    echo "$key: $value"
     echo "$key ?= $value" >>configure.mk
   done
 }
