@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configure_entries() {
+cache() {
   for pair in "$@";
   do
     local key=${pair%:*}
@@ -37,4 +37,4 @@ do
   shift
 done
 
-configure_entries prefix:$prefix
+cache prefix:$prefix
