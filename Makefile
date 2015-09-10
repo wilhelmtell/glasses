@@ -2,8 +2,6 @@
 
 .PHONY: all check clean distclean dist
 
-## user-configurable data
-ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 ## shouldn't need user tweaking
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
 LIBGLASSES_TRANSLATION_UNITS := $(filter %.cc,${LIBGLASSES_SOURCE_FILES})
