@@ -21,7 +21,7 @@ clean:
 	rm -f ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES} tests_passed
 
 distclean: clean
-	rm -f libglasses.a check_glasses
+	rm -f libglasses.a check_glasses configure.mk
 
 dist: glasses-${VERSION}.tar.gz glasses-${VERSION}.tar.xz glasses-${VERSION}.zip
 
