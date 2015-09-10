@@ -14,7 +14,7 @@ rm -f configure.mk
 
 prefix="${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}"
 CXX="${CXX:-g++}"
-CXXFLAGS="${CXXFLAGS:-}"
+CXXFLAGS="${CXXFLAGS:--std=c++14}"
 
 while [[ $# -ge 1 ]];
 do
