@@ -41,7 +41,7 @@ do
       shift
       ;;
     --cxx=*)
-      cxx=${1#*=}
+      CXX=${1#*=}
       ;;
     --cxxflags)
       if [ $# -eq 1 ];
