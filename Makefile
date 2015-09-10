@@ -25,8 +25,11 @@ clean:
 distclean: clean
 	rm -f libglasses.a check_glasses configure.mk
 
-libglasses.a: ${LIBGLASSES_OBJECT_FILES}
+libglasses.a: config.hh ${LIBGLASSES_OBJECT_FILES}
 	ar rcs $@ $^
+
+config.hh: config.hh.in
+	sed "s/^#make_define_str[ \t]\+VERSION[ \t]\+@VERSION@[ \t]*$$/#define VERSION \"${VERSION}\"/;" config.hh.in >config.hh
 
 tests_passed: check_glasses
 	./check_glasses && touch tests_passed
