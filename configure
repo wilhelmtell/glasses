@@ -51,7 +51,7 @@ EOF
 }
 
 generate_config_header() {
-  cat <<EOF
+  cat <<EOF |perl -pe 's/^#define ([A-Z_]+) ("")?$/\/* #undef $1 *\//'
 #ifndef TLS_CONFIG_HH_
 #define TLS_CONFIG_HH_
 
