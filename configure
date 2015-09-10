@@ -28,12 +28,26 @@ execute() {
   "$@"
 }
 
+usage() { cat <<EOF
+$0 [options]
+
+Configure Glasses for building.
+
+ --help
+ --quiet             configure quietly
+ --prefix            set install prefix
+ --cxx=<flags>       specify C++14 compiler
+ --cxxflags=<flags>  set install prefix
+
+The configure script stores the values it gathers configure.mk.
+EOF
+}
+
 while [[ $# -ge 1 ]];
 do
   case "$1" in
     --help)
-      sed "s|\$0|$0|g" configure.help
-      shift $(($# - 1))
+      usage
       exit 0
       ;;
     --quiet)
