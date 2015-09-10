@@ -16,6 +16,7 @@ VERSION="${VERSION:-$(bash tools/version.bash)}"
 prefix="${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}"
 CXX="${CXX:-g++}"
 CXXFLAGS="${CXXFLAGS:--std=c++14}"
+LIBRARIES="${LIBRARIES:-boost_signals}"
 
 while [[ $# -ge 1 ]];
 do
@@ -64,4 +65,4 @@ do
   shift
 done
 
-cache VERSION:"$VERSION" prefix:"$prefix" CXX:"$CXX" CXXFLAGS:"$CXXFLAGS"
+cache VERSION:"$VERSION" prefix:"$prefix" CXX:"$CXX" CXXFLAGS:"$CXXFLAGS" LIBRARIES:"$LIBRARIES"
