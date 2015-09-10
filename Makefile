@@ -6,7 +6,6 @@
 VERSION := $(shell bash tools/version.bash)
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 LIBRARIES := boost_signals
-CXXFLAGS := ${CXXFLAGS} -std=c++14
 
 ## shouldn't need user tweaking
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
