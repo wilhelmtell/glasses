@@ -1,0 +1,10 @@
+$0 [options]
+
+Configure Glasses for building.
+
+ --help
+ --prefix            set install prefix
+ --cxx=<flags>       specify C++14 compiler
+ --cxxflags=<flags>  set install prefix
+
+The configure script stores the values it gathers configure.mk.
