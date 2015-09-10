@@ -2,6 +2,8 @@
 
 .PHONY: all check clean distclean
 
+VERSION := $(shell bash tools/version.bash)
+
 ## shouldn't need user tweaking
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
 LIBGLASSES_TRANSLATION_UNITS := $(filter %.cc,${LIBGLASSES_SOURCE_FILES})

@@ -63,7 +63,6 @@ do
 done
 
 cache \
-  VERSION:"${VERSION:-$(bash tools/version.bash)}" \
   prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
   CXX:"${CXX:-g++}" \
   CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
