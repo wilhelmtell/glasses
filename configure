@@ -86,7 +86,7 @@ done
 QUIET="${QUIET:-0}"
 
 execute "Clearing old cache" rm -f configure.mk
-
+execute "Generating new cache"
 cache_default \
   prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
   ALL_SOURCE_FILES:"${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}" \
