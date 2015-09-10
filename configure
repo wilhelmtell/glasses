@@ -3,7 +3,7 @@
 # create a cache entry with a default value. default as in create a cache entry
 # unless the entry is already set. so, an entry like prefix will work since
 # this is a name make doesn't know of, but CXX will not, because make has an
-# implicit variable with that name (with a default value of g++).
+# implicit variable with that name.
 cache_default() {
   for pair in "$@";
   do
