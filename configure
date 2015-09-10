@@ -22,7 +22,11 @@ cache_constant() {
   done
 }
 
-rm -f configure.mk
+execute() {
+  [ "$QUIET" = 1 ] || echo "$1 ..."
+  shift
+  "$@"
+}
 
 while [[ $# -ge 1 ]];
 do
@@ -31,6 +35,9 @@ do
       sed "s|\$0|$0|g" configure.help
       shift $(($# - 1))
       exit 0
+      ;;
+    --quiet)
+      QUIET=1
       ;;
     --prefix)
       if [ $# -eq 1 ];
@@ -76,6 +83,10 @@ do
   shift
 done
 
+QUIET="${QUIET:-0}"
+
+execute "Clearing old cache" rm -f configure.mk
+
 cache_default \
   prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
   ALL_SOURCE_FILES:"${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}" \
@@ -84,4 +95,4 @@ cache_constant \
   CXX:"${CXX:-g++}" \
   CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
 
-cp -a Makefile{.in,}
+execute "Generating Makefile" cp -a Makefile{.in,}
