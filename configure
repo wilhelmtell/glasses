@@ -13,6 +13,7 @@ cache() {
 rm -f configure.mk
 
 prefix=${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}
+CXX=${CXX:-g++}
 
 while [[ $# -ge 1 ]];
 do
@@ -29,6 +30,18 @@ do
     --prefix=*)
       prefix=${1#*=}
       ;;
+    --cxx)
+      if [ $# -eq 1 ];
+      then
+        echo "error: expected cxx value: --cxx <value>" >&2
+        exit 1
+      fi
+      CXX="$2"
+      shift
+      ;;
+    --cxx=*)
+      cxx=${1#*=}
+      ;;
     *)
       echo "error: unknown option ${1%=*}." >&2
       exit 1
@@ -37,4 +50,4 @@ do
   shift
 done
 
-cache prefix:$prefix
+cache prefix:$prefix CXX:$CXX
