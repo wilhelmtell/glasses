@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec 3>&1
+
 # create a cache entry with a default value. default as in create a cache entry
 # unless the entry is already set. so, an entry like prefix will work since
 # this is a name make doesn't know of, but CXX will not, because make has an
@@ -23,7 +25,7 @@ cache_constant() {
 }
 
 execute() {
-  [ "$QUIET" = 1 ] || echo "$1 ..."
+  [ "$QUIET" = 1 ] || echo "$1 ..." >&3
   shift
   "$@"
 }
@@ -43,12 +45,14 @@ The configure script stores the values it gathers in configure.mk.
 EOF
 }
 
+ERROR=
+QUIT=
 while [[ $# -ge 1 ]];
 do
   case "$1" in
     --help)
       usage
-      exit 0
+      QUIT=1
       ;;
     --quiet)
       QUIET=1
@@ -57,7 +61,7 @@ do
       if [ $# -eq 1 ];
       then
         echo "error: expected prefix value: --prefix <value>" >&2
-        exit 1
+        ERROR=1
       fi
       prefix="$2"
       shift
@@ -69,7 +73,7 @@ do
       if [ $# -eq 1 ];
       then
         echo "error: expected cxx value: --cxx <value>" >&2
-        exit 1
+        ERROR=1
       fi
       CXX="$2"
       shift
@@ -81,7 +85,7 @@ do
       if [ $# -eq 1 ];
       then
         echo "error: expected cxxflags value: --cxxflags <value>" >&2
-        exit 1
+        ERROR=1
       fi
       CXXFLAGS="$2"
       shift
@@ -91,11 +95,21 @@ do
       ;;
     *)
       echo "error: unknown option ${1%=*}." >&2
-      exit 1
+      ERROR=1
       ;;
   esac
   shift
 done
+if [ "$ERROR" ];
+then
+  exec 3>&-
+  exit 1
+fi
+if [ "$QUIT" ];
+then
+  exec 3>&-
+  exit 0
+fi
 
 QUIET="${QUIET:-0}"
 
@@ -107,6 +121,8 @@ cache_default \
   LIBRARIES:"${LIBRARIES:-boost_signals}"
 cache_constant \
   CXX:"${CXX:-g++}" \
-  CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
+  CXXFLAGS:"${CXXFLAGS:--std=c++14}"
 
 execute "Generating Makefile" cp -a Makefile{.in,}
+
+exec 3>&-
