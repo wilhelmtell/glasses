@@ -12,13 +12,6 @@ cache() {
 
 rm -f configure.mk
 
-VERSION="${VERSION:-$(bash tools/version.bash)}"
-prefix="${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}"
-CXX="${CXX:-g++}"
-CXXFLAGS="${CXXFLAGS:--std=c++14}"
-ALL_SOURCE_FILES="${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}"
-LIBRARIES="${LIBRARIES:-boost_signals}"
-
 while [[ $# -ge 1 ]];
 do
   case "$1" in
@@ -66,4 +59,10 @@ do
   shift
 done
 
-cache VERSION:"$VERSION" prefix:"$prefix" CXX:"$CXX" CXXFLAGS:"$CXXFLAGS" ALL_SOURCE_FILES:"$ALL_SOURCE_FILES" LIBRARIES:"$LIBRARIES"
+cache \
+  VERSION:"${VERSION:-$(bash tools/version.bash)}" \
+  prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
+  CXX:"${CXX:-g++}" \
+  CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
+  ALL_SOURCE_FILES:"${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}" \
+  LIBRARIES:"${LIBRARIES:-boost_signals}"
