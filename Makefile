@@ -26,8 +26,7 @@ all: libglasses.a
 libglasses.a: ${LIBGLASSES_OBJECT_FILES}
 	ar rcs $@ $^
 
-check: check_glasses
-	./check_glasses
+check: tests_passed
 
 tests_passed: check_glasses
 	./check_glasses && touch tests_passed
