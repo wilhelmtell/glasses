@@ -1,6 +1,6 @@
 -include configure.mk
 
-.PHONY: all check clean distclean dist
+.PHONY: all check clean distclean
 
 ## shouldn't need user tweaking
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
@@ -23,8 +23,6 @@ clean:
 distclean: clean
 	rm -f libglasses.a check_glasses configure.mk
 
-dist: glasses-${VERSION}.tar.gz glasses-${VERSION}.tar.xz glasses-${VERSION}.zip
-
 libglasses.a: ${LIBGLASSES_OBJECT_FILES}
 	ar rcs $@ $^
 
@@ -36,15 +34,6 @@ check_glasses: ${CHECK_GLASSES_OBJECT_FILES} libglasses.a
 
 %.dep: %.cc
 	${CXX} ${CPPFLAGS} ${CXXFLAGS} -MG -MM -MP -MT$@ -MT${<:.cc=.o} $< >$@
-
-glasses-${VERSION}.tar.gz:
-	git archive --format=tar --prefix=glasses/ HEAD |gzip -9 >glasses-${VERSION}.tar.gz
-
-glasses-${VERSION}.tar.xz:
-	git archive --format=tar --prefix=glasses/ HEAD |xz -9 >glasses-${VERSION}.tar.xz
-
-glasses-${VERSION}.zip:
-	git archive --format=zip --prefix=glasses-${VERSION}/ HEAD >glasses-${VERSION}.zip
 
 ifneq "${MAKECMDGOALS}" "clean"
   ifneq "${MAKECMDGOALS}" "distclean"
