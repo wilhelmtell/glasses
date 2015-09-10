@@ -83,3 +83,5 @@ cache_default \
 cache_constant \
   CXX:"${CXX:-g++}" \
   CXXFLAGS:"${CXXFLAGS:--std=c++14}" \
+
+cp -a Makefile{.in,}

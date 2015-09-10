@@ -23,7 +23,7 @@ clean:
 	rm -f ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES} tests_passed
 
 distclean: clean
-	rm -f libglasses.a check_glasses configure.mk
+	rm -f libglasses.a check_glasses configure.mk Makefile
 
 libglasses.a: config.hh ${LIBGLASSES_OBJECT_FILES}
 	ar rcs $@ $^

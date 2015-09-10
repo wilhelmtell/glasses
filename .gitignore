@@ -9,6 +9,7 @@ libcheck_glasses.a
 tests_passed
 config.hh
 configure.mk
+Makefile
 *-*.tar.gz
 *-*.tar.xz
 *-*.zip
