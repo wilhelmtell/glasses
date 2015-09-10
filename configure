@@ -17,6 +17,15 @@ prefix="${HOME}/usr/local/stow/$(basename $(pwd))"
 while [[ $# -ge 1 ]];
 do
   case "$1" in
+    --prefix)
+      if [ $# -eq 1 ];
+      then
+        echo "error: expected prefix value: --prefix <value>" >&2
+        exit 1
+      fi
+      prefix="$2"
+      shift
+      ;;
     --prefix=*)
       prefix=${1#*=}
       ;;
