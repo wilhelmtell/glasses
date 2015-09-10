@@ -1,4 +1,4 @@
-prefix ?= ${HOME}/usr/local/stow/$(notdir ${CURDIR})
+-include configure.mk
 
 .PHONY: all check clean distclean dist
 

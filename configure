@@ -1,0 +1,31 @@
+#!/bin/bash
+
+configure_entries() {
+  for pair in "$@";
+  do
+    local key=${pair%:*}
+    local value=${pair#*:}
+    echo "$key: $value"
+    echo "$key ?= $value" >>configure.mk
+  done
+}
+
+rm -f configure.mk
+
+prefix="${HOME}/usr/local/stow/$(basename $(pwd))"
+
+while [[ $# -ge 1 ]];
+do
+  case "$1" in
+    --prefix=*)
+      prefix=${1#*=}
+      ;;
+    *)
+      echo "error: unknown option ${1%=*}." >&2
+      exit 1
+      ;;
+  esac
+  shift
+done
+
+configure_entries prefix:$prefix
