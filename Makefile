@@ -45,9 +45,7 @@ distclean: clean
 
 ifneq "${MAKECMDGOALS}" "clean"
   ifneq "${MAKECMDGOALS}" "distclean"
-    ifneq "${MAKECMDGOALS}" "uninstall"
-      -include ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
-    endif
+    -include ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
   endif
 endif
 
