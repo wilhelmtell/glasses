@@ -3,7 +3,6 @@
 .PHONY: all check clean distclean dist
 
 ## user-configurable data
-VERSION := $(shell bash tools/version.bash)
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 LIBRARIES := boost_signals
 
