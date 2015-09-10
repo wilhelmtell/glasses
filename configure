@@ -4,7 +4,7 @@ cache() {
   for pair in "$@";
   do
     local key=${pair%:*}
-    local value=${pair#*:}
+    local value="${pair#*:}"
     echo "$key: $value"
     echo "$key ?= $value" >>configure.mk
   done
@@ -12,9 +12,9 @@ cache() {
 
 rm -f configure.mk
 
-prefix=${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}
-CXX=${CXX:-g++}
-CXXFLAGS=${CXXFLAGS:-}
+prefix="${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}"
+CXX="${CXX:-g++}"
+CXXFLAGS="${CXXFLAGS:-}"
 
 while [[ $# -ge 1 ]];
 do
@@ -29,7 +29,7 @@ do
       shift
       ;;
     --prefix=*)
-      prefix=${1#*=}
+      prefix="${1#*=}"
       ;;
     --cxx)
       if [ $# -eq 1 ];
@@ -41,7 +41,7 @@ do
       shift
       ;;
     --cxx=*)
-      CXX=${1#*=}
+      CXX="${1#*=}"
       ;;
     --cxxflags)
       if [ $# -eq 1 ];
@@ -53,7 +53,7 @@ do
       shift
       ;;
     --cxxflags=*)
-      CXXFLAGS=${1#*=}
+      CXXFLAGS="${1#*=}"
       ;;
     *)
       echo "error: unknown option ${1%=*}." >&2
@@ -63,4 +63,4 @@ do
   shift
 done
 
-cache prefix:$prefix CXX:$CXX CXXFLAGS:$CXXFLAGS
+cache prefix:"$prefix" CXX:"$CXX" CXXFLAGS:"$CXXFLAGS"
