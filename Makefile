@@ -2,6 +2,7 @@ prefix ?= ${HOME}/usr/local/stow/$(notdir ${CURDIR})
 
 .PHONY: all check clean distclean
 
+## user-configurable data
 VERSION := $(shell bash tools/version.bash)
 ALL_SOURCE_FILES := $(shell find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc')
 INCLUDE_DIRECTORIES :=
@@ -10,6 +11,7 @@ LIBRARIES := boost_signals
 CPPFLAGS :=
 CXXFLAGS := ${CXXFLAGS} -std=c++14
 
+## shouldn't need user tweaking
 LIBGLASSES_SOURCE_FILES := $(filter src/%,${ALL_SOURCE_FILES})
 LIBGLASSES_TRANSLATION_UNITS := $(filter %.cc,${LIBGLASSES_SOURCE_FILES})
 LIBGLASSES_OBJECT_FILES := ${LIBGLASSES_TRANSLATION_UNITS:.cc=.o}
