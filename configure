@@ -14,6 +14,7 @@ rm -f configure.mk
 
 prefix=${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}
 CXX=${CXX:-g++}
+CXXFLAGS=${CXXFLAGS:-}
 
 while [[ $# -ge 1 ]];
 do
@@ -42,6 +43,18 @@ do
     --cxx=*)
       cxx=${1#*=}
       ;;
+    --cxxflags)
+      if [ $# -eq 1 ];
+      then
+        echo "error: expected cxxflags value: --cxxflags <value>" >&2
+        exit 1
+      fi
+      CXXFLAGS="$2"
+      shift
+      ;;
+    --cxxflags=*)
+      CXXFLAGS=${1#*=}
+      ;;
     *)
       echo "error: unknown option ${1%=*}." >&2
       exit 1
@@ -50,4 +63,4 @@ do
   shift
 done
 
-cache prefix:$prefix CXX:$CXX
+cache prefix:$prefix CXX:$CXX CXXFLAGS:$CXXFLAGS
