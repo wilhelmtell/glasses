@@ -1,6 +1,6 @@
 prefix ?= ${HOME}/usr/local/stow/$(notdir ${CURDIR})
 
-.PHONY: all check clean distclean
+.PHONY: all check clean distclean dist
 
 ## user-configurable data
 VERSION := $(shell bash tools/version.bash)
