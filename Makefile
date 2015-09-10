@@ -23,16 +23,7 @@ LDFLAGS := ${LDFLAGS} $(foreach L,${LIBRARIES},-l$L)
 
 all: libglasses.a
 
-libglasses.a: ${LIBGLASSES_OBJECT_FILES}
-	ar rcs $@ $^
-
 check: tests_passed
-
-tests_passed: check_glasses
-	./check_glasses && touch tests_passed
-
-check_glasses: ${CHECK_GLASSES_OBJECT_FILES} libglasses.a
-	${LINK.cc} libglasses.a ${CHECK_GLASSES_OBJECT_FILES} ${OUTPUT_OPTION}
 
 clean:
 	rm -f ${LIBGLASSES_OBJECT_FILES} ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_OBJECT_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES} tests_passed
@@ -40,16 +31,19 @@ clean:
 distclean: clean
 	rm -f libglasses.a check_glasses
 
+dist: glasses-${VERSION}.tar.gz glasses-${VERSION}.tar.xz glasses-${VERSION}.zip
+
+libglasses.a: ${LIBGLASSES_OBJECT_FILES}
+	ar rcs $@ $^
+
+tests_passed: check_glasses
+	./check_glasses && touch tests_passed
+
+check_glasses: ${CHECK_GLASSES_OBJECT_FILES} libglasses.a
+	${LINK.cc} libglasses.a ${CHECK_GLASSES_OBJECT_FILES} ${OUTPUT_OPTION}
+
 %.dep: %.cc
 	${CXX} ${CPPFLAGS} ${CXXFLAGS} -MG -MM -MP -MT$@ -MT${<:.cc=.o} $< >$@
-
-ifneq "${MAKECMDGOALS}" "clean"
-  ifneq "${MAKECMDGOALS}" "distclean"
-    -include ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
-  endif
-endif
-
-dist: glasses-${VERSION}.tar.gz glasses-${VERSION}.tar.xz glasses-${VERSION}.zip
 
 glasses-${VERSION}.tar.gz:
 	git archive --format=tar --prefix=glasses/ HEAD |gzip -9 >glasses-${VERSION}.tar.gz
@@ -59,3 +53,9 @@ glasses-${VERSION}.tar.xz:
 
 glasses-${VERSION}.zip:
 	git archive --format=zip --prefix=glasses-${VERSION}/ HEAD >glasses-${VERSION}.zip
+
+ifneq "${MAKECMDGOALS}" "clean"
+  ifneq "${MAKECMDGOALS}" "distclean"
+    -include ${LIBGLASSES_DEPENDENCY_FILES} ${CHECK_GLASSES_DEPENDENCY_FILES}
+  endif
+endif
