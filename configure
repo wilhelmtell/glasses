@@ -12,7 +12,7 @@ configure_entries() {
 
 rm -f configure.mk
 
-prefix="${HOME}/usr/local/stow/$(basename $(pwd))"
+prefix=${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}
 
 while [[ $# -ge 1 ]];
 do
