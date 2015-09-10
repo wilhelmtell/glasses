@@ -1,6 +1,0 @@
-#ifndef TLS_CONFIG_HH_
-#define TLS_CONFIG_HH_
-
-#make_define_str VERSION @VERSION@
-
-#endif

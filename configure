@@ -2,6 +2,11 @@
 
 exec 3>&1
 
+# get a value of an entry in the cache
+get() {
+  sed "/^$1 / ! d; s/.*= \(.*\)/\1/;" configure.mk
+}
+
 # create a cache entry with a default value. default as in create a cache entry
 # unless the entry is already set. so, an entry like prefix will work since
 # this is a name make doesn't know of, but CXX will not, because make has an
@@ -42,6 +47,25 @@ Configure Glasses for building.
  --cxxflags=<flags>  set install prefix
 
 The configure script stores the values it gathers in configure.mk.
+EOF
+}
+
+generate_config_header() {
+  cat <<EOF
+#ifndef TLS_CONFIG_HH_
+#define TLS_CONFIG_HH_
+
+#define VERSION "$(get VERSION)"
+#define VERSION_MAJOR $(get VERSION_MAJOR)
+#define VERSION_MINOR $(get VERSION_MINOR)
+#define VERSION_PATCH $(get VERSION_PATCH)
+#define VERSION_TWEAK $(get VERSION_TWEAK)
+#define VERSION_DISTANCE $(get VERSION_DISTANCE)
+#define VERSION_SHA "$(get VERSION_SHA)"
+#define VERSION_DIRTY "$(get VERSION_DIRTY)"
+#define VERSION_FULLSHA "$(get VERSION_FULLSHA)"
+
+#endif
 EOF
 }
 
@@ -118,11 +142,21 @@ execute "Generating new cache"
 cache_default \
   prefix:"${prefix:-"${HOME}/usr/local/stow/$(basename $(pwd))"}" \
   ALL_SOURCE_FILES:"${ALL_SOURCE_FILES:-$(find src test -name '*.hh' -o -name '*.tcc' -o -name '*.cc' |tr '\n' ' ')}" \
+  VERSION:"${VERSION:-$(bash tools/version.bash)}" \
+  VERSION_MAJOR:"${VERSION:-$(bash tools/version.bash major)}" \
+  VERSION_MINOR:"${VERSION:-$(bash tools/version.bash minor)}" \
+  VERSION_PATCH:"${VERSION:-$(bash tools/version.bash patch)}" \
+  VERSION_TWEAK:"${VERSION:-$(bash tools/version.bash tweak)}" \
+  VERSION_DISTANCE:"${VERSION:-$(bash tools/version.bash distance)}" \
+  VERSION_SHA:"${VERSION:-$(bash tools/version.bash sha)}" \
+  VERSION_DIRTY:"${VERSION:-$(bash tools/version.bash dirty)}" \
+  VERSION_FULLSHA:"${VERSION:-$(bash tools/version.bash fullsha)}" \
   LIBRARIES:"${LIBRARIES:-boost_signals}"
 cache_constant \
   CXX:"${CXX:-g++}" \
   CXXFLAGS:"${CXXFLAGS:--std=c++14}"
 
+execute "Generating config header" generate_config_header >config.hh
 execute "Generating Makefile" cp -a Makefile{.in,}
 
 exec 3>&-
