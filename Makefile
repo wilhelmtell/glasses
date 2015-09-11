@@ -7,10 +7,10 @@ all: src/libglasses.a(${OBJ})
 
 check: tests_passed
 
-tests_passed: check_glasses
-	./check_glasses && touch $@
+tests_passed: test/check_glasses
+	test/check_glasses && touch $@
 
-check_glasses: src/libglasses.a(${OBJ}) ${TEST_OBJ}
+test/check_glasses: src/libglasses.a(${OBJ}) ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
 
 clean:
