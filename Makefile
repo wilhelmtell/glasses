@@ -11,7 +11,7 @@ tests_passed: test/check_glasses
 	test/check_glasses && touch $@
 
 test/check_glasses: src/libglasses.a(${OBJ}) ${TEST_OBJ}
-	${LINK.cc} ${OUTPUT_OPTION} $^
+	${LINK.cc} ${LDLIBS} ${OUTPUT_OPTION} $^
 
 clean:
 	${RM} ${OBJ}
