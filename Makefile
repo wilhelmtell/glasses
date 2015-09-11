@@ -2,9 +2,7 @@ OBJ := $(patsubst %.cc,%.o,$(wildcard src/*.cc src/dim/*.cc src/detail/*.cc))
 TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc test/dim/*.cc))
 LDLIBS += -lSDL2 -lSDL2_ttf -lboost_signals
 
-.PHONY: all check clean
-
-all: src/libglasses.a
+.PHONY: check clean
 
 src/libglasses.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
