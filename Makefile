@@ -18,6 +18,6 @@ clean:
 	${RM} ${OBJ}
 
 %.dep: %.cc
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -MG -MM -MP -MT$@ -MT$(<:.cc=.o) $< >$@
+	${COMPILE.cc} -MG -MM -MP -MT$@ -MT$(<:.cc=.o) $< >$@
 
 -include ${OBJ:.o=.dep} ${TEST_OBJ:.o=.dep}
