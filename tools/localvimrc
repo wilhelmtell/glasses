@@ -1,5 +1,3 @@
 let g:ctrlp_custom_ignore = {
-      \ 'file': '\v\.(o|a|sw[op]|dep)$|<(glasses|lib(check_)?glasses\.a|check_glasses|tests_passed|config\.hh|configure\.mk|Makefile|.*-.*\.(zip|tar\.[gx]z))$',
-      \ 'dir': '\v<(check_glasses\.dSYM)$',
+      \ 'file': '\v\.(o|a|sw[op]|dep)$|<(check_glasses|check)$',
       \ }
-set grepprg=git\ grep\ -InH\ $*
