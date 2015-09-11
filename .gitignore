@@ -1,15 +1,4 @@
-.*.sw[op]
 *.o
 *.dep
-glasses
 libglasses.a
 check_glasses
-check_glasses.dSYM
-libcheck_glasses.a
-tests_passed
-config.hh
-configure.mk
-Makefile
-*-*.tar.gz
-*-*.tar.xz
-*-*.zip
