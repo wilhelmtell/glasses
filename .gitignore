@@ -2,4 +2,4 @@
 *.dep
 libglasses.a
 check_glasses
-tests_passed
+check
