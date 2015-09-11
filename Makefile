@@ -6,8 +6,10 @@ TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc test/dim/*.cc))
 libglasses.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
 
-check: check_glasses
-	./check_glasses
+check: tests_passed
+
+tests_passed: check_glasses
+	./check_glasses && touch $@
 
 check_glasses: libglasses.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
