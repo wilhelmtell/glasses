@@ -1,7 +1,7 @@
 #include "rectangle.hh"
 #include <utility>
-#include "dim/width.hh"
-#include "dim/height.hh"
+#include "width.hh"
+#include "height.hh"
 
 namespace gls {
 rectangle::rectangle(dim::width w, dim::height h)

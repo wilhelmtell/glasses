@@ -2,8 +2,8 @@
 #define GLS_POSITIONED_RECTANGLE_HH_
 
 #include "rectangle.hh"
-#include "dim/width_fwd.hh"
-#include "dim/height_fwd.hh"
+#include "width_fwd.hh"
+#include "height_fwd.hh"
 #include "point.hh"
 
 namespace gls {

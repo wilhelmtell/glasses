@@ -1,8 +1,8 @@
 #include <catch/catch.hpp>
 #include "../src/point.hh"
 #include "../src/positioned_rectangle.hh"
-#include "../src/dim/width.hh"
-#include "../src/dim/height.hh"
+#include "../src/width.hh"
+#include "../src/height.hh"
 
 TEST_CASE("bounding() outside a zero-sized positioned_rectangle") {
   gls::point const p{1, 1};
