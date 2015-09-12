@@ -1,5 +1,5 @@
 #include <catch/catch.hpp>
-#include "../../src/dim/height.hh"
+#include "../src/height.hh"
 
 TEST_CASE("value-initialized height equals 0") {
   gls::dim::height const h{};

@@ -1,8 +1,8 @@
 #ifndef GLS_RECTANGLE_HH_
 #define GLS_RECTANGLE_HH_
 
-#include "dim/width.hh"
-#include "dim/height.hh"
+#include "width.hh"
+#include "height.hh"
 
 namespace gls {
 struct rectangle {

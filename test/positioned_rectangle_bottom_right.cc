@@ -2,8 +2,8 @@
 #include "point_io.hh"
 #include "../src/positioned_rectangle.hh"
 #include "../src/point.hh"
-#include "../src/dim/width.hh"
-#include "../src/dim/height.hh"
+#include "../src/width.hh"
+#include "../src/height.hh"
 
 TEST_CASE("bottom_right() of value-initialized positioned_rectangle") {
   gls::point const x{0, 0};

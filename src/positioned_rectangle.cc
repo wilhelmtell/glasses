@@ -1,7 +1,7 @@
 #include "positioned_rectangle.hh"
 #include <utility>
-#include "dim/width.hh"
-#include "dim/height.hh"
+#include "width.hh"
+#include "height.hh"
 #include "point.hh"
 
 namespace gls {

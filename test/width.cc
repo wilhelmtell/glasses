@@ -1,5 +1,5 @@
 #include <catch/catch.hpp>
-#include "../../src/dim/width.hh"
+#include "../src/width.hh"
 
 TEST_CASE("value-initialized width equals 0") {
   gls::dim::width const w{};
