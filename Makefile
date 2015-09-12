@@ -1,6 +1,6 @@
 OBJ := $(patsubst %.cc,%.o,$(wildcard src/*.cc src/detail/*.cc))
 TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc))
-LDLIBS += -lSDL2 -lSDL2_ttf -lboost_signals
+LDLIBS += -lboost_signals
 
 .PHONY: clean
 
