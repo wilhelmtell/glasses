@@ -4,7 +4,6 @@
 namespace {
 void push_quit_event_onto_the_sdl_event_queue() {
   SDL_Event sdl_quit_event;
-  SDL_zero(sdl_quit_event);
   sdl_quit_event.type = SDL_QUIT;
   SDL_PushEvent(&sdl_quit_event);
 }
