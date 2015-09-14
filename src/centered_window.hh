@@ -9,6 +9,8 @@ namespace gls {
 struct centered_window {
   centered_window(title const& text, rectangle const& bounds);
 
+  SDL_Window* get() const;
+
 private:
   positioned_window w;
 };
