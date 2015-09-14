@@ -4,8 +4,8 @@
 #include "window.hh"
 
 namespace gls {
-renderer::renderer(window const& w, int const& index, int const& flags)
-: r{SDL_CreateRenderer(w.get(), index, flags), &SDL_DestroyRenderer} {
+renderer::renderer(window const& w)
+: r{SDL_CreateRenderer(w.get(), -1, 0), &SDL_DestroyRenderer} {
   if(r == nullptr) throw renderer_creation_error(SDL_GetError());
 }
 

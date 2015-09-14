@@ -7,7 +7,7 @@
 
 namespace gls {
 struct renderer {
-  renderer(window const& w, int const& index, int const& flags);
+  explicit renderer(window const& w);
 
   SDL_Renderer* get() const;
 
