@@ -3,11 +3,11 @@
 
 #include <memory>
 #include <SDL2/SDL.h>
-#include "window_fwd.hh"
 
 namespace gls {
 struct renderer {
-  explicit renderer(window const& w);
+  template<typename Window>
+  explicit renderer(Window const& w);
 
   SDL_Renderer* get() const;
 
@@ -17,5 +17,7 @@ private:
   pointer r;
 };
 }
+
+#include "renderer.tcc"
 
 #endif

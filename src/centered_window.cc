@@ -9,4 +9,6 @@ centered_window::centered_window(title const& text, rectangle const& bounds)
 : w(text,
     positioned_rectangle(point(SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED),
                          bounds)) {}
+
+SDL_Window* centered_window::get() const { return w.get(); }
 }

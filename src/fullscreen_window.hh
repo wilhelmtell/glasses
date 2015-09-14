@@ -9,6 +9,8 @@ namespace gls {
 struct fullscreen_window {
   fullscreen_window(title const& text, rectangle dimensions);
 
+  SDL_Window* get() const;
+
 private:
   detail::window w;
 };
