@@ -8,6 +8,8 @@
 
 namespace gls {
 namespace detail {
+window::window(SDL_Window* w) : w(w, &SDL_DestroyWindow) {}
+
 window::window(title const& text,
                positioned_rectangle const& bounds,
                int const& flags)
