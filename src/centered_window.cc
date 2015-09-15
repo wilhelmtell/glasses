@@ -5,6 +5,8 @@
 #include <SDL2/SDL.h>
 
 namespace gls {
+centered_window::centered_window(SDL_Window* w) : w(w) {}
+
 centered_window::centered_window(title const& text, rectangle const& bounds)
 : w(text,
     positioned_rectangle(point(SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED),
