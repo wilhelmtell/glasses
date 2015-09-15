@@ -6,6 +6,7 @@
 namespace gls {
 namespace detail {
 struct system {
+  system() = default;
   explicit system(int const& flags);
 
 private:

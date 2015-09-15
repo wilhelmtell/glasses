@@ -10,6 +10,7 @@
 namespace gls {
 namespace detail {
 struct window {
+  window() = default;
   explicit window(SDL_Window* w);
   window(title const& text,
          positioned_rectangle const& bounds,
