@@ -13,6 +13,8 @@ SDL_Texture* texture_from_bmp(gls::renderer& renderer,
 }
 
 namespace gls {
+texture::texture(SDL_Texture* t) : t(t, &SDL_DestroyTexture) {}
+
 texture::texture(renderer& r, surface& s)
 : t(SDL_CreateTextureFromSurface(r.get(), s.get()), &SDL_DestroyTexture) {
   if(!t) throw texture_creation_error(SDL_GetError());
