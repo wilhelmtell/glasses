@@ -15,7 +15,7 @@ struct window {
   window(title const& text,
          positioned_rectangle const& bounds,
          int const& flags);
-  window(title const& text, rectangle dimensions, int const& flags);
+  window(title const& text, rectangle const& dimensions, int const& flags);
 
   SDL_Window* get() const;
 

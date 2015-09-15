@@ -23,7 +23,7 @@ window::window(title const& text,
   if(w == nullptr) throw window_creation_error(SDL_GetError());
 }
 
-window::window(title const& text, rectangle dimensions, int const& flags)
+window::window(title const& text, rectangle const& dimensions, int const& flags)
 : window(
     text,
     positioned_rectangle(
