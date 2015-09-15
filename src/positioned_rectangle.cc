@@ -26,6 +26,6 @@ bool outside(positioned_rectangle const& a, positioned_rectangle const& b) {
 point top_left(positioned_rectangle const& r) { return r.top_left(); }
 
 point bottom_right(positioned_rectangle const& r) {
-  return point{top_left(r).x + r.width(), top_left(r).y + r.height()};
+  return point{top_left(r).x() + r.width(), top_left(r).y() + r.height()};
 }
 }

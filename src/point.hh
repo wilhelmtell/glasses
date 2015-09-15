@@ -5,12 +5,17 @@
 
 namespace gls {
 struct point {
-  point() = default;
-  point(int x, int y);
+  using value_type = int;
 
-public:
-  int x;
-  int y;
+  point() = default;
+  point(value_type x, value_type y);
+
+  value_type x() const;
+  value_type y() const;
+
+private:
+  value_type x_coordinate;
+  value_type y_coordinate;
 };
 
 bool operator==(point const& lhs, point const& rhs);
