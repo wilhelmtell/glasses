@@ -1,5 +1,6 @@
 #include "point.hh"
 #include "positioned_rectangle.hh"
+#include <utility>
 
 namespace {
 bool bounding_top(gls::point const& p, gls::positioned_rectangle const& b) {
@@ -24,12 +25,13 @@ bool bounding_left(gls::point const& p, gls::positioned_rectangle const& b) {
 }
 
 namespace gls {
-point::point(int x_coordinate, int y_coordinate)
-: x_coordinate{x_coordinate}, y_coordinate{y_coordinate} {}
+point::point(point::value_type x_coordinate, point::value_type y_coordinate)
+: x_coordinate(std::move(x_coordinate))
+, y_coordinate(std::move(y_coordinate)) {}
 
-int point::x() const { return x_coordinate; }
+point::value_type point::x() const { return x_coordinate; }
 
-int point::y() const { return y_coordinate; }
+point::value_type point::y() const { return y_coordinate; }
 
 bool operator==(point const& lhs, point const& rhs) {
   return lhs.x() == rhs.x() && lhs.y() == rhs.y();
