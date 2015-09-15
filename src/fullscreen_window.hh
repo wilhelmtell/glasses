@@ -8,6 +8,7 @@
 
 namespace gls {
 struct fullscreen_window {
+  fullscreen_window() = default;
   explicit fullscreen_window(SDL_Window* w);
   fullscreen_window(title const& text, rectangle dimensions);
 

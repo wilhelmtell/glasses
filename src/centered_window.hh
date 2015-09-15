@@ -8,6 +8,7 @@
 
 namespace gls {
 struct centered_window {
+  centered_window() = default;
   explicit centered_window(SDL_Window* w);
   centered_window(title const& text, rectangle const& bounds);
 

@@ -8,6 +8,7 @@
 
 namespace gls {
 struct positioned_window {
+  positioned_window() = default;
   explicit positioned_window(SDL_Window* w);
   positioned_window(title const& text, positioned_rectangle const& bounds);
 

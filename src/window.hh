@@ -8,6 +8,7 @@
 
 namespace gls {
 struct window {
+  window() = default;
   explicit window(SDL_Window* w);
   window(title const& text, rectangle const& dimensions);
 
