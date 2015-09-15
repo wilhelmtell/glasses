@@ -3,11 +3,11 @@
 #include "surface.hh"
 #include <SDL2/SDL.h>
 #include "texture_creation_error.hh"
-#include "filename.hh"
+#include "bmp_filename.hh"
 
 namespace {
 SDL_Texture* texture_from_bmp(gls::renderer& renderer,
-                              gls::filename const& bmp) {
+                              gls::bmp_filename const& bmp) {
   gls::surface surface(bmp);
   return SDL_CreateTextureFromSurface(renderer.get(), surface.get());
 }
@@ -21,7 +21,7 @@ texture::texture(renderer& r, surface& s)
   if(!t) throw texture_creation_error(SDL_GetError());
 }
 
-texture::texture(renderer& r, filename const& bmp)
+texture::texture(renderer& r, bmp_filename const& bmp)
 : t(texture_from_bmp(r, bmp), &SDL_DestroyTexture) {
   if(!t) throw texture_creation_error(SDL_GetError());
 }

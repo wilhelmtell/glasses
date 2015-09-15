@@ -5,13 +5,13 @@
 #include <SDL2/SDL.h>
 #include "surface_fwd.hh"
 #include "renderer_fwd.hh"
-#include "filename_fwd.hh"
+#include "bmp_filename_fwd.hh"
 
 namespace gls {
 struct texture {
   explicit texture(SDL_Texture* t);
   texture(renderer& r, surface& s);
-  texture(renderer& r, filename const& bmp);
+  texture(renderer& r, bmp_filename const& bmp);
 
   SDL_Texture* get() const;
 
