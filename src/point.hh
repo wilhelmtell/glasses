@@ -8,9 +8,12 @@ struct point {
   point() = default;
   point(int x, int y);
 
-public:
-  int x;
-  int y;
+  int x() const;
+  int y() const;
+
+private:
+  int x_coordinate;
+  int y_coordinate;
 };
 
 bool operator==(point const& lhs, point const& rhs);

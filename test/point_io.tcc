@@ -8,7 +8,7 @@ namespace gls {
 template <typename Ch, typename Tr>
 std::basic_ostream<Ch, Tr>& operator<<(std::basic_ostream<Ch, Tr>& o,
                                        point const& p) {
-  return o << '(' << p.x << ',' << p.y << ')';
+  return o << '(' << p.x() << ',' << p.y() << ')';
 }
 }
 
