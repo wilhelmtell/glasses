@@ -7,6 +7,7 @@
 
 namespace gls {
 struct ttf_font {
+  ttf_font() = default;
   explicit ttf_font(TTF_Font* font);
   ttf_font(char const* const name, std::size_t const& size);
 
