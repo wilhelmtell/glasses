@@ -4,6 +4,8 @@
 #include "title.hh"
 
 namespace gls {
+window::window(SDL_Window* w) : w(w) {}
+
 window::window(title const& text, rectangle dimensions)
 : w(text, dimensions, 0) {}
 
