@@ -4,7 +4,6 @@
 #include <memory>
 #include <SDL2/SDL_ttf.h>
 #include <cstddef>
-#include "surface_fwd.hh"
 
 namespace gls {
 struct ttf_font {
