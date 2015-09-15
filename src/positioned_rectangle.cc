@@ -10,6 +10,10 @@ positioned_rectangle::positioned_rectangle(point p, rectangle r)
 
 point positioned_rectangle::top_left() const { return p; }
 
+point::value_type positioned_rectangle::x() const { return top_left().x(); }
+
+point::value_type positioned_rectangle::y() const { return top_left().y(); }
+
 dim::width positioned_rectangle::width() const { return r.width(); }
 
 dim::height positioned_rectangle::height() const { return r.height(); }
@@ -26,6 +30,6 @@ bool outside(positioned_rectangle const& a, positioned_rectangle const& b) {
 point top_left(positioned_rectangle const& r) { return r.top_left(); }
 
 point bottom_right(positioned_rectangle const& r) {
-  return point{top_left(r).x() + r.width(), top_left(r).y() + r.height()};
+  return point{r.x() + r.width(), r.y() + r.height()};
 }
 }

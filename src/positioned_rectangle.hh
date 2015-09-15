@@ -12,6 +12,8 @@ struct positioned_rectangle {
   positioned_rectangle(point p, rectangle r);
 
   point top_left() const;
+  point::value_type x() const;
+  point::value_type y() const;
   dim::width width() const;
   dim::height height() const;
 

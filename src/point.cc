@@ -4,23 +4,21 @@
 
 namespace {
 bool bounding_top(gls::point const& p, gls::positioned_rectangle const& b) {
-  return p.x() >= top_left(b).x() && p.x() <= top_left(b).x() + b.width()
-         && p.y() == top_left(b).y();
+  return p.x() >= b.x() && p.x() <= b.x() + b.width() && p.y() == b.y();
 }
 
 bool bounding_right(gls::point const& p, gls::positioned_rectangle const& b) {
-  return p.x() == top_left(b).x() + b.width() && p.y() >= top_left(b).y()
-         && p.y() <= top_left(b).y() + b.height();
+  return p.x() == b.x() + b.width() && p.y() >= b.y()
+         && p.y() <= b.y() + b.height();
 }
 
 bool bounding_bottom(gls::point const& p, gls::positioned_rectangle const& b) {
-  return p.x() >= top_left(b).x() && p.x() <= top_left(b).x() + b.width()
-         && p.y() == top_left(b).y() + b.height();
+  return p.x() >= b.x() && p.x() <= b.x() + b.width()
+         && p.y() == b.y() + b.height();
 }
 
 bool bounding_left(gls::point const& p, gls::positioned_rectangle const& b) {
-  return p.x() == top_left(b).x() && p.y() >= top_left(b).y()
-         && p.y() <= top_left(b).y() + b.height();
+  return p.x() == b.x() && p.y() >= b.y() && p.y() <= b.y() + b.height();
 }
 }
 
@@ -45,8 +43,8 @@ bool bounding(point const& p, positioned_rectangle const& b) {
 }
 
 bool outside(point const& p, positioned_rectangle const& b) {
-  return p.x() < top_left(b).x() || p.x() > top_left(b).x() + b.width()
-         || p.y() < top_left(b).y() || p.y() > top_left(b).y() + b.height();
+  return p.x() < b.x() || p.x() > b.x() + b.width() || p.y() < b.y()
+         || p.y() > b.y() + b.height();
 }
 
 bool inside(point const& p, positioned_rectangle const& b) {
