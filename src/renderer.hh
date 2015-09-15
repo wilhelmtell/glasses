@@ -6,6 +6,7 @@
 
 namespace gls {
 struct renderer {
+  explicit renderer(SDL_Renderer* r);
   template<typename Window>
   explicit renderer(Window const& w);
 

@@ -6,6 +6,7 @@
 
 namespace gls {
 struct surface {
+  explicit surface(SDL_Surface* s);
   explicit surface(char const* const bmp_filename);
 
   SDL_Surface* get() const;
