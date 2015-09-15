@@ -8,7 +8,9 @@ namespace gls {
 positioned_rectangle::positioned_rectangle(point p, rectangle r)
 : p{std::move(p)}, r(std::move(r)) {}
 
-point positioned_rectangle::top_left() const { return p; }
+point::value_type positioned_rectangle::x() const { return p.x(); }
+
+point::value_type positioned_rectangle::y() const { return p.y(); }
 
 dim::width positioned_rectangle::width() const { return r.width(); }
 
@@ -23,9 +25,9 @@ bool outside(positioned_rectangle const& a, positioned_rectangle const& b) {
   return outside(top_left(a), b) && outside(bottom_right(a), b);
 }
 
-point top_left(positioned_rectangle const& r) { return r.top_left(); }
+point top_left(positioned_rectangle const& r) { return r.p; }
 
 point bottom_right(positioned_rectangle const& r) {
-  return point{top_left(r).x() + r.width(), top_left(r).y() + r.height()};
+  return point{r.x() + r.width(), r.y() + r.height()};
 }
 }
