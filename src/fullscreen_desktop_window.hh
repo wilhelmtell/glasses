@@ -3,9 +3,11 @@
 
 #include "detail/window.hh"
 #include "title_fwd.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 struct fullscreen_desktop_window {
+  explicit fullscreen_desktop_window(SDL_Window* w);
   explicit fullscreen_desktop_window(title const& text);
 
   SDL_Window* get() const;
