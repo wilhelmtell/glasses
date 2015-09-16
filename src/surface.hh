@@ -3,11 +3,12 @@
 
 #include <memory>
 #include <SDL2/SDL.h>
+#include "bmp_filename_fwd.hh"
 
 namespace gls {
 struct surface {
   explicit surface(SDL_Surface* s);
-  explicit surface(char const* const bmp_filename);
+  explicit surface(bmp_filename const& bmp);
 
   SDL_Surface* get() const;
 
