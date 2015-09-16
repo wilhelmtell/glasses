@@ -4,13 +4,13 @@
 #include <memory>
 #include <SDL2/SDL_ttf.h>
 #include <cstddef>
-#include "filename_fwd.hh"
+#include "ttf_filename_fwd.hh"
 
 namespace gls {
 struct ttf_font {
   ttf_font() = default;
   explicit ttf_font(TTF_Font* font);
-  ttf_font(filename const& name, std::size_t const& size);
+  ttf_font(ttf_filename const& name, std::size_t const& size);
 
   TTF_Font* get() const;
 
