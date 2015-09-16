@@ -13,17 +13,19 @@ window::window(SDL_Window* w) : w(w, &SDL_DestroyWindow) {}
 window::window(title const& text,
                positioned_rectangle const& bounds,
                int const& flags)
-: w{SDL_CreateWindow(text.c_str(),
+: w(SDL_CreateWindow(text.c_str(),
                      bounds.x(),
                      bounds.y(),
                      bounds.width(),
                      bounds.height(),
                      flags),
-    &SDL_DestroyWindow} {
+    &SDL_DestroyWindow) {
   if(w == nullptr) throw window_creation_error(SDL_GetError());
 }
 
-window::window(title const& text, rectangle const& dimensions, int const& flags)
+window::window(title const& text,
+               rectangle const& dimensions,
+               int const& flags)
 : window(
     text,
     positioned_rectangle(
