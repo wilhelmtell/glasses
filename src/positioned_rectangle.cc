@@ -6,7 +6,7 @@
 
 namespace gls {
 positioned_rectangle::positioned_rectangle(point p, rectangle r)
-: p{std::move(p)}, r(std::move(r)) {}
+: p(std::move(p)), r(std::move(r)) {}
 
 point::value_type positioned_rectangle::x() const { return p.x(); }
 

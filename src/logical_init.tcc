@@ -5,7 +5,9 @@
 
 namespace gls {
 template <typename Op>
-logical_init::logical_init(Op init) { init(); }
+logical_init::logical_init(Op init) {
+  init();
+}
 }
 
 #endif
