@@ -17,12 +17,12 @@ namespace gls {
 texture::texture(SDL_Texture* t) : t(t, &SDL_DestroyTexture) {}
 
 texture::texture(renderer& r, surface& s)
-: t(SDL_CreateTextureFromSurface(r.get(), s.get()), &SDL_DestroyTexture) {
+: texture(SDL_CreateTextureFromSurface(r.get(), s.get())) {
   if(!t) throw texture_creation_error(SDL_GetError());
 }
 
 texture::texture(renderer& r, bmp_filename const& bmp)
-: t(texture_from_bmp(r, bmp), &SDL_DestroyTexture) {
+: texture(texture_from_bmp(r, bmp)) {
   if(!t) throw texture_creation_error(SDL_GetError());
 }
 
