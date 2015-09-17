@@ -9,6 +9,7 @@
 
 namespace gls {
 struct texture {
+  texture() = default;
   explicit texture(SDL_Texture* t);
   texture(renderer& r, surface& s);
   texture(renderer& r, bmp_filename const& bmp);
