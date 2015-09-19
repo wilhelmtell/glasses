@@ -5,8 +5,11 @@
 #include "texture_creation_error.hh"
 #include "bmp_filename.hh"
 #include "ttf_font.hh"
+#include "width.hh"
+#include "height.hh"
 #include "text.hh"
 #include "colour.hh"
+#include <cassert>
 
 namespace {
 SDL_Texture* texture_from_bmp(gls::renderer& renderer,
@@ -44,6 +47,20 @@ texture::texture(renderer& r,
                  text const& t,
                  colour const& c)
 : texture(make_texture(r, ttf, t, c)) {}
+
+dim::width texture::width() const {
+  int w;
+  auto const err = SDL_QueryTexture(get(), nullptr, nullptr, &w, nullptr);
+  assert(err == 0);  // XXX: How should I handle an error here?
+  return dim::width(w);
+}
+
+dim::height texture::height() const {
+  int h;
+  auto const err = SDL_QueryTexture(get(), nullptr, nullptr, nullptr, &h);
+  assert(err == 0);  // XXX: How should I handle an error here?
+  return dim::height(h);
+}
 
 SDL_Texture* texture::get() const { return t.get(); }
 }
