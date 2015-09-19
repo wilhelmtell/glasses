@@ -1,6 +1,8 @@
 #ifndef GLS_TITLE_HH_
 #define GLS_TITLE_HH_
 
+#include "text.hh"
+
 namespace gls {
 struct title {
   title() = default;
@@ -9,7 +11,7 @@ struct title {
   char const* c_str() const;
 
 private:
-  char const* t;
+  text t;
 };
 }
 
