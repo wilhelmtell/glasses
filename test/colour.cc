@@ -10,3 +10,7 @@ TEST_CASE("value-initialized colour zeroes out") {
   auto const them_all = t.red() | t.green() | t.blue() | t.alpha();
   REQUIRE(them_all == 0);
 }
+
+TEST_CASE("colour constructed with colour components compiles") {
+  gls::colour const t(2, 2, 2, 2);
+}
