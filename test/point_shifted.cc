@@ -26,6 +26,12 @@ TEST_CASE("point shifted_up() from within the 3rd quadrant") {
   REQUIRE(gls::shifted_up(p, 2) == x);
 }
 
+TEST_CASE("point shifted_up() from within the 4th quadrant") {
+  gls::point const p(-12, -34);
+  gls::point const x(-12, -36);  // 4th quadrant up means further from x axis
+  REQUIRE(gls::shifted_up(p, 2) == x);
+}
+
 TEST_CASE("point shifted_up() from origin") {
   gls::point const p(0, 0);
   gls::point const x(0, -2);
