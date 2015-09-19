@@ -50,4 +50,8 @@ bool outside(point const& p, positioned_rectangle const& b) {
 bool inside(point const& p, positioned_rectangle const& b) {
   return !outside(p, b) && !bounding(p, b);
 }
+
+point shifted_up(point const& p, point::value_type offset) {
+  return point(p.x(), p.y() - offset);
+}
 }
