@@ -22,3 +22,11 @@ TEST_CASE("colour constructed with random colour components") {
   REQUIRE(t.blue() == 152);
   REQUIRE(t.alpha() == 31);
 }
+
+TEST_CASE("colour constructed with zeroes") {
+  gls::colour const t(0, 0, 0, 0);
+  REQUIRE(t.red() == 0);
+  REQUIRE(t.green() == 0);
+  REQUIRE(t.blue() == 0);
+  REQUIRE(t.alpha() == 0);
+}
