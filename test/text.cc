@@ -10,6 +10,11 @@ TEST_CASE("text constructed with a C string compiles") {
   gls::text const t("a");
 }
 
+TEST_CASE("8 characters text constructed with a C string equals c_str()") {
+  gls::text const t("01234567");
+  REQUIRE(std::string("01234567") == t.c_str());
+}
+
 TEST_CASE("1 character text constructed with a C string equals c_str()") {
   gls::text const t("a");
   REQUIRE(std::string("a") == t.c_str());
