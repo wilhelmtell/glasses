@@ -1626,4 +1626,1611 @@ void event_dispatch::keydown_sleep() const { keydown_sleep_signal(); }
 connection event_dispatch::on_keydown_sleep(keydown_sleep_slot_t const& op) {
   return keydown_sleep_signal.connect(op);
 }
+
+void event_dispatch::keyup_unknown() const { keyup_unknown_signal(); }
+
+connection event_dispatch::on_keyup_unknown(
+  keyup_unknown_slot_t const& op) {
+  return keyup_unknown_signal.connect(op);
+}
+
+void event_dispatch::keyup_backspace() const { keyup_backspace_signal(); }
+
+connection event_dispatch::on_keyup_backspace(
+  keyup_backspace_slot_t const& op) {
+  return keyup_backspace_signal.connect(op);
+}
+
+void event_dispatch::keyup_tab() const { keyup_tab_signal(); }
+
+connection event_dispatch::on_keyup_tab(keyup_tab_slot_t const& op) {
+  return keyup_tab_signal.connect(op);
+}
+
+void event_dispatch::keyup_return() const { keyup_return_signal(); }
+
+connection event_dispatch::on_keyup_return(keyup_return_slot_t const& op) {
+  return keyup_return_signal.connect(op);
+}
+
+void event_dispatch::keyup_escape() const { keyup_escape_signal(); }
+
+connection event_dispatch::on_keyup_escape(keyup_escape_slot_t const& op) {
+  return keyup_escape_signal.connect(op);
+}
+
+void event_dispatch::keyup_space() const { keyup_space_signal(); }
+
+connection event_dispatch::on_keyup_space(keyup_space_slot_t const& op) {
+  return keyup_space_signal.connect(op);
+}
+
+void event_dispatch::keyup_exclaim() const { keyup_exclaim_signal(); }
+
+connection event_dispatch::on_keyup_exclaim(
+  keyup_exclaim_slot_t const& op) {
+  return keyup_exclaim_signal.connect(op);
+}
+
+void event_dispatch::keyup_quotedbl() const { keyup_quotedbl_signal(); }
+
+connection event_dispatch::on_keyup_quotedbl(
+  keyup_quotedbl_slot_t const& op) {
+  return keyup_quotedbl_signal.connect(op);
+}
+
+void event_dispatch::keyup_hash() const { keyup_hash_signal(); }
+
+connection event_dispatch::on_keyup_hash(keyup_hash_slot_t const& op) {
+  return keyup_hash_signal.connect(op);
+}
+
+void event_dispatch::keyup_dollar() const { keyup_dollar_signal(); }
+
+connection event_dispatch::on_keyup_dollar(keyup_dollar_slot_t const& op) {
+  return keyup_dollar_signal.connect(op);
+}
+
+void event_dispatch::keyup_percent() const { keyup_percent_signal(); }
+
+connection event_dispatch::on_keyup_percent(
+  keyup_percent_slot_t const& op) {
+  return keyup_percent_signal.connect(op);
+}
+
+void event_dispatch::keyup_ampersand() const { keyup_ampersand_signal(); }
+
+connection event_dispatch::on_keyup_ampersand(
+  keyup_ampersand_slot_t const& op) {
+  return keyup_ampersand_signal.connect(op);
+}
+
+void event_dispatch::keyup_quote() const { keyup_quote_signal(); }
+
+connection event_dispatch::on_keyup_quote(keyup_quote_slot_t const& op) {
+  return keyup_quote_signal.connect(op);
+}
+
+void event_dispatch::keyup_leftparen() const { keyup_leftparen_signal(); }
+
+connection event_dispatch::on_keyup_leftparen(
+  keyup_leftparen_slot_t const& op) {
+  return keyup_leftparen_signal.connect(op);
+}
+
+void event_dispatch::keyup_rightparen() const {
+  keyup_rightparen_signal();
+}
+
+connection event_dispatch::on_keyup_rightparen(
+  keyup_rightparen_slot_t const& op) {
+  return keyup_rightparen_signal.connect(op);
+}
+
+void event_dispatch::keyup_asterisk() const { keyup_asterisk_signal(); }
+
+connection event_dispatch::on_keyup_asterisk(
+  keyup_asterisk_slot_t const& op) {
+  return keyup_asterisk_signal.connect(op);
+}
+
+void event_dispatch::keyup_plus() const { keyup_plus_signal(); }
+
+connection event_dispatch::on_keyup_plus(keyup_plus_slot_t const& op) {
+  return keyup_plus_signal.connect(op);
+}
+
+void event_dispatch::keyup_comma() const { keyup_comma_signal(); }
+
+connection event_dispatch::on_keyup_comma(keyup_comma_slot_t const& op) {
+  return keyup_comma_signal.connect(op);
+}
+
+void event_dispatch::keyup_minus() const { keyup_minus_signal(); }
+
+connection event_dispatch::on_keyup_minus(keyup_minus_slot_t const& op) {
+  return keyup_minus_signal.connect(op);
+}
+
+void event_dispatch::keyup_period() const { keyup_period_signal(); }
+
+connection event_dispatch::on_keyup_period(keyup_period_slot_t const& op) {
+  return keyup_period_signal.connect(op);
+}
+
+void event_dispatch::keyup_slash() const { keyup_slash_signal(); }
+
+connection event_dispatch::on_keyup_slash(keyup_slash_slot_t const& op) {
+  return keyup_slash_signal.connect(op);
+}
+
+void event_dispatch::keyup_0() const { keyup_0_signal(); }
+
+connection event_dispatch::on_keyup_0(keyup_0_slot_t const& op) {
+  return keyup_0_signal.connect(op);
+}
+
+void event_dispatch::keyup_1() const { keyup_1_signal(); }
+
+connection event_dispatch::on_keyup_1(keyup_1_slot_t const& op) {
+  return keyup_1_signal.connect(op);
+}
+
+void event_dispatch::keyup_2() const { keyup_2_signal(); }
+
+connection event_dispatch::on_keyup_2(keyup_2_slot_t const& op) {
+  return keyup_2_signal.connect(op);
+}
+
+void event_dispatch::keyup_3() const { keyup_3_signal(); }
+
+connection event_dispatch::on_keyup_3(keyup_3_slot_t const& op) {
+  return keyup_3_signal.connect(op);
+}
+
+void event_dispatch::keyup_4() const { keyup_4_signal(); }
+
+connection event_dispatch::on_keyup_4(keyup_4_slot_t const& op) {
+  return keyup_4_signal.connect(op);
+}
+
+void event_dispatch::keyup_5() const { keyup_5_signal(); }
+
+connection event_dispatch::on_keyup_5(keyup_5_slot_t const& op) {
+  return keyup_5_signal.connect(op);
+}
+
+void event_dispatch::keyup_6() const { keyup_6_signal(); }
+
+connection event_dispatch::on_keyup_6(keyup_6_slot_t const& op) {
+  return keyup_6_signal.connect(op);
+}
+
+void event_dispatch::keyup_7() const { keyup_7_signal(); }
+
+connection event_dispatch::on_keyup_7(keyup_7_slot_t const& op) {
+  return keyup_7_signal.connect(op);
+}
+
+void event_dispatch::keyup_8() const { keyup_8_signal(); }
+
+connection event_dispatch::on_keyup_8(keyup_8_slot_t const& op) {
+  return keyup_8_signal.connect(op);
+}
+
+void event_dispatch::keyup_9() const { keyup_9_signal(); }
+
+connection event_dispatch::on_keyup_9(keyup_9_slot_t const& op) {
+  return keyup_9_signal.connect(op);
+}
+
+void event_dispatch::keyup_colon() const { keyup_colon_signal(); }
+
+connection event_dispatch::on_keyup_colon(keyup_colon_slot_t const& op) {
+  return keyup_colon_signal.connect(op);
+}
+
+void event_dispatch::keyup_semicolon() const { keyup_semicolon_signal(); }
+
+connection event_dispatch::on_keyup_semicolon(
+  keyup_semicolon_slot_t const& op) {
+  return keyup_semicolon_signal.connect(op);
+}
+
+void event_dispatch::keyup_less() const { keyup_less_signal(); }
+
+connection event_dispatch::on_keyup_less(keyup_less_slot_t const& op) {
+  return keyup_less_signal.connect(op);
+}
+
+void event_dispatch::keyup_equals() const { keyup_equals_signal(); }
+
+connection event_dispatch::on_keyup_equals(keyup_equals_slot_t const& op) {
+  return keyup_equals_signal.connect(op);
+}
+
+void event_dispatch::keyup_greater() const { keyup_greater_signal(); }
+
+connection event_dispatch::on_keyup_greater(
+  keyup_greater_slot_t const& op) {
+  return keyup_greater_signal.connect(op);
+}
+
+void event_dispatch::keyup_question() const { keyup_question_signal(); }
+
+connection event_dispatch::on_keyup_question(
+  keyup_question_slot_t const& op) {
+  return keyup_question_signal.connect(op);
+}
+
+void event_dispatch::keyup_at() const { keyup_at_signal(); }
+
+connection event_dispatch::on_keyup_at(keyup_at_slot_t const& op) {
+  return keyup_at_signal.connect(op);
+}
+
+void event_dispatch::keyup_leftbracket() const {
+  keyup_leftbracket_signal();
+}
+
+connection event_dispatch::on_keyup_leftbracket(
+  keyup_leftbracket_slot_t const& op) {
+  return keyup_leftbracket_signal.connect(op);
+}
+
+void event_dispatch::keyup_backslash() const { keyup_backslash_signal(); }
+
+connection event_dispatch::on_keyup_backslash(
+  keyup_backslash_slot_t const& op) {
+  return keyup_backslash_signal.connect(op);
+}
+
+void event_dispatch::keyup_rightbracket() const {
+  keyup_rightbracket_signal();
+}
+
+connection event_dispatch::on_keyup_rightbracket(
+  keyup_rightbracket_slot_t const& op) {
+  return keyup_rightbracket_signal.connect(op);
+}
+
+void event_dispatch::keyup_caret() const { keyup_caret_signal(); }
+
+connection event_dispatch::on_keyup_caret(keyup_caret_slot_t const& op) {
+  return keyup_caret_signal.connect(op);
+}
+
+void event_dispatch::keyup_underscore() const {
+  keyup_underscore_signal();
+}
+
+connection event_dispatch::on_keyup_underscore(
+  keyup_underscore_slot_t const& op) {
+  return keyup_underscore_signal.connect(op);
+}
+
+void event_dispatch::keyup_backquote() const { keyup_backquote_signal(); }
+
+connection event_dispatch::on_keyup_backquote(
+  keyup_backquote_slot_t const& op) {
+  return keyup_backquote_signal.connect(op);
+}
+
+void event_dispatch::keyup_a() const { keyup_a_signal(); }
+
+connection event_dispatch::on_keyup_a(keyup_a_slot_t const& op) {
+  return keyup_a_signal.connect(op);
+}
+
+void event_dispatch::keyup_b() const { keyup_b_signal(); }
+
+connection event_dispatch::on_keyup_b(keyup_b_slot_t const& op) {
+  return keyup_b_signal.connect(op);
+}
+
+void event_dispatch::keyup_c() const { keyup_c_signal(); }
+
+connection event_dispatch::on_keyup_c(keyup_c_slot_t const& op) {
+  return keyup_c_signal.connect(op);
+}
+
+void event_dispatch::keyup_d() const { keyup_d_signal(); }
+
+connection event_dispatch::on_keyup_d(keyup_d_slot_t const& op) {
+  return keyup_d_signal.connect(op);
+}
+
+void event_dispatch::keyup_e() const { keyup_e_signal(); }
+
+connection event_dispatch::on_keyup_e(keyup_e_slot_t const& op) {
+  return keyup_e_signal.connect(op);
+}
+
+void event_dispatch::keyup_f() const { keyup_f_signal(); }
+
+connection event_dispatch::on_keyup_f(keyup_f_slot_t const& op) {
+  return keyup_f_signal.connect(op);
+}
+
+void event_dispatch::keyup_g() const { keyup_g_signal(); }
+
+connection event_dispatch::on_keyup_g(keyup_g_slot_t const& op) {
+  return keyup_g_signal.connect(op);
+}
+
+void event_dispatch::keyup_h() const { keyup_h_signal(); }
+
+connection event_dispatch::on_keyup_h(keyup_h_slot_t const& op) {
+  return keyup_h_signal.connect(op);
+}
+
+void event_dispatch::keyup_i() const { keyup_i_signal(); }
+
+connection event_dispatch::on_keyup_i(keyup_i_slot_t const& op) {
+  return keyup_i_signal.connect(op);
+}
+
+void event_dispatch::keyup_j() const { keyup_j_signal(); }
+
+connection event_dispatch::on_keyup_j(keyup_j_slot_t const& op) {
+  return keyup_j_signal.connect(op);
+}
+
+void event_dispatch::keyup_k() const { keyup_k_signal(); }
+
+connection event_dispatch::on_keyup_k(keyup_k_slot_t const& op) {
+  return keyup_k_signal.connect(op);
+}
+
+void event_dispatch::keyup_l() const { keyup_l_signal(); }
+
+connection event_dispatch::on_keyup_l(keyup_l_slot_t const& op) {
+  return keyup_l_signal.connect(op);
+}
+
+void event_dispatch::keyup_m() const { keyup_m_signal(); }
+
+connection event_dispatch::on_keyup_m(keyup_m_slot_t const& op) {
+  return keyup_m_signal.connect(op);
+}
+
+void event_dispatch::keyup_n() const { keyup_n_signal(); }
+
+connection event_dispatch::on_keyup_n(keyup_n_slot_t const& op) {
+  return keyup_n_signal.connect(op);
+}
+
+void event_dispatch::keyup_o() const { keyup_o_signal(); }
+
+connection event_dispatch::on_keyup_o(keyup_o_slot_t const& op) {
+  return keyup_o_signal.connect(op);
+}
+
+void event_dispatch::keyup_p() const { keyup_p_signal(); }
+
+connection event_dispatch::on_keyup_p(keyup_p_slot_t const& op) {
+  return keyup_p_signal.connect(op);
+}
+
+void event_dispatch::keyup_q() const { keyup_q_signal(); }
+
+connection event_dispatch::on_keyup_q(keyup_q_slot_t const& op) {
+  return keyup_q_signal.connect(op);
+}
+
+void event_dispatch::keyup_r() const { keyup_r_signal(); }
+
+connection event_dispatch::on_keyup_r(keyup_r_slot_t const& op) {
+  return keyup_r_signal.connect(op);
+}
+
+void event_dispatch::keyup_s() const { keyup_s_signal(); }
+
+connection event_dispatch::on_keyup_s(keyup_s_slot_t const& op) {
+  return keyup_s_signal.connect(op);
+}
+
+void event_dispatch::keyup_t() const { keyup_t_signal(); }
+
+connection event_dispatch::on_keyup_t(keyup_t_slot_t const& op) {
+  return keyup_t_signal.connect(op);
+}
+
+void event_dispatch::keyup_u() const { keyup_u_signal(); }
+
+connection event_dispatch::on_keyup_u(keyup_u_slot_t const& op) {
+  return keyup_u_signal.connect(op);
+}
+
+void event_dispatch::keyup_v() const { keyup_v_signal(); }
+
+connection event_dispatch::on_keyup_v(keyup_v_slot_t const& op) {
+  return keyup_v_signal.connect(op);
+}
+
+void event_dispatch::keyup_w() const { keyup_w_signal(); }
+
+connection event_dispatch::on_keyup_w(keyup_w_slot_t const& op) {
+  return keyup_w_signal.connect(op);
+}
+
+void event_dispatch::keyup_x() const { keyup_x_signal(); }
+
+connection event_dispatch::on_keyup_x(keyup_x_slot_t const& op) {
+  return keyup_x_signal.connect(op);
+}
+
+void event_dispatch::keyup_y() const { keyup_y_signal(); }
+
+connection event_dispatch::on_keyup_y(keyup_y_slot_t const& op) {
+  return keyup_y_signal.connect(op);
+}
+
+void event_dispatch::keyup_z() const { keyup_z_signal(); }
+
+connection event_dispatch::on_keyup_z(keyup_z_slot_t const& op) {
+  return keyup_z_signal.connect(op);
+}
+
+void event_dispatch::keyup_delete() const { keyup_delete_signal(); }
+
+connection event_dispatch::on_keyup_delete(keyup_delete_slot_t const& op) {
+  return keyup_delete_signal.connect(op);
+}
+
+void event_dispatch::keyup_capslock() const { keyup_capslock_signal(); }
+
+connection event_dispatch::on_keyup_capslock(
+  keyup_capslock_slot_t const& op) {
+  return keyup_capslock_signal.connect(op);
+}
+
+void event_dispatch::keyup_f1() const { keyup_f1_signal(); }
+
+connection event_dispatch::on_keyup_f1(keyup_f1_slot_t const& op) {
+  return keyup_f1_signal.connect(op);
+}
+
+void event_dispatch::keyup_f2() const { keyup_f2_signal(); }
+
+connection event_dispatch::on_keyup_f2(keyup_f2_slot_t const& op) {
+  return keyup_f2_signal.connect(op);
+}
+
+void event_dispatch::keyup_f3() const { keyup_f3_signal(); }
+
+connection event_dispatch::on_keyup_f3(keyup_f3_slot_t const& op) {
+  return keyup_f3_signal.connect(op);
+}
+
+void event_dispatch::keyup_f4() const { keyup_f4_signal(); }
+
+connection event_dispatch::on_keyup_f4(keyup_f4_slot_t const& op) {
+  return keyup_f4_signal.connect(op);
+}
+
+void event_dispatch::keyup_f5() const { keyup_f5_signal(); }
+
+connection event_dispatch::on_keyup_f5(keyup_f5_slot_t const& op) {
+  return keyup_f5_signal.connect(op);
+}
+
+void event_dispatch::keyup_f6() const { keyup_f6_signal(); }
+
+connection event_dispatch::on_keyup_f6(keyup_f6_slot_t const& op) {
+  return keyup_f6_signal.connect(op);
+}
+
+void event_dispatch::keyup_f7() const { keyup_f7_signal(); }
+
+connection event_dispatch::on_keyup_f7(keyup_f7_slot_t const& op) {
+  return keyup_f7_signal.connect(op);
+}
+
+void event_dispatch::keyup_f8() const { keyup_f8_signal(); }
+
+connection event_dispatch::on_keyup_f8(keyup_f8_slot_t const& op) {
+  return keyup_f8_signal.connect(op);
+}
+
+void event_dispatch::keyup_f9() const { keyup_f9_signal(); }
+
+connection event_dispatch::on_keyup_f9(keyup_f9_slot_t const& op) {
+  return keyup_f9_signal.connect(op);
+}
+
+void event_dispatch::keyup_f10() const { keyup_f10_signal(); }
+
+connection event_dispatch::on_keyup_f10(keyup_f10_slot_t const& op) {
+  return keyup_f10_signal.connect(op);
+}
+
+void event_dispatch::keyup_f11() const { keyup_f11_signal(); }
+
+connection event_dispatch::on_keyup_f11(keyup_f11_slot_t const& op) {
+  return keyup_f11_signal.connect(op);
+}
+
+void event_dispatch::keyup_f12() const { keyup_f12_signal(); }
+
+connection event_dispatch::on_keyup_f12(keyup_f12_slot_t const& op) {
+  return keyup_f12_signal.connect(op);
+}
+
+void event_dispatch::keyup_printscreen() const {
+  keyup_printscreen_signal();
+}
+
+connection event_dispatch::on_keyup_printscreen(
+  keyup_printscreen_slot_t const& op) {
+  return keyup_printscreen_signal.connect(op);
+}
+
+void event_dispatch::keyup_scrolllock() const {
+  keyup_scrolllock_signal();
+}
+
+connection event_dispatch::on_keyup_scrolllock(
+  keyup_scrolllock_slot_t const& op) {
+  return keyup_scrolllock_signal.connect(op);
+}
+
+void event_dispatch::keyup_pause() const { keyup_pause_signal(); }
+
+connection event_dispatch::on_keyup_pause(keyup_pause_slot_t const& op) {
+  return keyup_pause_signal.connect(op);
+}
+
+void event_dispatch::keyup_insert() const { keyup_insert_signal(); }
+
+connection event_dispatch::on_keyup_insert(keyup_insert_slot_t const& op) {
+  return keyup_insert_signal.connect(op);
+}
+
+void event_dispatch::keyup_home() const { keyup_home_signal(); }
+
+connection event_dispatch::on_keyup_home(keyup_home_slot_t const& op) {
+  return keyup_home_signal.connect(op);
+}
+
+void event_dispatch::keyup_pageup() const { keyup_pageup_signal(); }
+
+connection event_dispatch::on_keyup_pageup(keyup_pageup_slot_t const& op) {
+  return keyup_pageup_signal.connect(op);
+}
+
+void event_dispatch::keyup_end() const { keyup_end_signal(); }
+
+connection event_dispatch::on_keyup_end(keyup_end_slot_t const& op) {
+  return keyup_end_signal.connect(op);
+}
+
+void event_dispatch::keyup_pagedown() const { keyup_pagedown_signal(); }
+
+connection event_dispatch::on_keyup_pagedown(
+  keyup_pagedown_slot_t const& op) {
+  return keyup_pagedown_signal.connect(op);
+}
+
+void event_dispatch::keyup_right() const { keyup_right_signal(); }
+
+connection event_dispatch::on_keyup_right(keyup_right_slot_t const& op) {
+  return keyup_right_signal.connect(op);
+}
+
+void event_dispatch::keyup_left() const { keyup_left_signal(); }
+
+connection event_dispatch::on_keyup_left(keyup_left_slot_t const& op) {
+  return keyup_left_signal.connect(op);
+}
+
+void event_dispatch::keyup_down() const { keyup_down_signal(); }
+
+connection event_dispatch::on_keyup_down(keyup_down_slot_t const& op) {
+  return keyup_down_signal.connect(op);
+}
+
+void event_dispatch::keyup_up() const { keyup_up_signal(); }
+
+connection event_dispatch::on_keyup_up(keyup_up_slot_t const& op) {
+  return keyup_up_signal.connect(op);
+}
+
+void event_dispatch::keyup_numlockclear() const {
+  keyup_numlockclear_signal();
+}
+
+connection event_dispatch::on_keyup_numlockclear(
+  keyup_numlockclear_slot_t const& op) {
+  return keyup_numlockclear_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_divide() const { keyup_kp_divide_signal(); }
+
+connection event_dispatch::on_keyup_kp_divide(
+  keyup_kp_divide_slot_t const& op) {
+  return keyup_kp_divide_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_multiply() const {
+  keyup_kp_multiply_signal();
+}
+
+connection event_dispatch::on_keyup_kp_multiply(
+  keyup_kp_multiply_slot_t const& op) {
+  return keyup_kp_multiply_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_minus() const { keyup_kp_minus_signal(); }
+
+connection event_dispatch::on_keyup_kp_minus(
+  keyup_kp_minus_slot_t const& op) {
+  return keyup_kp_minus_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_plus() const { keyup_kp_plus_signal(); }
+
+connection event_dispatch::on_keyup_kp_plus(
+  keyup_kp_plus_slot_t const& op) {
+  return keyup_kp_plus_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_enter() const { keyup_kp_enter_signal(); }
+
+connection event_dispatch::on_keyup_kp_enter(
+  keyup_kp_enter_slot_t const& op) {
+  return keyup_kp_enter_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_1() const { keyup_kp_1_signal(); }
+
+connection event_dispatch::on_keyup_kp_1(keyup_kp_1_slot_t const& op) {
+  return keyup_kp_1_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_2() const { keyup_kp_2_signal(); }
+
+connection event_dispatch::on_keyup_kp_2(keyup_kp_2_slot_t const& op) {
+  return keyup_kp_2_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_3() const { keyup_kp_3_signal(); }
+
+connection event_dispatch::on_keyup_kp_3(keyup_kp_3_slot_t const& op) {
+  return keyup_kp_3_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_4() const { keyup_kp_4_signal(); }
+
+connection event_dispatch::on_keyup_kp_4(keyup_kp_4_slot_t const& op) {
+  return keyup_kp_4_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_5() const { keyup_kp_5_signal(); }
+
+connection event_dispatch::on_keyup_kp_5(keyup_kp_5_slot_t const& op) {
+  return keyup_kp_5_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_6() const { keyup_kp_6_signal(); }
+
+connection event_dispatch::on_keyup_kp_6(keyup_kp_6_slot_t const& op) {
+  return keyup_kp_6_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_7() const { keyup_kp_7_signal(); }
+
+connection event_dispatch::on_keyup_kp_7(keyup_kp_7_slot_t const& op) {
+  return keyup_kp_7_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_8() const { keyup_kp_8_signal(); }
+
+connection event_dispatch::on_keyup_kp_8(keyup_kp_8_slot_t const& op) {
+  return keyup_kp_8_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_9() const { keyup_kp_9_signal(); }
+
+connection event_dispatch::on_keyup_kp_9(keyup_kp_9_slot_t const& op) {
+  return keyup_kp_9_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_0() const { keyup_kp_0_signal(); }
+
+connection event_dispatch::on_keyup_kp_0(keyup_kp_0_slot_t const& op) {
+  return keyup_kp_0_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_period() const { keyup_kp_period_signal(); }
+
+connection event_dispatch::on_keyup_kp_period(
+  keyup_kp_period_slot_t const& op) {
+  return keyup_kp_period_signal.connect(op);
+}
+
+void event_dispatch::keyup_application() const {
+  keyup_application_signal();
+}
+
+connection event_dispatch::on_keyup_application(
+  keyup_application_slot_t const& op) {
+  return keyup_application_signal.connect(op);
+}
+
+void event_dispatch::keyup_power() const { keyup_power_signal(); }
+
+connection event_dispatch::on_keyup_power(keyup_power_slot_t const& op) {
+  return keyup_power_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_equals() const { keyup_kp_equals_signal(); }
+
+connection event_dispatch::on_keyup_kp_equals(
+  keyup_kp_equals_slot_t const& op) {
+  return keyup_kp_equals_signal.connect(op);
+}
+
+void event_dispatch::keyup_f13() const { keyup_f13_signal(); }
+
+connection event_dispatch::on_keyup_f13(keyup_f13_slot_t const& op) {
+  return keyup_f13_signal.connect(op);
+}
+
+void event_dispatch::keyup_f14() const { keyup_f14_signal(); }
+
+connection event_dispatch::on_keyup_f14(keyup_f14_slot_t const& op) {
+  return keyup_f14_signal.connect(op);
+}
+
+void event_dispatch::keyup_f15() const { keyup_f15_signal(); }
+
+connection event_dispatch::on_keyup_f15(keyup_f15_slot_t const& op) {
+  return keyup_f15_signal.connect(op);
+}
+
+void event_dispatch::keyup_f16() const { keyup_f16_signal(); }
+
+connection event_dispatch::on_keyup_f16(keyup_f16_slot_t const& op) {
+  return keyup_f16_signal.connect(op);
+}
+
+void event_dispatch::keyup_f17() const { keyup_f17_signal(); }
+
+connection event_dispatch::on_keyup_f17(keyup_f17_slot_t const& op) {
+  return keyup_f17_signal.connect(op);
+}
+
+void event_dispatch::keyup_f18() const { keyup_f18_signal(); }
+
+connection event_dispatch::on_keyup_f18(keyup_f18_slot_t const& op) {
+  return keyup_f18_signal.connect(op);
+}
+
+void event_dispatch::keyup_f19() const { keyup_f19_signal(); }
+
+connection event_dispatch::on_keyup_f19(keyup_f19_slot_t const& op) {
+  return keyup_f19_signal.connect(op);
+}
+
+void event_dispatch::keyup_f20() const { keyup_f20_signal(); }
+
+connection event_dispatch::on_keyup_f20(keyup_f20_slot_t const& op) {
+  return keyup_f20_signal.connect(op);
+}
+
+void event_dispatch::keyup_f21() const { keyup_f21_signal(); }
+
+connection event_dispatch::on_keyup_f21(keyup_f21_slot_t const& op) {
+  return keyup_f21_signal.connect(op);
+}
+
+void event_dispatch::keyup_f22() const { keyup_f22_signal(); }
+
+connection event_dispatch::on_keyup_f22(keyup_f22_slot_t const& op) {
+  return keyup_f22_signal.connect(op);
+}
+
+void event_dispatch::keyup_f23() const { keyup_f23_signal(); }
+
+connection event_dispatch::on_keyup_f23(keyup_f23_slot_t const& op) {
+  return keyup_f23_signal.connect(op);
+}
+
+void event_dispatch::keyup_f24() const { keyup_f24_signal(); }
+
+connection event_dispatch::on_keyup_f24(keyup_f24_slot_t const& op) {
+  return keyup_f24_signal.connect(op);
+}
+
+void event_dispatch::keyup_execute() const { keyup_execute_signal(); }
+
+connection event_dispatch::on_keyup_execute(
+  keyup_execute_slot_t const& op) {
+  return keyup_execute_signal.connect(op);
+}
+
+void event_dispatch::keyup_help() const { keyup_help_signal(); }
+
+connection event_dispatch::on_keyup_help(keyup_help_slot_t const& op) {
+  return keyup_help_signal.connect(op);
+}
+
+void event_dispatch::keyup_menu() const { keyup_menu_signal(); }
+
+connection event_dispatch::on_keyup_menu(keyup_menu_slot_t const& op) {
+  return keyup_menu_signal.connect(op);
+}
+
+void event_dispatch::keyup_select() const { keyup_select_signal(); }
+
+connection event_dispatch::on_keyup_select(keyup_select_slot_t const& op) {
+  return keyup_select_signal.connect(op);
+}
+
+void event_dispatch::keyup_stop() const { keyup_stop_signal(); }
+
+connection event_dispatch::on_keyup_stop(keyup_stop_slot_t const& op) {
+  return keyup_stop_signal.connect(op);
+}
+
+void event_dispatch::keyup_again() const { keyup_again_signal(); }
+
+connection event_dispatch::on_keyup_again(keyup_again_slot_t const& op) {
+  return keyup_again_signal.connect(op);
+}
+
+void event_dispatch::keyup_undo() const { keyup_undo_signal(); }
+
+connection event_dispatch::on_keyup_undo(keyup_undo_slot_t const& op) {
+  return keyup_undo_signal.connect(op);
+}
+
+void event_dispatch::keyup_cut() const { keyup_cut_signal(); }
+
+connection event_dispatch::on_keyup_cut(keyup_cut_slot_t const& op) {
+  return keyup_cut_signal.connect(op);
+}
+
+void event_dispatch::keyup_copy() const { keyup_copy_signal(); }
+
+connection event_dispatch::on_keyup_copy(keyup_copy_slot_t const& op) {
+  return keyup_copy_signal.connect(op);
+}
+
+void event_dispatch::keyup_paste() const { keyup_paste_signal(); }
+
+connection event_dispatch::on_keyup_paste(keyup_paste_slot_t const& op) {
+  return keyup_paste_signal.connect(op);
+}
+
+void event_dispatch::keyup_find() const { keyup_find_signal(); }
+
+connection event_dispatch::on_keyup_find(keyup_find_slot_t const& op) {
+  return keyup_find_signal.connect(op);
+}
+
+void event_dispatch::keyup_mute() const { keyup_mute_signal(); }
+
+connection event_dispatch::on_keyup_mute(keyup_mute_slot_t const& op) {
+  return keyup_mute_signal.connect(op);
+}
+
+void event_dispatch::keyup_volumeup() const { keyup_volumeup_signal(); }
+
+connection event_dispatch::on_keyup_volumeup(
+  keyup_volumeup_slot_t const& op) {
+  return keyup_volumeup_signal.connect(op);
+}
+
+void event_dispatch::keyup_volumedown() const {
+  keyup_volumedown_signal();
+}
+
+connection event_dispatch::on_keyup_volumedown(
+  keyup_volumedown_slot_t const& op) {
+  return keyup_volumedown_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_comma() const { keyup_kp_comma_signal(); }
+
+connection event_dispatch::on_keyup_kp_comma(
+  keyup_kp_comma_slot_t const& op) {
+  return keyup_kp_comma_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_equalsas400() const {
+  keyup_kp_equalsas400_signal();
+}
+
+connection event_dispatch::on_keyup_kp_equalsas400(
+  keyup_kp_equalsas400_slot_t const& op) {
+  return keyup_kp_equalsas400_signal.connect(op);
+}
+
+void event_dispatch::keyup_alterase() const { keyup_alterase_signal(); }
+
+connection event_dispatch::on_keyup_alterase(
+  keyup_alterase_slot_t const& op) {
+  return keyup_alterase_signal.connect(op);
+}
+
+void event_dispatch::keyup_sysreq() const { keyup_sysreq_signal(); }
+
+connection event_dispatch::on_keyup_sysreq(keyup_sysreq_slot_t const& op) {
+  return keyup_sysreq_signal.connect(op);
+}
+
+void event_dispatch::keyup_cancel() const { keyup_cancel_signal(); }
+
+connection event_dispatch::on_keyup_cancel(keyup_cancel_slot_t const& op) {
+  return keyup_cancel_signal.connect(op);
+}
+
+void event_dispatch::keyup_clear() const { keyup_clear_signal(); }
+
+connection event_dispatch::on_keyup_clear(keyup_clear_slot_t const& op) {
+  return keyup_clear_signal.connect(op);
+}
+
+void event_dispatch::keyup_prior() const { keyup_prior_signal(); }
+
+connection event_dispatch::on_keyup_prior(keyup_prior_slot_t const& op) {
+  return keyup_prior_signal.connect(op);
+}
+
+void event_dispatch::keyup_return2() const { keyup_return2_signal(); }
+
+connection event_dispatch::on_keyup_return2(
+  keyup_return2_slot_t const& op) {
+  return keyup_return2_signal.connect(op);
+}
+
+void event_dispatch::keyup_separator() const { keyup_separator_signal(); }
+
+connection event_dispatch::on_keyup_separator(
+  keyup_separator_slot_t const& op) {
+  return keyup_separator_signal.connect(op);
+}
+
+void event_dispatch::keyup_out() const { keyup_out_signal(); }
+
+connection event_dispatch::on_keyup_out(keyup_out_slot_t const& op) {
+  return keyup_out_signal.connect(op);
+}
+
+void event_dispatch::keyup_oper() const { keyup_oper_signal(); }
+
+connection event_dispatch::on_keyup_oper(keyup_oper_slot_t const& op) {
+  return keyup_oper_signal.connect(op);
+}
+
+void event_dispatch::keyup_clearagain() const {
+  keyup_clearagain_signal();
+}
+
+connection event_dispatch::on_keyup_clearagain(
+  keyup_clearagain_slot_t const& op) {
+  return keyup_clearagain_signal.connect(op);
+}
+
+void event_dispatch::keyup_crsel() const { keyup_crsel_signal(); }
+
+connection event_dispatch::on_keyup_crsel(keyup_crsel_slot_t const& op) {
+  return keyup_crsel_signal.connect(op);
+}
+
+void event_dispatch::keyup_exsel() const { keyup_exsel_signal(); }
+
+connection event_dispatch::on_keyup_exsel(keyup_exsel_slot_t const& op) {
+  return keyup_exsel_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_00() const { keyup_kp_00_signal(); }
+
+connection event_dispatch::on_keyup_kp_00(keyup_kp_00_slot_t const& op) {
+  return keyup_kp_00_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_000() const { keyup_kp_000_signal(); }
+
+connection event_dispatch::on_keyup_kp_000(keyup_kp_000_slot_t const& op) {
+  return keyup_kp_000_signal.connect(op);
+}
+
+void event_dispatch::keyup_thousandsseparator() const {
+  keyup_thousandsseparator_signal();
+}
+
+connection event_dispatch::on_keyup_thousandsseparator(
+  keyup_thousandsseparator_slot_t const& op) {
+  return keyup_thousandsseparator_signal.connect(op);
+}
+
+void event_dispatch::keyup_decimalseparator() const {
+  keyup_decimalseparator_signal();
+}
+
+connection event_dispatch::on_keyup_decimalseparator(
+  keyup_decimalseparator_slot_t const& op) {
+  return keyup_decimalseparator_signal.connect(op);
+}
+
+void event_dispatch::keyup_currencyunit() const {
+  keyup_currencyunit_signal();
+}
+
+connection event_dispatch::on_keyup_currencyunit(
+  keyup_currencyunit_slot_t const& op) {
+  return keyup_currencyunit_signal.connect(op);
+}
+
+void event_dispatch::keyup_currencysubunit() const {
+  keyup_currencysubunit_signal();
+}
+
+connection event_dispatch::on_keyup_currencysubunit(
+  keyup_currencysubunit_slot_t const& op) {
+  return keyup_currencysubunit_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_leftparen() const {
+  keyup_kp_leftparen_signal();
+}
+
+connection event_dispatch::on_keyup_kp_leftparen(
+  keyup_kp_leftparen_slot_t const& op) {
+  return keyup_kp_leftparen_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_rightparen() const {
+  keyup_kp_rightparen_signal();
+}
+
+connection event_dispatch::on_keyup_kp_rightparen(
+  keyup_kp_rightparen_slot_t const& op) {
+  return keyup_kp_rightparen_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_leftbrace() const {
+  keyup_kp_leftbrace_signal();
+}
+
+connection event_dispatch::on_keyup_kp_leftbrace(
+  keyup_kp_leftbrace_slot_t const& op) {
+  return keyup_kp_leftbrace_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_rightbrace() const {
+  keyup_kp_rightbrace_signal();
+}
+
+connection event_dispatch::on_keyup_kp_rightbrace(
+  keyup_kp_rightbrace_slot_t const& op) {
+  return keyup_kp_rightbrace_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_tab() const { keyup_kp_tab_signal(); }
+
+connection event_dispatch::on_keyup_kp_tab(keyup_kp_tab_slot_t const& op) {
+  return keyup_kp_tab_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_backspace() const {
+  keyup_kp_backspace_signal();
+}
+
+connection event_dispatch::on_keyup_kp_backspace(
+  keyup_kp_backspace_slot_t const& op) {
+  return keyup_kp_backspace_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_a() const { keyup_kp_a_signal(); }
+
+connection event_dispatch::on_keyup_kp_a(keyup_kp_a_slot_t const& op) {
+  return keyup_kp_a_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_b() const { keyup_kp_b_signal(); }
+
+connection event_dispatch::on_keyup_kp_b(keyup_kp_b_slot_t const& op) {
+  return keyup_kp_b_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_c() const { keyup_kp_c_signal(); }
+
+connection event_dispatch::on_keyup_kp_c(keyup_kp_c_slot_t const& op) {
+  return keyup_kp_c_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_d() const { keyup_kp_d_signal(); }
+
+connection event_dispatch::on_keyup_kp_d(keyup_kp_d_slot_t const& op) {
+  return keyup_kp_d_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_e() const { keyup_kp_e_signal(); }
+
+connection event_dispatch::on_keyup_kp_e(keyup_kp_e_slot_t const& op) {
+  return keyup_kp_e_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_f() const { keyup_kp_f_signal(); }
+
+connection event_dispatch::on_keyup_kp_f(keyup_kp_f_slot_t const& op) {
+  return keyup_kp_f_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_xor() const { keyup_kp_xor_signal(); }
+
+connection event_dispatch::on_keyup_kp_xor(keyup_kp_xor_slot_t const& op) {
+  return keyup_kp_xor_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_power() const { keyup_kp_power_signal(); }
+
+connection event_dispatch::on_keyup_kp_power(
+  keyup_kp_power_slot_t const& op) {
+  return keyup_kp_power_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_percent() const {
+  keyup_kp_percent_signal();
+}
+
+connection event_dispatch::on_keyup_kp_percent(
+  keyup_kp_percent_slot_t const& op) {
+  return keyup_kp_percent_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_less() const { keyup_kp_less_signal(); }
+
+connection event_dispatch::on_keyup_kp_less(
+  keyup_kp_less_slot_t const& op) {
+  return keyup_kp_less_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_greater() const {
+  keyup_kp_greater_signal();
+}
+
+connection event_dispatch::on_keyup_kp_greater(
+  keyup_kp_greater_slot_t const& op) {
+  return keyup_kp_greater_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_ampersand() const {
+  keyup_kp_ampersand_signal();
+}
+
+connection event_dispatch::on_keyup_kp_ampersand(
+  keyup_kp_ampersand_slot_t const& op) {
+  return keyup_kp_ampersand_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_dblampersand() const {
+  keyup_kp_dblampersand_signal();
+}
+
+connection event_dispatch::on_keyup_kp_dblampersand(
+  keyup_kp_dblampersand_slot_t const& op) {
+  return keyup_kp_dblampersand_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_verticalbar() const {
+  keyup_kp_verticalbar_signal();
+}
+
+connection event_dispatch::on_keyup_kp_verticalbar(
+  keyup_kp_verticalbar_slot_t const& op) {
+  return keyup_kp_verticalbar_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_dblverticalbar() const {
+  keyup_kp_dblverticalbar_signal();
+}
+
+connection event_dispatch::on_keyup_kp_dblverticalbar(
+  keyup_kp_dblverticalbar_slot_t const& op) {
+  return keyup_kp_dblverticalbar_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_colon() const { keyup_kp_colon_signal(); }
+
+connection event_dispatch::on_keyup_kp_colon(
+  keyup_kp_colon_slot_t const& op) {
+  return keyup_kp_colon_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_hash() const { keyup_kp_hash_signal(); }
+
+connection event_dispatch::on_keyup_kp_hash(
+  keyup_kp_hash_slot_t const& op) {
+  return keyup_kp_hash_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_space() const { keyup_kp_space_signal(); }
+
+connection event_dispatch::on_keyup_kp_space(
+  keyup_kp_space_slot_t const& op) {
+  return keyup_kp_space_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_at() const { keyup_kp_at_signal(); }
+
+connection event_dispatch::on_keyup_kp_at(keyup_kp_at_slot_t const& op) {
+  return keyup_kp_at_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_exclam() const { keyup_kp_exclam_signal(); }
+
+connection event_dispatch::on_keyup_kp_exclam(
+  keyup_kp_exclam_slot_t const& op) {
+  return keyup_kp_exclam_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memstore() const {
+  keyup_kp_memstore_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memstore(
+  keyup_kp_memstore_slot_t const& op) {
+  return keyup_kp_memstore_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memrecall() const {
+  keyup_kp_memrecall_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memrecall(
+  keyup_kp_memrecall_slot_t const& op) {
+  return keyup_kp_memrecall_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memclear() const {
+  keyup_kp_memclear_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memclear(
+  keyup_kp_memclear_slot_t const& op) {
+  return keyup_kp_memclear_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memadd() const { keyup_kp_memadd_signal(); }
+
+connection event_dispatch::on_keyup_kp_memadd(
+  keyup_kp_memadd_slot_t const& op) {
+  return keyup_kp_memadd_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memsubtract() const {
+  keyup_kp_memsubtract_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memsubtract(
+  keyup_kp_memsubtract_slot_t const& op) {
+  return keyup_kp_memsubtract_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memmultiply() const {
+  keyup_kp_memmultiply_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memmultiply(
+  keyup_kp_memmultiply_slot_t const& op) {
+  return keyup_kp_memmultiply_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_memdivide() const {
+  keyup_kp_memdivide_signal();
+}
+
+connection event_dispatch::on_keyup_kp_memdivide(
+  keyup_kp_memdivide_slot_t const& op) {
+  return keyup_kp_memdivide_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_plusminus() const {
+  keyup_kp_plusminus_signal();
+}
+
+connection event_dispatch::on_keyup_kp_plusminus(
+  keyup_kp_plusminus_slot_t const& op) {
+  return keyup_kp_plusminus_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_clear() const { keyup_kp_clear_signal(); }
+
+connection event_dispatch::on_keyup_kp_clear(
+  keyup_kp_clear_slot_t const& op) {
+  return keyup_kp_clear_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_clearentry() const {
+  keyup_kp_clearentry_signal();
+}
+
+connection event_dispatch::on_keyup_kp_clearentry(
+  keyup_kp_clearentry_slot_t const& op) {
+  return keyup_kp_clearentry_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_binary() const { keyup_kp_binary_signal(); }
+
+connection event_dispatch::on_keyup_kp_binary(
+  keyup_kp_binary_slot_t const& op) {
+  return keyup_kp_binary_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_octal() const { keyup_kp_octal_signal(); }
+
+connection event_dispatch::on_keyup_kp_octal(
+  keyup_kp_octal_slot_t const& op) {
+  return keyup_kp_octal_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_decimal() const {
+  keyup_kp_decimal_signal();
+}
+
+connection event_dispatch::on_keyup_kp_decimal(
+  keyup_kp_decimal_slot_t const& op) {
+  return keyup_kp_decimal_signal.connect(op);
+}
+
+void event_dispatch::keyup_kp_hexadecimal() const {
+  keyup_kp_hexadecimal_signal();
+}
+
+connection event_dispatch::on_keyup_kp_hexadecimal(
+  keyup_kp_hexadecimal_slot_t const& op) {
+  return keyup_kp_hexadecimal_signal.connect(op);
+}
+
+void event_dispatch::keyup_lctrl() const { keyup_lctrl_signal(); }
+
+connection event_dispatch::on_keyup_lctrl(keyup_lctrl_slot_t const& op) {
+  return keyup_lctrl_signal.connect(op);
+}
+
+void event_dispatch::keyup_lshift() const { keyup_lshift_signal(); }
+
+connection event_dispatch::on_keyup_lshift(keyup_lshift_slot_t const& op) {
+  return keyup_lshift_signal.connect(op);
+}
+
+void event_dispatch::keyup_lalt() const { keyup_lalt_signal(); }
+
+connection event_dispatch::on_keyup_lalt(keyup_lalt_slot_t const& op) {
+  return keyup_lalt_signal.connect(op);
+}
+
+void event_dispatch::keyup_lgui() const { keyup_lgui_signal(); }
+
+connection event_dispatch::on_keyup_lgui(keyup_lgui_slot_t const& op) {
+  return keyup_lgui_signal.connect(op);
+}
+
+void event_dispatch::keyup_rctrl() const { keyup_rctrl_signal(); }
+
+connection event_dispatch::on_keyup_rctrl(keyup_rctrl_slot_t const& op) {
+  return keyup_rctrl_signal.connect(op);
+}
+
+void event_dispatch::keyup_rshift() const { keyup_rshift_signal(); }
+
+connection event_dispatch::on_keyup_rshift(keyup_rshift_slot_t const& op) {
+  return keyup_rshift_signal.connect(op);
+}
+
+void event_dispatch::keyup_ralt() const { keyup_ralt_signal(); }
+
+connection event_dispatch::on_keyup_ralt(keyup_ralt_slot_t const& op) {
+  return keyup_ralt_signal.connect(op);
+}
+
+void event_dispatch::keyup_rgui() const { keyup_rgui_signal(); }
+
+connection event_dispatch::on_keyup_rgui(keyup_rgui_slot_t const& op) {
+  return keyup_rgui_signal.connect(op);
+}
+
+void event_dispatch::keyup_mode() const { keyup_mode_signal(); }
+
+connection event_dispatch::on_keyup_mode(keyup_mode_slot_t const& op) {
+  return keyup_mode_signal.connect(op);
+}
+
+void event_dispatch::keyup_audionext() const { keyup_audionext_signal(); }
+
+connection event_dispatch::on_keyup_audionext(
+  keyup_audionext_slot_t const& op) {
+  return keyup_audionext_signal.connect(op);
+}
+
+void event_dispatch::keyup_audioprev() const { keyup_audioprev_signal(); }
+
+connection event_dispatch::on_keyup_audioprev(
+  keyup_audioprev_slot_t const& op) {
+  return keyup_audioprev_signal.connect(op);
+}
+
+void event_dispatch::keyup_audiostop() const { keyup_audiostop_signal(); }
+
+connection event_dispatch::on_keyup_audiostop(
+  keyup_audiostop_slot_t const& op) {
+  return keyup_audiostop_signal.connect(op);
+}
+
+void event_dispatch::keyup_audioplay() const { keyup_audioplay_signal(); }
+
+connection event_dispatch::on_keyup_audioplay(
+  keyup_audioplay_slot_t const& op) {
+  return keyup_audioplay_signal.connect(op);
+}
+
+void event_dispatch::keyup_audiomute() const { keyup_audiomute_signal(); }
+
+connection event_dispatch::on_keyup_audiomute(
+  keyup_audiomute_slot_t const& op) {
+  return keyup_audiomute_signal.connect(op);
+}
+
+void event_dispatch::keyup_mediaselect() const {
+  keyup_mediaselect_signal();
+}
+
+connection event_dispatch::on_keyup_mediaselect(
+  keyup_mediaselect_slot_t const& op) {
+  return keyup_mediaselect_signal.connect(op);
+}
+
+void event_dispatch::keyup_www() const { keyup_www_signal(); }
+
+connection event_dispatch::on_keyup_www(keyup_www_slot_t const& op) {
+  return keyup_www_signal.connect(op);
+}
+
+void event_dispatch::keyup_mail() const { keyup_mail_signal(); }
+
+connection event_dispatch::on_keyup_mail(keyup_mail_slot_t const& op) {
+  return keyup_mail_signal.connect(op);
+}
+
+void event_dispatch::keyup_calculator() const {
+  keyup_calculator_signal();
+}
+
+connection event_dispatch::on_keyup_calculator(
+  keyup_calculator_slot_t const& op) {
+  return keyup_calculator_signal.connect(op);
+}
+
+void event_dispatch::keyup_computer() const { keyup_computer_signal(); }
+
+connection event_dispatch::on_keyup_computer(
+  keyup_computer_slot_t const& op) {
+  return keyup_computer_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_search() const { keyup_ac_search_signal(); }
+
+connection event_dispatch::on_keyup_ac_search(
+  keyup_ac_search_slot_t const& op) {
+  return keyup_ac_search_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_home() const { keyup_ac_home_signal(); }
+
+connection event_dispatch::on_keyup_ac_home(
+  keyup_ac_home_slot_t const& op) {
+  return keyup_ac_home_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_back() const { keyup_ac_back_signal(); }
+
+connection event_dispatch::on_keyup_ac_back(
+  keyup_ac_back_slot_t const& op) {
+  return keyup_ac_back_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_forward() const {
+  keyup_ac_forward_signal();
+}
+
+connection event_dispatch::on_keyup_ac_forward(
+  keyup_ac_forward_slot_t const& op) {
+  return keyup_ac_forward_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_stop() const { keyup_ac_stop_signal(); }
+
+connection event_dispatch::on_keyup_ac_stop(
+  keyup_ac_stop_slot_t const& op) {
+  return keyup_ac_stop_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_refresh() const {
+  keyup_ac_refresh_signal();
+}
+
+connection event_dispatch::on_keyup_ac_refresh(
+  keyup_ac_refresh_slot_t const& op) {
+  return keyup_ac_refresh_signal.connect(op);
+}
+
+void event_dispatch::keyup_ac_bookmarks() const {
+  keyup_ac_bookmarks_signal();
+}
+
+connection event_dispatch::on_keyup_ac_bookmarks(
+  keyup_ac_bookmarks_slot_t const& op) {
+  return keyup_ac_bookmarks_signal.connect(op);
+}
+
+void event_dispatch::keyup_brightnessdown() const {
+  keyup_brightnessdown_signal();
+}
+
+connection event_dispatch::on_keyup_brightnessdown(
+  keyup_brightnessdown_slot_t const& op) {
+  return keyup_brightnessdown_signal.connect(op);
+}
+
+void event_dispatch::keyup_brightnessup() const {
+  keyup_brightnessup_signal();
+}
+
+connection event_dispatch::on_keyup_brightnessup(
+  keyup_brightnessup_slot_t const& op) {
+  return keyup_brightnessup_signal.connect(op);
+}
+
+void event_dispatch::keyup_displayswitch() const {
+  keyup_displayswitch_signal();
+}
+
+connection event_dispatch::on_keyup_displayswitch(
+  keyup_displayswitch_slot_t const& op) {
+  return keyup_displayswitch_signal.connect(op);
+}
+
+void event_dispatch::keyup_kbdillumtoggle() const {
+  keyup_kbdillumtoggle_signal();
+}
+
+connection event_dispatch::on_keyup_kbdillumtoggle(
+  keyup_kbdillumtoggle_slot_t const& op) {
+  return keyup_kbdillumtoggle_signal.connect(op);
+}
+
+void event_dispatch::keyup_kbdillumdown() const {
+  keyup_kbdillumdown_signal();
+}
+
+connection event_dispatch::on_keyup_kbdillumdown(
+  keyup_kbdillumdown_slot_t const& op) {
+  return keyup_kbdillumdown_signal.connect(op);
+}
+
+void event_dispatch::keyup_kbdillumup() const {
+  keyup_kbdillumup_signal();
+}
+
+connection event_dispatch::on_keyup_kbdillumup(
+  keyup_kbdillumup_slot_t const& op) {
+  return keyup_kbdillumup_signal.connect(op);
+}
+
+void event_dispatch::keyup_eject() const { keyup_eject_signal(); }
+
+connection event_dispatch::on_keyup_eject(keyup_eject_slot_t const& op) {
+  return keyup_eject_signal.connect(op);
+}
+
+void event_dispatch::keyup_sleep() const { keyup_sleep_signal(); }
+
+connection event_dispatch::on_keyup_sleep(keyup_sleep_slot_t const& op) {
+  return keyup_sleep_signal.connect(op);
+}
 }
