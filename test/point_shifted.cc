@@ -42,3 +42,8 @@ TEST_CASE("point shifted_up() 0 from origin") {
   gls::point const p(0, 0);
   REQUIRE(gls::shifted_up(p, 0) == p);
 }
+
+TEST_CASE("point shifted_up() 0 from 2nd quadrant") {
+  gls::point const p(98, 56);
+  REQUIRE(gls::shifted_up(p, 0) == p);
+}
