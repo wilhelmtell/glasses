@@ -25,5 +25,21 @@ width& width::operator/=(width::value_type const& rhs) {
   value /= rhs;
   return *this;
 }
+
+width operator+(width lhs, width::value_type const& rhs) {
+  return lhs += rhs;
+}
+
+width operator-(width lhs, width::value_type const& rhs) {
+  return lhs -= rhs;
+}
+
+width operator*(width lhs, width::value_type const& rhs) {
+  return lhs *= rhs;
+}
+
+width operator/(width lhs, width::value_type const& rhs) {
+  return lhs /= rhs;
+}
 }
 }

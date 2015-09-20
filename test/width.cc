@@ -16,3 +16,9 @@ TEST_CASE("width::value_type compiles") {
   gls::dim::width const w{4};
   REQUIRE(x == w);
 }
+
+TEST_CASE("width::operator+=(width) with a positive rhs") {
+  gls::dim::width w(4);
+  w += 3;
+  REQUIRE(w == 7);
+}

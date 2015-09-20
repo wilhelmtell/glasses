@@ -19,6 +19,11 @@ struct width {
 private:
   value_type value;
 };
+
+width operator+(width lhs, width::value_type const& rhs);
+width operator-(width lhs, width::value_type const& rhs);
+width operator*(width lhs, width::value_type const& rhs);
+width operator/(width lhs, width::value_type const& rhs);
 }
 }
 
