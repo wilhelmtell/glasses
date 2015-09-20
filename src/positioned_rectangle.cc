@@ -43,6 +43,24 @@ point bottom_right(positioned_rectangle const& r) {
   return point{r.x() + r.width(), r.y() + r.height()};
 }
 
+positioned_rectangle q1_rectangle() {
+  return positioned_rectangle(shifted_left(origin_point(), 1),
+                              unit_rectangle());
+}
+
+positioned_rectangle q2_rectangle() {
+  return positioned_rectangle(origin_point(), unit_rectangle());
+}
+
+positioned_rectangle q3_rectangle() {
+  return positioned_rectangle(shifted_up(origin_point(), 1), unit_rectangle());
+}
+
+positioned_rectangle q4_rectangle() {
+  return positioned_rectangle(shifted_up_left(origin_point(), 1),
+                              unit_rectangle());
+}
+
 positioned_rectangle shifted_left(positioned_rectangle const& r,
                                   point::value_type const& offset) {
   return positioned_rectangle(shifted_left(top_left(r), offset),
