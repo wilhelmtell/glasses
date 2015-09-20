@@ -3,6 +3,7 @@
 #include "width.hh"
 #include "height.hh"
 #include "point.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 positioned_rectangle::positioned_rectangle(point p, rectangle r)
@@ -88,5 +89,9 @@ positioned_rectangle shifted_down_right(positioned_rectangle const& r,
                                         point::value_type const& offset) {
   return positioned_rectangle(shifted_down_right(top_left(r), offset),
                               rectangle(r.width(), r.height()));
+}
+
+SDL_Rect to_sdl_rect(positioned_rectangle const& r) {
+  return {r.x(), r.y(), r.width(), r.height()};
 }
 }
