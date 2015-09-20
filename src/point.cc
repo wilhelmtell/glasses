@@ -66,4 +66,8 @@ point shifted_left(point const& p, point::value_type offset) {
 point shifted_right(point const& p, point::value_type offset) {
   return point(p.x() + offset, p.y());
 }
+
+point shifted_down_left(point const& p, point::value_type offset) {
+  return point(p.x() - offset, p.y() + offset);
+}
 }
