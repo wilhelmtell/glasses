@@ -23,6 +23,10 @@ private:
   rectangle r;
 };
 
+bool operator==(positioned_rectangle const& lhs,
+                positioned_rectangle const& rhs);
+bool operator!=(positioned_rectangle const& lhs,
+                positioned_rectangle const& rhs);
 bool intersect(positioned_rectangle const& a, positioned_rectangle const& b);
 bool outside(positioned_rectangle const& a, positioned_rectangle const& b);
 point top_left(positioned_rectangle const& r);
