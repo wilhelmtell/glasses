@@ -45,6 +45,16 @@ TEST_CASE(
   }
 }
 
+TEST_CASE("positioned_rectangle equality with 2 1st-quadrant rects") {
+  gls::positioned_rectangle const a(
+    gls::point(-5, -8),
+    gls::rectangle(gls::dim::width(2), gls::dim::height(3)));
+  gls::positioned_rectangle const b(
+    gls::point(-5, -8),
+    gls::rectangle(gls::dim::width(2), gls::dim::height(3)));
+  REQUIRE(a == b);
+}
+
 TEST_CASE("positioned_rectangle equality with 2 2nd-quadrant rects") {
   gls::positioned_rectangle const a(
     gls::point(1, 1), gls::rectangle(gls::dim::width(2), gls::dim::height(3)));
