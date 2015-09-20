@@ -16,6 +16,8 @@ private:
   dim::width w;
   dim::height h;
 };
+
+rectangle unit_rectangle();
 }
 
 #endif
