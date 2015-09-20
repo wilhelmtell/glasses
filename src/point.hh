@@ -25,6 +25,7 @@ bool bounding(point const& p, positioned_rectangle const& b);
 bool outside(point const& p, positioned_rectangle const& b);
 bool inside(point const& p, positioned_rectangle const& b);
 point shifted_up(point const& p, point::value_type offset);
+point shifted_down(point const& p, point::value_type offset);
 }
 
 #endif

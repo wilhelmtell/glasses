@@ -47,3 +47,43 @@ TEST_CASE("point shifted_up() 0 from 2nd quadrant") {
   gls::point const p(98, 56);
   REQUIRE(gls::shifted_up(p, 0) == p);
 }
+
+TEST_CASE("point shifted_down() from within the 1st quadrant") {
+  gls::point const p(-12, 34);
+  gls::point const x(-12, 36);  // 1st quadrant down means further from x axis
+  REQUIRE(gls::shifted_down(p, 2) == x);
+}
+
+TEST_CASE("point shifted_down() from within the 2nd quadrant") {
+  gls::point const p(12, 34);
+  gls::point const x(12, 36);  // 2nd quadrant down means further from x axis
+  REQUIRE(gls::shifted_down(p, 2) == x);
+}
+
+TEST_CASE("point shifted_down() from within the 3rd quadrant") {
+  gls::point const p(12, -34);
+  gls::point const x(12, -32);  // 3rd quadrant down means towards x axis
+  REQUIRE(gls::shifted_down(p, 2) == x);
+}
+
+TEST_CASE("point shifted_down() from within the 4th quadrant") {
+  gls::point const p(-12, -34);
+  gls::point const x(-12, -32);  // 4th quadrant down means towards x axis
+  REQUIRE(gls::shifted_down(p, 2) == x);
+}
+
+TEST_CASE("point shifted_down() from origin") {
+  gls::point const p(0, 0);
+  gls::point const x(0, 2);
+  REQUIRE(gls::shifted_down(p, 2) == x);
+}
+
+TEST_CASE("point shifted_down() 0 from origin") {
+  gls::point const p(0, 0);
+  REQUIRE(gls::shifted_down(p, 0) == p);
+}
+
+TEST_CASE("point shifted_down() 0 from 2nd quadrant") {
+  gls::point const p(98, 56);
+  REQUIRE(gls::shifted_down(p, 0) == p);
+}
