@@ -17,6 +17,8 @@ private:
   dim::height h;
 };
 
+bool operator==(rectangle const& lhs, rectangle const& rhs);
+bool operator!=(rectangle const& lhs, rectangle const& rhs);
 rectangle unit_rectangle();
 }
 
