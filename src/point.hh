@@ -24,14 +24,14 @@ bool operator!=(point const& lhs, point const& rhs);
 bool bounding(point const& p, positioned_rectangle const& b);
 bool outside(point const& p, positioned_rectangle const& b);
 bool inside(point const& p, positioned_rectangle const& b);
-point shifted_up(point const& p, point::value_type offset);
-point shifted_down(point const& p, point::value_type offset);
-point shifted_left(point const& p, point::value_type offset);
-point shifted_right(point const& p, point::value_type offset);
-point shifted_down_left(point const& p, point::value_type offset);
-point shifted_down_right(point const& p, point::value_type offset);
-point shifted_up_left(point const& p, point::value_type offset);
-point shifted_up_right(point const& p, point::value_type offset);
+point shifted_up(point const& p, point::value_type const& offset);
+point shifted_down(point const& p, point::value_type const& offset);
+point shifted_left(point const& p, point::value_type const& offset);
+point shifted_right(point const& p, point::value_type const& offset);
+point shifted_down_left(point const& p, point::value_type const& offset);
+point shifted_down_right(point const& p, point::value_type const& offset);
+point shifted_up_left(point const& p, point::value_type const& offset);
+point shifted_up_right(point const& p, point::value_type const& offset);
 }
 
 #endif
