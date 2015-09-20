@@ -5,6 +5,7 @@
 #include "width_fwd.hh"
 #include "height_fwd.hh"
 #include "point.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 struct positioned_rectangle {
@@ -47,6 +48,7 @@ positioned_rectangle shifted_down_left(positioned_rectangle const& r,
                                        point::value_type const& offset);
 positioned_rectangle shifted_down_right(positioned_rectangle const& r,
                                         point::value_type const& offset);
+SDL_Rect to_sdl_rect(positioned_rectangle const& r);
 }
 
 #endif
