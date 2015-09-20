@@ -24,6 +24,7 @@ bool operator!=(point const& lhs, point const& rhs);
 bool bounding(point const& p, positioned_rectangle const& b);
 bool outside(point const& p, positioned_rectangle const& b);
 bool inside(point const& p, positioned_rectangle const& b);
+point origin_point();
 point shifted_up(point const& p, point::value_type const& offset);
 point shifted_down(point const& p, point::value_type const& offset);
 point shifted_left(point const& p, point::value_type const& offset);

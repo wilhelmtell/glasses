@@ -51,6 +51,8 @@ bool inside(point const& p, positioned_rectangle const& b) {
   return !outside(p, b) && !bounding(p, b);
 }
 
+point origin_point() { return point{}; }
+
 point shifted_up(point const& p, point::value_type const& offset) {
   return point(p.x(), p.y() - offset);
 }

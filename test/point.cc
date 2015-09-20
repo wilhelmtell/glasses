@@ -58,3 +58,9 @@ TEST_CASE("two points with different x and y are different") {
     REQUIRE(!(a == b));
   }
 }
+
+TEST_CASE("origin_point() is point(0, 0)") {
+  auto const origin = gls::origin_point();
+  gls::point const x(0, 0);
+  REQUIRE(origin == x);
+}
