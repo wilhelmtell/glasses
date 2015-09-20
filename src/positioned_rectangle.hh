@@ -31,6 +31,22 @@ bool intersect(positioned_rectangle const& a, positioned_rectangle const& b);
 bool outside(positioned_rectangle const& a, positioned_rectangle const& b);
 point top_left(positioned_rectangle const& r);
 point bottom_right(positioned_rectangle const& r);
+positioned_rectangle shifted_left(positioned_rectangle const& r,
+                                  point::value_type const& offset);
+positioned_rectangle shifted_right(positioned_rectangle const& r,
+                                   point::value_type const& offset);
+positioned_rectangle shifted_up(positioned_rectangle const& r,
+                                point::value_type const& offset);
+positioned_rectangle shifted_down(positioned_rectangle const& r,
+                                  point::value_type const& offset);
+positioned_rectangle shifted_up_left(positioned_rectangle const& r,
+                                     point::value_type const& offset);
+positioned_rectangle shifted_up_right(positioned_rectangle const& r,
+                                      point::value_type const& offset);
+positioned_rectangle shifted_down_left(positioned_rectangle const& r,
+                                       point::value_type const& offset);
+positioned_rectangle shifted_down_right(positioned_rectangle const& r,
+                                        point::value_type const& offset);
 }
 
 #endif

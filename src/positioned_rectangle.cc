@@ -41,4 +41,52 @@ point top_left(positioned_rectangle const& r) { return r.p; }
 point bottom_right(positioned_rectangle const& r) {
   return point{r.x() + r.width(), r.y() + r.height()};
 }
+
+positioned_rectangle shifted_left(positioned_rectangle const& r,
+                                  point::value_type const& offset) {
+  return positioned_rectangle(shifted_left(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_right(positioned_rectangle const& r,
+                                   point::value_type const& offset) {
+  return positioned_rectangle(shifted_right(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_up(positioned_rectangle const& r,
+                                point::value_type const& offset) {
+  return positioned_rectangle(shifted_up(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_down(positioned_rectangle const& r,
+                                  point::value_type const& offset) {
+  return positioned_rectangle(shifted_down(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_up_left(positioned_rectangle const& r,
+                                     point::value_type const& offset) {
+  return positioned_rectangle(shifted_up_left(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_up_right(positioned_rectangle const& r,
+                                      point::value_type const& offset) {
+  return positioned_rectangle(shifted_up_right(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_down_left(positioned_rectangle const& r,
+                                       point::value_type const& offset) {
+  return positioned_rectangle(shifted_down_left(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
+
+positioned_rectangle shifted_down_right(positioned_rectangle const& r,
+                                        point::value_type const& offset) {
+  return positioned_rectangle(shifted_down_right(top_left(r), offset),
+                              rectangle(r.width(), r.height()));
+}
 }
