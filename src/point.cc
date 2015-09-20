@@ -50,4 +50,36 @@ bool outside(point const& p, positioned_rectangle const& b) {
 bool inside(point const& p, positioned_rectangle const& b) {
   return !outside(p, b) && !bounding(p, b);
 }
+
+point shifted_up(point const& p, point::value_type offset) {
+  return point(p.x(), p.y() - offset);
+}
+
+point shifted_down(point const& p, point::value_type offset) {
+  return point(p.x(), p.y() + offset);
+}
+
+point shifted_left(point const& p, point::value_type offset) {
+  return point(p.x() - offset, p.y());
+}
+
+point shifted_right(point const& p, point::value_type offset) {
+  return point(p.x() + offset, p.y());
+}
+
+point shifted_down_left(point const& p, point::value_type offset) {
+  return point(p.x() - offset, p.y() + offset);
+}
+
+point shifted_down_right(point const& p, point::value_type offset) {
+  return point(p.x() + offset, p.y() + offset);
+}
+
+point shifted_up_left(point const& p, point::value_type offset) {
+  return point(p.x() - offset, p.y() - offset);
+}
+
+point shifted_up_right(point const& p, point::value_type offset) {
+  return point(p.x() + offset, p.y() - offset);
+}
 }
