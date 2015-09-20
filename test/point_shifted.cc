@@ -287,3 +287,43 @@ TEST_CASE("point shifted_up_left() 0 from 2nd quadrant") {
   gls::point const p(98, 56);
   REQUIRE(gls::shifted_up_left(p, 0) == p);
 }
+
+TEST_CASE("point shifted_up_right() from within the 1st quadrant") {
+  gls::point const p(-12, 34);
+  gls::point const x(-10, 32);
+  REQUIRE(gls::shifted_up_right(p, 2) == x);
+}
+
+TEST_CASE("point shifted_up_right() from within the 2nd quadrant") {
+  gls::point const p(12, 34);
+  gls::point const x(14, 32);
+  REQUIRE(gls::shifted_up_right(p, 2) == x);
+}
+
+TEST_CASE("point shifted_up_right() from within the 3rd quadrant") {
+  gls::point const p(12, -34);
+  gls::point const x(14, -36);
+  REQUIRE(gls::shifted_up_right(p, 2) == x);
+}
+
+TEST_CASE("point shifted_up_right() from within the 4th quadrant") {
+  gls::point const p(-12, -34);
+  gls::point const x(-10, -36);
+  REQUIRE(gls::shifted_up_right(p, 2) == x);
+}
+
+TEST_CASE("point shifted_up_right() from origin") {
+  gls::point const p(0, 0);
+  gls::point const x(2, -2);
+  REQUIRE(gls::shifted_up_right(p, 2) == x);
+}
+
+TEST_CASE("point shifted_up_right() 0 from origin") {
+  gls::point const p(0, 0);
+  REQUIRE(gls::shifted_up_right(p, 0) == p);
+}
+
+TEST_CASE("point shifted_up_right() 0 from 2nd quadrant") {
+  gls::point const p(98, 56);
+  REQUIRE(gls::shifted_up_right(p, 0) == p);
+}

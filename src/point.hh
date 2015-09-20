@@ -31,6 +31,7 @@ point shifted_right(point const& p, point::value_type offset);
 point shifted_down_left(point const& p, point::value_type offset);
 point shifted_down_right(point const& p, point::value_type offset);
 point shifted_up_left(point const& p, point::value_type offset);
+point shifted_up_right(point const& p, point::value_type offset);
 }
 
 #endif
