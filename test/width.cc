@@ -71,12 +71,6 @@ TEST_CASE("width::operator*=() with a positive rhs") {
   REQUIRE(w == 12);
 }
 
-TEST_CASE("width::operator*=() with a negative rhs") {
-  gls::dim::width w(4);
-  w *= -3;
-  REQUIRE(w == -12);
-}
-
 TEST_CASE("width::operator*=() with a 0 rhs") {
   gls::dim::width w(4);
   w *= 0;
@@ -93,12 +87,6 @@ TEST_CASE("width::operator/=() with a positive rhs") {
   gls::dim::width w(6);
   w /= 3;
   REQUIRE(w == 2);
-}
-
-TEST_CASE("width::operator/=() with a negative rhs") {
-  gls::dim::width w(6);
-  w /= -3;
-  REQUIRE(w == -2);
 }
 
 TEST_CASE("width::operator/=() with a non-whole division") {
@@ -149,10 +137,6 @@ TEST_CASE("operator*(width) with a positive rhs") {
   REQUIRE(gls::dim::width(4) * 3 == 12);
 }
 
-TEST_CASE("operator*(width) with a negative rhs") {
-  REQUIRE(gls::dim::width(4) * -3 == -12);
-}
-
 TEST_CASE("operator*(width) with a 0 rhs") {
   REQUIRE(gls::dim::width(4) * 0 == 0);
 }
@@ -163,10 +147,6 @@ TEST_CASE("chained operator*(width)") {
 
 TEST_CASE("operator/(width) with a positive rhs") {
   REQUIRE(gls::dim::width(6) / 3 == 2);
-}
-
-TEST_CASE("operator/(width) with a negative rhs") {
-  REQUIRE(gls::dim::width(6) / -3 == -2);
 }
 
 TEST_CASE("operator/(width) with a non-whole division") {
