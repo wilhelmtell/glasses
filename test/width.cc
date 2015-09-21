@@ -17,97 +17,97 @@ TEST_CASE("width::value_type compiles") {
   REQUIRE(x == w);
 }
 
-TEST_CASE("width::operator+=(width) with a positive rhs") {
+TEST_CASE("width::operator+=() with a positive rhs") {
   gls::dim::width w(4);
   w += 3;
   REQUIRE(w == 7);
 }
 
-TEST_CASE("width::operator+=(width) with a negative rhs") {
+TEST_CASE("width::operator+=() with a negative rhs") {
   gls::dim::width w(4);
   w += -3;
   REQUIRE(w == 1);
 }
 
-TEST_CASE("width::operator+=(width) with a 0 rhs") {
+TEST_CASE("width::operator+=() with a 0 rhs") {
   gls::dim::width w(4);
   w += 0;
   REQUIRE(w == 4);
 }
 
-TEST_CASE("width::operator+=(width) capturing the evaluation") {
+TEST_CASE("width::operator+=() capturing the evaluation") {
   gls::dim::width a(4), b(0);
   b = a += 3;
   REQUIRE(b == 7);
 }
 
-TEST_CASE("width::operator-=(width) with a positive rhs") {
+TEST_CASE("width::operator-=() with a positive rhs") {
   gls::dim::width w(4);
   w -= 3;
   REQUIRE(w == 1);
 }
 
-TEST_CASE("width::operator-=(width) with a negative rhs") {
+TEST_CASE("width::operator-=() with a negative rhs") {
   gls::dim::width w(4);
   w -= -3;
   REQUIRE(w == 7);
 }
 
-TEST_CASE("width::operator-=(width) with a 0 rhs") {
+TEST_CASE("width::operator-=() with a 0 rhs") {
   gls::dim::width w(4);
   w -= 0;
   REQUIRE(w == 4);
 }
 
-TEST_CASE("width::operator-=(width) capturing the evaluation") {
+TEST_CASE("width::operator-=() capturing the evaluation") {
   gls::dim::width a(4), b(0);
   b = a -= 3;
   REQUIRE(b == 1);
 }
 
-TEST_CASE("width::operator*=(width) with a positive rhs") {
+TEST_CASE("width::operator*=() with a positive rhs") {
   gls::dim::width w(4);
   w *= 3;
   REQUIRE(w == 12);
 }
 
-TEST_CASE("width::operator*=(width) with a negative rhs") {
+TEST_CASE("width::operator*=() with a negative rhs") {
   gls::dim::width w(4);
   w *= -3;
   REQUIRE(w == -12);
 }
 
-TEST_CASE("width::operator*=(width) with a 0 rhs") {
+TEST_CASE("width::operator*=() with a 0 rhs") {
   gls::dim::width w(4);
   w *= 0;
   REQUIRE(w == 0);
 }
 
-TEST_CASE("width::operator*=(width) capturing the evaluation") {
+TEST_CASE("width::operator*=() capturing the evaluation") {
   gls::dim::width a(4), b(0);
   b = a *= 3;
   REQUIRE(b == 12);
 }
 
-TEST_CASE("width::operator/=(width) with a positive rhs") {
+TEST_CASE("width::operator/=() with a positive rhs") {
   gls::dim::width w(6);
   w /= 3;
   REQUIRE(w == 2);
 }
 
-TEST_CASE("width::operator/=(width) with a negative rhs") {
+TEST_CASE("width::operator/=() with a negative rhs") {
   gls::dim::width w(6);
   w /= -3;
   REQUIRE(w == -2);
 }
 
-TEST_CASE("width::operator/=(width) with a non-whole division") {
+TEST_CASE("width::operator/=() with a non-whole division") {
   gls::dim::width w(4);
   w /= 3;
   REQUIRE(w == 1);
 }
 
-TEST_CASE("width::operator/=(width) capturing the evaluation") {
+TEST_CASE("width::operator/=() capturing the evaluation") {
   gls::dim::width a(6), b(0);
   b = a /= 3;
   REQUIRE(b == 2);
