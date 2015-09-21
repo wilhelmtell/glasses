@@ -112,3 +112,15 @@ TEST_CASE("width::operator/=() capturing the evaluation") {
   b = a /= 3;
   REQUIRE(b == 2);
 }
+
+TEST_CASE("operator+(width) with a positive rhs") {
+  REQUIRE(gls::dim::width(4) + 3 == 7);
+}
+
+TEST_CASE("operator+(width) with a negative rhs") {
+  REQUIRE(gls::dim::width(4) + -3 == 1);
+}
+
+TEST_CASE("operator+(width) with a 0 rhs") {
+  REQUIRE(gls::dim::width(4) + 0 == 4);
+}
