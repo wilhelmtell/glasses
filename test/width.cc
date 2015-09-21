@@ -124,3 +124,15 @@ TEST_CASE("operator+(width) with a negative rhs") {
 TEST_CASE("operator+(width) with a 0 rhs") {
   REQUIRE(gls::dim::width(4) + 0 == 4);
 }
+
+TEST_CASE("operator-(width) with a positive rhs") {
+  REQUIRE(gls::dim::width(4) - 3 == 1);
+}
+
+TEST_CASE("operator-(width) with a negative rhs") {
+  REQUIRE(gls::dim::width(4) - -3 == 7);
+}
+
+TEST_CASE("operator-(width) with a 0 rhs") {
+  REQUIRE(gls::dim::width(4) - 0 == 4);
+}
