@@ -148,3 +148,15 @@ TEST_CASE("operator*(width) with a negative rhs") {
 TEST_CASE("operator*(width) with a 0 rhs") {
   REQUIRE(gls::dim::width(4) * 0 == 0);
 }
+
+TEST_CASE("operator/(width) with a positive rhs") {
+  REQUIRE(gls::dim::width(6) / 3 == 2);
+}
+
+TEST_CASE("operator/(width) with a negative rhs") {
+  REQUIRE(gls::dim::width(6) / -3 == -2);
+}
+
+TEST_CASE("operator/(width) with a non-whole division") {
+  REQUIRE(gls::dim::width(4) / 3 == 1);
+}
