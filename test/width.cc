@@ -22,3 +22,9 @@ TEST_CASE("width::operator+=(width) with a positive rhs") {
   w += 3;
   REQUIRE(w == 7);
 }
+
+TEST_CASE("width::operator+=(width) with a negative rhs") {
+  gls::dim::width w(4);
+  w += -3;
+  REQUIRE(w == 1);
+}
