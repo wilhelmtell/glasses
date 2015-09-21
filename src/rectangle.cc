@@ -20,4 +20,14 @@ bool operator!=(rectangle const& lhs, rectangle const& rhs) {
 }
 
 rectangle unit_rectangle() { return rectangle(dim::width(1), dim::height(1)); }
+
+rectangle xstretched(rectangle const& r,
+                     dim::width::value_type const& addition) {
+  return rectangle(r.width() + addition, r.height());
+}
+
+rectangle ystretched(rectangle const& r,
+                     dim::width::value_type const& addition) {
+  return rectangle(r.width(), r.height() + addition);
+}
 }
