@@ -34,3 +34,9 @@ TEST_CASE("width::operator+=(width) with a 0 rhs") {
   w += 0;
   REQUIRE(w == 4);
 }
+
+TEST_CASE("width::operator+=(width) capturing the evaluation") {
+  gls::dim::width a(4), b(0);
+  b = a += 3;
+  REQUIRE(b == 7);
+}
