@@ -11,9 +11,19 @@ struct height {
 
   operator value_type() const;
 
+  height& operator+=(height::value_type const& rhs);
+  height& operator-=(height::value_type const& rhs);
+  height& operator*=(height::value_type const& rhs);
+  height& operator/=(height::value_type const& rhs);
+
 private:
   value_type value;
 };
+
+height operator+(height lhs, height::value_type const& rhs);
+height operator-(height lhs, height::value_type const& rhs);
+height operator*(height lhs, height::value_type const& rhs);
+height operator/(height lhs, height::value_type const& rhs);
 }
 }
 
