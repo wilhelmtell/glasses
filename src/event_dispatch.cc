@@ -20,1617 +20,4163 @@ connection event_dispatch::on_quit(quit_slot_t const& op) {
   return quit_signal.connect(op);
 }
 
-void event_dispatch::keydown_unknown() const { keydown_unknown_signal(); }
+void event_dispatch::keydown_unknown_repeat() const {
+  keydown_unknown_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_unknown_repeat(
+  keydown_unknown_repeat_slot_t const& op) {
+  return keydown_unknown_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_backspace_repeat() const {
+  keydown_backspace_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_backspace_repeat(
+  keydown_backspace_repeat_slot_t const& op) {
+  return keydown_backspace_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_tab_repeat() const {
+  keydown_tab_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_tab_repeat(
+  keydown_tab_repeat_slot_t const& op) {
+  return keydown_tab_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_return_repeat() const {
+  keydown_return_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_return_repeat(
+  keydown_return_repeat_slot_t const& op) {
+  return keydown_return_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_escape_repeat() const {
+  keydown_escape_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_escape_repeat(
+  keydown_escape_repeat_slot_t const& op) {
+  return keydown_escape_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_space_repeat() const {
+  keydown_space_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_space_repeat(
+  keydown_space_repeat_slot_t const& op) {
+  return keydown_space_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_exclaim_repeat() const {
+  keydown_exclaim_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_exclaim_repeat(
+  keydown_exclaim_repeat_slot_t const& op) {
+  return keydown_exclaim_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_quotedbl_repeat() const {
+  keydown_quotedbl_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_quotedbl_repeat(
+  keydown_quotedbl_repeat_slot_t const& op) {
+  return keydown_quotedbl_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_hash_repeat() const {
+  keydown_hash_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_hash_repeat(
+  keydown_hash_repeat_slot_t const& op) {
+  return keydown_hash_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_dollar_repeat() const {
+  keydown_dollar_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_dollar_repeat(
+  keydown_dollar_repeat_slot_t const& op) {
+  return keydown_dollar_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_percent_repeat() const {
+  keydown_percent_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_percent_repeat(
+  keydown_percent_repeat_slot_t const& op) {
+  return keydown_percent_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ampersand_repeat() const {
+  keydown_ampersand_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ampersand_repeat(
+  keydown_ampersand_repeat_slot_t const& op) {
+  return keydown_ampersand_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_quote_repeat() const {
+  keydown_quote_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_quote_repeat(
+  keydown_quote_repeat_slot_t const& op) {
+  return keydown_quote_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_leftparen_repeat() const {
+  keydown_leftparen_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_leftparen_repeat(
+  keydown_leftparen_repeat_slot_t const& op) {
+  return keydown_leftparen_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_rightparen_repeat() const {
+  keydown_rightparen_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_rightparen_repeat(
+  keydown_rightparen_repeat_slot_t const& op) {
+  return keydown_rightparen_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_asterisk_repeat() const {
+  keydown_asterisk_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_asterisk_repeat(
+  keydown_asterisk_repeat_slot_t const& op) {
+  return keydown_asterisk_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_plus_repeat() const {
+  keydown_plus_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_plus_repeat(
+  keydown_plus_repeat_slot_t const& op) {
+  return keydown_plus_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_comma_repeat() const {
+  keydown_comma_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_comma_repeat(
+  keydown_comma_repeat_slot_t const& op) {
+  return keydown_comma_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_minus_repeat() const {
+  keydown_minus_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_minus_repeat(
+  keydown_minus_repeat_slot_t const& op) {
+  return keydown_minus_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_period_repeat() const {
+  keydown_period_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_period_repeat(
+  keydown_period_repeat_slot_t const& op) {
+  return keydown_period_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_slash_repeat() const {
+  keydown_slash_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_slash_repeat(
+  keydown_slash_repeat_slot_t const& op) {
+  return keydown_slash_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_0_repeat() const { keydown_0_repeat_signal(); }
+
+connection event_dispatch::on_keydown_0_repeat(
+  keydown_0_repeat_slot_t const& op) {
+  return keydown_0_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_1_repeat() const { keydown_1_repeat_signal(); }
+
+connection event_dispatch::on_keydown_1_repeat(
+  keydown_1_repeat_slot_t const& op) {
+  return keydown_1_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_2_repeat() const { keydown_2_repeat_signal(); }
+
+connection event_dispatch::on_keydown_2_repeat(
+  keydown_2_repeat_slot_t const& op) {
+  return keydown_2_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_3_repeat() const { keydown_3_repeat_signal(); }
+
+connection event_dispatch::on_keydown_3_repeat(
+  keydown_3_repeat_slot_t const& op) {
+  return keydown_3_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_4_repeat() const { keydown_4_repeat_signal(); }
+
+connection event_dispatch::on_keydown_4_repeat(
+  keydown_4_repeat_slot_t const& op) {
+  return keydown_4_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_5_repeat() const { keydown_5_repeat_signal(); }
+
+connection event_dispatch::on_keydown_5_repeat(
+  keydown_5_repeat_slot_t const& op) {
+  return keydown_5_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_6_repeat() const { keydown_6_repeat_signal(); }
+
+connection event_dispatch::on_keydown_6_repeat(
+  keydown_6_repeat_slot_t const& op) {
+  return keydown_6_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_7_repeat() const { keydown_7_repeat_signal(); }
+
+connection event_dispatch::on_keydown_7_repeat(
+  keydown_7_repeat_slot_t const& op) {
+  return keydown_7_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_8_repeat() const { keydown_8_repeat_signal(); }
+
+connection event_dispatch::on_keydown_8_repeat(
+  keydown_8_repeat_slot_t const& op) {
+  return keydown_8_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_9_repeat() const { keydown_9_repeat_signal(); }
+
+connection event_dispatch::on_keydown_9_repeat(
+  keydown_9_repeat_slot_t const& op) {
+  return keydown_9_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_colon_repeat() const {
+  keydown_colon_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_colon_repeat(
+  keydown_colon_repeat_slot_t const& op) {
+  return keydown_colon_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_semicolon_repeat() const {
+  keydown_semicolon_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_semicolon_repeat(
+  keydown_semicolon_repeat_slot_t const& op) {
+  return keydown_semicolon_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_less_repeat() const {
+  keydown_less_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_less_repeat(
+  keydown_less_repeat_slot_t const& op) {
+  return keydown_less_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_equals_repeat() const {
+  keydown_equals_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_equals_repeat(
+  keydown_equals_repeat_slot_t const& op) {
+  return keydown_equals_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_greater_repeat() const {
+  keydown_greater_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_greater_repeat(
+  keydown_greater_repeat_slot_t const& op) {
+  return keydown_greater_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_question_repeat() const {
+  keydown_question_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_question_repeat(
+  keydown_question_repeat_slot_t const& op) {
+  return keydown_question_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_at_repeat() const { keydown_at_repeat_signal(); }
+
+connection event_dispatch::on_keydown_at_repeat(
+  keydown_at_repeat_slot_t const& op) {
+  return keydown_at_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_leftbracket_repeat() const {
+  keydown_leftbracket_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_leftbracket_repeat(
+  keydown_leftbracket_repeat_slot_t const& op) {
+  return keydown_leftbracket_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_backslash_repeat() const {
+  keydown_backslash_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_backslash_repeat(
+  keydown_backslash_repeat_slot_t const& op) {
+  return keydown_backslash_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_rightbracket_repeat() const {
+  keydown_rightbracket_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_rightbracket_repeat(
+  keydown_rightbracket_repeat_slot_t const& op) {
+  return keydown_rightbracket_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_caret_repeat() const {
+  keydown_caret_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_caret_repeat(
+  keydown_caret_repeat_slot_t const& op) {
+  return keydown_caret_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_underscore_repeat() const {
+  keydown_underscore_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_underscore_repeat(
+  keydown_underscore_repeat_slot_t const& op) {
+  return keydown_underscore_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_backquote_repeat() const {
+  keydown_backquote_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_backquote_repeat(
+  keydown_backquote_repeat_slot_t const& op) {
+  return keydown_backquote_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_a_repeat() const { keydown_a_repeat_signal(); }
+
+connection event_dispatch::on_keydown_a_repeat(
+  keydown_a_repeat_slot_t const& op) {
+  return keydown_a_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_b_repeat() const { keydown_b_repeat_signal(); }
+
+connection event_dispatch::on_keydown_b_repeat(
+  keydown_b_repeat_slot_t const& op) {
+  return keydown_b_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_c_repeat() const { keydown_c_repeat_signal(); }
+
+connection event_dispatch::on_keydown_c_repeat(
+  keydown_c_repeat_slot_t const& op) {
+  return keydown_c_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_d_repeat() const { keydown_d_repeat_signal(); }
+
+connection event_dispatch::on_keydown_d_repeat(
+  keydown_d_repeat_slot_t const& op) {
+  return keydown_d_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_e_repeat() const { keydown_e_repeat_signal(); }
+
+connection event_dispatch::on_keydown_e_repeat(
+  keydown_e_repeat_slot_t const& op) {
+  return keydown_e_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f_repeat() const { keydown_f_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f_repeat(
+  keydown_f_repeat_slot_t const& op) {
+  return keydown_f_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_g_repeat() const { keydown_g_repeat_signal(); }
+
+connection event_dispatch::on_keydown_g_repeat(
+  keydown_g_repeat_slot_t const& op) {
+  return keydown_g_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_h_repeat() const { keydown_h_repeat_signal(); }
+
+connection event_dispatch::on_keydown_h_repeat(
+  keydown_h_repeat_slot_t const& op) {
+  return keydown_h_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_i_repeat() const { keydown_i_repeat_signal(); }
+
+connection event_dispatch::on_keydown_i_repeat(
+  keydown_i_repeat_slot_t const& op) {
+  return keydown_i_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_j_repeat() const { keydown_j_repeat_signal(); }
+
+connection event_dispatch::on_keydown_j_repeat(
+  keydown_j_repeat_slot_t const& op) {
+  return keydown_j_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_k_repeat() const { keydown_k_repeat_signal(); }
+
+connection event_dispatch::on_keydown_k_repeat(
+  keydown_k_repeat_slot_t const& op) {
+  return keydown_k_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_l_repeat() const { keydown_l_repeat_signal(); }
+
+connection event_dispatch::on_keydown_l_repeat(
+  keydown_l_repeat_slot_t const& op) {
+  return keydown_l_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_m_repeat() const { keydown_m_repeat_signal(); }
+
+connection event_dispatch::on_keydown_m_repeat(
+  keydown_m_repeat_slot_t const& op) {
+  return keydown_m_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_n_repeat() const { keydown_n_repeat_signal(); }
+
+connection event_dispatch::on_keydown_n_repeat(
+  keydown_n_repeat_slot_t const& op) {
+  return keydown_n_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_o_repeat() const { keydown_o_repeat_signal(); }
+
+connection event_dispatch::on_keydown_o_repeat(
+  keydown_o_repeat_slot_t const& op) {
+  return keydown_o_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_p_repeat() const { keydown_p_repeat_signal(); }
+
+connection event_dispatch::on_keydown_p_repeat(
+  keydown_p_repeat_slot_t const& op) {
+  return keydown_p_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_q_repeat() const { keydown_q_repeat_signal(); }
+
+connection event_dispatch::on_keydown_q_repeat(
+  keydown_q_repeat_slot_t const& op) {
+  return keydown_q_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_r_repeat() const { keydown_r_repeat_signal(); }
+
+connection event_dispatch::on_keydown_r_repeat(
+  keydown_r_repeat_slot_t const& op) {
+  return keydown_r_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_s_repeat() const { keydown_s_repeat_signal(); }
+
+connection event_dispatch::on_keydown_s_repeat(
+  keydown_s_repeat_slot_t const& op) {
+  return keydown_s_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_t_repeat() const { keydown_t_repeat_signal(); }
+
+connection event_dispatch::on_keydown_t_repeat(
+  keydown_t_repeat_slot_t const& op) {
+  return keydown_t_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_u_repeat() const { keydown_u_repeat_signal(); }
+
+connection event_dispatch::on_keydown_u_repeat(
+  keydown_u_repeat_slot_t const& op) {
+  return keydown_u_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_v_repeat() const { keydown_v_repeat_signal(); }
+
+connection event_dispatch::on_keydown_v_repeat(
+  keydown_v_repeat_slot_t const& op) {
+  return keydown_v_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_w_repeat() const { keydown_w_repeat_signal(); }
+
+connection event_dispatch::on_keydown_w_repeat(
+  keydown_w_repeat_slot_t const& op) {
+  return keydown_w_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_x_repeat() const { keydown_x_repeat_signal(); }
+
+connection event_dispatch::on_keydown_x_repeat(
+  keydown_x_repeat_slot_t const& op) {
+  return keydown_x_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_y_repeat() const { keydown_y_repeat_signal(); }
+
+connection event_dispatch::on_keydown_y_repeat(
+  keydown_y_repeat_slot_t const& op) {
+  return keydown_y_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_z_repeat() const { keydown_z_repeat_signal(); }
+
+connection event_dispatch::on_keydown_z_repeat(
+  keydown_z_repeat_slot_t const& op) {
+  return keydown_z_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_delete_repeat() const {
+  keydown_delete_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_delete_repeat(
+  keydown_delete_repeat_slot_t const& op) {
+  return keydown_delete_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_capslock_repeat() const {
+  keydown_capslock_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_capslock_repeat(
+  keydown_capslock_repeat_slot_t const& op) {
+  return keydown_capslock_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f1_repeat() const { keydown_f1_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f1_repeat(
+  keydown_f1_repeat_slot_t const& op) {
+  return keydown_f1_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f2_repeat() const { keydown_f2_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f2_repeat(
+  keydown_f2_repeat_slot_t const& op) {
+  return keydown_f2_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f3_repeat() const { keydown_f3_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f3_repeat(
+  keydown_f3_repeat_slot_t const& op) {
+  return keydown_f3_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f4_repeat() const { keydown_f4_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f4_repeat(
+  keydown_f4_repeat_slot_t const& op) {
+  return keydown_f4_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f5_repeat() const { keydown_f5_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f5_repeat(
+  keydown_f5_repeat_slot_t const& op) {
+  return keydown_f5_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f6_repeat() const { keydown_f6_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f6_repeat(
+  keydown_f6_repeat_slot_t const& op) {
+  return keydown_f6_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f7_repeat() const { keydown_f7_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f7_repeat(
+  keydown_f7_repeat_slot_t const& op) {
+  return keydown_f7_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f8_repeat() const { keydown_f8_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f8_repeat(
+  keydown_f8_repeat_slot_t const& op) {
+  return keydown_f8_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f9_repeat() const { keydown_f9_repeat_signal(); }
+
+connection event_dispatch::on_keydown_f9_repeat(
+  keydown_f9_repeat_slot_t const& op) {
+  return keydown_f9_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f10_repeat() const {
+  keydown_f10_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f10_repeat(
+  keydown_f10_repeat_slot_t const& op) {
+  return keydown_f10_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f11_repeat() const {
+  keydown_f11_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f11_repeat(
+  keydown_f11_repeat_slot_t const& op) {
+  return keydown_f11_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f12_repeat() const {
+  keydown_f12_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f12_repeat(
+  keydown_f12_repeat_slot_t const& op) {
+  return keydown_f12_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_printscreen_repeat() const {
+  keydown_printscreen_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_printscreen_repeat(
+  keydown_printscreen_repeat_slot_t const& op) {
+  return keydown_printscreen_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_scrolllock_repeat() const {
+  keydown_scrolllock_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_scrolllock_repeat(
+  keydown_scrolllock_repeat_slot_t const& op) {
+  return keydown_scrolllock_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_pause_repeat() const {
+  keydown_pause_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_pause_repeat(
+  keydown_pause_repeat_slot_t const& op) {
+  return keydown_pause_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_insert_repeat() const {
+  keydown_insert_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_insert_repeat(
+  keydown_insert_repeat_slot_t const& op) {
+  return keydown_insert_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_home_repeat() const {
+  keydown_home_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_home_repeat(
+  keydown_home_repeat_slot_t const& op) {
+  return keydown_home_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_pageup_repeat() const {
+  keydown_pageup_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_pageup_repeat(
+  keydown_pageup_repeat_slot_t const& op) {
+  return keydown_pageup_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_end_repeat() const {
+  keydown_end_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_end_repeat(
+  keydown_end_repeat_slot_t const& op) {
+  return keydown_end_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_pagedown_repeat() const {
+  keydown_pagedown_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_pagedown_repeat(
+  keydown_pagedown_repeat_slot_t const& op) {
+  return keydown_pagedown_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_right_repeat() const {
+  keydown_right_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_right_repeat(
+  keydown_right_repeat_slot_t const& op) {
+  return keydown_right_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_left_repeat() const {
+  keydown_left_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_left_repeat(
+  keydown_left_repeat_slot_t const& op) {
+  return keydown_left_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_down_repeat() const {
+  keydown_down_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_down_repeat(
+  keydown_down_repeat_slot_t const& op) {
+  return keydown_down_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_up_repeat() const { keydown_up_repeat_signal(); }
+
+connection event_dispatch::on_keydown_up_repeat(
+  keydown_up_repeat_slot_t const& op) {
+  return keydown_up_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_numlockclear_repeat() const {
+  keydown_numlockclear_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_numlockclear_repeat(
+  keydown_numlockclear_repeat_slot_t const& op) {
+  return keydown_numlockclear_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_divide_repeat() const {
+  keydown_kp_divide_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_divide_repeat(
+  keydown_kp_divide_repeat_slot_t const& op) {
+  return keydown_kp_divide_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_multiply_repeat() const {
+  keydown_kp_multiply_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_multiply_repeat(
+  keydown_kp_multiply_repeat_slot_t const& op) {
+  return keydown_kp_multiply_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_minus_repeat() const {
+  keydown_kp_minus_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_minus_repeat(
+  keydown_kp_minus_repeat_slot_t const& op) {
+  return keydown_kp_minus_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_plus_repeat() const {
+  keydown_kp_plus_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_plus_repeat(
+  keydown_kp_plus_repeat_slot_t const& op) {
+  return keydown_kp_plus_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_enter_repeat() const {
+  keydown_kp_enter_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_enter_repeat(
+  keydown_kp_enter_repeat_slot_t const& op) {
+  return keydown_kp_enter_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_1_repeat() const {
+  keydown_kp_1_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_1_repeat(
+  keydown_kp_1_repeat_slot_t const& op) {
+  return keydown_kp_1_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_2_repeat() const {
+  keydown_kp_2_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_2_repeat(
+  keydown_kp_2_repeat_slot_t const& op) {
+  return keydown_kp_2_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_3_repeat() const {
+  keydown_kp_3_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_3_repeat(
+  keydown_kp_3_repeat_slot_t const& op) {
+  return keydown_kp_3_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_4_repeat() const {
+  keydown_kp_4_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_4_repeat(
+  keydown_kp_4_repeat_slot_t const& op) {
+  return keydown_kp_4_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_5_repeat() const {
+  keydown_kp_5_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_5_repeat(
+  keydown_kp_5_repeat_slot_t const& op) {
+  return keydown_kp_5_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_6_repeat() const {
+  keydown_kp_6_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_6_repeat(
+  keydown_kp_6_repeat_slot_t const& op) {
+  return keydown_kp_6_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_7_repeat() const {
+  keydown_kp_7_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_7_repeat(
+  keydown_kp_7_repeat_slot_t const& op) {
+  return keydown_kp_7_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_8_repeat() const {
+  keydown_kp_8_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_8_repeat(
+  keydown_kp_8_repeat_slot_t const& op) {
+  return keydown_kp_8_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_9_repeat() const {
+  keydown_kp_9_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_9_repeat(
+  keydown_kp_9_repeat_slot_t const& op) {
+  return keydown_kp_9_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_0_repeat() const {
+  keydown_kp_0_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_0_repeat(
+  keydown_kp_0_repeat_slot_t const& op) {
+  return keydown_kp_0_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_period_repeat() const {
+  keydown_kp_period_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_period_repeat(
+  keydown_kp_period_repeat_slot_t const& op) {
+  return keydown_kp_period_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_application_repeat() const {
+  keydown_application_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_application_repeat(
+  keydown_application_repeat_slot_t const& op) {
+  return keydown_application_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_power_repeat() const {
+  keydown_power_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_power_repeat(
+  keydown_power_repeat_slot_t const& op) {
+  return keydown_power_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_equals_repeat() const {
+  keydown_kp_equals_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_equals_repeat(
+  keydown_kp_equals_repeat_slot_t const& op) {
+  return keydown_kp_equals_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f13_repeat() const {
+  keydown_f13_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f13_repeat(
+  keydown_f13_repeat_slot_t const& op) {
+  return keydown_f13_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f14_repeat() const {
+  keydown_f14_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f14_repeat(
+  keydown_f14_repeat_slot_t const& op) {
+  return keydown_f14_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f15_repeat() const {
+  keydown_f15_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f15_repeat(
+  keydown_f15_repeat_slot_t const& op) {
+  return keydown_f15_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f16_repeat() const {
+  keydown_f16_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f16_repeat(
+  keydown_f16_repeat_slot_t const& op) {
+  return keydown_f16_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f17_repeat() const {
+  keydown_f17_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f17_repeat(
+  keydown_f17_repeat_slot_t const& op) {
+  return keydown_f17_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f18_repeat() const {
+  keydown_f18_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f18_repeat(
+  keydown_f18_repeat_slot_t const& op) {
+  return keydown_f18_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f19_repeat() const {
+  keydown_f19_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f19_repeat(
+  keydown_f19_repeat_slot_t const& op) {
+  return keydown_f19_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f20_repeat() const {
+  keydown_f20_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f20_repeat(
+  keydown_f20_repeat_slot_t const& op) {
+  return keydown_f20_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f21_repeat() const {
+  keydown_f21_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f21_repeat(
+  keydown_f21_repeat_slot_t const& op) {
+  return keydown_f21_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f22_repeat() const {
+  keydown_f22_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f22_repeat(
+  keydown_f22_repeat_slot_t const& op) {
+  return keydown_f22_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f23_repeat() const {
+  keydown_f23_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f23_repeat(
+  keydown_f23_repeat_slot_t const& op) {
+  return keydown_f23_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_f24_repeat() const {
+  keydown_f24_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_f24_repeat(
+  keydown_f24_repeat_slot_t const& op) {
+  return keydown_f24_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_execute_repeat() const {
+  keydown_execute_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_execute_repeat(
+  keydown_execute_repeat_slot_t const& op) {
+  return keydown_execute_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_help_repeat() const {
+  keydown_help_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_help_repeat(
+  keydown_help_repeat_slot_t const& op) {
+  return keydown_help_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_menu_repeat() const {
+  keydown_menu_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_menu_repeat(
+  keydown_menu_repeat_slot_t const& op) {
+  return keydown_menu_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_select_repeat() const {
+  keydown_select_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_select_repeat(
+  keydown_select_repeat_slot_t const& op) {
+  return keydown_select_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_stop_repeat() const {
+  keydown_stop_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_stop_repeat(
+  keydown_stop_repeat_slot_t const& op) {
+  return keydown_stop_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_again_repeat() const {
+  keydown_again_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_again_repeat(
+  keydown_again_repeat_slot_t const& op) {
+  return keydown_again_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_undo_repeat() const {
+  keydown_undo_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_undo_repeat(
+  keydown_undo_repeat_slot_t const& op) {
+  return keydown_undo_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_cut_repeat() const {
+  keydown_cut_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_cut_repeat(
+  keydown_cut_repeat_slot_t const& op) {
+  return keydown_cut_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_copy_repeat() const {
+  keydown_copy_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_copy_repeat(
+  keydown_copy_repeat_slot_t const& op) {
+  return keydown_copy_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_paste_repeat() const {
+  keydown_paste_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_paste_repeat(
+  keydown_paste_repeat_slot_t const& op) {
+  return keydown_paste_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_find_repeat() const {
+  keydown_find_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_find_repeat(
+  keydown_find_repeat_slot_t const& op) {
+  return keydown_find_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_mute_repeat() const {
+  keydown_mute_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_mute_repeat(
+  keydown_mute_repeat_slot_t const& op) {
+  return keydown_mute_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_volumeup_repeat() const {
+  keydown_volumeup_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_volumeup_repeat(
+  keydown_volumeup_repeat_slot_t const& op) {
+  return keydown_volumeup_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_volumedown_repeat() const {
+  keydown_volumedown_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_volumedown_repeat(
+  keydown_volumedown_repeat_slot_t const& op) {
+  return keydown_volumedown_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_comma_repeat() const {
+  keydown_kp_comma_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_comma_repeat(
+  keydown_kp_comma_repeat_slot_t const& op) {
+  return keydown_kp_comma_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_equalsas400_repeat() const {
+  keydown_kp_equalsas400_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_equalsas400_repeat(
+  keydown_kp_equalsas400_repeat_slot_t const& op) {
+  return keydown_kp_equalsas400_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_alterase_repeat() const {
+  keydown_alterase_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_alterase_repeat(
+  keydown_alterase_repeat_slot_t const& op) {
+  return keydown_alterase_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_sysreq_repeat() const {
+  keydown_sysreq_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_sysreq_repeat(
+  keydown_sysreq_repeat_slot_t const& op) {
+  return keydown_sysreq_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_cancel_repeat() const {
+  keydown_cancel_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_cancel_repeat(
+  keydown_cancel_repeat_slot_t const& op) {
+  return keydown_cancel_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_clear_repeat() const {
+  keydown_clear_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_clear_repeat(
+  keydown_clear_repeat_slot_t const& op) {
+  return keydown_clear_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_prior_repeat() const {
+  keydown_prior_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_prior_repeat(
+  keydown_prior_repeat_slot_t const& op) {
+  return keydown_prior_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_return2_repeat() const {
+  keydown_return2_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_return2_repeat(
+  keydown_return2_repeat_slot_t const& op) {
+  return keydown_return2_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_separator_repeat() const {
+  keydown_separator_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_separator_repeat(
+  keydown_separator_repeat_slot_t const& op) {
+  return keydown_separator_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_out_repeat() const {
+  keydown_out_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_out_repeat(
+  keydown_out_repeat_slot_t const& op) {
+  return keydown_out_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_oper_repeat() const {
+  keydown_oper_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_oper_repeat(
+  keydown_oper_repeat_slot_t const& op) {
+  return keydown_oper_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_clearagain_repeat() const {
+  keydown_clearagain_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_clearagain_repeat(
+  keydown_clearagain_repeat_slot_t const& op) {
+  return keydown_clearagain_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_crsel_repeat() const {
+  keydown_crsel_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_crsel_repeat(
+  keydown_crsel_repeat_slot_t const& op) {
+  return keydown_crsel_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_exsel_repeat() const {
+  keydown_exsel_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_exsel_repeat(
+  keydown_exsel_repeat_slot_t const& op) {
+  return keydown_exsel_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_00_repeat() const {
+  keydown_kp_00_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_00_repeat(
+  keydown_kp_00_repeat_slot_t const& op) {
+  return keydown_kp_00_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_000_repeat() const {
+  keydown_kp_000_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_000_repeat(
+  keydown_kp_000_repeat_slot_t const& op) {
+  return keydown_kp_000_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_thousandsseparator_repeat() const {
+  keydown_thousandsseparator_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_thousandsseparator_repeat(
+  keydown_thousandsseparator_repeat_slot_t const& op) {
+  return keydown_thousandsseparator_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_decimalseparator_repeat() const {
+  keydown_decimalseparator_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_decimalseparator_repeat(
+  keydown_decimalseparator_repeat_slot_t const& op) {
+  return keydown_decimalseparator_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_currencyunit_repeat() const {
+  keydown_currencyunit_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_currencyunit_repeat(
+  keydown_currencyunit_repeat_slot_t const& op) {
+  return keydown_currencyunit_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_currencysubunit_repeat() const {
+  keydown_currencysubunit_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_currencysubunit_repeat(
+  keydown_currencysubunit_repeat_slot_t const& op) {
+  return keydown_currencysubunit_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_leftparen_repeat() const {
+  keydown_kp_leftparen_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_leftparen_repeat(
+  keydown_kp_leftparen_repeat_slot_t const& op) {
+  return keydown_kp_leftparen_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_rightparen_repeat() const {
+  keydown_kp_rightparen_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_rightparen_repeat(
+  keydown_kp_rightparen_repeat_slot_t const& op) {
+  return keydown_kp_rightparen_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_leftbrace_repeat() const {
+  keydown_kp_leftbrace_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_leftbrace_repeat(
+  keydown_kp_leftbrace_repeat_slot_t const& op) {
+  return keydown_kp_leftbrace_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_rightbrace_repeat() const {
+  keydown_kp_rightbrace_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_rightbrace_repeat(
+  keydown_kp_rightbrace_repeat_slot_t const& op) {
+  return keydown_kp_rightbrace_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_tab_repeat() const {
+  keydown_kp_tab_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_tab_repeat(
+  keydown_kp_tab_repeat_slot_t const& op) {
+  return keydown_kp_tab_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_backspace_repeat() const {
+  keydown_kp_backspace_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_backspace_repeat(
+  keydown_kp_backspace_repeat_slot_t const& op) {
+  return keydown_kp_backspace_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_a_repeat() const {
+  keydown_kp_a_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_a_repeat(
+  keydown_kp_a_repeat_slot_t const& op) {
+  return keydown_kp_a_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_b_repeat() const {
+  keydown_kp_b_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_b_repeat(
+  keydown_kp_b_repeat_slot_t const& op) {
+  return keydown_kp_b_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_c_repeat() const {
+  keydown_kp_c_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_c_repeat(
+  keydown_kp_c_repeat_slot_t const& op) {
+  return keydown_kp_c_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_d_repeat() const {
+  keydown_kp_d_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_d_repeat(
+  keydown_kp_d_repeat_slot_t const& op) {
+  return keydown_kp_d_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_e_repeat() const {
+  keydown_kp_e_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_e_repeat(
+  keydown_kp_e_repeat_slot_t const& op) {
+  return keydown_kp_e_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_f_repeat() const {
+  keydown_kp_f_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_f_repeat(
+  keydown_kp_f_repeat_slot_t const& op) {
+  return keydown_kp_f_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_xor_repeat() const {
+  keydown_kp_xor_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_xor_repeat(
+  keydown_kp_xor_repeat_slot_t const& op) {
+  return keydown_kp_xor_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_power_repeat() const {
+  keydown_kp_power_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_power_repeat(
+  keydown_kp_power_repeat_slot_t const& op) {
+  return keydown_kp_power_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_percent_repeat() const {
+  keydown_kp_percent_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_percent_repeat(
+  keydown_kp_percent_repeat_slot_t const& op) {
+  return keydown_kp_percent_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_less_repeat() const {
+  keydown_kp_less_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_less_repeat(
+  keydown_kp_less_repeat_slot_t const& op) {
+  return keydown_kp_less_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_greater_repeat() const {
+  keydown_kp_greater_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_greater_repeat(
+  keydown_kp_greater_repeat_slot_t const& op) {
+  return keydown_kp_greater_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_ampersand_repeat() const {
+  keydown_kp_ampersand_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_ampersand_repeat(
+  keydown_kp_ampersand_repeat_slot_t const& op) {
+  return keydown_kp_ampersand_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_dblampersand_repeat() const {
+  keydown_kp_dblampersand_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_dblampersand_repeat(
+  keydown_kp_dblampersand_repeat_slot_t const& op) {
+  return keydown_kp_dblampersand_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_verticalbar_repeat() const {
+  keydown_kp_verticalbar_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_verticalbar_repeat(
+  keydown_kp_verticalbar_repeat_slot_t const& op) {
+  return keydown_kp_verticalbar_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_dblverticalbar_repeat() const {
+  keydown_kp_dblverticalbar_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_dblverticalbar_repeat(
+  keydown_kp_dblverticalbar_repeat_slot_t const& op) {
+  return keydown_kp_dblverticalbar_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_colon_repeat() const {
+  keydown_kp_colon_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_colon_repeat(
+  keydown_kp_colon_repeat_slot_t const& op) {
+  return keydown_kp_colon_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_hash_repeat() const {
+  keydown_kp_hash_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_hash_repeat(
+  keydown_kp_hash_repeat_slot_t const& op) {
+  return keydown_kp_hash_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_space_repeat() const {
+  keydown_kp_space_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_space_repeat(
+  keydown_kp_space_repeat_slot_t const& op) {
+  return keydown_kp_space_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_at_repeat() const {
+  keydown_kp_at_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_at_repeat(
+  keydown_kp_at_repeat_slot_t const& op) {
+  return keydown_kp_at_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_exclam_repeat() const {
+  keydown_kp_exclam_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_exclam_repeat(
+  keydown_kp_exclam_repeat_slot_t const& op) {
+  return keydown_kp_exclam_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memstore_repeat() const {
+  keydown_kp_memstore_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memstore_repeat(
+  keydown_kp_memstore_repeat_slot_t const& op) {
+  return keydown_kp_memstore_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memrecall_repeat() const {
+  keydown_kp_memrecall_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memrecall_repeat(
+  keydown_kp_memrecall_repeat_slot_t const& op) {
+  return keydown_kp_memrecall_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memclear_repeat() const {
+  keydown_kp_memclear_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memclear_repeat(
+  keydown_kp_memclear_repeat_slot_t const& op) {
+  return keydown_kp_memclear_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memadd_repeat() const {
+  keydown_kp_memadd_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memadd_repeat(
+  keydown_kp_memadd_repeat_slot_t const& op) {
+  return keydown_kp_memadd_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memsubtract_repeat() const {
+  keydown_kp_memsubtract_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memsubtract_repeat(
+  keydown_kp_memsubtract_repeat_slot_t const& op) {
+  return keydown_kp_memsubtract_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memmultiply_repeat() const {
+  keydown_kp_memmultiply_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memmultiply_repeat(
+  keydown_kp_memmultiply_repeat_slot_t const& op) {
+  return keydown_kp_memmultiply_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_memdivide_repeat() const {
+  keydown_kp_memdivide_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_memdivide_repeat(
+  keydown_kp_memdivide_repeat_slot_t const& op) {
+  return keydown_kp_memdivide_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_plusminus_repeat() const {
+  keydown_kp_plusminus_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_plusminus_repeat(
+  keydown_kp_plusminus_repeat_slot_t const& op) {
+  return keydown_kp_plusminus_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_clear_repeat() const {
+  keydown_kp_clear_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_clear_repeat(
+  keydown_kp_clear_repeat_slot_t const& op) {
+  return keydown_kp_clear_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_clearentry_repeat() const {
+  keydown_kp_clearentry_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_clearentry_repeat(
+  keydown_kp_clearentry_repeat_slot_t const& op) {
+  return keydown_kp_clearentry_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_binary_repeat() const {
+  keydown_kp_binary_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_binary_repeat(
+  keydown_kp_binary_repeat_slot_t const& op) {
+  return keydown_kp_binary_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_octal_repeat() const {
+  keydown_kp_octal_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_octal_repeat(
+  keydown_kp_octal_repeat_slot_t const& op) {
+  return keydown_kp_octal_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_decimal_repeat() const {
+  keydown_kp_decimal_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_decimal_repeat(
+  keydown_kp_decimal_repeat_slot_t const& op) {
+  return keydown_kp_decimal_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kp_hexadecimal_repeat() const {
+  keydown_kp_hexadecimal_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kp_hexadecimal_repeat(
+  keydown_kp_hexadecimal_repeat_slot_t const& op) {
+  return keydown_kp_hexadecimal_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_lctrl_repeat() const {
+  keydown_lctrl_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_lctrl_repeat(
+  keydown_lctrl_repeat_slot_t const& op) {
+  return keydown_lctrl_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_lshift_repeat() const {
+  keydown_lshift_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_lshift_repeat(
+  keydown_lshift_repeat_slot_t const& op) {
+  return keydown_lshift_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_lalt_repeat() const {
+  keydown_lalt_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_lalt_repeat(
+  keydown_lalt_repeat_slot_t const& op) {
+  return keydown_lalt_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_lgui_repeat() const {
+  keydown_lgui_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_lgui_repeat(
+  keydown_lgui_repeat_slot_t const& op) {
+  return keydown_lgui_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_rctrl_repeat() const {
+  keydown_rctrl_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_rctrl_repeat(
+  keydown_rctrl_repeat_slot_t const& op) {
+  return keydown_rctrl_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_rshift_repeat() const {
+  keydown_rshift_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_rshift_repeat(
+  keydown_rshift_repeat_slot_t const& op) {
+  return keydown_rshift_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ralt_repeat() const {
+  keydown_ralt_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ralt_repeat(
+  keydown_ralt_repeat_slot_t const& op) {
+  return keydown_ralt_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_rgui_repeat() const {
+  keydown_rgui_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_rgui_repeat(
+  keydown_rgui_repeat_slot_t const& op) {
+  return keydown_rgui_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_mode_repeat() const {
+  keydown_mode_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_mode_repeat(
+  keydown_mode_repeat_slot_t const& op) {
+  return keydown_mode_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_audionext_repeat() const {
+  keydown_audionext_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_audionext_repeat(
+  keydown_audionext_repeat_slot_t const& op) {
+  return keydown_audionext_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_audioprev_repeat() const {
+  keydown_audioprev_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_audioprev_repeat(
+  keydown_audioprev_repeat_slot_t const& op) {
+  return keydown_audioprev_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_audiostop_repeat() const {
+  keydown_audiostop_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_audiostop_repeat(
+  keydown_audiostop_repeat_slot_t const& op) {
+  return keydown_audiostop_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_audioplay_repeat() const {
+  keydown_audioplay_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_audioplay_repeat(
+  keydown_audioplay_repeat_slot_t const& op) {
+  return keydown_audioplay_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_audiomute_repeat() const {
+  keydown_audiomute_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_audiomute_repeat(
+  keydown_audiomute_repeat_slot_t const& op) {
+  return keydown_audiomute_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_mediaselect_repeat() const {
+  keydown_mediaselect_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_mediaselect_repeat(
+  keydown_mediaselect_repeat_slot_t const& op) {
+  return keydown_mediaselect_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_www_repeat() const {
+  keydown_www_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_www_repeat(
+  keydown_www_repeat_slot_t const& op) {
+  return keydown_www_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_mail_repeat() const {
+  keydown_mail_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_mail_repeat(
+  keydown_mail_repeat_slot_t const& op) {
+  return keydown_mail_repeat_signal.connect(op);
+}
 
-connection event_dispatch::on_keydown_unknown(
-  keydown_unknown_slot_t const& op) {
-  return keydown_unknown_signal.connect(op);
+void event_dispatch::keydown_calculator_repeat() const {
+  keydown_calculator_repeat_signal();
 }
 
-void event_dispatch::keydown_backspace() const { keydown_backspace_signal(); }
+connection event_dispatch::on_keydown_calculator_repeat(
+  keydown_calculator_repeat_slot_t const& op) {
+  return keydown_calculator_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_computer_repeat() const {
+  keydown_computer_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_computer_repeat(
+  keydown_computer_repeat_slot_t const& op) {
+  return keydown_computer_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_search_repeat() const {
+  keydown_ac_search_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_search_repeat(
+  keydown_ac_search_repeat_slot_t const& op) {
+  return keydown_ac_search_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_home_repeat() const {
+  keydown_ac_home_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_home_repeat(
+  keydown_ac_home_repeat_slot_t const& op) {
+  return keydown_ac_home_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_back_repeat() const {
+  keydown_ac_back_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_back_repeat(
+  keydown_ac_back_repeat_slot_t const& op) {
+  return keydown_ac_back_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_forward_repeat() const {
+  keydown_ac_forward_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_forward_repeat(
+  keydown_ac_forward_repeat_slot_t const& op) {
+  return keydown_ac_forward_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_stop_repeat() const {
+  keydown_ac_stop_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_stop_repeat(
+  keydown_ac_stop_repeat_slot_t const& op) {
+  return keydown_ac_stop_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_refresh_repeat() const {
+  keydown_ac_refresh_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_refresh_repeat(
+  keydown_ac_refresh_repeat_slot_t const& op) {
+  return keydown_ac_refresh_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_ac_bookmarks_repeat() const {
+  keydown_ac_bookmarks_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_ac_bookmarks_repeat(
+  keydown_ac_bookmarks_repeat_slot_t const& op) {
+  return keydown_ac_bookmarks_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_brightnessdown_repeat() const {
+  keydown_brightnessdown_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_brightnessdown_repeat(
+  keydown_brightnessdown_repeat_slot_t const& op) {
+  return keydown_brightnessdown_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_brightnessup_repeat() const {
+  keydown_brightnessup_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_brightnessup_repeat(
+  keydown_brightnessup_repeat_slot_t const& op) {
+  return keydown_brightnessup_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_displayswitch_repeat() const {
+  keydown_displayswitch_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_displayswitch_repeat(
+  keydown_displayswitch_repeat_slot_t const& op) {
+  return keydown_displayswitch_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kbdillumtoggle_repeat() const {
+  keydown_kbdillumtoggle_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kbdillumtoggle_repeat(
+  keydown_kbdillumtoggle_repeat_slot_t const& op) {
+  return keydown_kbdillumtoggle_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kbdillumdown_repeat() const {
+  keydown_kbdillumdown_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kbdillumdown_repeat(
+  keydown_kbdillumdown_repeat_slot_t const& op) {
+  return keydown_kbdillumdown_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_kbdillumup_repeat() const {
+  keydown_kbdillumup_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_kbdillumup_repeat(
+  keydown_kbdillumup_repeat_slot_t const& op) {
+  return keydown_kbdillumup_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_eject_repeat() const {
+  keydown_eject_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_eject_repeat(
+  keydown_eject_repeat_slot_t const& op) {
+  return keydown_eject_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_sleep_repeat() const {
+  keydown_sleep_repeat_signal();
+}
+
+connection event_dispatch::on_keydown_sleep_repeat(
+  keydown_sleep_repeat_slot_t const& op) {
+  return keydown_sleep_repeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_unknown_nonrepeat() const {
+  keydown_unknown_nonrepeat_signal();
+}
+
+connection event_dispatch::on_keydown_unknown_nonrepeat(
+  keydown_unknown_nonrepeat_slot_t const& op) {
+  return keydown_unknown_nonrepeat_signal.connect(op);
+}
+
+void event_dispatch::keydown_backspace_nonrepeat() const {
+  keydown_backspace_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_backspace(
-  keydown_backspace_slot_t const& op) {
-  return keydown_backspace_signal.connect(op);
+connection event_dispatch::on_keydown_backspace_nonrepeat(
+  keydown_backspace_nonrepeat_slot_t const& op) {
+  return keydown_backspace_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_tab() const { keydown_tab_signal(); }
+void event_dispatch::keydown_tab_nonrepeat() const {
+  keydown_tab_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_tab(keydown_tab_slot_t const& op) {
-  return keydown_tab_signal.connect(op);
+connection event_dispatch::on_keydown_tab_nonrepeat(
+  keydown_tab_nonrepeat_slot_t const& op) {
+  return keydown_tab_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_return() const { keydown_return_signal(); }
+void event_dispatch::keydown_return_nonrepeat() const {
+  keydown_return_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_return(keydown_return_slot_t const& op) {
-  return keydown_return_signal.connect(op);
+connection event_dispatch::on_keydown_return_nonrepeat(
+  keydown_return_nonrepeat_slot_t const& op) {
+  return keydown_return_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_escape() const { keydown_escape_signal(); }
+void event_dispatch::keydown_escape_nonrepeat() const {
+  keydown_escape_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_escape(keydown_escape_slot_t const& op) {
-  return keydown_escape_signal.connect(op);
+connection event_dispatch::on_keydown_escape_nonrepeat(
+  keydown_escape_nonrepeat_slot_t const& op) {
+  return keydown_escape_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_space() const { keydown_space_signal(); }
+void event_dispatch::keydown_space_nonrepeat() const {
+  keydown_space_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_space(keydown_space_slot_t const& op) {
-  return keydown_space_signal.connect(op);
+connection event_dispatch::on_keydown_space_nonrepeat(
+  keydown_space_nonrepeat_slot_t const& op) {
+  return keydown_space_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_exclaim() const { keydown_exclaim_signal(); }
+void event_dispatch::keydown_exclaim_nonrepeat() const {
+  keydown_exclaim_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_exclaim(
-  keydown_exclaim_slot_t const& op) {
-  return keydown_exclaim_signal.connect(op);
+connection event_dispatch::on_keydown_exclaim_nonrepeat(
+  keydown_exclaim_nonrepeat_slot_t const& op) {
+  return keydown_exclaim_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_quotedbl() const { keydown_quotedbl_signal(); }
+void event_dispatch::keydown_quotedbl_nonrepeat() const {
+  keydown_quotedbl_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_quotedbl(
-  keydown_quotedbl_slot_t const& op) {
-  return keydown_quotedbl_signal.connect(op);
+connection event_dispatch::on_keydown_quotedbl_nonrepeat(
+  keydown_quotedbl_nonrepeat_slot_t const& op) {
+  return keydown_quotedbl_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_hash() const { keydown_hash_signal(); }
+void event_dispatch::keydown_hash_nonrepeat() const {
+  keydown_hash_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_hash(keydown_hash_slot_t const& op) {
-  return keydown_hash_signal.connect(op);
+connection event_dispatch::on_keydown_hash_nonrepeat(
+  keydown_hash_nonrepeat_slot_t const& op) {
+  return keydown_hash_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_dollar() const { keydown_dollar_signal(); }
+void event_dispatch::keydown_dollar_nonrepeat() const {
+  keydown_dollar_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_dollar(keydown_dollar_slot_t const& op) {
-  return keydown_dollar_signal.connect(op);
+connection event_dispatch::on_keydown_dollar_nonrepeat(
+  keydown_dollar_nonrepeat_slot_t const& op) {
+  return keydown_dollar_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_percent() const { keydown_percent_signal(); }
+void event_dispatch::keydown_percent_nonrepeat() const {
+  keydown_percent_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_percent(
-  keydown_percent_slot_t const& op) {
-  return keydown_percent_signal.connect(op);
+connection event_dispatch::on_keydown_percent_nonrepeat(
+  keydown_percent_nonrepeat_slot_t const& op) {
+  return keydown_percent_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ampersand() const { keydown_ampersand_signal(); }
+void event_dispatch::keydown_ampersand_nonrepeat() const {
+  keydown_ampersand_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ampersand(
-  keydown_ampersand_slot_t const& op) {
-  return keydown_ampersand_signal.connect(op);
+connection event_dispatch::on_keydown_ampersand_nonrepeat(
+  keydown_ampersand_nonrepeat_slot_t const& op) {
+  return keydown_ampersand_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_quote() const { keydown_quote_signal(); }
+void event_dispatch::keydown_quote_nonrepeat() const {
+  keydown_quote_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_quote(keydown_quote_slot_t const& op) {
-  return keydown_quote_signal.connect(op);
+connection event_dispatch::on_keydown_quote_nonrepeat(
+  keydown_quote_nonrepeat_slot_t const& op) {
+  return keydown_quote_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_leftparen() const { keydown_leftparen_signal(); }
+void event_dispatch::keydown_leftparen_nonrepeat() const {
+  keydown_leftparen_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_leftparen(
-  keydown_leftparen_slot_t const& op) {
-  return keydown_leftparen_signal.connect(op);
+connection event_dispatch::on_keydown_leftparen_nonrepeat(
+  keydown_leftparen_nonrepeat_slot_t const& op) {
+  return keydown_leftparen_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_rightparen() const {
-  keydown_rightparen_signal();
+void event_dispatch::keydown_rightparen_nonrepeat() const {
+  keydown_rightparen_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_rightparen(
-  keydown_rightparen_slot_t const& op) {
-  return keydown_rightparen_signal.connect(op);
+connection event_dispatch::on_keydown_rightparen_nonrepeat(
+  keydown_rightparen_nonrepeat_slot_t const& op) {
+  return keydown_rightparen_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_asterisk() const { keydown_asterisk_signal(); }
+void event_dispatch::keydown_asterisk_nonrepeat() const {
+  keydown_asterisk_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_asterisk(
-  keydown_asterisk_slot_t const& op) {
-  return keydown_asterisk_signal.connect(op);
+connection event_dispatch::on_keydown_asterisk_nonrepeat(
+  keydown_asterisk_nonrepeat_slot_t const& op) {
+  return keydown_asterisk_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_plus() const { keydown_plus_signal(); }
+void event_dispatch::keydown_plus_nonrepeat() const {
+  keydown_plus_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_plus(keydown_plus_slot_t const& op) {
-  return keydown_plus_signal.connect(op);
+connection event_dispatch::on_keydown_plus_nonrepeat(
+  keydown_plus_nonrepeat_slot_t const& op) {
+  return keydown_plus_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_comma() const { keydown_comma_signal(); }
+void event_dispatch::keydown_comma_nonrepeat() const {
+  keydown_comma_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_comma(keydown_comma_slot_t const& op) {
-  return keydown_comma_signal.connect(op);
+connection event_dispatch::on_keydown_comma_nonrepeat(
+  keydown_comma_nonrepeat_slot_t const& op) {
+  return keydown_comma_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_minus() const { keydown_minus_signal(); }
+void event_dispatch::keydown_minus_nonrepeat() const {
+  keydown_minus_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_minus(keydown_minus_slot_t const& op) {
-  return keydown_minus_signal.connect(op);
+connection event_dispatch::on_keydown_minus_nonrepeat(
+  keydown_minus_nonrepeat_slot_t const& op) {
+  return keydown_minus_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_period() const { keydown_period_signal(); }
+void event_dispatch::keydown_period_nonrepeat() const {
+  keydown_period_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_period(keydown_period_slot_t const& op) {
-  return keydown_period_signal.connect(op);
+connection event_dispatch::on_keydown_period_nonrepeat(
+  keydown_period_nonrepeat_slot_t const& op) {
+  return keydown_period_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_slash() const { keydown_slash_signal(); }
+void event_dispatch::keydown_slash_nonrepeat() const {
+  keydown_slash_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_slash(keydown_slash_slot_t const& op) {
-  return keydown_slash_signal.connect(op);
+connection event_dispatch::on_keydown_slash_nonrepeat(
+  keydown_slash_nonrepeat_slot_t const& op) {
+  return keydown_slash_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_0() const { keydown_0_signal(); }
+void event_dispatch::keydown_0_nonrepeat() const {
+  keydown_0_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_0(keydown_0_slot_t const& op) {
-  return keydown_0_signal.connect(op);
+connection event_dispatch::on_keydown_0_nonrepeat(
+  keydown_0_nonrepeat_slot_t const& op) {
+  return keydown_0_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_1() const { keydown_1_signal(); }
+void event_dispatch::keydown_1_nonrepeat() const {
+  keydown_1_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_1(keydown_1_slot_t const& op) {
-  return keydown_1_signal.connect(op);
+connection event_dispatch::on_keydown_1_nonrepeat(
+  keydown_1_nonrepeat_slot_t const& op) {
+  return keydown_1_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_2() const { keydown_2_signal(); }
+void event_dispatch::keydown_2_nonrepeat() const {
+  keydown_2_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_2(keydown_2_slot_t const& op) {
-  return keydown_2_signal.connect(op);
+connection event_dispatch::on_keydown_2_nonrepeat(
+  keydown_2_nonrepeat_slot_t const& op) {
+  return keydown_2_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_3() const { keydown_3_signal(); }
+void event_dispatch::keydown_3_nonrepeat() const {
+  keydown_3_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_3(keydown_3_slot_t const& op) {
-  return keydown_3_signal.connect(op);
+connection event_dispatch::on_keydown_3_nonrepeat(
+  keydown_3_nonrepeat_slot_t const& op) {
+  return keydown_3_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_4() const { keydown_4_signal(); }
+void event_dispatch::keydown_4_nonrepeat() const {
+  keydown_4_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_4(keydown_4_slot_t const& op) {
-  return keydown_4_signal.connect(op);
+connection event_dispatch::on_keydown_4_nonrepeat(
+  keydown_4_nonrepeat_slot_t const& op) {
+  return keydown_4_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_5() const { keydown_5_signal(); }
+void event_dispatch::keydown_5_nonrepeat() const {
+  keydown_5_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_5(keydown_5_slot_t const& op) {
-  return keydown_5_signal.connect(op);
+connection event_dispatch::on_keydown_5_nonrepeat(
+  keydown_5_nonrepeat_slot_t const& op) {
+  return keydown_5_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_6() const { keydown_6_signal(); }
+void event_dispatch::keydown_6_nonrepeat() const {
+  keydown_6_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_6(keydown_6_slot_t const& op) {
-  return keydown_6_signal.connect(op);
+connection event_dispatch::on_keydown_6_nonrepeat(
+  keydown_6_nonrepeat_slot_t const& op) {
+  return keydown_6_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_7() const { keydown_7_signal(); }
+void event_dispatch::keydown_7_nonrepeat() const {
+  keydown_7_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_7(keydown_7_slot_t const& op) {
-  return keydown_7_signal.connect(op);
+connection event_dispatch::on_keydown_7_nonrepeat(
+  keydown_7_nonrepeat_slot_t const& op) {
+  return keydown_7_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_8() const { keydown_8_signal(); }
+void event_dispatch::keydown_8_nonrepeat() const {
+  keydown_8_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_8(keydown_8_slot_t const& op) {
-  return keydown_8_signal.connect(op);
+connection event_dispatch::on_keydown_8_nonrepeat(
+  keydown_8_nonrepeat_slot_t const& op) {
+  return keydown_8_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_9() const { keydown_9_signal(); }
+void event_dispatch::keydown_9_nonrepeat() const {
+  keydown_9_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_9(keydown_9_slot_t const& op) {
-  return keydown_9_signal.connect(op);
+connection event_dispatch::on_keydown_9_nonrepeat(
+  keydown_9_nonrepeat_slot_t const& op) {
+  return keydown_9_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_colon() const { keydown_colon_signal(); }
+void event_dispatch::keydown_colon_nonrepeat() const {
+  keydown_colon_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_colon(keydown_colon_slot_t const& op) {
-  return keydown_colon_signal.connect(op);
+connection event_dispatch::on_keydown_colon_nonrepeat(
+  keydown_colon_nonrepeat_slot_t const& op) {
+  return keydown_colon_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_semicolon() const { keydown_semicolon_signal(); }
+void event_dispatch::keydown_semicolon_nonrepeat() const {
+  keydown_semicolon_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_semicolon(
-  keydown_semicolon_slot_t const& op) {
-  return keydown_semicolon_signal.connect(op);
+connection event_dispatch::on_keydown_semicolon_nonrepeat(
+  keydown_semicolon_nonrepeat_slot_t const& op) {
+  return keydown_semicolon_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_less() const { keydown_less_signal(); }
+void event_dispatch::keydown_less_nonrepeat() const {
+  keydown_less_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_less(keydown_less_slot_t const& op) {
-  return keydown_less_signal.connect(op);
+connection event_dispatch::on_keydown_less_nonrepeat(
+  keydown_less_nonrepeat_slot_t const& op) {
+  return keydown_less_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_equals() const { keydown_equals_signal(); }
+void event_dispatch::keydown_equals_nonrepeat() const {
+  keydown_equals_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_equals(keydown_equals_slot_t const& op) {
-  return keydown_equals_signal.connect(op);
+connection event_dispatch::on_keydown_equals_nonrepeat(
+  keydown_equals_nonrepeat_slot_t const& op) {
+  return keydown_equals_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_greater() const { keydown_greater_signal(); }
+void event_dispatch::keydown_greater_nonrepeat() const {
+  keydown_greater_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_greater(
-  keydown_greater_slot_t const& op) {
-  return keydown_greater_signal.connect(op);
+connection event_dispatch::on_keydown_greater_nonrepeat(
+  keydown_greater_nonrepeat_slot_t const& op) {
+  return keydown_greater_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_question() const { keydown_question_signal(); }
+void event_dispatch::keydown_question_nonrepeat() const {
+  keydown_question_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_question(
-  keydown_question_slot_t const& op) {
-  return keydown_question_signal.connect(op);
+connection event_dispatch::on_keydown_question_nonrepeat(
+  keydown_question_nonrepeat_slot_t const& op) {
+  return keydown_question_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_at() const { keydown_at_signal(); }
+void event_dispatch::keydown_at_nonrepeat() const {
+  keydown_at_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_at(keydown_at_slot_t const& op) {
-  return keydown_at_signal.connect(op);
+connection event_dispatch::on_keydown_at_nonrepeat(
+  keydown_at_nonrepeat_slot_t const& op) {
+  return keydown_at_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_leftbracket() const {
-  keydown_leftbracket_signal();
+void event_dispatch::keydown_leftbracket_nonrepeat() const {
+  keydown_leftbracket_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_leftbracket(
-  keydown_leftbracket_slot_t const& op) {
-  return keydown_leftbracket_signal.connect(op);
+connection event_dispatch::on_keydown_leftbracket_nonrepeat(
+  keydown_leftbracket_nonrepeat_slot_t const& op) {
+  return keydown_leftbracket_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_backslash() const { keydown_backslash_signal(); }
+void event_dispatch::keydown_backslash_nonrepeat() const {
+  keydown_backslash_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_backslash(
-  keydown_backslash_slot_t const& op) {
-  return keydown_backslash_signal.connect(op);
+connection event_dispatch::on_keydown_backslash_nonrepeat(
+  keydown_backslash_nonrepeat_slot_t const& op) {
+  return keydown_backslash_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_rightbracket() const {
-  keydown_rightbracket_signal();
+void event_dispatch::keydown_rightbracket_nonrepeat() const {
+  keydown_rightbracket_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_rightbracket(
-  keydown_rightbracket_slot_t const& op) {
-  return keydown_rightbracket_signal.connect(op);
+connection event_dispatch::on_keydown_rightbracket_nonrepeat(
+  keydown_rightbracket_nonrepeat_slot_t const& op) {
+  return keydown_rightbracket_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_caret() const { keydown_caret_signal(); }
+void event_dispatch::keydown_caret_nonrepeat() const {
+  keydown_caret_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_caret(keydown_caret_slot_t const& op) {
-  return keydown_caret_signal.connect(op);
+connection event_dispatch::on_keydown_caret_nonrepeat(
+  keydown_caret_nonrepeat_slot_t const& op) {
+  return keydown_caret_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_underscore() const {
-  keydown_underscore_signal();
+void event_dispatch::keydown_underscore_nonrepeat() const {
+  keydown_underscore_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_underscore(
-  keydown_underscore_slot_t const& op) {
-  return keydown_underscore_signal.connect(op);
+connection event_dispatch::on_keydown_underscore_nonrepeat(
+  keydown_underscore_nonrepeat_slot_t const& op) {
+  return keydown_underscore_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_backquote() const { keydown_backquote_signal(); }
+void event_dispatch::keydown_backquote_nonrepeat() const {
+  keydown_backquote_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_backquote(
-  keydown_backquote_slot_t const& op) {
-  return keydown_backquote_signal.connect(op);
+connection event_dispatch::on_keydown_backquote_nonrepeat(
+  keydown_backquote_nonrepeat_slot_t const& op) {
+  return keydown_backquote_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_a() const { keydown_a_signal(); }
+void event_dispatch::keydown_a_nonrepeat() const {
+  keydown_a_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_a(keydown_a_slot_t const& op) {
-  return keydown_a_signal.connect(op);
+connection event_dispatch::on_keydown_a_nonrepeat(
+  keydown_a_nonrepeat_slot_t const& op) {
+  return keydown_a_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_b() const { keydown_b_signal(); }
+void event_dispatch::keydown_b_nonrepeat() const {
+  keydown_b_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_b(keydown_b_slot_t const& op) {
-  return keydown_b_signal.connect(op);
+connection event_dispatch::on_keydown_b_nonrepeat(
+  keydown_b_nonrepeat_slot_t const& op) {
+  return keydown_b_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_c() const { keydown_c_signal(); }
+void event_dispatch::keydown_c_nonrepeat() const {
+  keydown_c_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_c(keydown_c_slot_t const& op) {
-  return keydown_c_signal.connect(op);
+connection event_dispatch::on_keydown_c_nonrepeat(
+  keydown_c_nonrepeat_slot_t const& op) {
+  return keydown_c_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_d() const { keydown_d_signal(); }
+void event_dispatch::keydown_d_nonrepeat() const {
+  keydown_d_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_d(keydown_d_slot_t const& op) {
-  return keydown_d_signal.connect(op);
+connection event_dispatch::on_keydown_d_nonrepeat(
+  keydown_d_nonrepeat_slot_t const& op) {
+  return keydown_d_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_e() const { keydown_e_signal(); }
+void event_dispatch::keydown_e_nonrepeat() const {
+  keydown_e_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_e(keydown_e_slot_t const& op) {
-  return keydown_e_signal.connect(op);
+connection event_dispatch::on_keydown_e_nonrepeat(
+  keydown_e_nonrepeat_slot_t const& op) {
+  return keydown_e_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f() const { keydown_f_signal(); }
+void event_dispatch::keydown_f_nonrepeat() const {
+  keydown_f_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f(keydown_f_slot_t const& op) {
-  return keydown_f_signal.connect(op);
+connection event_dispatch::on_keydown_f_nonrepeat(
+  keydown_f_nonrepeat_slot_t const& op) {
+  return keydown_f_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_g() const { keydown_g_signal(); }
+void event_dispatch::keydown_g_nonrepeat() const {
+  keydown_g_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_g(keydown_g_slot_t const& op) {
-  return keydown_g_signal.connect(op);
+connection event_dispatch::on_keydown_g_nonrepeat(
+  keydown_g_nonrepeat_slot_t const& op) {
+  return keydown_g_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_h() const { keydown_h_signal(); }
+void event_dispatch::keydown_h_nonrepeat() const {
+  keydown_h_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_h(keydown_h_slot_t const& op) {
-  return keydown_h_signal.connect(op);
+connection event_dispatch::on_keydown_h_nonrepeat(
+  keydown_h_nonrepeat_slot_t const& op) {
+  return keydown_h_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_i() const { keydown_i_signal(); }
+void event_dispatch::keydown_i_nonrepeat() const {
+  keydown_i_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_i(keydown_i_slot_t const& op) {
-  return keydown_i_signal.connect(op);
+connection event_dispatch::on_keydown_i_nonrepeat(
+  keydown_i_nonrepeat_slot_t const& op) {
+  return keydown_i_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_j() const { keydown_j_signal(); }
+void event_dispatch::keydown_j_nonrepeat() const {
+  keydown_j_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_j(keydown_j_slot_t const& op) {
-  return keydown_j_signal.connect(op);
+connection event_dispatch::on_keydown_j_nonrepeat(
+  keydown_j_nonrepeat_slot_t const& op) {
+  return keydown_j_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_k() const { keydown_k_signal(); }
+void event_dispatch::keydown_k_nonrepeat() const {
+  keydown_k_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_k(keydown_k_slot_t const& op) {
-  return keydown_k_signal.connect(op);
+connection event_dispatch::on_keydown_k_nonrepeat(
+  keydown_k_nonrepeat_slot_t const& op) {
+  return keydown_k_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_l() const { keydown_l_signal(); }
+void event_dispatch::keydown_l_nonrepeat() const {
+  keydown_l_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_l(keydown_l_slot_t const& op) {
-  return keydown_l_signal.connect(op);
+connection event_dispatch::on_keydown_l_nonrepeat(
+  keydown_l_nonrepeat_slot_t const& op) {
+  return keydown_l_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_m() const { keydown_m_signal(); }
+void event_dispatch::keydown_m_nonrepeat() const {
+  keydown_m_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_m(keydown_m_slot_t const& op) {
-  return keydown_m_signal.connect(op);
+connection event_dispatch::on_keydown_m_nonrepeat(
+  keydown_m_nonrepeat_slot_t const& op) {
+  return keydown_m_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_n() const { keydown_n_signal(); }
+void event_dispatch::keydown_n_nonrepeat() const {
+  keydown_n_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_n(keydown_n_slot_t const& op) {
-  return keydown_n_signal.connect(op);
+connection event_dispatch::on_keydown_n_nonrepeat(
+  keydown_n_nonrepeat_slot_t const& op) {
+  return keydown_n_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_o() const { keydown_o_signal(); }
+void event_dispatch::keydown_o_nonrepeat() const {
+  keydown_o_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_o(keydown_o_slot_t const& op) {
-  return keydown_o_signal.connect(op);
+connection event_dispatch::on_keydown_o_nonrepeat(
+  keydown_o_nonrepeat_slot_t const& op) {
+  return keydown_o_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_p() const { keydown_p_signal(); }
+void event_dispatch::keydown_p_nonrepeat() const {
+  keydown_p_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_p(keydown_p_slot_t const& op) {
-  return keydown_p_signal.connect(op);
+connection event_dispatch::on_keydown_p_nonrepeat(
+  keydown_p_nonrepeat_slot_t const& op) {
+  return keydown_p_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_q() const { keydown_q_signal(); }
+void event_dispatch::keydown_q_nonrepeat() const {
+  keydown_q_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_q(keydown_q_slot_t const& op) {
-  return keydown_q_signal.connect(op);
+connection event_dispatch::on_keydown_q_nonrepeat(
+  keydown_q_nonrepeat_slot_t const& op) {
+  return keydown_q_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_r() const { keydown_r_signal(); }
+void event_dispatch::keydown_r_nonrepeat() const {
+  keydown_r_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_r(keydown_r_slot_t const& op) {
-  return keydown_r_signal.connect(op);
+connection event_dispatch::on_keydown_r_nonrepeat(
+  keydown_r_nonrepeat_slot_t const& op) {
+  return keydown_r_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_s() const { keydown_s_signal(); }
+void event_dispatch::keydown_s_nonrepeat() const {
+  keydown_s_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_s(keydown_s_slot_t const& op) {
-  return keydown_s_signal.connect(op);
+connection event_dispatch::on_keydown_s_nonrepeat(
+  keydown_s_nonrepeat_slot_t const& op) {
+  return keydown_s_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_t() const { keydown_t_signal(); }
+void event_dispatch::keydown_t_nonrepeat() const {
+  keydown_t_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_t(keydown_t_slot_t const& op) {
-  return keydown_t_signal.connect(op);
+connection event_dispatch::on_keydown_t_nonrepeat(
+  keydown_t_nonrepeat_slot_t const& op) {
+  return keydown_t_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_u() const { keydown_u_signal(); }
+void event_dispatch::keydown_u_nonrepeat() const {
+  keydown_u_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_u(keydown_u_slot_t const& op) {
-  return keydown_u_signal.connect(op);
+connection event_dispatch::on_keydown_u_nonrepeat(
+  keydown_u_nonrepeat_slot_t const& op) {
+  return keydown_u_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_v() const { keydown_v_signal(); }
+void event_dispatch::keydown_v_nonrepeat() const {
+  keydown_v_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_v(keydown_v_slot_t const& op) {
-  return keydown_v_signal.connect(op);
+connection event_dispatch::on_keydown_v_nonrepeat(
+  keydown_v_nonrepeat_slot_t const& op) {
+  return keydown_v_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_w() const { keydown_w_signal(); }
+void event_dispatch::keydown_w_nonrepeat() const {
+  keydown_w_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_w(keydown_w_slot_t const& op) {
-  return keydown_w_signal.connect(op);
+connection event_dispatch::on_keydown_w_nonrepeat(
+  keydown_w_nonrepeat_slot_t const& op) {
+  return keydown_w_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_x() const { keydown_x_signal(); }
+void event_dispatch::keydown_x_nonrepeat() const {
+  keydown_x_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_x(keydown_x_slot_t const& op) {
-  return keydown_x_signal.connect(op);
+connection event_dispatch::on_keydown_x_nonrepeat(
+  keydown_x_nonrepeat_slot_t const& op) {
+  return keydown_x_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_y() const { keydown_y_signal(); }
+void event_dispatch::keydown_y_nonrepeat() const {
+  keydown_y_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_y(keydown_y_slot_t const& op) {
-  return keydown_y_signal.connect(op);
+connection event_dispatch::on_keydown_y_nonrepeat(
+  keydown_y_nonrepeat_slot_t const& op) {
+  return keydown_y_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_z() const { keydown_z_signal(); }
+void event_dispatch::keydown_z_nonrepeat() const {
+  keydown_z_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_z(keydown_z_slot_t const& op) {
-  return keydown_z_signal.connect(op);
+connection event_dispatch::on_keydown_z_nonrepeat(
+  keydown_z_nonrepeat_slot_t const& op) {
+  return keydown_z_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_delete() const { keydown_delete_signal(); }
+void event_dispatch::keydown_delete_nonrepeat() const {
+  keydown_delete_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_delete(keydown_delete_slot_t const& op) {
-  return keydown_delete_signal.connect(op);
+connection event_dispatch::on_keydown_delete_nonrepeat(
+  keydown_delete_nonrepeat_slot_t const& op) {
+  return keydown_delete_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_capslock() const { keydown_capslock_signal(); }
+void event_dispatch::keydown_capslock_nonrepeat() const {
+  keydown_capslock_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_capslock(
-  keydown_capslock_slot_t const& op) {
-  return keydown_capslock_signal.connect(op);
+connection event_dispatch::on_keydown_capslock_nonrepeat(
+  keydown_capslock_nonrepeat_slot_t const& op) {
+  return keydown_capslock_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f1() const { keydown_f1_signal(); }
+void event_dispatch::keydown_f1_nonrepeat() const {
+  keydown_f1_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f1(keydown_f1_slot_t const& op) {
-  return keydown_f1_signal.connect(op);
+connection event_dispatch::on_keydown_f1_nonrepeat(
+  keydown_f1_nonrepeat_slot_t const& op) {
+  return keydown_f1_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f2() const { keydown_f2_signal(); }
+void event_dispatch::keydown_f2_nonrepeat() const {
+  keydown_f2_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f2(keydown_f2_slot_t const& op) {
-  return keydown_f2_signal.connect(op);
+connection event_dispatch::on_keydown_f2_nonrepeat(
+  keydown_f2_nonrepeat_slot_t const& op) {
+  return keydown_f2_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f3() const { keydown_f3_signal(); }
+void event_dispatch::keydown_f3_nonrepeat() const {
+  keydown_f3_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f3(keydown_f3_slot_t const& op) {
-  return keydown_f3_signal.connect(op);
+connection event_dispatch::on_keydown_f3_nonrepeat(
+  keydown_f3_nonrepeat_slot_t const& op) {
+  return keydown_f3_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f4() const { keydown_f4_signal(); }
+void event_dispatch::keydown_f4_nonrepeat() const {
+  keydown_f4_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f4(keydown_f4_slot_t const& op) {
-  return keydown_f4_signal.connect(op);
+connection event_dispatch::on_keydown_f4_nonrepeat(
+  keydown_f4_nonrepeat_slot_t const& op) {
+  return keydown_f4_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f5() const { keydown_f5_signal(); }
+void event_dispatch::keydown_f5_nonrepeat() const {
+  keydown_f5_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f5(keydown_f5_slot_t const& op) {
-  return keydown_f5_signal.connect(op);
+connection event_dispatch::on_keydown_f5_nonrepeat(
+  keydown_f5_nonrepeat_slot_t const& op) {
+  return keydown_f5_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f6() const { keydown_f6_signal(); }
+void event_dispatch::keydown_f6_nonrepeat() const {
+  keydown_f6_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f6(keydown_f6_slot_t const& op) {
-  return keydown_f6_signal.connect(op);
+connection event_dispatch::on_keydown_f6_nonrepeat(
+  keydown_f6_nonrepeat_slot_t const& op) {
+  return keydown_f6_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f7() const { keydown_f7_signal(); }
+void event_dispatch::keydown_f7_nonrepeat() const {
+  keydown_f7_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f7(keydown_f7_slot_t const& op) {
-  return keydown_f7_signal.connect(op);
+connection event_dispatch::on_keydown_f7_nonrepeat(
+  keydown_f7_nonrepeat_slot_t const& op) {
+  return keydown_f7_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f8() const { keydown_f8_signal(); }
+void event_dispatch::keydown_f8_nonrepeat() const {
+  keydown_f8_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f8(keydown_f8_slot_t const& op) {
-  return keydown_f8_signal.connect(op);
+connection event_dispatch::on_keydown_f8_nonrepeat(
+  keydown_f8_nonrepeat_slot_t const& op) {
+  return keydown_f8_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f9() const { keydown_f9_signal(); }
+void event_dispatch::keydown_f9_nonrepeat() const {
+  keydown_f9_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f9(keydown_f9_slot_t const& op) {
-  return keydown_f9_signal.connect(op);
+connection event_dispatch::on_keydown_f9_nonrepeat(
+  keydown_f9_nonrepeat_slot_t const& op) {
+  return keydown_f9_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f10() const { keydown_f10_signal(); }
+void event_dispatch::keydown_f10_nonrepeat() const {
+  keydown_f10_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f10(keydown_f10_slot_t const& op) {
-  return keydown_f10_signal.connect(op);
+connection event_dispatch::on_keydown_f10_nonrepeat(
+  keydown_f10_nonrepeat_slot_t const& op) {
+  return keydown_f10_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f11() const { keydown_f11_signal(); }
+void event_dispatch::keydown_f11_nonrepeat() const {
+  keydown_f11_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f11(keydown_f11_slot_t const& op) {
-  return keydown_f11_signal.connect(op);
+connection event_dispatch::on_keydown_f11_nonrepeat(
+  keydown_f11_nonrepeat_slot_t const& op) {
+  return keydown_f11_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f12() const { keydown_f12_signal(); }
+void event_dispatch::keydown_f12_nonrepeat() const {
+  keydown_f12_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f12(keydown_f12_slot_t const& op) {
-  return keydown_f12_signal.connect(op);
+connection event_dispatch::on_keydown_f12_nonrepeat(
+  keydown_f12_nonrepeat_slot_t const& op) {
+  return keydown_f12_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_printscreen() const {
-  keydown_printscreen_signal();
+void event_dispatch::keydown_printscreen_nonrepeat() const {
+  keydown_printscreen_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_printscreen(
-  keydown_printscreen_slot_t const& op) {
-  return keydown_printscreen_signal.connect(op);
+connection event_dispatch::on_keydown_printscreen_nonrepeat(
+  keydown_printscreen_nonrepeat_slot_t const& op) {
+  return keydown_printscreen_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_scrolllock() const {
-  keydown_scrolllock_signal();
+void event_dispatch::keydown_scrolllock_nonrepeat() const {
+  keydown_scrolllock_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_scrolllock(
-  keydown_scrolllock_slot_t const& op) {
-  return keydown_scrolllock_signal.connect(op);
+connection event_dispatch::on_keydown_scrolllock_nonrepeat(
+  keydown_scrolllock_nonrepeat_slot_t const& op) {
+  return keydown_scrolllock_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_pause() const { keydown_pause_signal(); }
+void event_dispatch::keydown_pause_nonrepeat() const {
+  keydown_pause_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_pause(keydown_pause_slot_t const& op) {
-  return keydown_pause_signal.connect(op);
+connection event_dispatch::on_keydown_pause_nonrepeat(
+  keydown_pause_nonrepeat_slot_t const& op) {
+  return keydown_pause_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_insert() const { keydown_insert_signal(); }
+void event_dispatch::keydown_insert_nonrepeat() const {
+  keydown_insert_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_insert(keydown_insert_slot_t const& op) {
-  return keydown_insert_signal.connect(op);
+connection event_dispatch::on_keydown_insert_nonrepeat(
+  keydown_insert_nonrepeat_slot_t const& op) {
+  return keydown_insert_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_home() const { keydown_home_signal(); }
+void event_dispatch::keydown_home_nonrepeat() const {
+  keydown_home_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_home(keydown_home_slot_t const& op) {
-  return keydown_home_signal.connect(op);
+connection event_dispatch::on_keydown_home_nonrepeat(
+  keydown_home_nonrepeat_slot_t const& op) {
+  return keydown_home_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_pageup() const { keydown_pageup_signal(); }
+void event_dispatch::keydown_pageup_nonrepeat() const {
+  keydown_pageup_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_pageup(keydown_pageup_slot_t const& op) {
-  return keydown_pageup_signal.connect(op);
+connection event_dispatch::on_keydown_pageup_nonrepeat(
+  keydown_pageup_nonrepeat_slot_t const& op) {
+  return keydown_pageup_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_end() const { keydown_end_signal(); }
+void event_dispatch::keydown_end_nonrepeat() const {
+  keydown_end_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_end(keydown_end_slot_t const& op) {
-  return keydown_end_signal.connect(op);
+connection event_dispatch::on_keydown_end_nonrepeat(
+  keydown_end_nonrepeat_slot_t const& op) {
+  return keydown_end_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_pagedown() const { keydown_pagedown_signal(); }
+void event_dispatch::keydown_pagedown_nonrepeat() const {
+  keydown_pagedown_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_pagedown(
-  keydown_pagedown_slot_t const& op) {
-  return keydown_pagedown_signal.connect(op);
+connection event_dispatch::on_keydown_pagedown_nonrepeat(
+  keydown_pagedown_nonrepeat_slot_t const& op) {
+  return keydown_pagedown_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_right() const { keydown_right_signal(); }
+void event_dispatch::keydown_right_nonrepeat() const {
+  keydown_right_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_right(keydown_right_slot_t const& op) {
-  return keydown_right_signal.connect(op);
+connection event_dispatch::on_keydown_right_nonrepeat(
+  keydown_right_nonrepeat_slot_t const& op) {
+  return keydown_right_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_left() const { keydown_left_signal(); }
+void event_dispatch::keydown_left_nonrepeat() const {
+  keydown_left_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_left(keydown_left_slot_t const& op) {
-  return keydown_left_signal.connect(op);
+connection event_dispatch::on_keydown_left_nonrepeat(
+  keydown_left_nonrepeat_slot_t const& op) {
+  return keydown_left_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_down() const { keydown_down_signal(); }
+void event_dispatch::keydown_down_nonrepeat() const {
+  keydown_down_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_down(keydown_down_slot_t const& op) {
-  return keydown_down_signal.connect(op);
+connection event_dispatch::on_keydown_down_nonrepeat(
+  keydown_down_nonrepeat_slot_t const& op) {
+  return keydown_down_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_up() const { keydown_up_signal(); }
+void event_dispatch::keydown_up_nonrepeat() const {
+  keydown_up_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_up(keydown_up_slot_t const& op) {
-  return keydown_up_signal.connect(op);
+connection event_dispatch::on_keydown_up_nonrepeat(
+  keydown_up_nonrepeat_slot_t const& op) {
+  return keydown_up_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_numlockclear() const {
-  keydown_numlockclear_signal();
+void event_dispatch::keydown_numlockclear_nonrepeat() const {
+  keydown_numlockclear_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_numlockclear(
-  keydown_numlockclear_slot_t const& op) {
-  return keydown_numlockclear_signal.connect(op);
+connection event_dispatch::on_keydown_numlockclear_nonrepeat(
+  keydown_numlockclear_nonrepeat_slot_t const& op) {
+  return keydown_numlockclear_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_divide() const { keydown_kp_divide_signal(); }
+void event_dispatch::keydown_kp_divide_nonrepeat() const {
+  keydown_kp_divide_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_divide(
-  keydown_kp_divide_slot_t const& op) {
-  return keydown_kp_divide_signal.connect(op);
+connection event_dispatch::on_keydown_kp_divide_nonrepeat(
+  keydown_kp_divide_nonrepeat_slot_t const& op) {
+  return keydown_kp_divide_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_multiply() const {
-  keydown_kp_multiply_signal();
+void event_dispatch::keydown_kp_multiply_nonrepeat() const {
+  keydown_kp_multiply_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_multiply(
-  keydown_kp_multiply_slot_t const& op) {
-  return keydown_kp_multiply_signal.connect(op);
+connection event_dispatch::on_keydown_kp_multiply_nonrepeat(
+  keydown_kp_multiply_nonrepeat_slot_t const& op) {
+  return keydown_kp_multiply_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_minus() const { keydown_kp_minus_signal(); }
+void event_dispatch::keydown_kp_minus_nonrepeat() const {
+  keydown_kp_minus_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_minus(
-  keydown_kp_minus_slot_t const& op) {
-  return keydown_kp_minus_signal.connect(op);
+connection event_dispatch::on_keydown_kp_minus_nonrepeat(
+  keydown_kp_minus_nonrepeat_slot_t const& op) {
+  return keydown_kp_minus_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_plus() const { keydown_kp_plus_signal(); }
+void event_dispatch::keydown_kp_plus_nonrepeat() const {
+  keydown_kp_plus_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_plus(
-  keydown_kp_plus_slot_t const& op) {
-  return keydown_kp_plus_signal.connect(op);
+connection event_dispatch::on_keydown_kp_plus_nonrepeat(
+  keydown_kp_plus_nonrepeat_slot_t const& op) {
+  return keydown_kp_plus_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_enter() const { keydown_kp_enter_signal(); }
+void event_dispatch::keydown_kp_enter_nonrepeat() const {
+  keydown_kp_enter_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_enter(
-  keydown_kp_enter_slot_t const& op) {
-  return keydown_kp_enter_signal.connect(op);
+connection event_dispatch::on_keydown_kp_enter_nonrepeat(
+  keydown_kp_enter_nonrepeat_slot_t const& op) {
+  return keydown_kp_enter_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_1() const { keydown_kp_1_signal(); }
+void event_dispatch::keydown_kp_1_nonrepeat() const {
+  keydown_kp_1_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_1(keydown_kp_1_slot_t const& op) {
-  return keydown_kp_1_signal.connect(op);
+connection event_dispatch::on_keydown_kp_1_nonrepeat(
+  keydown_kp_1_nonrepeat_slot_t const& op) {
+  return keydown_kp_1_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_2() const { keydown_kp_2_signal(); }
+void event_dispatch::keydown_kp_2_nonrepeat() const {
+  keydown_kp_2_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_2(keydown_kp_2_slot_t const& op) {
-  return keydown_kp_2_signal.connect(op);
+connection event_dispatch::on_keydown_kp_2_nonrepeat(
+  keydown_kp_2_nonrepeat_slot_t const& op) {
+  return keydown_kp_2_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_3() const { keydown_kp_3_signal(); }
+void event_dispatch::keydown_kp_3_nonrepeat() const {
+  keydown_kp_3_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_3(keydown_kp_3_slot_t const& op) {
-  return keydown_kp_3_signal.connect(op);
+connection event_dispatch::on_keydown_kp_3_nonrepeat(
+  keydown_kp_3_nonrepeat_slot_t const& op) {
+  return keydown_kp_3_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_4() const { keydown_kp_4_signal(); }
+void event_dispatch::keydown_kp_4_nonrepeat() const {
+  keydown_kp_4_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_4(keydown_kp_4_slot_t const& op) {
-  return keydown_kp_4_signal.connect(op);
+connection event_dispatch::on_keydown_kp_4_nonrepeat(
+  keydown_kp_4_nonrepeat_slot_t const& op) {
+  return keydown_kp_4_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_5() const { keydown_kp_5_signal(); }
+void event_dispatch::keydown_kp_5_nonrepeat() const {
+  keydown_kp_5_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_5(keydown_kp_5_slot_t const& op) {
-  return keydown_kp_5_signal.connect(op);
+connection event_dispatch::on_keydown_kp_5_nonrepeat(
+  keydown_kp_5_nonrepeat_slot_t const& op) {
+  return keydown_kp_5_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_6() const { keydown_kp_6_signal(); }
+void event_dispatch::keydown_kp_6_nonrepeat() const {
+  keydown_kp_6_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_6(keydown_kp_6_slot_t const& op) {
-  return keydown_kp_6_signal.connect(op);
+connection event_dispatch::on_keydown_kp_6_nonrepeat(
+  keydown_kp_6_nonrepeat_slot_t const& op) {
+  return keydown_kp_6_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_7() const { keydown_kp_7_signal(); }
+void event_dispatch::keydown_kp_7_nonrepeat() const {
+  keydown_kp_7_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_7(keydown_kp_7_slot_t const& op) {
-  return keydown_kp_7_signal.connect(op);
+connection event_dispatch::on_keydown_kp_7_nonrepeat(
+  keydown_kp_7_nonrepeat_slot_t const& op) {
+  return keydown_kp_7_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_8() const { keydown_kp_8_signal(); }
+void event_dispatch::keydown_kp_8_nonrepeat() const {
+  keydown_kp_8_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_8(keydown_kp_8_slot_t const& op) {
-  return keydown_kp_8_signal.connect(op);
+connection event_dispatch::on_keydown_kp_8_nonrepeat(
+  keydown_kp_8_nonrepeat_slot_t const& op) {
+  return keydown_kp_8_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_9() const { keydown_kp_9_signal(); }
+void event_dispatch::keydown_kp_9_nonrepeat() const {
+  keydown_kp_9_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_9(keydown_kp_9_slot_t const& op) {
-  return keydown_kp_9_signal.connect(op);
+connection event_dispatch::on_keydown_kp_9_nonrepeat(
+  keydown_kp_9_nonrepeat_slot_t const& op) {
+  return keydown_kp_9_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_0() const { keydown_kp_0_signal(); }
+void event_dispatch::keydown_kp_0_nonrepeat() const {
+  keydown_kp_0_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_0(keydown_kp_0_slot_t const& op) {
-  return keydown_kp_0_signal.connect(op);
+connection event_dispatch::on_keydown_kp_0_nonrepeat(
+  keydown_kp_0_nonrepeat_slot_t const& op) {
+  return keydown_kp_0_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_period() const { keydown_kp_period_signal(); }
+void event_dispatch::keydown_kp_period_nonrepeat() const {
+  keydown_kp_period_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_period(
-  keydown_kp_period_slot_t const& op) {
-  return keydown_kp_period_signal.connect(op);
+connection event_dispatch::on_keydown_kp_period_nonrepeat(
+  keydown_kp_period_nonrepeat_slot_t const& op) {
+  return keydown_kp_period_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_application() const {
-  keydown_application_signal();
+void event_dispatch::keydown_application_nonrepeat() const {
+  keydown_application_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_application(
-  keydown_application_slot_t const& op) {
-  return keydown_application_signal.connect(op);
+connection event_dispatch::on_keydown_application_nonrepeat(
+  keydown_application_nonrepeat_slot_t const& op) {
+  return keydown_application_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_power() const { keydown_power_signal(); }
+void event_dispatch::keydown_power_nonrepeat() const {
+  keydown_power_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_power(keydown_power_slot_t const& op) {
-  return keydown_power_signal.connect(op);
+connection event_dispatch::on_keydown_power_nonrepeat(
+  keydown_power_nonrepeat_slot_t const& op) {
+  return keydown_power_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_equals() const { keydown_kp_equals_signal(); }
+void event_dispatch::keydown_kp_equals_nonrepeat() const {
+  keydown_kp_equals_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_equals(
-  keydown_kp_equals_slot_t const& op) {
-  return keydown_kp_equals_signal.connect(op);
+connection event_dispatch::on_keydown_kp_equals_nonrepeat(
+  keydown_kp_equals_nonrepeat_slot_t const& op) {
+  return keydown_kp_equals_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f13() const { keydown_f13_signal(); }
+void event_dispatch::keydown_f13_nonrepeat() const {
+  keydown_f13_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f13(keydown_f13_slot_t const& op) {
-  return keydown_f13_signal.connect(op);
+connection event_dispatch::on_keydown_f13_nonrepeat(
+  keydown_f13_nonrepeat_slot_t const& op) {
+  return keydown_f13_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f14() const { keydown_f14_signal(); }
+void event_dispatch::keydown_f14_nonrepeat() const {
+  keydown_f14_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f14(keydown_f14_slot_t const& op) {
-  return keydown_f14_signal.connect(op);
+connection event_dispatch::on_keydown_f14_nonrepeat(
+  keydown_f14_nonrepeat_slot_t const& op) {
+  return keydown_f14_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f15() const { keydown_f15_signal(); }
+void event_dispatch::keydown_f15_nonrepeat() const {
+  keydown_f15_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f15(keydown_f15_slot_t const& op) {
-  return keydown_f15_signal.connect(op);
+connection event_dispatch::on_keydown_f15_nonrepeat(
+  keydown_f15_nonrepeat_slot_t const& op) {
+  return keydown_f15_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f16() const { keydown_f16_signal(); }
+void event_dispatch::keydown_f16_nonrepeat() const {
+  keydown_f16_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f16(keydown_f16_slot_t const& op) {
-  return keydown_f16_signal.connect(op);
+connection event_dispatch::on_keydown_f16_nonrepeat(
+  keydown_f16_nonrepeat_slot_t const& op) {
+  return keydown_f16_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f17() const { keydown_f17_signal(); }
+void event_dispatch::keydown_f17_nonrepeat() const {
+  keydown_f17_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f17(keydown_f17_slot_t const& op) {
-  return keydown_f17_signal.connect(op);
+connection event_dispatch::on_keydown_f17_nonrepeat(
+  keydown_f17_nonrepeat_slot_t const& op) {
+  return keydown_f17_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f18() const { keydown_f18_signal(); }
+void event_dispatch::keydown_f18_nonrepeat() const {
+  keydown_f18_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f18(keydown_f18_slot_t const& op) {
-  return keydown_f18_signal.connect(op);
+connection event_dispatch::on_keydown_f18_nonrepeat(
+  keydown_f18_nonrepeat_slot_t const& op) {
+  return keydown_f18_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f19() const { keydown_f19_signal(); }
+void event_dispatch::keydown_f19_nonrepeat() const {
+  keydown_f19_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f19(keydown_f19_slot_t const& op) {
-  return keydown_f19_signal.connect(op);
+connection event_dispatch::on_keydown_f19_nonrepeat(
+  keydown_f19_nonrepeat_slot_t const& op) {
+  return keydown_f19_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f20() const { keydown_f20_signal(); }
+void event_dispatch::keydown_f20_nonrepeat() const {
+  keydown_f20_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f20(keydown_f20_slot_t const& op) {
-  return keydown_f20_signal.connect(op);
+connection event_dispatch::on_keydown_f20_nonrepeat(
+  keydown_f20_nonrepeat_slot_t const& op) {
+  return keydown_f20_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f21() const { keydown_f21_signal(); }
+void event_dispatch::keydown_f21_nonrepeat() const {
+  keydown_f21_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f21(keydown_f21_slot_t const& op) {
-  return keydown_f21_signal.connect(op);
+connection event_dispatch::on_keydown_f21_nonrepeat(
+  keydown_f21_nonrepeat_slot_t const& op) {
+  return keydown_f21_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f22() const { keydown_f22_signal(); }
+void event_dispatch::keydown_f22_nonrepeat() const {
+  keydown_f22_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f22(keydown_f22_slot_t const& op) {
-  return keydown_f22_signal.connect(op);
+connection event_dispatch::on_keydown_f22_nonrepeat(
+  keydown_f22_nonrepeat_slot_t const& op) {
+  return keydown_f22_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f23() const { keydown_f23_signal(); }
+void event_dispatch::keydown_f23_nonrepeat() const {
+  keydown_f23_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f23(keydown_f23_slot_t const& op) {
-  return keydown_f23_signal.connect(op);
+connection event_dispatch::on_keydown_f23_nonrepeat(
+  keydown_f23_nonrepeat_slot_t const& op) {
+  return keydown_f23_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_f24() const { keydown_f24_signal(); }
+void event_dispatch::keydown_f24_nonrepeat() const {
+  keydown_f24_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_f24(keydown_f24_slot_t const& op) {
-  return keydown_f24_signal.connect(op);
+connection event_dispatch::on_keydown_f24_nonrepeat(
+  keydown_f24_nonrepeat_slot_t const& op) {
+  return keydown_f24_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_execute() const { keydown_execute_signal(); }
+void event_dispatch::keydown_execute_nonrepeat() const {
+  keydown_execute_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_execute(
-  keydown_execute_slot_t const& op) {
-  return keydown_execute_signal.connect(op);
+connection event_dispatch::on_keydown_execute_nonrepeat(
+  keydown_execute_nonrepeat_slot_t const& op) {
+  return keydown_execute_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_help() const { keydown_help_signal(); }
+void event_dispatch::keydown_help_nonrepeat() const {
+  keydown_help_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_help(keydown_help_slot_t const& op) {
-  return keydown_help_signal.connect(op);
+connection event_dispatch::on_keydown_help_nonrepeat(
+  keydown_help_nonrepeat_slot_t const& op) {
+  return keydown_help_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_menu() const { keydown_menu_signal(); }
+void event_dispatch::keydown_menu_nonrepeat() const {
+  keydown_menu_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_menu(keydown_menu_slot_t const& op) {
-  return keydown_menu_signal.connect(op);
+connection event_dispatch::on_keydown_menu_nonrepeat(
+  keydown_menu_nonrepeat_slot_t const& op) {
+  return keydown_menu_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_select() const { keydown_select_signal(); }
+void event_dispatch::keydown_select_nonrepeat() const {
+  keydown_select_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_select(keydown_select_slot_t const& op) {
-  return keydown_select_signal.connect(op);
+connection event_dispatch::on_keydown_select_nonrepeat(
+  keydown_select_nonrepeat_slot_t const& op) {
+  return keydown_select_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_stop() const { keydown_stop_signal(); }
+void event_dispatch::keydown_stop_nonrepeat() const {
+  keydown_stop_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_stop(keydown_stop_slot_t const& op) {
-  return keydown_stop_signal.connect(op);
+connection event_dispatch::on_keydown_stop_nonrepeat(
+  keydown_stop_nonrepeat_slot_t const& op) {
+  return keydown_stop_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_again() const { keydown_again_signal(); }
+void event_dispatch::keydown_again_nonrepeat() const {
+  keydown_again_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_again(keydown_again_slot_t const& op) {
-  return keydown_again_signal.connect(op);
+connection event_dispatch::on_keydown_again_nonrepeat(
+  keydown_again_nonrepeat_slot_t const& op) {
+  return keydown_again_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_undo() const { keydown_undo_signal(); }
+void event_dispatch::keydown_undo_nonrepeat() const {
+  keydown_undo_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_undo(keydown_undo_slot_t const& op) {
-  return keydown_undo_signal.connect(op);
+connection event_dispatch::on_keydown_undo_nonrepeat(
+  keydown_undo_nonrepeat_slot_t const& op) {
+  return keydown_undo_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_cut() const { keydown_cut_signal(); }
+void event_dispatch::keydown_cut_nonrepeat() const {
+  keydown_cut_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_cut(keydown_cut_slot_t const& op) {
-  return keydown_cut_signal.connect(op);
+connection event_dispatch::on_keydown_cut_nonrepeat(
+  keydown_cut_nonrepeat_slot_t const& op) {
+  return keydown_cut_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_copy() const { keydown_copy_signal(); }
+void event_dispatch::keydown_copy_nonrepeat() const {
+  keydown_copy_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_copy(keydown_copy_slot_t const& op) {
-  return keydown_copy_signal.connect(op);
+connection event_dispatch::on_keydown_copy_nonrepeat(
+  keydown_copy_nonrepeat_slot_t const& op) {
+  return keydown_copy_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_paste() const { keydown_paste_signal(); }
+void event_dispatch::keydown_paste_nonrepeat() const {
+  keydown_paste_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_paste(keydown_paste_slot_t const& op) {
-  return keydown_paste_signal.connect(op);
+connection event_dispatch::on_keydown_paste_nonrepeat(
+  keydown_paste_nonrepeat_slot_t const& op) {
+  return keydown_paste_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_find() const { keydown_find_signal(); }
+void event_dispatch::keydown_find_nonrepeat() const {
+  keydown_find_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_find(keydown_find_slot_t const& op) {
-  return keydown_find_signal.connect(op);
+connection event_dispatch::on_keydown_find_nonrepeat(
+  keydown_find_nonrepeat_slot_t const& op) {
+  return keydown_find_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_mute() const { keydown_mute_signal(); }
+void event_dispatch::keydown_mute_nonrepeat() const {
+  keydown_mute_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_mute(keydown_mute_slot_t const& op) {
-  return keydown_mute_signal.connect(op);
+connection event_dispatch::on_keydown_mute_nonrepeat(
+  keydown_mute_nonrepeat_slot_t const& op) {
+  return keydown_mute_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_volumeup() const { keydown_volumeup_signal(); }
+void event_dispatch::keydown_volumeup_nonrepeat() const {
+  keydown_volumeup_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_volumeup(
-  keydown_volumeup_slot_t const& op) {
-  return keydown_volumeup_signal.connect(op);
+connection event_dispatch::on_keydown_volumeup_nonrepeat(
+  keydown_volumeup_nonrepeat_slot_t const& op) {
+  return keydown_volumeup_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_volumedown() const {
-  keydown_volumedown_signal();
+void event_dispatch::keydown_volumedown_nonrepeat() const {
+  keydown_volumedown_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_volumedown(
-  keydown_volumedown_slot_t const& op) {
-  return keydown_volumedown_signal.connect(op);
+connection event_dispatch::on_keydown_volumedown_nonrepeat(
+  keydown_volumedown_nonrepeat_slot_t const& op) {
+  return keydown_volumedown_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_comma() const { keydown_kp_comma_signal(); }
+void event_dispatch::keydown_kp_comma_nonrepeat() const {
+  keydown_kp_comma_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_comma(
-  keydown_kp_comma_slot_t const& op) {
-  return keydown_kp_comma_signal.connect(op);
+connection event_dispatch::on_keydown_kp_comma_nonrepeat(
+  keydown_kp_comma_nonrepeat_slot_t const& op) {
+  return keydown_kp_comma_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_equalsas400() const {
-  keydown_kp_equalsas400_signal();
+void event_dispatch::keydown_kp_equalsas400_nonrepeat() const {
+  keydown_kp_equalsas400_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_equalsas400(
-  keydown_kp_equalsas400_slot_t const& op) {
-  return keydown_kp_equalsas400_signal.connect(op);
+connection event_dispatch::on_keydown_kp_equalsas400_nonrepeat(
+  keydown_kp_equalsas400_nonrepeat_slot_t const& op) {
+  return keydown_kp_equalsas400_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_alterase() const { keydown_alterase_signal(); }
+void event_dispatch::keydown_alterase_nonrepeat() const {
+  keydown_alterase_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_alterase(
-  keydown_alterase_slot_t const& op) {
-  return keydown_alterase_signal.connect(op);
+connection event_dispatch::on_keydown_alterase_nonrepeat(
+  keydown_alterase_nonrepeat_slot_t const& op) {
+  return keydown_alterase_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_sysreq() const { keydown_sysreq_signal(); }
+void event_dispatch::keydown_sysreq_nonrepeat() const {
+  keydown_sysreq_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_sysreq(keydown_sysreq_slot_t const& op) {
-  return keydown_sysreq_signal.connect(op);
+connection event_dispatch::on_keydown_sysreq_nonrepeat(
+  keydown_sysreq_nonrepeat_slot_t const& op) {
+  return keydown_sysreq_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_cancel() const { keydown_cancel_signal(); }
+void event_dispatch::keydown_cancel_nonrepeat() const {
+  keydown_cancel_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_cancel(keydown_cancel_slot_t const& op) {
-  return keydown_cancel_signal.connect(op);
+connection event_dispatch::on_keydown_cancel_nonrepeat(
+  keydown_cancel_nonrepeat_slot_t const& op) {
+  return keydown_cancel_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_clear() const { keydown_clear_signal(); }
+void event_dispatch::keydown_clear_nonrepeat() const {
+  keydown_clear_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_clear(keydown_clear_slot_t const& op) {
-  return keydown_clear_signal.connect(op);
+connection event_dispatch::on_keydown_clear_nonrepeat(
+  keydown_clear_nonrepeat_slot_t const& op) {
+  return keydown_clear_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_prior() const { keydown_prior_signal(); }
+void event_dispatch::keydown_prior_nonrepeat() const {
+  keydown_prior_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_prior(keydown_prior_slot_t const& op) {
-  return keydown_prior_signal.connect(op);
+connection event_dispatch::on_keydown_prior_nonrepeat(
+  keydown_prior_nonrepeat_slot_t const& op) {
+  return keydown_prior_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_return2() const { keydown_return2_signal(); }
+void event_dispatch::keydown_return2_nonrepeat() const {
+  keydown_return2_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_return2(
-  keydown_return2_slot_t const& op) {
-  return keydown_return2_signal.connect(op);
+connection event_dispatch::on_keydown_return2_nonrepeat(
+  keydown_return2_nonrepeat_slot_t const& op) {
+  return keydown_return2_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_separator() const { keydown_separator_signal(); }
+void event_dispatch::keydown_separator_nonrepeat() const {
+  keydown_separator_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_separator(
-  keydown_separator_slot_t const& op) {
-  return keydown_separator_signal.connect(op);
+connection event_dispatch::on_keydown_separator_nonrepeat(
+  keydown_separator_nonrepeat_slot_t const& op) {
+  return keydown_separator_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_out() const { keydown_out_signal(); }
+void event_dispatch::keydown_out_nonrepeat() const {
+  keydown_out_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_out(keydown_out_slot_t const& op) {
-  return keydown_out_signal.connect(op);
+connection event_dispatch::on_keydown_out_nonrepeat(
+  keydown_out_nonrepeat_slot_t const& op) {
+  return keydown_out_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_oper() const { keydown_oper_signal(); }
+void event_dispatch::keydown_oper_nonrepeat() const {
+  keydown_oper_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_oper(keydown_oper_slot_t const& op) {
-  return keydown_oper_signal.connect(op);
+connection event_dispatch::on_keydown_oper_nonrepeat(
+  keydown_oper_nonrepeat_slot_t const& op) {
+  return keydown_oper_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_clearagain() const {
-  keydown_clearagain_signal();
+void event_dispatch::keydown_clearagain_nonrepeat() const {
+  keydown_clearagain_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_clearagain(
-  keydown_clearagain_slot_t const& op) {
-  return keydown_clearagain_signal.connect(op);
+connection event_dispatch::on_keydown_clearagain_nonrepeat(
+  keydown_clearagain_nonrepeat_slot_t const& op) {
+  return keydown_clearagain_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_crsel() const { keydown_crsel_signal(); }
+void event_dispatch::keydown_crsel_nonrepeat() const {
+  keydown_crsel_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_crsel(keydown_crsel_slot_t const& op) {
-  return keydown_crsel_signal.connect(op);
+connection event_dispatch::on_keydown_crsel_nonrepeat(
+  keydown_crsel_nonrepeat_slot_t const& op) {
+  return keydown_crsel_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_exsel() const { keydown_exsel_signal(); }
+void event_dispatch::keydown_exsel_nonrepeat() const {
+  keydown_exsel_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_exsel(keydown_exsel_slot_t const& op) {
-  return keydown_exsel_signal.connect(op);
+connection event_dispatch::on_keydown_exsel_nonrepeat(
+  keydown_exsel_nonrepeat_slot_t const& op) {
+  return keydown_exsel_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_00() const { keydown_kp_00_signal(); }
+void event_dispatch::keydown_kp_00_nonrepeat() const {
+  keydown_kp_00_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_00(keydown_kp_00_slot_t const& op) {
-  return keydown_kp_00_signal.connect(op);
+connection event_dispatch::on_keydown_kp_00_nonrepeat(
+  keydown_kp_00_nonrepeat_slot_t const& op) {
+  return keydown_kp_00_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_000() const { keydown_kp_000_signal(); }
+void event_dispatch::keydown_kp_000_nonrepeat() const {
+  keydown_kp_000_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_000(keydown_kp_000_slot_t const& op) {
-  return keydown_kp_000_signal.connect(op);
+connection event_dispatch::on_keydown_kp_000_nonrepeat(
+  keydown_kp_000_nonrepeat_slot_t const& op) {
+  return keydown_kp_000_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_thousandsseparator() const {
-  keydown_thousandsseparator_signal();
+void event_dispatch::keydown_thousandsseparator_nonrepeat() const {
+  keydown_thousandsseparator_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_thousandsseparator(
-  keydown_thousandsseparator_slot_t const& op) {
-  return keydown_thousandsseparator_signal.connect(op);
+connection event_dispatch::on_keydown_thousandsseparator_nonrepeat(
+  keydown_thousandsseparator_nonrepeat_slot_t const& op) {
+  return keydown_thousandsseparator_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_decimalseparator() const {
-  keydown_decimalseparator_signal();
+void event_dispatch::keydown_decimalseparator_nonrepeat() const {
+  keydown_decimalseparator_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_decimalseparator(
-  keydown_decimalseparator_slot_t const& op) {
-  return keydown_decimalseparator_signal.connect(op);
+connection event_dispatch::on_keydown_decimalseparator_nonrepeat(
+  keydown_decimalseparator_nonrepeat_slot_t const& op) {
+  return keydown_decimalseparator_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_currencyunit() const {
-  keydown_currencyunit_signal();
+void event_dispatch::keydown_currencyunit_nonrepeat() const {
+  keydown_currencyunit_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_currencyunit(
-  keydown_currencyunit_slot_t const& op) {
-  return keydown_currencyunit_signal.connect(op);
+connection event_dispatch::on_keydown_currencyunit_nonrepeat(
+  keydown_currencyunit_nonrepeat_slot_t const& op) {
+  return keydown_currencyunit_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_currencysubunit() const {
-  keydown_currencysubunit_signal();
+void event_dispatch::keydown_currencysubunit_nonrepeat() const {
+  keydown_currencysubunit_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_currencysubunit(
-  keydown_currencysubunit_slot_t const& op) {
-  return keydown_currencysubunit_signal.connect(op);
+connection event_dispatch::on_keydown_currencysubunit_nonrepeat(
+  keydown_currencysubunit_nonrepeat_slot_t const& op) {
+  return keydown_currencysubunit_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_leftparen() const {
-  keydown_kp_leftparen_signal();
+void event_dispatch::keydown_kp_leftparen_nonrepeat() const {
+  keydown_kp_leftparen_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_leftparen(
-  keydown_kp_leftparen_slot_t const& op) {
-  return keydown_kp_leftparen_signal.connect(op);
+connection event_dispatch::on_keydown_kp_leftparen_nonrepeat(
+  keydown_kp_leftparen_nonrepeat_slot_t const& op) {
+  return keydown_kp_leftparen_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_rightparen() const {
-  keydown_kp_rightparen_signal();
+void event_dispatch::keydown_kp_rightparen_nonrepeat() const {
+  keydown_kp_rightparen_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_rightparen(
-  keydown_kp_rightparen_slot_t const& op) {
-  return keydown_kp_rightparen_signal.connect(op);
+connection event_dispatch::on_keydown_kp_rightparen_nonrepeat(
+  keydown_kp_rightparen_nonrepeat_slot_t const& op) {
+  return keydown_kp_rightparen_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_leftbrace() const {
-  keydown_kp_leftbrace_signal();
+void event_dispatch::keydown_kp_leftbrace_nonrepeat() const {
+  keydown_kp_leftbrace_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_leftbrace(
-  keydown_kp_leftbrace_slot_t const& op) {
-  return keydown_kp_leftbrace_signal.connect(op);
+connection event_dispatch::on_keydown_kp_leftbrace_nonrepeat(
+  keydown_kp_leftbrace_nonrepeat_slot_t const& op) {
+  return keydown_kp_leftbrace_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_rightbrace() const {
-  keydown_kp_rightbrace_signal();
+void event_dispatch::keydown_kp_rightbrace_nonrepeat() const {
+  keydown_kp_rightbrace_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_rightbrace(
-  keydown_kp_rightbrace_slot_t const& op) {
-  return keydown_kp_rightbrace_signal.connect(op);
+connection event_dispatch::on_keydown_kp_rightbrace_nonrepeat(
+  keydown_kp_rightbrace_nonrepeat_slot_t const& op) {
+  return keydown_kp_rightbrace_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_tab() const { keydown_kp_tab_signal(); }
+void event_dispatch::keydown_kp_tab_nonrepeat() const {
+  keydown_kp_tab_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_tab(keydown_kp_tab_slot_t const& op) {
-  return keydown_kp_tab_signal.connect(op);
+connection event_dispatch::on_keydown_kp_tab_nonrepeat(
+  keydown_kp_tab_nonrepeat_slot_t const& op) {
+  return keydown_kp_tab_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_backspace() const {
-  keydown_kp_backspace_signal();
+void event_dispatch::keydown_kp_backspace_nonrepeat() const {
+  keydown_kp_backspace_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_backspace(
-  keydown_kp_backspace_slot_t const& op) {
-  return keydown_kp_backspace_signal.connect(op);
+connection event_dispatch::on_keydown_kp_backspace_nonrepeat(
+  keydown_kp_backspace_nonrepeat_slot_t const& op) {
+  return keydown_kp_backspace_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_a() const { keydown_kp_a_signal(); }
+void event_dispatch::keydown_kp_a_nonrepeat() const {
+  keydown_kp_a_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_a(keydown_kp_a_slot_t const& op) {
-  return keydown_kp_a_signal.connect(op);
+connection event_dispatch::on_keydown_kp_a_nonrepeat(
+  keydown_kp_a_nonrepeat_slot_t const& op) {
+  return keydown_kp_a_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_b() const { keydown_kp_b_signal(); }
+void event_dispatch::keydown_kp_b_nonrepeat() const {
+  keydown_kp_b_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_b(keydown_kp_b_slot_t const& op) {
-  return keydown_kp_b_signal.connect(op);
+connection event_dispatch::on_keydown_kp_b_nonrepeat(
+  keydown_kp_b_nonrepeat_slot_t const& op) {
+  return keydown_kp_b_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_c() const { keydown_kp_c_signal(); }
+void event_dispatch::keydown_kp_c_nonrepeat() const {
+  keydown_kp_c_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_c(keydown_kp_c_slot_t const& op) {
-  return keydown_kp_c_signal.connect(op);
+connection event_dispatch::on_keydown_kp_c_nonrepeat(
+  keydown_kp_c_nonrepeat_slot_t const& op) {
+  return keydown_kp_c_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_d() const { keydown_kp_d_signal(); }
+void event_dispatch::keydown_kp_d_nonrepeat() const {
+  keydown_kp_d_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_d(keydown_kp_d_slot_t const& op) {
-  return keydown_kp_d_signal.connect(op);
+connection event_dispatch::on_keydown_kp_d_nonrepeat(
+  keydown_kp_d_nonrepeat_slot_t const& op) {
+  return keydown_kp_d_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_e() const { keydown_kp_e_signal(); }
+void event_dispatch::keydown_kp_e_nonrepeat() const {
+  keydown_kp_e_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_e(keydown_kp_e_slot_t const& op) {
-  return keydown_kp_e_signal.connect(op);
+connection event_dispatch::on_keydown_kp_e_nonrepeat(
+  keydown_kp_e_nonrepeat_slot_t const& op) {
+  return keydown_kp_e_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_f() const { keydown_kp_f_signal(); }
+void event_dispatch::keydown_kp_f_nonrepeat() const {
+  keydown_kp_f_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_f(keydown_kp_f_slot_t const& op) {
-  return keydown_kp_f_signal.connect(op);
+connection event_dispatch::on_keydown_kp_f_nonrepeat(
+  keydown_kp_f_nonrepeat_slot_t const& op) {
+  return keydown_kp_f_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_xor() const { keydown_kp_xor_signal(); }
+void event_dispatch::keydown_kp_xor_nonrepeat() const {
+  keydown_kp_xor_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_xor(keydown_kp_xor_slot_t const& op) {
-  return keydown_kp_xor_signal.connect(op);
+connection event_dispatch::on_keydown_kp_xor_nonrepeat(
+  keydown_kp_xor_nonrepeat_slot_t const& op) {
+  return keydown_kp_xor_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_power() const { keydown_kp_power_signal(); }
+void event_dispatch::keydown_kp_power_nonrepeat() const {
+  keydown_kp_power_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_power(
-  keydown_kp_power_slot_t const& op) {
-  return keydown_kp_power_signal.connect(op);
+connection event_dispatch::on_keydown_kp_power_nonrepeat(
+  keydown_kp_power_nonrepeat_slot_t const& op) {
+  return keydown_kp_power_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_percent() const {
-  keydown_kp_percent_signal();
+void event_dispatch::keydown_kp_percent_nonrepeat() const {
+  keydown_kp_percent_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_percent(
-  keydown_kp_percent_slot_t const& op) {
-  return keydown_kp_percent_signal.connect(op);
+connection event_dispatch::on_keydown_kp_percent_nonrepeat(
+  keydown_kp_percent_nonrepeat_slot_t const& op) {
+  return keydown_kp_percent_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_less() const { keydown_kp_less_signal(); }
+void event_dispatch::keydown_kp_less_nonrepeat() const {
+  keydown_kp_less_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_less(
-  keydown_kp_less_slot_t const& op) {
-  return keydown_kp_less_signal.connect(op);
+connection event_dispatch::on_keydown_kp_less_nonrepeat(
+  keydown_kp_less_nonrepeat_slot_t const& op) {
+  return keydown_kp_less_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_greater() const {
-  keydown_kp_greater_signal();
+void event_dispatch::keydown_kp_greater_nonrepeat() const {
+  keydown_kp_greater_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_greater(
-  keydown_kp_greater_slot_t const& op) {
-  return keydown_kp_greater_signal.connect(op);
+connection event_dispatch::on_keydown_kp_greater_nonrepeat(
+  keydown_kp_greater_nonrepeat_slot_t const& op) {
+  return keydown_kp_greater_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_ampersand() const {
-  keydown_kp_ampersand_signal();
+void event_dispatch::keydown_kp_ampersand_nonrepeat() const {
+  keydown_kp_ampersand_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_ampersand(
-  keydown_kp_ampersand_slot_t const& op) {
-  return keydown_kp_ampersand_signal.connect(op);
+connection event_dispatch::on_keydown_kp_ampersand_nonrepeat(
+  keydown_kp_ampersand_nonrepeat_slot_t const& op) {
+  return keydown_kp_ampersand_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_dblampersand() const {
-  keydown_kp_dblampersand_signal();
+void event_dispatch::keydown_kp_dblampersand_nonrepeat() const {
+  keydown_kp_dblampersand_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_dblampersand(
-  keydown_kp_dblampersand_slot_t const& op) {
-  return keydown_kp_dblampersand_signal.connect(op);
+connection event_dispatch::on_keydown_kp_dblampersand_nonrepeat(
+  keydown_kp_dblampersand_nonrepeat_slot_t const& op) {
+  return keydown_kp_dblampersand_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_verticalbar() const {
-  keydown_kp_verticalbar_signal();
+void event_dispatch::keydown_kp_verticalbar_nonrepeat() const {
+  keydown_kp_verticalbar_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_verticalbar(
-  keydown_kp_verticalbar_slot_t const& op) {
-  return keydown_kp_verticalbar_signal.connect(op);
+connection event_dispatch::on_keydown_kp_verticalbar_nonrepeat(
+  keydown_kp_verticalbar_nonrepeat_slot_t const& op) {
+  return keydown_kp_verticalbar_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_dblverticalbar() const {
-  keydown_kp_dblverticalbar_signal();
+void event_dispatch::keydown_kp_dblverticalbar_nonrepeat() const {
+  keydown_kp_dblverticalbar_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_dblverticalbar(
-  keydown_kp_dblverticalbar_slot_t const& op) {
-  return keydown_kp_dblverticalbar_signal.connect(op);
+connection event_dispatch::on_keydown_kp_dblverticalbar_nonrepeat(
+  keydown_kp_dblverticalbar_nonrepeat_slot_t const& op) {
+  return keydown_kp_dblverticalbar_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_colon() const { keydown_kp_colon_signal(); }
+void event_dispatch::keydown_kp_colon_nonrepeat() const {
+  keydown_kp_colon_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_colon(
-  keydown_kp_colon_slot_t const& op) {
-  return keydown_kp_colon_signal.connect(op);
+connection event_dispatch::on_keydown_kp_colon_nonrepeat(
+  keydown_kp_colon_nonrepeat_slot_t const& op) {
+  return keydown_kp_colon_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_hash() const { keydown_kp_hash_signal(); }
+void event_dispatch::keydown_kp_hash_nonrepeat() const {
+  keydown_kp_hash_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_hash(
-  keydown_kp_hash_slot_t const& op) {
-  return keydown_kp_hash_signal.connect(op);
+connection event_dispatch::on_keydown_kp_hash_nonrepeat(
+  keydown_kp_hash_nonrepeat_slot_t const& op) {
+  return keydown_kp_hash_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_space() const { keydown_kp_space_signal(); }
+void event_dispatch::keydown_kp_space_nonrepeat() const {
+  keydown_kp_space_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_space(
-  keydown_kp_space_slot_t const& op) {
-  return keydown_kp_space_signal.connect(op);
+connection event_dispatch::on_keydown_kp_space_nonrepeat(
+  keydown_kp_space_nonrepeat_slot_t const& op) {
+  return keydown_kp_space_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_at() const { keydown_kp_at_signal(); }
+void event_dispatch::keydown_kp_at_nonrepeat() const {
+  keydown_kp_at_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_at(keydown_kp_at_slot_t const& op) {
-  return keydown_kp_at_signal.connect(op);
+connection event_dispatch::on_keydown_kp_at_nonrepeat(
+  keydown_kp_at_nonrepeat_slot_t const& op) {
+  return keydown_kp_at_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_exclam() const { keydown_kp_exclam_signal(); }
+void event_dispatch::keydown_kp_exclam_nonrepeat() const {
+  keydown_kp_exclam_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_exclam(
-  keydown_kp_exclam_slot_t const& op) {
-  return keydown_kp_exclam_signal.connect(op);
+connection event_dispatch::on_keydown_kp_exclam_nonrepeat(
+  keydown_kp_exclam_nonrepeat_slot_t const& op) {
+  return keydown_kp_exclam_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memstore() const {
-  keydown_kp_memstore_signal();
+void event_dispatch::keydown_kp_memstore_nonrepeat() const {
+  keydown_kp_memstore_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memstore(
-  keydown_kp_memstore_slot_t const& op) {
-  return keydown_kp_memstore_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memstore_nonrepeat(
+  keydown_kp_memstore_nonrepeat_slot_t const& op) {
+  return keydown_kp_memstore_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memrecall() const {
-  keydown_kp_memrecall_signal();
+void event_dispatch::keydown_kp_memrecall_nonrepeat() const {
+  keydown_kp_memrecall_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memrecall(
-  keydown_kp_memrecall_slot_t const& op) {
-  return keydown_kp_memrecall_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memrecall_nonrepeat(
+  keydown_kp_memrecall_nonrepeat_slot_t const& op) {
+  return keydown_kp_memrecall_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memclear() const {
-  keydown_kp_memclear_signal();
+void event_dispatch::keydown_kp_memclear_nonrepeat() const {
+  keydown_kp_memclear_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memclear(
-  keydown_kp_memclear_slot_t const& op) {
-  return keydown_kp_memclear_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memclear_nonrepeat(
+  keydown_kp_memclear_nonrepeat_slot_t const& op) {
+  return keydown_kp_memclear_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memadd() const { keydown_kp_memadd_signal(); }
+void event_dispatch::keydown_kp_memadd_nonrepeat() const {
+  keydown_kp_memadd_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_memadd(
-  keydown_kp_memadd_slot_t const& op) {
-  return keydown_kp_memadd_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memadd_nonrepeat(
+  keydown_kp_memadd_nonrepeat_slot_t const& op) {
+  return keydown_kp_memadd_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memsubtract() const {
-  keydown_kp_memsubtract_signal();
+void event_dispatch::keydown_kp_memsubtract_nonrepeat() const {
+  keydown_kp_memsubtract_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memsubtract(
-  keydown_kp_memsubtract_slot_t const& op) {
-  return keydown_kp_memsubtract_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memsubtract_nonrepeat(
+  keydown_kp_memsubtract_nonrepeat_slot_t const& op) {
+  return keydown_kp_memsubtract_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memmultiply() const {
-  keydown_kp_memmultiply_signal();
+void event_dispatch::keydown_kp_memmultiply_nonrepeat() const {
+  keydown_kp_memmultiply_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memmultiply(
-  keydown_kp_memmultiply_slot_t const& op) {
-  return keydown_kp_memmultiply_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memmultiply_nonrepeat(
+  keydown_kp_memmultiply_nonrepeat_slot_t const& op) {
+  return keydown_kp_memmultiply_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_memdivide() const {
-  keydown_kp_memdivide_signal();
+void event_dispatch::keydown_kp_memdivide_nonrepeat() const {
+  keydown_kp_memdivide_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_memdivide(
-  keydown_kp_memdivide_slot_t const& op) {
-  return keydown_kp_memdivide_signal.connect(op);
+connection event_dispatch::on_keydown_kp_memdivide_nonrepeat(
+  keydown_kp_memdivide_nonrepeat_slot_t const& op) {
+  return keydown_kp_memdivide_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_plusminus() const {
-  keydown_kp_plusminus_signal();
+void event_dispatch::keydown_kp_plusminus_nonrepeat() const {
+  keydown_kp_plusminus_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_plusminus(
-  keydown_kp_plusminus_slot_t const& op) {
-  return keydown_kp_plusminus_signal.connect(op);
+connection event_dispatch::on_keydown_kp_plusminus_nonrepeat(
+  keydown_kp_plusminus_nonrepeat_slot_t const& op) {
+  return keydown_kp_plusminus_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_clear() const { keydown_kp_clear_signal(); }
+void event_dispatch::keydown_kp_clear_nonrepeat() const {
+  keydown_kp_clear_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_clear(
-  keydown_kp_clear_slot_t const& op) {
-  return keydown_kp_clear_signal.connect(op);
+connection event_dispatch::on_keydown_kp_clear_nonrepeat(
+  keydown_kp_clear_nonrepeat_slot_t const& op) {
+  return keydown_kp_clear_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_clearentry() const {
-  keydown_kp_clearentry_signal();
+void event_dispatch::keydown_kp_clearentry_nonrepeat() const {
+  keydown_kp_clearentry_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_clearentry(
-  keydown_kp_clearentry_slot_t const& op) {
-  return keydown_kp_clearentry_signal.connect(op);
+connection event_dispatch::on_keydown_kp_clearentry_nonrepeat(
+  keydown_kp_clearentry_nonrepeat_slot_t const& op) {
+  return keydown_kp_clearentry_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_binary() const { keydown_kp_binary_signal(); }
+void event_dispatch::keydown_kp_binary_nonrepeat() const {
+  keydown_kp_binary_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_binary(
-  keydown_kp_binary_slot_t const& op) {
-  return keydown_kp_binary_signal.connect(op);
+connection event_dispatch::on_keydown_kp_binary_nonrepeat(
+  keydown_kp_binary_nonrepeat_slot_t const& op) {
+  return keydown_kp_binary_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_octal() const { keydown_kp_octal_signal(); }
+void event_dispatch::keydown_kp_octal_nonrepeat() const {
+  keydown_kp_octal_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_kp_octal(
-  keydown_kp_octal_slot_t const& op) {
-  return keydown_kp_octal_signal.connect(op);
+connection event_dispatch::on_keydown_kp_octal_nonrepeat(
+  keydown_kp_octal_nonrepeat_slot_t const& op) {
+  return keydown_kp_octal_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_decimal() const {
-  keydown_kp_decimal_signal();
+void event_dispatch::keydown_kp_decimal_nonrepeat() const {
+  keydown_kp_decimal_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_decimal(
-  keydown_kp_decimal_slot_t const& op) {
-  return keydown_kp_decimal_signal.connect(op);
+connection event_dispatch::on_keydown_kp_decimal_nonrepeat(
+  keydown_kp_decimal_nonrepeat_slot_t const& op) {
+  return keydown_kp_decimal_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kp_hexadecimal() const {
-  keydown_kp_hexadecimal_signal();
+void event_dispatch::keydown_kp_hexadecimal_nonrepeat() const {
+  keydown_kp_hexadecimal_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kp_hexadecimal(
-  keydown_kp_hexadecimal_slot_t const& op) {
-  return keydown_kp_hexadecimal_signal.connect(op);
+connection event_dispatch::on_keydown_kp_hexadecimal_nonrepeat(
+  keydown_kp_hexadecimal_nonrepeat_slot_t const& op) {
+  return keydown_kp_hexadecimal_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_lctrl() const { keydown_lctrl_signal(); }
+void event_dispatch::keydown_lctrl_nonrepeat() const {
+  keydown_lctrl_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_lctrl(keydown_lctrl_slot_t const& op) {
-  return keydown_lctrl_signal.connect(op);
+connection event_dispatch::on_keydown_lctrl_nonrepeat(
+  keydown_lctrl_nonrepeat_slot_t const& op) {
+  return keydown_lctrl_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_lshift() const { keydown_lshift_signal(); }
+void event_dispatch::keydown_lshift_nonrepeat() const {
+  keydown_lshift_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_lshift(keydown_lshift_slot_t const& op) {
-  return keydown_lshift_signal.connect(op);
+connection event_dispatch::on_keydown_lshift_nonrepeat(
+  keydown_lshift_nonrepeat_slot_t const& op) {
+  return keydown_lshift_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_lalt() const { keydown_lalt_signal(); }
+void event_dispatch::keydown_lalt_nonrepeat() const {
+  keydown_lalt_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_lalt(keydown_lalt_slot_t const& op) {
-  return keydown_lalt_signal.connect(op);
+connection event_dispatch::on_keydown_lalt_nonrepeat(
+  keydown_lalt_nonrepeat_slot_t const& op) {
+  return keydown_lalt_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_lgui() const { keydown_lgui_signal(); }
+void event_dispatch::keydown_lgui_nonrepeat() const {
+  keydown_lgui_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_lgui(keydown_lgui_slot_t const& op) {
-  return keydown_lgui_signal.connect(op);
+connection event_dispatch::on_keydown_lgui_nonrepeat(
+  keydown_lgui_nonrepeat_slot_t const& op) {
+  return keydown_lgui_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_rctrl() const { keydown_rctrl_signal(); }
+void event_dispatch::keydown_rctrl_nonrepeat() const {
+  keydown_rctrl_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_rctrl(keydown_rctrl_slot_t const& op) {
-  return keydown_rctrl_signal.connect(op);
+connection event_dispatch::on_keydown_rctrl_nonrepeat(
+  keydown_rctrl_nonrepeat_slot_t const& op) {
+  return keydown_rctrl_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_rshift() const { keydown_rshift_signal(); }
+void event_dispatch::keydown_rshift_nonrepeat() const {
+  keydown_rshift_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_rshift(keydown_rshift_slot_t const& op) {
-  return keydown_rshift_signal.connect(op);
+connection event_dispatch::on_keydown_rshift_nonrepeat(
+  keydown_rshift_nonrepeat_slot_t const& op) {
+  return keydown_rshift_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ralt() const { keydown_ralt_signal(); }
+void event_dispatch::keydown_ralt_nonrepeat() const {
+  keydown_ralt_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ralt(keydown_ralt_slot_t const& op) {
-  return keydown_ralt_signal.connect(op);
+connection event_dispatch::on_keydown_ralt_nonrepeat(
+  keydown_ralt_nonrepeat_slot_t const& op) {
+  return keydown_ralt_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_rgui() const { keydown_rgui_signal(); }
+void event_dispatch::keydown_rgui_nonrepeat() const {
+  keydown_rgui_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_rgui(keydown_rgui_slot_t const& op) {
-  return keydown_rgui_signal.connect(op);
+connection event_dispatch::on_keydown_rgui_nonrepeat(
+  keydown_rgui_nonrepeat_slot_t const& op) {
+  return keydown_rgui_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_mode() const { keydown_mode_signal(); }
+void event_dispatch::keydown_mode_nonrepeat() const {
+  keydown_mode_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_mode(keydown_mode_slot_t const& op) {
-  return keydown_mode_signal.connect(op);
+connection event_dispatch::on_keydown_mode_nonrepeat(
+  keydown_mode_nonrepeat_slot_t const& op) {
+  return keydown_mode_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_audionext() const { keydown_audionext_signal(); }
+void event_dispatch::keydown_audionext_nonrepeat() const {
+  keydown_audionext_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_audionext(
-  keydown_audionext_slot_t const& op) {
-  return keydown_audionext_signal.connect(op);
+connection event_dispatch::on_keydown_audionext_nonrepeat(
+  keydown_audionext_nonrepeat_slot_t const& op) {
+  return keydown_audionext_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_audioprev() const { keydown_audioprev_signal(); }
+void event_dispatch::keydown_audioprev_nonrepeat() const {
+  keydown_audioprev_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_audioprev(
-  keydown_audioprev_slot_t const& op) {
-  return keydown_audioprev_signal.connect(op);
+connection event_dispatch::on_keydown_audioprev_nonrepeat(
+  keydown_audioprev_nonrepeat_slot_t const& op) {
+  return keydown_audioprev_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_audiostop() const { keydown_audiostop_signal(); }
+void event_dispatch::keydown_audiostop_nonrepeat() const {
+  keydown_audiostop_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_audiostop(
-  keydown_audiostop_slot_t const& op) {
-  return keydown_audiostop_signal.connect(op);
+connection event_dispatch::on_keydown_audiostop_nonrepeat(
+  keydown_audiostop_nonrepeat_slot_t const& op) {
+  return keydown_audiostop_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_audioplay() const { keydown_audioplay_signal(); }
+void event_dispatch::keydown_audioplay_nonrepeat() const {
+  keydown_audioplay_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_audioplay(
-  keydown_audioplay_slot_t const& op) {
-  return keydown_audioplay_signal.connect(op);
+connection event_dispatch::on_keydown_audioplay_nonrepeat(
+  keydown_audioplay_nonrepeat_slot_t const& op) {
+  return keydown_audioplay_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_audiomute() const { keydown_audiomute_signal(); }
+void event_dispatch::keydown_audiomute_nonrepeat() const {
+  keydown_audiomute_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_audiomute(
-  keydown_audiomute_slot_t const& op) {
-  return keydown_audiomute_signal.connect(op);
+connection event_dispatch::on_keydown_audiomute_nonrepeat(
+  keydown_audiomute_nonrepeat_slot_t const& op) {
+  return keydown_audiomute_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_mediaselect() const {
-  keydown_mediaselect_signal();
+void event_dispatch::keydown_mediaselect_nonrepeat() const {
+  keydown_mediaselect_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_mediaselect(
-  keydown_mediaselect_slot_t const& op) {
-  return keydown_mediaselect_signal.connect(op);
+connection event_dispatch::on_keydown_mediaselect_nonrepeat(
+  keydown_mediaselect_nonrepeat_slot_t const& op) {
+  return keydown_mediaselect_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_www() const { keydown_www_signal(); }
+void event_dispatch::keydown_www_nonrepeat() const {
+  keydown_www_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_www(keydown_www_slot_t const& op) {
-  return keydown_www_signal.connect(op);
+connection event_dispatch::on_keydown_www_nonrepeat(
+  keydown_www_nonrepeat_slot_t const& op) {
+  return keydown_www_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_mail() const { keydown_mail_signal(); }
+void event_dispatch::keydown_mail_nonrepeat() const {
+  keydown_mail_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_mail(keydown_mail_slot_t const& op) {
-  return keydown_mail_signal.connect(op);
+connection event_dispatch::on_keydown_mail_nonrepeat(
+  keydown_mail_nonrepeat_slot_t const& op) {
+  return keydown_mail_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_calculator() const {
-  keydown_calculator_signal();
+void event_dispatch::keydown_calculator_nonrepeat() const {
+  keydown_calculator_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_calculator(
-  keydown_calculator_slot_t const& op) {
-  return keydown_calculator_signal.connect(op);
+connection event_dispatch::on_keydown_calculator_nonrepeat(
+  keydown_calculator_nonrepeat_slot_t const& op) {
+  return keydown_calculator_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_computer() const { keydown_computer_signal(); }
+void event_dispatch::keydown_computer_nonrepeat() const {
+  keydown_computer_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_computer(
-  keydown_computer_slot_t const& op) {
-  return keydown_computer_signal.connect(op);
+connection event_dispatch::on_keydown_computer_nonrepeat(
+  keydown_computer_nonrepeat_slot_t const& op) {
+  return keydown_computer_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_search() const { keydown_ac_search_signal(); }
+void event_dispatch::keydown_ac_search_nonrepeat() const {
+  keydown_ac_search_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ac_search(
-  keydown_ac_search_slot_t const& op) {
-  return keydown_ac_search_signal.connect(op);
+connection event_dispatch::on_keydown_ac_search_nonrepeat(
+  keydown_ac_search_nonrepeat_slot_t const& op) {
+  return keydown_ac_search_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_home() const { keydown_ac_home_signal(); }
+void event_dispatch::keydown_ac_home_nonrepeat() const {
+  keydown_ac_home_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ac_home(
-  keydown_ac_home_slot_t const& op) {
-  return keydown_ac_home_signal.connect(op);
+connection event_dispatch::on_keydown_ac_home_nonrepeat(
+  keydown_ac_home_nonrepeat_slot_t const& op) {
+  return keydown_ac_home_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_back() const { keydown_ac_back_signal(); }
+void event_dispatch::keydown_ac_back_nonrepeat() const {
+  keydown_ac_back_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ac_back(
-  keydown_ac_back_slot_t const& op) {
-  return keydown_ac_back_signal.connect(op);
+connection event_dispatch::on_keydown_ac_back_nonrepeat(
+  keydown_ac_back_nonrepeat_slot_t const& op) {
+  return keydown_ac_back_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_forward() const {
-  keydown_ac_forward_signal();
+void event_dispatch::keydown_ac_forward_nonrepeat() const {
+  keydown_ac_forward_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_ac_forward(
-  keydown_ac_forward_slot_t const& op) {
-  return keydown_ac_forward_signal.connect(op);
+connection event_dispatch::on_keydown_ac_forward_nonrepeat(
+  keydown_ac_forward_nonrepeat_slot_t const& op) {
+  return keydown_ac_forward_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_stop() const { keydown_ac_stop_signal(); }
+void event_dispatch::keydown_ac_stop_nonrepeat() const {
+  keydown_ac_stop_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_ac_stop(
-  keydown_ac_stop_slot_t const& op) {
-  return keydown_ac_stop_signal.connect(op);
+connection event_dispatch::on_keydown_ac_stop_nonrepeat(
+  keydown_ac_stop_nonrepeat_slot_t const& op) {
+  return keydown_ac_stop_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_refresh() const {
-  keydown_ac_refresh_signal();
+void event_dispatch::keydown_ac_refresh_nonrepeat() const {
+  keydown_ac_refresh_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_ac_refresh(
-  keydown_ac_refresh_slot_t const& op) {
-  return keydown_ac_refresh_signal.connect(op);
+connection event_dispatch::on_keydown_ac_refresh_nonrepeat(
+  keydown_ac_refresh_nonrepeat_slot_t const& op) {
+  return keydown_ac_refresh_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_ac_bookmarks() const {
-  keydown_ac_bookmarks_signal();
+void event_dispatch::keydown_ac_bookmarks_nonrepeat() const {
+  keydown_ac_bookmarks_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_ac_bookmarks(
-  keydown_ac_bookmarks_slot_t const& op) {
-  return keydown_ac_bookmarks_signal.connect(op);
+connection event_dispatch::on_keydown_ac_bookmarks_nonrepeat(
+  keydown_ac_bookmarks_nonrepeat_slot_t const& op) {
+  return keydown_ac_bookmarks_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_brightnessdown() const {
-  keydown_brightnessdown_signal();
+void event_dispatch::keydown_brightnessdown_nonrepeat() const {
+  keydown_brightnessdown_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_brightnessdown(
-  keydown_brightnessdown_slot_t const& op) {
-  return keydown_brightnessdown_signal.connect(op);
+connection event_dispatch::on_keydown_brightnessdown_nonrepeat(
+  keydown_brightnessdown_nonrepeat_slot_t const& op) {
+  return keydown_brightnessdown_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_brightnessup() const {
-  keydown_brightnessup_signal();
+void event_dispatch::keydown_brightnessup_nonrepeat() const {
+  keydown_brightnessup_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_brightnessup(
-  keydown_brightnessup_slot_t const& op) {
-  return keydown_brightnessup_signal.connect(op);
+connection event_dispatch::on_keydown_brightnessup_nonrepeat(
+  keydown_brightnessup_nonrepeat_slot_t const& op) {
+  return keydown_brightnessup_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_displayswitch() const {
-  keydown_displayswitch_signal();
+void event_dispatch::keydown_displayswitch_nonrepeat() const {
+  keydown_displayswitch_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_displayswitch(
-  keydown_displayswitch_slot_t const& op) {
-  return keydown_displayswitch_signal.connect(op);
+connection event_dispatch::on_keydown_displayswitch_nonrepeat(
+  keydown_displayswitch_nonrepeat_slot_t const& op) {
+  return keydown_displayswitch_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kbdillumtoggle() const {
-  keydown_kbdillumtoggle_signal();
+void event_dispatch::keydown_kbdillumtoggle_nonrepeat() const {
+  keydown_kbdillumtoggle_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kbdillumtoggle(
-  keydown_kbdillumtoggle_slot_t const& op) {
-  return keydown_kbdillumtoggle_signal.connect(op);
+connection event_dispatch::on_keydown_kbdillumtoggle_nonrepeat(
+  keydown_kbdillumtoggle_nonrepeat_slot_t const& op) {
+  return keydown_kbdillumtoggle_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kbdillumdown() const {
-  keydown_kbdillumdown_signal();
+void event_dispatch::keydown_kbdillumdown_nonrepeat() const {
+  keydown_kbdillumdown_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kbdillumdown(
-  keydown_kbdillumdown_slot_t const& op) {
-  return keydown_kbdillumdown_signal.connect(op);
+connection event_dispatch::on_keydown_kbdillumdown_nonrepeat(
+  keydown_kbdillumdown_nonrepeat_slot_t const& op) {
+  return keydown_kbdillumdown_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_kbdillumup() const {
-  keydown_kbdillumup_signal();
+void event_dispatch::keydown_kbdillumup_nonrepeat() const {
+  keydown_kbdillumup_nonrepeat_signal();
 }
 
-connection event_dispatch::on_keydown_kbdillumup(
-  keydown_kbdillumup_slot_t const& op) {
-  return keydown_kbdillumup_signal.connect(op);
+connection event_dispatch::on_keydown_kbdillumup_nonrepeat(
+  keydown_kbdillumup_nonrepeat_slot_t const& op) {
+  return keydown_kbdillumup_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_eject() const { keydown_eject_signal(); }
+void event_dispatch::keydown_eject_nonrepeat() const {
+  keydown_eject_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_eject(keydown_eject_slot_t const& op) {
-  return keydown_eject_signal.connect(op);
+connection event_dispatch::on_keydown_eject_nonrepeat(
+  keydown_eject_nonrepeat_slot_t const& op) {
+  return keydown_eject_nonrepeat_signal.connect(op);
 }
 
-void event_dispatch::keydown_sleep() const { keydown_sleep_signal(); }
+void event_dispatch::keydown_sleep_nonrepeat() const {
+  keydown_sleep_nonrepeat_signal();
+}
 
-connection event_dispatch::on_keydown_sleep(keydown_sleep_slot_t const& op) {
-  return keydown_sleep_signal.connect(op);
+connection event_dispatch::on_keydown_sleep_nonrepeat(
+  keydown_sleep_nonrepeat_slot_t const& op) {
+  return keydown_sleep_nonrepeat_signal.connect(op);
 }
 
 void event_dispatch::keyup_unknown() const { keyup_unknown_signal(); }
 
-connection event_dispatch::on_keyup_unknown(
-  keyup_unknown_slot_t const& op) {
+connection event_dispatch::on_keyup_unknown(keyup_unknown_slot_t const& op) {
   return keyup_unknown_signal.connect(op);
 }
 
@@ -1667,15 +4213,13 @@ connection event_dispatch::on_keyup_space(keyup_space_slot_t const& op) {
 
 void event_dispatch::keyup_exclaim() const { keyup_exclaim_signal(); }
 
-connection event_dispatch::on_keyup_exclaim(
-  keyup_exclaim_slot_t const& op) {
+connection event_dispatch::on_keyup_exclaim(keyup_exclaim_slot_t const& op) {
   return keyup_exclaim_signal.connect(op);
 }
 
 void event_dispatch::keyup_quotedbl() const { keyup_quotedbl_signal(); }
 
-connection event_dispatch::on_keyup_quotedbl(
-  keyup_quotedbl_slot_t const& op) {
+connection event_dispatch::on_keyup_quotedbl(keyup_quotedbl_slot_t const& op) {
   return keyup_quotedbl_signal.connect(op);
 }
 
@@ -1693,8 +4237,7 @@ connection event_dispatch::on_keyup_dollar(keyup_dollar_slot_t const& op) {
 
 void event_dispatch::keyup_percent() const { keyup_percent_signal(); }
 
-connection event_dispatch::on_keyup_percent(
-  keyup_percent_slot_t const& op) {
+connection event_dispatch::on_keyup_percent(keyup_percent_slot_t const& op) {
   return keyup_percent_signal.connect(op);
 }
 
@@ -1718,9 +4261,7 @@ connection event_dispatch::on_keyup_leftparen(
   return keyup_leftparen_signal.connect(op);
 }
 
-void event_dispatch::keyup_rightparen() const {
-  keyup_rightparen_signal();
-}
+void event_dispatch::keyup_rightparen() const { keyup_rightparen_signal(); }
 
 connection event_dispatch::on_keyup_rightparen(
   keyup_rightparen_slot_t const& op) {
@@ -1729,8 +4270,7 @@ connection event_dispatch::on_keyup_rightparen(
 
 void event_dispatch::keyup_asterisk() const { keyup_asterisk_signal(); }
 
-connection event_dispatch::on_keyup_asterisk(
-  keyup_asterisk_slot_t const& op) {
+connection event_dispatch::on_keyup_asterisk(keyup_asterisk_slot_t const& op) {
   return keyup_asterisk_signal.connect(op);
 }
 
@@ -1851,15 +4391,13 @@ connection event_dispatch::on_keyup_equals(keyup_equals_slot_t const& op) {
 
 void event_dispatch::keyup_greater() const { keyup_greater_signal(); }
 
-connection event_dispatch::on_keyup_greater(
-  keyup_greater_slot_t const& op) {
+connection event_dispatch::on_keyup_greater(keyup_greater_slot_t const& op) {
   return keyup_greater_signal.connect(op);
 }
 
 void event_dispatch::keyup_question() const { keyup_question_signal(); }
 
-connection event_dispatch::on_keyup_question(
-  keyup_question_slot_t const& op) {
+connection event_dispatch::on_keyup_question(keyup_question_slot_t const& op) {
   return keyup_question_signal.connect(op);
 }
 
@@ -1869,9 +4407,7 @@ connection event_dispatch::on_keyup_at(keyup_at_slot_t const& op) {
   return keyup_at_signal.connect(op);
 }
 
-void event_dispatch::keyup_leftbracket() const {
-  keyup_leftbracket_signal();
-}
+void event_dispatch::keyup_leftbracket() const { keyup_leftbracket_signal(); }
 
 connection event_dispatch::on_keyup_leftbracket(
   keyup_leftbracket_slot_t const& op) {
@@ -1900,9 +4436,7 @@ connection event_dispatch::on_keyup_caret(keyup_caret_slot_t const& op) {
   return keyup_caret_signal.connect(op);
 }
 
-void event_dispatch::keyup_underscore() const {
-  keyup_underscore_signal();
-}
+void event_dispatch::keyup_underscore() const { keyup_underscore_signal(); }
 
 connection event_dispatch::on_keyup_underscore(
   keyup_underscore_slot_t const& op) {
@@ -2080,8 +4614,7 @@ connection event_dispatch::on_keyup_delete(keyup_delete_slot_t const& op) {
 
 void event_dispatch::keyup_capslock() const { keyup_capslock_signal(); }
 
-connection event_dispatch::on_keyup_capslock(
-  keyup_capslock_slot_t const& op) {
+connection event_dispatch::on_keyup_capslock(keyup_capslock_slot_t const& op) {
   return keyup_capslock_signal.connect(op);
 }
 
@@ -2157,18 +4690,14 @@ connection event_dispatch::on_keyup_f12(keyup_f12_slot_t const& op) {
   return keyup_f12_signal.connect(op);
 }
 
-void event_dispatch::keyup_printscreen() const {
-  keyup_printscreen_signal();
-}
+void event_dispatch::keyup_printscreen() const { keyup_printscreen_signal(); }
 
 connection event_dispatch::on_keyup_printscreen(
   keyup_printscreen_slot_t const& op) {
   return keyup_printscreen_signal.connect(op);
 }
 
-void event_dispatch::keyup_scrolllock() const {
-  keyup_scrolllock_signal();
-}
+void event_dispatch::keyup_scrolllock() const { keyup_scrolllock_signal(); }
 
 connection event_dispatch::on_keyup_scrolllock(
   keyup_scrolllock_slot_t const& op) {
@@ -2207,8 +4736,7 @@ connection event_dispatch::on_keyup_end(keyup_end_slot_t const& op) {
 
 void event_dispatch::keyup_pagedown() const { keyup_pagedown_signal(); }
 
-connection event_dispatch::on_keyup_pagedown(
-  keyup_pagedown_slot_t const& op) {
+connection event_dispatch::on_keyup_pagedown(keyup_pagedown_slot_t const& op) {
   return keyup_pagedown_signal.connect(op);
 }
 
@@ -2252,9 +4780,7 @@ connection event_dispatch::on_keyup_kp_divide(
   return keyup_kp_divide_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_multiply() const {
-  keyup_kp_multiply_signal();
-}
+void event_dispatch::keyup_kp_multiply() const { keyup_kp_multiply_signal(); }
 
 connection event_dispatch::on_keyup_kp_multiply(
   keyup_kp_multiply_slot_t const& op) {
@@ -2263,22 +4789,19 @@ connection event_dispatch::on_keyup_kp_multiply(
 
 void event_dispatch::keyup_kp_minus() const { keyup_kp_minus_signal(); }
 
-connection event_dispatch::on_keyup_kp_minus(
-  keyup_kp_minus_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_minus(keyup_kp_minus_slot_t const& op) {
   return keyup_kp_minus_signal.connect(op);
 }
 
 void event_dispatch::keyup_kp_plus() const { keyup_kp_plus_signal(); }
 
-connection event_dispatch::on_keyup_kp_plus(
-  keyup_kp_plus_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_plus(keyup_kp_plus_slot_t const& op) {
   return keyup_kp_plus_signal.connect(op);
 }
 
 void event_dispatch::keyup_kp_enter() const { keyup_kp_enter_signal(); }
 
-connection event_dispatch::on_keyup_kp_enter(
-  keyup_kp_enter_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_enter(keyup_kp_enter_slot_t const& op) {
   return keyup_kp_enter_signal.connect(op);
 }
 
@@ -2349,9 +4872,7 @@ connection event_dispatch::on_keyup_kp_period(
   return keyup_kp_period_signal.connect(op);
 }
 
-void event_dispatch::keyup_application() const {
-  keyup_application_signal();
-}
+void event_dispatch::keyup_application() const { keyup_application_signal(); }
 
 connection event_dispatch::on_keyup_application(
   keyup_application_slot_t const& op) {
@@ -2445,8 +4966,7 @@ connection event_dispatch::on_keyup_f24(keyup_f24_slot_t const& op) {
 
 void event_dispatch::keyup_execute() const { keyup_execute_signal(); }
 
-connection event_dispatch::on_keyup_execute(
-  keyup_execute_slot_t const& op) {
+connection event_dispatch::on_keyup_execute(keyup_execute_slot_t const& op) {
   return keyup_execute_signal.connect(op);
 }
 
@@ -2518,14 +5038,11 @@ connection event_dispatch::on_keyup_mute(keyup_mute_slot_t const& op) {
 
 void event_dispatch::keyup_volumeup() const { keyup_volumeup_signal(); }
 
-connection event_dispatch::on_keyup_volumeup(
-  keyup_volumeup_slot_t const& op) {
+connection event_dispatch::on_keyup_volumeup(keyup_volumeup_slot_t const& op) {
   return keyup_volumeup_signal.connect(op);
 }
 
-void event_dispatch::keyup_volumedown() const {
-  keyup_volumedown_signal();
-}
+void event_dispatch::keyup_volumedown() const { keyup_volumedown_signal(); }
 
 connection event_dispatch::on_keyup_volumedown(
   keyup_volumedown_slot_t const& op) {
@@ -2534,8 +5051,7 @@ connection event_dispatch::on_keyup_volumedown(
 
 void event_dispatch::keyup_kp_comma() const { keyup_kp_comma_signal(); }
 
-connection event_dispatch::on_keyup_kp_comma(
-  keyup_kp_comma_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_comma(keyup_kp_comma_slot_t const& op) {
   return keyup_kp_comma_signal.connect(op);
 }
 
@@ -2550,8 +5066,7 @@ connection event_dispatch::on_keyup_kp_equalsas400(
 
 void event_dispatch::keyup_alterase() const { keyup_alterase_signal(); }
 
-connection event_dispatch::on_keyup_alterase(
-  keyup_alterase_slot_t const& op) {
+connection event_dispatch::on_keyup_alterase(keyup_alterase_slot_t const& op) {
   return keyup_alterase_signal.connect(op);
 }
 
@@ -2581,8 +5096,7 @@ connection event_dispatch::on_keyup_prior(keyup_prior_slot_t const& op) {
 
 void event_dispatch::keyup_return2() const { keyup_return2_signal(); }
 
-connection event_dispatch::on_keyup_return2(
-  keyup_return2_slot_t const& op) {
+connection event_dispatch::on_keyup_return2(keyup_return2_slot_t const& op) {
   return keyup_return2_signal.connect(op);
 }
 
@@ -2605,9 +5119,7 @@ connection event_dispatch::on_keyup_oper(keyup_oper_slot_t const& op) {
   return keyup_oper_signal.connect(op);
 }
 
-void event_dispatch::keyup_clearagain() const {
-  keyup_clearagain_signal();
-}
+void event_dispatch::keyup_clearagain() const { keyup_clearagain_signal(); }
 
 connection event_dispatch::on_keyup_clearagain(
   keyup_clearagain_slot_t const& op) {
@@ -2769,14 +5281,11 @@ connection event_dispatch::on_keyup_kp_xor(keyup_kp_xor_slot_t const& op) {
 
 void event_dispatch::keyup_kp_power() const { keyup_kp_power_signal(); }
 
-connection event_dispatch::on_keyup_kp_power(
-  keyup_kp_power_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_power(keyup_kp_power_slot_t const& op) {
   return keyup_kp_power_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_percent() const {
-  keyup_kp_percent_signal();
-}
+void event_dispatch::keyup_kp_percent() const { keyup_kp_percent_signal(); }
 
 connection event_dispatch::on_keyup_kp_percent(
   keyup_kp_percent_slot_t const& op) {
@@ -2785,14 +5294,11 @@ connection event_dispatch::on_keyup_kp_percent(
 
 void event_dispatch::keyup_kp_less() const { keyup_kp_less_signal(); }
 
-connection event_dispatch::on_keyup_kp_less(
-  keyup_kp_less_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_less(keyup_kp_less_slot_t const& op) {
   return keyup_kp_less_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_greater() const {
-  keyup_kp_greater_signal();
-}
+void event_dispatch::keyup_kp_greater() const { keyup_kp_greater_signal(); }
 
 connection event_dispatch::on_keyup_kp_greater(
   keyup_kp_greater_slot_t const& op) {
@@ -2837,22 +5343,19 @@ connection event_dispatch::on_keyup_kp_dblverticalbar(
 
 void event_dispatch::keyup_kp_colon() const { keyup_kp_colon_signal(); }
 
-connection event_dispatch::on_keyup_kp_colon(
-  keyup_kp_colon_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_colon(keyup_kp_colon_slot_t const& op) {
   return keyup_kp_colon_signal.connect(op);
 }
 
 void event_dispatch::keyup_kp_hash() const { keyup_kp_hash_signal(); }
 
-connection event_dispatch::on_keyup_kp_hash(
-  keyup_kp_hash_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_hash(keyup_kp_hash_slot_t const& op) {
   return keyup_kp_hash_signal.connect(op);
 }
 
 void event_dispatch::keyup_kp_space() const { keyup_kp_space_signal(); }
 
-connection event_dispatch::on_keyup_kp_space(
-  keyup_kp_space_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_space(keyup_kp_space_slot_t const& op) {
   return keyup_kp_space_signal.connect(op);
 }
 
@@ -2869,9 +5372,7 @@ connection event_dispatch::on_keyup_kp_exclam(
   return keyup_kp_exclam_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_memstore() const {
-  keyup_kp_memstore_signal();
-}
+void event_dispatch::keyup_kp_memstore() const { keyup_kp_memstore_signal(); }
 
 connection event_dispatch::on_keyup_kp_memstore(
   keyup_kp_memstore_slot_t const& op) {
@@ -2887,9 +5388,7 @@ connection event_dispatch::on_keyup_kp_memrecall(
   return keyup_kp_memrecall_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_memclear() const {
-  keyup_kp_memclear_signal();
-}
+void event_dispatch::keyup_kp_memclear() const { keyup_kp_memclear_signal(); }
 
 connection event_dispatch::on_keyup_kp_memclear(
   keyup_kp_memclear_slot_t const& op) {
@@ -2941,8 +5440,7 @@ connection event_dispatch::on_keyup_kp_plusminus(
 
 void event_dispatch::keyup_kp_clear() const { keyup_kp_clear_signal(); }
 
-connection event_dispatch::on_keyup_kp_clear(
-  keyup_kp_clear_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_clear(keyup_kp_clear_slot_t const& op) {
   return keyup_kp_clear_signal.connect(op);
 }
 
@@ -2964,14 +5462,11 @@ connection event_dispatch::on_keyup_kp_binary(
 
 void event_dispatch::keyup_kp_octal() const { keyup_kp_octal_signal(); }
 
-connection event_dispatch::on_keyup_kp_octal(
-  keyup_kp_octal_slot_t const& op) {
+connection event_dispatch::on_keyup_kp_octal(keyup_kp_octal_slot_t const& op) {
   return keyup_kp_octal_signal.connect(op);
 }
 
-void event_dispatch::keyup_kp_decimal() const {
-  keyup_kp_decimal_signal();
-}
+void event_dispatch::keyup_kp_decimal() const { keyup_kp_decimal_signal(); }
 
 connection event_dispatch::on_keyup_kp_decimal(
   keyup_kp_decimal_slot_t const& op) {
@@ -3076,9 +5571,7 @@ connection event_dispatch::on_keyup_audiomute(
   return keyup_audiomute_signal.connect(op);
 }
 
-void event_dispatch::keyup_mediaselect() const {
-  keyup_mediaselect_signal();
-}
+void event_dispatch::keyup_mediaselect() const { keyup_mediaselect_signal(); }
 
 connection event_dispatch::on_keyup_mediaselect(
   keyup_mediaselect_slot_t const& op) {
@@ -3097,9 +5590,7 @@ connection event_dispatch::on_keyup_mail(keyup_mail_slot_t const& op) {
   return keyup_mail_signal.connect(op);
 }
 
-void event_dispatch::keyup_calculator() const {
-  keyup_calculator_signal();
-}
+void event_dispatch::keyup_calculator() const { keyup_calculator_signal(); }
 
 connection event_dispatch::on_keyup_calculator(
   keyup_calculator_slot_t const& op) {
@@ -3108,8 +5599,7 @@ connection event_dispatch::on_keyup_calculator(
 
 void event_dispatch::keyup_computer() const { keyup_computer_signal(); }
 
-connection event_dispatch::on_keyup_computer(
-  keyup_computer_slot_t const& op) {
+connection event_dispatch::on_keyup_computer(keyup_computer_slot_t const& op) {
   return keyup_computer_signal.connect(op);
 }
 
@@ -3122,21 +5612,17 @@ connection event_dispatch::on_keyup_ac_search(
 
 void event_dispatch::keyup_ac_home() const { keyup_ac_home_signal(); }
 
-connection event_dispatch::on_keyup_ac_home(
-  keyup_ac_home_slot_t const& op) {
+connection event_dispatch::on_keyup_ac_home(keyup_ac_home_slot_t const& op) {
   return keyup_ac_home_signal.connect(op);
 }
 
 void event_dispatch::keyup_ac_back() const { keyup_ac_back_signal(); }
 
-connection event_dispatch::on_keyup_ac_back(
-  keyup_ac_back_slot_t const& op) {
+connection event_dispatch::on_keyup_ac_back(keyup_ac_back_slot_t const& op) {
   return keyup_ac_back_signal.connect(op);
 }
 
-void event_dispatch::keyup_ac_forward() const {
-  keyup_ac_forward_signal();
-}
+void event_dispatch::keyup_ac_forward() const { keyup_ac_forward_signal(); }
 
 connection event_dispatch::on_keyup_ac_forward(
   keyup_ac_forward_slot_t const& op) {
@@ -3145,14 +5631,11 @@ connection event_dispatch::on_keyup_ac_forward(
 
 void event_dispatch::keyup_ac_stop() const { keyup_ac_stop_signal(); }
 
-connection event_dispatch::on_keyup_ac_stop(
-  keyup_ac_stop_slot_t const& op) {
+connection event_dispatch::on_keyup_ac_stop(keyup_ac_stop_slot_t const& op) {
   return keyup_ac_stop_signal.connect(op);
 }
 
-void event_dispatch::keyup_ac_refresh() const {
-  keyup_ac_refresh_signal();
-}
+void event_dispatch::keyup_ac_refresh() const { keyup_ac_refresh_signal(); }
 
 connection event_dispatch::on_keyup_ac_refresh(
   keyup_ac_refresh_slot_t const& op) {
@@ -3213,9 +5696,7 @@ connection event_dispatch::on_keyup_kbdillumdown(
   return keyup_kbdillumdown_signal.connect(op);
 }
 
-void event_dispatch::keyup_kbdillumup() const {
-  keyup_kbdillumup_signal();
-}
+void event_dispatch::keyup_kbdillumup() const { keyup_kbdillumup_signal(); }
 
 connection event_dispatch::on_keyup_kbdillumup(
   keyup_kbdillumup_slot_t const& op) {
