@@ -30,17 +30,15 @@ SDL_Texture* make_texture(gls::renderer& renderer,
 }
 
 namespace gls {
-texture::texture(SDL_Texture* t) : t(t, &SDL_DestroyTexture) {}
+texture::texture(SDL_Texture* t) : t(t, &SDL_DestroyTexture) {
+  if(!this->t) throw texture_creation_error(SDL_GetError());
+}
 
 texture::texture(renderer& r, surface& s)
-: texture(SDL_CreateTextureFromSurface(r.get(), s.get())) {
-  if(!t) throw texture_creation_error(SDL_GetError());
-}
+: texture(SDL_CreateTextureFromSurface(r.get(), s.get())) {}
 
 texture::texture(renderer& r, bmp_filename const& bmp)
-: texture(texture_from_bmp(r, bmp)) {
-  if(!t) throw texture_creation_error(SDL_GetError());
-}
+: texture(texture_from_bmp(r, bmp)) {}
 
 texture::texture(renderer& r,
                  ttf_font const& ttf,
