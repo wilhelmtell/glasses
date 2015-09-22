@@ -11,494 +11,1250 @@ using connection = boost::signals2::connection;
 struct event_dispatch {
   using quit_signal_t = signal<void()>;
   using quit_slot_t = quit_signal_t::slot_type;
-  using keydown_unknown_signal_t = signal<void()>;
-  using keydown_unknown_slot_t = keydown_unknown_signal_t::slot_type;
-  using keydown_backspace_signal_t = signal<void()>;
-  using keydown_backspace_slot_t = keydown_backspace_signal_t::slot_type;
-  using keydown_tab_signal_t = signal<void()>;
-  using keydown_tab_slot_t = keydown_tab_signal_t::slot_type;
-  using keydown_return_signal_t = signal<void()>;
-  using keydown_return_slot_t = keydown_return_signal_t::slot_type;
-  using keydown_escape_signal_t = signal<void()>;
-  using keydown_escape_slot_t = keydown_escape_signal_t::slot_type;
-  using keydown_space_signal_t = signal<void()>;
-  using keydown_space_slot_t = keydown_space_signal_t::slot_type;
-  using keydown_exclaim_signal_t = signal<void()>;
-  using keydown_exclaim_slot_t = keydown_exclaim_signal_t::slot_type;
-  using keydown_quotedbl_signal_t = signal<void()>;
-  using keydown_quotedbl_slot_t = keydown_quotedbl_signal_t::slot_type;
-  using keydown_hash_signal_t = signal<void()>;
-  using keydown_hash_slot_t = keydown_hash_signal_t::slot_type;
-  using keydown_dollar_signal_t = signal<void()>;
-  using keydown_dollar_slot_t = keydown_dollar_signal_t::slot_type;
-  using keydown_percent_signal_t = signal<void()>;
-  using keydown_percent_slot_t = keydown_percent_signal_t::slot_type;
-  using keydown_ampersand_signal_t = signal<void()>;
-  using keydown_ampersand_slot_t = keydown_ampersand_signal_t::slot_type;
-  using keydown_quote_signal_t = signal<void()>;
-  using keydown_quote_slot_t = keydown_quote_signal_t::slot_type;
-  using keydown_leftparen_signal_t = signal<void()>;
-  using keydown_leftparen_slot_t = keydown_leftparen_signal_t::slot_type;
-  using keydown_rightparen_signal_t = signal<void()>;
-  using keydown_rightparen_slot_t = keydown_rightparen_signal_t::slot_type;
-  using keydown_asterisk_signal_t = signal<void()>;
-  using keydown_asterisk_slot_t = keydown_asterisk_signal_t::slot_type;
-  using keydown_plus_signal_t = signal<void()>;
-  using keydown_plus_slot_t = keydown_plus_signal_t::slot_type;
-  using keydown_comma_signal_t = signal<void()>;
-  using keydown_comma_slot_t = keydown_comma_signal_t::slot_type;
-  using keydown_minus_signal_t = signal<void()>;
-  using keydown_minus_slot_t = keydown_minus_signal_t::slot_type;
-  using keydown_period_signal_t = signal<void()>;
-  using keydown_period_slot_t = keydown_period_signal_t::slot_type;
-  using keydown_slash_signal_t = signal<void()>;
-  using keydown_slash_slot_t = keydown_slash_signal_t::slot_type;
-  using keydown_0_signal_t = signal<void()>;
-  using keydown_0_slot_t = keydown_0_signal_t::slot_type;
-  using keydown_1_signal_t = signal<void()>;
-  using keydown_1_slot_t = keydown_1_signal_t::slot_type;
-  using keydown_2_signal_t = signal<void()>;
-  using keydown_2_slot_t = keydown_2_signal_t::slot_type;
-  using keydown_3_signal_t = signal<void()>;
-  using keydown_3_slot_t = keydown_3_signal_t::slot_type;
-  using keydown_4_signal_t = signal<void()>;
-  using keydown_4_slot_t = keydown_4_signal_t::slot_type;
-  using keydown_5_signal_t = signal<void()>;
-  using keydown_5_slot_t = keydown_5_signal_t::slot_type;
-  using keydown_6_signal_t = signal<void()>;
-  using keydown_6_slot_t = keydown_6_signal_t::slot_type;
-  using keydown_7_signal_t = signal<void()>;
-  using keydown_7_slot_t = keydown_7_signal_t::slot_type;
-  using keydown_8_signal_t = signal<void()>;
-  using keydown_8_slot_t = keydown_8_signal_t::slot_type;
-  using keydown_9_signal_t = signal<void()>;
-  using keydown_9_slot_t = keydown_9_signal_t::slot_type;
-  using keydown_colon_signal_t = signal<void()>;
-  using keydown_colon_slot_t = keydown_colon_signal_t::slot_type;
-  using keydown_semicolon_signal_t = signal<void()>;
-  using keydown_semicolon_slot_t = keydown_semicolon_signal_t::slot_type;
-  using keydown_less_signal_t = signal<void()>;
-  using keydown_less_slot_t = keydown_less_signal_t::slot_type;
-  using keydown_equals_signal_t = signal<void()>;
-  using keydown_equals_slot_t = keydown_equals_signal_t::slot_type;
-  using keydown_greater_signal_t = signal<void()>;
-  using keydown_greater_slot_t = keydown_greater_signal_t::slot_type;
-  using keydown_question_signal_t = signal<void()>;
-  using keydown_question_slot_t = keydown_question_signal_t::slot_type;
-  using keydown_at_signal_t = signal<void()>;
-  using keydown_at_slot_t = keydown_at_signal_t::slot_type;
-  using keydown_leftbracket_signal_t = signal<void()>;
-  using keydown_leftbracket_slot_t = keydown_leftbracket_signal_t::slot_type;
-  using keydown_backslash_signal_t = signal<void()>;
-  using keydown_backslash_slot_t = keydown_backslash_signal_t::slot_type;
-  using keydown_rightbracket_signal_t = signal<void()>;
-  using keydown_rightbracket_slot_t = keydown_rightbracket_signal_t::slot_type;
-  using keydown_caret_signal_t = signal<void()>;
-  using keydown_caret_slot_t = keydown_caret_signal_t::slot_type;
-  using keydown_underscore_signal_t = signal<void()>;
-  using keydown_underscore_slot_t = keydown_underscore_signal_t::slot_type;
-  using keydown_backquote_signal_t = signal<void()>;
-  using keydown_backquote_slot_t = keydown_backquote_signal_t::slot_type;
-  using keydown_a_signal_t = signal<void()>;
-  using keydown_a_slot_t = keydown_a_signal_t::slot_type;
-  using keydown_b_signal_t = signal<void()>;
-  using keydown_b_slot_t = keydown_b_signal_t::slot_type;
-  using keydown_c_signal_t = signal<void()>;
-  using keydown_c_slot_t = keydown_c_signal_t::slot_type;
-  using keydown_d_signal_t = signal<void()>;
-  using keydown_d_slot_t = keydown_d_signal_t::slot_type;
-  using keydown_e_signal_t = signal<void()>;
-  using keydown_e_slot_t = keydown_e_signal_t::slot_type;
-  using keydown_f_signal_t = signal<void()>;
-  using keydown_f_slot_t = keydown_f_signal_t::slot_type;
-  using keydown_g_signal_t = signal<void()>;
-  using keydown_g_slot_t = keydown_g_signal_t::slot_type;
-  using keydown_h_signal_t = signal<void()>;
-  using keydown_h_slot_t = keydown_h_signal_t::slot_type;
-  using keydown_i_signal_t = signal<void()>;
-  using keydown_i_slot_t = keydown_i_signal_t::slot_type;
-  using keydown_j_signal_t = signal<void()>;
-  using keydown_j_slot_t = keydown_j_signal_t::slot_type;
-  using keydown_k_signal_t = signal<void()>;
-  using keydown_k_slot_t = keydown_k_signal_t::slot_type;
-  using keydown_l_signal_t = signal<void()>;
-  using keydown_l_slot_t = keydown_l_signal_t::slot_type;
-  using keydown_m_signal_t = signal<void()>;
-  using keydown_m_slot_t = keydown_m_signal_t::slot_type;
-  using keydown_n_signal_t = signal<void()>;
-  using keydown_n_slot_t = keydown_n_signal_t::slot_type;
-  using keydown_o_signal_t = signal<void()>;
-  using keydown_o_slot_t = keydown_o_signal_t::slot_type;
-  using keydown_p_signal_t = signal<void()>;
-  using keydown_p_slot_t = keydown_p_signal_t::slot_type;
-  using keydown_q_signal_t = signal<void()>;
-  using keydown_q_slot_t = keydown_q_signal_t::slot_type;
-  using keydown_r_signal_t = signal<void()>;
-  using keydown_r_slot_t = keydown_r_signal_t::slot_type;
-  using keydown_s_signal_t = signal<void()>;
-  using keydown_s_slot_t = keydown_s_signal_t::slot_type;
-  using keydown_t_signal_t = signal<void()>;
-  using keydown_t_slot_t = keydown_t_signal_t::slot_type;
-  using keydown_u_signal_t = signal<void()>;
-  using keydown_u_slot_t = keydown_u_signal_t::slot_type;
-  using keydown_v_signal_t = signal<void()>;
-  using keydown_v_slot_t = keydown_v_signal_t::slot_type;
-  using keydown_w_signal_t = signal<void()>;
-  using keydown_w_slot_t = keydown_w_signal_t::slot_type;
-  using keydown_x_signal_t = signal<void()>;
-  using keydown_x_slot_t = keydown_x_signal_t::slot_type;
-  using keydown_y_signal_t = signal<void()>;
-  using keydown_y_slot_t = keydown_y_signal_t::slot_type;
-  using keydown_z_signal_t = signal<void()>;
-  using keydown_z_slot_t = keydown_z_signal_t::slot_type;
-  using keydown_delete_signal_t = signal<void()>;
-  using keydown_delete_slot_t = keydown_delete_signal_t::slot_type;
-  using keydown_capslock_signal_t = signal<void()>;
-  using keydown_capslock_slot_t = keydown_capslock_signal_t::slot_type;
-  using keydown_f1_signal_t = signal<void()>;
-  using keydown_f1_slot_t = keydown_f1_signal_t::slot_type;
-  using keydown_f2_signal_t = signal<void()>;
-  using keydown_f2_slot_t = keydown_f2_signal_t::slot_type;
-  using keydown_f3_signal_t = signal<void()>;
-  using keydown_f3_slot_t = keydown_f3_signal_t::slot_type;
-  using keydown_f4_signal_t = signal<void()>;
-  using keydown_f4_slot_t = keydown_f4_signal_t::slot_type;
-  using keydown_f5_signal_t = signal<void()>;
-  using keydown_f5_slot_t = keydown_f5_signal_t::slot_type;
-  using keydown_f6_signal_t = signal<void()>;
-  using keydown_f6_slot_t = keydown_f6_signal_t::slot_type;
-  using keydown_f7_signal_t = signal<void()>;
-  using keydown_f7_slot_t = keydown_f7_signal_t::slot_type;
-  using keydown_f8_signal_t = signal<void()>;
-  using keydown_f8_slot_t = keydown_f8_signal_t::slot_type;
-  using keydown_f9_signal_t = signal<void()>;
-  using keydown_f9_slot_t = keydown_f9_signal_t::slot_type;
-  using keydown_f10_signal_t = signal<void()>;
-  using keydown_f10_slot_t = keydown_f10_signal_t::slot_type;
-  using keydown_f11_signal_t = signal<void()>;
-  using keydown_f11_slot_t = keydown_f11_signal_t::slot_type;
-  using keydown_f12_signal_t = signal<void()>;
-  using keydown_f12_slot_t = keydown_f12_signal_t::slot_type;
-  using keydown_printscreen_signal_t = signal<void()>;
-  using keydown_printscreen_slot_t = keydown_printscreen_signal_t::slot_type;
-  using keydown_scrolllock_signal_t = signal<void()>;
-  using keydown_scrolllock_slot_t = keydown_scrolllock_signal_t::slot_type;
-  using keydown_pause_signal_t = signal<void()>;
-  using keydown_pause_slot_t = keydown_pause_signal_t::slot_type;
-  using keydown_insert_signal_t = signal<void()>;
-  using keydown_insert_slot_t = keydown_insert_signal_t::slot_type;
-  using keydown_home_signal_t = signal<void()>;
-  using keydown_home_slot_t = keydown_home_signal_t::slot_type;
-  using keydown_pageup_signal_t = signal<void()>;
-  using keydown_pageup_slot_t = keydown_pageup_signal_t::slot_type;
-  using keydown_end_signal_t = signal<void()>;
-  using keydown_end_slot_t = keydown_end_signal_t::slot_type;
-  using keydown_pagedown_signal_t = signal<void()>;
-  using keydown_pagedown_slot_t = keydown_pagedown_signal_t::slot_type;
-  using keydown_right_signal_t = signal<void()>;
-  using keydown_right_slot_t = keydown_right_signal_t::slot_type;
-  using keydown_left_signal_t = signal<void()>;
-  using keydown_left_slot_t = keydown_left_signal_t::slot_type;
-  using keydown_down_signal_t = signal<void()>;
-  using keydown_down_slot_t = keydown_down_signal_t::slot_type;
-  using keydown_up_signal_t = signal<void()>;
-  using keydown_up_slot_t = keydown_up_signal_t::slot_type;
-  using keydown_numlockclear_signal_t = signal<void()>;
-  using keydown_numlockclear_slot_t = keydown_numlockclear_signal_t::slot_type;
-  using keydown_kp_divide_signal_t = signal<void()>;
-  using keydown_kp_divide_slot_t = keydown_kp_divide_signal_t::slot_type;
-  using keydown_kp_multiply_signal_t = signal<void()>;
-  using keydown_kp_multiply_slot_t = keydown_kp_multiply_signal_t::slot_type;
-  using keydown_kp_minus_signal_t = signal<void()>;
-  using keydown_kp_minus_slot_t = keydown_kp_minus_signal_t::slot_type;
-  using keydown_kp_plus_signal_t = signal<void()>;
-  using keydown_kp_plus_slot_t = keydown_kp_plus_signal_t::slot_type;
-  using keydown_kp_enter_signal_t = signal<void()>;
-  using keydown_kp_enter_slot_t = keydown_kp_enter_signal_t::slot_type;
-  using keydown_kp_1_signal_t = signal<void()>;
-  using keydown_kp_1_slot_t = keydown_kp_1_signal_t::slot_type;
-  using keydown_kp_2_signal_t = signal<void()>;
-  using keydown_kp_2_slot_t = keydown_kp_2_signal_t::slot_type;
-  using keydown_kp_3_signal_t = signal<void()>;
-  using keydown_kp_3_slot_t = keydown_kp_3_signal_t::slot_type;
-  using keydown_kp_4_signal_t = signal<void()>;
-  using keydown_kp_4_slot_t = keydown_kp_4_signal_t::slot_type;
-  using keydown_kp_5_signal_t = signal<void()>;
-  using keydown_kp_5_slot_t = keydown_kp_5_signal_t::slot_type;
-  using keydown_kp_6_signal_t = signal<void()>;
-  using keydown_kp_6_slot_t = keydown_kp_6_signal_t::slot_type;
-  using keydown_kp_7_signal_t = signal<void()>;
-  using keydown_kp_7_slot_t = keydown_kp_7_signal_t::slot_type;
-  using keydown_kp_8_signal_t = signal<void()>;
-  using keydown_kp_8_slot_t = keydown_kp_8_signal_t::slot_type;
-  using keydown_kp_9_signal_t = signal<void()>;
-  using keydown_kp_9_slot_t = keydown_kp_9_signal_t::slot_type;
-  using keydown_kp_0_signal_t = signal<void()>;
-  using keydown_kp_0_slot_t = keydown_kp_0_signal_t::slot_type;
-  using keydown_kp_period_signal_t = signal<void()>;
-  using keydown_kp_period_slot_t = keydown_kp_period_signal_t::slot_type;
-  using keydown_application_signal_t = signal<void()>;
-  using keydown_application_slot_t = keydown_application_signal_t::slot_type;
-  using keydown_power_signal_t = signal<void()>;
-  using keydown_power_slot_t = keydown_power_signal_t::slot_type;
-  using keydown_kp_equals_signal_t = signal<void()>;
-  using keydown_kp_equals_slot_t = keydown_kp_equals_signal_t::slot_type;
-  using keydown_f13_signal_t = signal<void()>;
-  using keydown_f13_slot_t = keydown_f13_signal_t::slot_type;
-  using keydown_f14_signal_t = signal<void()>;
-  using keydown_f14_slot_t = keydown_f14_signal_t::slot_type;
-  using keydown_f15_signal_t = signal<void()>;
-  using keydown_f15_slot_t = keydown_f15_signal_t::slot_type;
-  using keydown_f16_signal_t = signal<void()>;
-  using keydown_f16_slot_t = keydown_f16_signal_t::slot_type;
-  using keydown_f17_signal_t = signal<void()>;
-  using keydown_f17_slot_t = keydown_f17_signal_t::slot_type;
-  using keydown_f18_signal_t = signal<void()>;
-  using keydown_f18_slot_t = keydown_f18_signal_t::slot_type;
-  using keydown_f19_signal_t = signal<void()>;
-  using keydown_f19_slot_t = keydown_f19_signal_t::slot_type;
-  using keydown_f20_signal_t = signal<void()>;
-  using keydown_f20_slot_t = keydown_f20_signal_t::slot_type;
-  using keydown_f21_signal_t = signal<void()>;
-  using keydown_f21_slot_t = keydown_f21_signal_t::slot_type;
-  using keydown_f22_signal_t = signal<void()>;
-  using keydown_f22_slot_t = keydown_f22_signal_t::slot_type;
-  using keydown_f23_signal_t = signal<void()>;
-  using keydown_f23_slot_t = keydown_f23_signal_t::slot_type;
-  using keydown_f24_signal_t = signal<void()>;
-  using keydown_f24_slot_t = keydown_f24_signal_t::slot_type;
-  using keydown_execute_signal_t = signal<void()>;
-  using keydown_execute_slot_t = keydown_execute_signal_t::slot_type;
-  using keydown_help_signal_t = signal<void()>;
-  using keydown_help_slot_t = keydown_help_signal_t::slot_type;
-  using keydown_menu_signal_t = signal<void()>;
-  using keydown_menu_slot_t = keydown_menu_signal_t::slot_type;
-  using keydown_select_signal_t = signal<void()>;
-  using keydown_select_slot_t = keydown_select_signal_t::slot_type;
-  using keydown_stop_signal_t = signal<void()>;
-  using keydown_stop_slot_t = keydown_stop_signal_t::slot_type;
-  using keydown_again_signal_t = signal<void()>;
-  using keydown_again_slot_t = keydown_again_signal_t::slot_type;
-  using keydown_undo_signal_t = signal<void()>;
-  using keydown_undo_slot_t = keydown_undo_signal_t::slot_type;
-  using keydown_cut_signal_t = signal<void()>;
-  using keydown_cut_slot_t = keydown_cut_signal_t::slot_type;
-  using keydown_copy_signal_t = signal<void()>;
-  using keydown_copy_slot_t = keydown_copy_signal_t::slot_type;
-  using keydown_paste_signal_t = signal<void()>;
-  using keydown_paste_slot_t = keydown_paste_signal_t::slot_type;
-  using keydown_find_signal_t = signal<void()>;
-  using keydown_find_slot_t = keydown_find_signal_t::slot_type;
-  using keydown_mute_signal_t = signal<void()>;
-  using keydown_mute_slot_t = keydown_mute_signal_t::slot_type;
-  using keydown_volumeup_signal_t = signal<void()>;
-  using keydown_volumeup_slot_t = keydown_volumeup_signal_t::slot_type;
-  using keydown_volumedown_signal_t = signal<void()>;
-  using keydown_volumedown_slot_t = keydown_volumedown_signal_t::slot_type;
-  using keydown_kp_comma_signal_t = signal<void()>;
-  using keydown_kp_comma_slot_t = keydown_kp_comma_signal_t::slot_type;
-  using keydown_kp_equalsas400_signal_t = signal<void()>;
-  using keydown_kp_equalsas400_slot_t
-    = keydown_kp_equalsas400_signal_t::slot_type;
-  using keydown_alterase_signal_t = signal<void()>;
-  using keydown_alterase_slot_t = keydown_alterase_signal_t::slot_type;
-  using keydown_sysreq_signal_t = signal<void()>;
-  using keydown_sysreq_slot_t = keydown_sysreq_signal_t::slot_type;
-  using keydown_cancel_signal_t = signal<void()>;
-  using keydown_cancel_slot_t = keydown_cancel_signal_t::slot_type;
-  using keydown_clear_signal_t = signal<void()>;
-  using keydown_clear_slot_t = keydown_clear_signal_t::slot_type;
-  using keydown_prior_signal_t = signal<void()>;
-  using keydown_prior_slot_t = keydown_prior_signal_t::slot_type;
-  using keydown_return2_signal_t = signal<void()>;
-  using keydown_return2_slot_t = keydown_return2_signal_t::slot_type;
-  using keydown_separator_signal_t = signal<void()>;
-  using keydown_separator_slot_t = keydown_separator_signal_t::slot_type;
-  using keydown_out_signal_t = signal<void()>;
-  using keydown_out_slot_t = keydown_out_signal_t::slot_type;
-  using keydown_oper_signal_t = signal<void()>;
-  using keydown_oper_slot_t = keydown_oper_signal_t::slot_type;
-  using keydown_clearagain_signal_t = signal<void()>;
-  using keydown_clearagain_slot_t = keydown_clearagain_signal_t::slot_type;
-  using keydown_crsel_signal_t = signal<void()>;
-  using keydown_crsel_slot_t = keydown_crsel_signal_t::slot_type;
-  using keydown_exsel_signal_t = signal<void()>;
-  using keydown_exsel_slot_t = keydown_exsel_signal_t::slot_type;
-  using keydown_kp_00_signal_t = signal<void()>;
-  using keydown_kp_00_slot_t = keydown_kp_00_signal_t::slot_type;
-  using keydown_kp_000_signal_t = signal<void()>;
-  using keydown_kp_000_slot_t = keydown_kp_000_signal_t::slot_type;
-  using keydown_thousandsseparator_signal_t = signal<void()>;
-  using keydown_thousandsseparator_slot_t
-    = keydown_thousandsseparator_signal_t::slot_type;
-  using keydown_decimalseparator_signal_t = signal<void()>;
-  using keydown_decimalseparator_slot_t
-    = keydown_decimalseparator_signal_t::slot_type;
-  using keydown_currencyunit_signal_t = signal<void()>;
-  using keydown_currencyunit_slot_t = keydown_currencyunit_signal_t::slot_type;
-  using keydown_currencysubunit_signal_t = signal<void()>;
-  using keydown_currencysubunit_slot_t
-    = keydown_currencysubunit_signal_t::slot_type;
-  using keydown_kp_leftparen_signal_t = signal<void()>;
-  using keydown_kp_leftparen_slot_t = keydown_kp_leftparen_signal_t::slot_type;
-  using keydown_kp_rightparen_signal_t = signal<void()>;
-  using keydown_kp_rightparen_slot_t
-    = keydown_kp_rightparen_signal_t::slot_type;
-  using keydown_kp_leftbrace_signal_t = signal<void()>;
-  using keydown_kp_leftbrace_slot_t = keydown_kp_leftbrace_signal_t::slot_type;
-  using keydown_kp_rightbrace_signal_t = signal<void()>;
-  using keydown_kp_rightbrace_slot_t
-    = keydown_kp_rightbrace_signal_t::slot_type;
-  using keydown_kp_tab_signal_t = signal<void()>;
-  using keydown_kp_tab_slot_t = keydown_kp_tab_signal_t::slot_type;
-  using keydown_kp_backspace_signal_t = signal<void()>;
-  using keydown_kp_backspace_slot_t = keydown_kp_backspace_signal_t::slot_type;
-  using keydown_kp_a_signal_t = signal<void()>;
-  using keydown_kp_a_slot_t = keydown_kp_a_signal_t::slot_type;
-  using keydown_kp_b_signal_t = signal<void()>;
-  using keydown_kp_b_slot_t = keydown_kp_b_signal_t::slot_type;
-  using keydown_kp_c_signal_t = signal<void()>;
-  using keydown_kp_c_slot_t = keydown_kp_c_signal_t::slot_type;
-  using keydown_kp_d_signal_t = signal<void()>;
-  using keydown_kp_d_slot_t = keydown_kp_d_signal_t::slot_type;
-  using keydown_kp_e_signal_t = signal<void()>;
-  using keydown_kp_e_slot_t = keydown_kp_e_signal_t::slot_type;
-  using keydown_kp_f_signal_t = signal<void()>;
-  using keydown_kp_f_slot_t = keydown_kp_f_signal_t::slot_type;
-  using keydown_kp_xor_signal_t = signal<void()>;
-  using keydown_kp_xor_slot_t = keydown_kp_xor_signal_t::slot_type;
-  using keydown_kp_power_signal_t = signal<void()>;
-  using keydown_kp_power_slot_t = keydown_kp_power_signal_t::slot_type;
-  using keydown_kp_percent_signal_t = signal<void()>;
-  using keydown_kp_percent_slot_t = keydown_kp_percent_signal_t::slot_type;
-  using keydown_kp_less_signal_t = signal<void()>;
-  using keydown_kp_less_slot_t = keydown_kp_less_signal_t::slot_type;
-  using keydown_kp_greater_signal_t = signal<void()>;
-  using keydown_kp_greater_slot_t = keydown_kp_greater_signal_t::slot_type;
-  using keydown_kp_ampersand_signal_t = signal<void()>;
-  using keydown_kp_ampersand_slot_t = keydown_kp_ampersand_signal_t::slot_type;
-  using keydown_kp_dblampersand_signal_t = signal<void()>;
-  using keydown_kp_dblampersand_slot_t
-    = keydown_kp_dblampersand_signal_t::slot_type;
-  using keydown_kp_verticalbar_signal_t = signal<void()>;
-  using keydown_kp_verticalbar_slot_t
-    = keydown_kp_verticalbar_signal_t::slot_type;
-  using keydown_kp_dblverticalbar_signal_t = signal<void()>;
-  using keydown_kp_dblverticalbar_slot_t
-    = keydown_kp_dblverticalbar_signal_t::slot_type;
-  using keydown_kp_colon_signal_t = signal<void()>;
-  using keydown_kp_colon_slot_t = keydown_kp_colon_signal_t::slot_type;
-  using keydown_kp_hash_signal_t = signal<void()>;
-  using keydown_kp_hash_slot_t = keydown_kp_hash_signal_t::slot_type;
-  using keydown_kp_space_signal_t = signal<void()>;
-  using keydown_kp_space_slot_t = keydown_kp_space_signal_t::slot_type;
-  using keydown_kp_at_signal_t = signal<void()>;
-  using keydown_kp_at_slot_t = keydown_kp_at_signal_t::slot_type;
-  using keydown_kp_exclam_signal_t = signal<void()>;
-  using keydown_kp_exclam_slot_t = keydown_kp_exclam_signal_t::slot_type;
-  using keydown_kp_memstore_signal_t = signal<void()>;
-  using keydown_kp_memstore_slot_t = keydown_kp_memstore_signal_t::slot_type;
-  using keydown_kp_memrecall_signal_t = signal<void()>;
-  using keydown_kp_memrecall_slot_t = keydown_kp_memrecall_signal_t::slot_type;
-  using keydown_kp_memclear_signal_t = signal<void()>;
-  using keydown_kp_memclear_slot_t = keydown_kp_memclear_signal_t::slot_type;
-  using keydown_kp_memadd_signal_t = signal<void()>;
-  using keydown_kp_memadd_slot_t = keydown_kp_memadd_signal_t::slot_type;
-  using keydown_kp_memsubtract_signal_t = signal<void()>;
-  using keydown_kp_memsubtract_slot_t
-    = keydown_kp_memsubtract_signal_t::slot_type;
-  using keydown_kp_memmultiply_signal_t = signal<void()>;
-  using keydown_kp_memmultiply_slot_t
-    = keydown_kp_memmultiply_signal_t::slot_type;
-  using keydown_kp_memdivide_signal_t = signal<void()>;
-  using keydown_kp_memdivide_slot_t = keydown_kp_memdivide_signal_t::slot_type;
-  using keydown_kp_plusminus_signal_t = signal<void()>;
-  using keydown_kp_plusminus_slot_t = keydown_kp_plusminus_signal_t::slot_type;
-  using keydown_kp_clear_signal_t = signal<void()>;
-  using keydown_kp_clear_slot_t = keydown_kp_clear_signal_t::slot_type;
-  using keydown_kp_clearentry_signal_t = signal<void()>;
-  using keydown_kp_clearentry_slot_t
-    = keydown_kp_clearentry_signal_t::slot_type;
-  using keydown_kp_binary_signal_t = signal<void()>;
-  using keydown_kp_binary_slot_t = keydown_kp_binary_signal_t::slot_type;
-  using keydown_kp_octal_signal_t = signal<void()>;
-  using keydown_kp_octal_slot_t = keydown_kp_octal_signal_t::slot_type;
-  using keydown_kp_decimal_signal_t = signal<void()>;
-  using keydown_kp_decimal_slot_t = keydown_kp_decimal_signal_t::slot_type;
-  using keydown_kp_hexadecimal_signal_t = signal<void()>;
-  using keydown_kp_hexadecimal_slot_t
-    = keydown_kp_hexadecimal_signal_t::slot_type;
-  using keydown_lctrl_signal_t = signal<void()>;
-  using keydown_lctrl_slot_t = keydown_lctrl_signal_t::slot_type;
-  using keydown_lshift_signal_t = signal<void()>;
-  using keydown_lshift_slot_t = keydown_lshift_signal_t::slot_type;
-  using keydown_lalt_signal_t = signal<void()>;
-  using keydown_lalt_slot_t = keydown_lalt_signal_t::slot_type;
-  using keydown_lgui_signal_t = signal<void()>;
-  using keydown_lgui_slot_t = keydown_lgui_signal_t::slot_type;
-  using keydown_rctrl_signal_t = signal<void()>;
-  using keydown_rctrl_slot_t = keydown_rctrl_signal_t::slot_type;
-  using keydown_rshift_signal_t = signal<void()>;
-  using keydown_rshift_slot_t = keydown_rshift_signal_t::slot_type;
-  using keydown_ralt_signal_t = signal<void()>;
-  using keydown_ralt_slot_t = keydown_ralt_signal_t::slot_type;
-  using keydown_rgui_signal_t = signal<void()>;
-  using keydown_rgui_slot_t = keydown_rgui_signal_t::slot_type;
-  using keydown_mode_signal_t = signal<void()>;
-  using keydown_mode_slot_t = keydown_mode_signal_t::slot_type;
-  using keydown_audionext_signal_t = signal<void()>;
-  using keydown_audionext_slot_t = keydown_audionext_signal_t::slot_type;
-  using keydown_audioprev_signal_t = signal<void()>;
-  using keydown_audioprev_slot_t = keydown_audioprev_signal_t::slot_type;
-  using keydown_audiostop_signal_t = signal<void()>;
-  using keydown_audiostop_slot_t = keydown_audiostop_signal_t::slot_type;
-  using keydown_audioplay_signal_t = signal<void()>;
-  using keydown_audioplay_slot_t = keydown_audioplay_signal_t::slot_type;
-  using keydown_audiomute_signal_t = signal<void()>;
-  using keydown_audiomute_slot_t = keydown_audiomute_signal_t::slot_type;
-  using keydown_mediaselect_signal_t = signal<void()>;
-  using keydown_mediaselect_slot_t = keydown_mediaselect_signal_t::slot_type;
-  using keydown_www_signal_t = signal<void()>;
-  using keydown_www_slot_t = keydown_www_signal_t::slot_type;
-  using keydown_mail_signal_t = signal<void()>;
-  using keydown_mail_slot_t = keydown_mail_signal_t::slot_type;
-  using keydown_calculator_signal_t = signal<void()>;
-  using keydown_calculator_slot_t = keydown_calculator_signal_t::slot_type;
-  using keydown_computer_signal_t = signal<void()>;
-  using keydown_computer_slot_t = keydown_computer_signal_t::slot_type;
-  using keydown_ac_search_signal_t = signal<void()>;
-  using keydown_ac_search_slot_t = keydown_ac_search_signal_t::slot_type;
-  using keydown_ac_home_signal_t = signal<void()>;
-  using keydown_ac_home_slot_t = keydown_ac_home_signal_t::slot_type;
-  using keydown_ac_back_signal_t = signal<void()>;
-  using keydown_ac_back_slot_t = keydown_ac_back_signal_t::slot_type;
-  using keydown_ac_forward_signal_t = signal<void()>;
-  using keydown_ac_forward_slot_t = keydown_ac_forward_signal_t::slot_type;
-  using keydown_ac_stop_signal_t = signal<void()>;
-  using keydown_ac_stop_slot_t = keydown_ac_stop_signal_t::slot_type;
-  using keydown_ac_refresh_signal_t = signal<void()>;
-  using keydown_ac_refresh_slot_t = keydown_ac_refresh_signal_t::slot_type;
-  using keydown_ac_bookmarks_signal_t = signal<void()>;
-  using keydown_ac_bookmarks_slot_t = keydown_ac_bookmarks_signal_t::slot_type;
-  using keydown_brightnessdown_signal_t = signal<void()>;
-  using keydown_brightnessdown_slot_t
-    = keydown_brightnessdown_signal_t::slot_type;
-  using keydown_brightnessup_signal_t = signal<void()>;
-  using keydown_brightnessup_slot_t = keydown_brightnessup_signal_t::slot_type;
-  using keydown_displayswitch_signal_t = signal<void()>;
-  using keydown_displayswitch_slot_t
-    = keydown_displayswitch_signal_t::slot_type;
-  using keydown_kbdillumtoggle_signal_t = signal<void()>;
-  using keydown_kbdillumtoggle_slot_t
-    = keydown_kbdillumtoggle_signal_t::slot_type;
-  using keydown_kbdillumdown_signal_t = signal<void()>;
-  using keydown_kbdillumdown_slot_t = keydown_kbdillumdown_signal_t::slot_type;
-  using keydown_kbdillumup_signal_t = signal<void()>;
-  using keydown_kbdillumup_slot_t = keydown_kbdillumup_signal_t::slot_type;
-  using keydown_eject_signal_t = signal<void()>;
-  using keydown_eject_slot_t = keydown_eject_signal_t::slot_type;
-  using keydown_sleep_signal_t = signal<void()>;
-  using keydown_sleep_slot_t = keydown_sleep_signal_t::slot_type;
+  using keydown_unknown_repeat_signal_t = signal<void()>;
+  using keydown_unknown_repeat_slot_t
+    = keydown_unknown_repeat_signal_t::slot_type;
+  using keydown_backspace_repeat_signal_t = signal<void()>;
+  using keydown_backspace_repeat_slot_t
+    = keydown_backspace_repeat_signal_t::slot_type;
+  using keydown_tab_repeat_signal_t = signal<void()>;
+  using keydown_tab_repeat_slot_t = keydown_tab_repeat_signal_t::slot_type;
+  using keydown_return_repeat_signal_t = signal<void()>;
+  using keydown_return_repeat_slot_t
+    = keydown_return_repeat_signal_t::slot_type;
+  using keydown_escape_repeat_signal_t = signal<void()>;
+  using keydown_escape_repeat_slot_t
+    = keydown_escape_repeat_signal_t::slot_type;
+  using keydown_space_repeat_signal_t = signal<void()>;
+  using keydown_space_repeat_slot_t = keydown_space_repeat_signal_t::slot_type;
+  using keydown_exclaim_repeat_signal_t = signal<void()>;
+  using keydown_exclaim_repeat_slot_t
+    = keydown_exclaim_repeat_signal_t::slot_type;
+  using keydown_quotedbl_repeat_signal_t = signal<void()>;
+  using keydown_quotedbl_repeat_slot_t
+    = keydown_quotedbl_repeat_signal_t::slot_type;
+  using keydown_hash_repeat_signal_t = signal<void()>;
+  using keydown_hash_repeat_slot_t = keydown_hash_repeat_signal_t::slot_type;
+  using keydown_dollar_repeat_signal_t = signal<void()>;
+  using keydown_dollar_repeat_slot_t
+    = keydown_dollar_repeat_signal_t::slot_type;
+  using keydown_percent_repeat_signal_t = signal<void()>;
+  using keydown_percent_repeat_slot_t
+    = keydown_percent_repeat_signal_t::slot_type;
+  using keydown_ampersand_repeat_signal_t = signal<void()>;
+  using keydown_ampersand_repeat_slot_t
+    = keydown_ampersand_repeat_signal_t::slot_type;
+  using keydown_quote_repeat_signal_t = signal<void()>;
+  using keydown_quote_repeat_slot_t = keydown_quote_repeat_signal_t::slot_type;
+  using keydown_leftparen_repeat_signal_t = signal<void()>;
+  using keydown_leftparen_repeat_slot_t
+    = keydown_leftparen_repeat_signal_t::slot_type;
+  using keydown_rightparen_repeat_signal_t = signal<void()>;
+  using keydown_rightparen_repeat_slot_t
+    = keydown_rightparen_repeat_signal_t::slot_type;
+  using keydown_asterisk_repeat_signal_t = signal<void()>;
+  using keydown_asterisk_repeat_slot_t
+    = keydown_asterisk_repeat_signal_t::slot_type;
+  using keydown_plus_repeat_signal_t = signal<void()>;
+  using keydown_plus_repeat_slot_t = keydown_plus_repeat_signal_t::slot_type;
+  using keydown_comma_repeat_signal_t = signal<void()>;
+  using keydown_comma_repeat_slot_t = keydown_comma_repeat_signal_t::slot_type;
+  using keydown_minus_repeat_signal_t = signal<void()>;
+  using keydown_minus_repeat_slot_t = keydown_minus_repeat_signal_t::slot_type;
+  using keydown_period_repeat_signal_t = signal<void()>;
+  using keydown_period_repeat_slot_t
+    = keydown_period_repeat_signal_t::slot_type;
+  using keydown_slash_repeat_signal_t = signal<void()>;
+  using keydown_slash_repeat_slot_t = keydown_slash_repeat_signal_t::slot_type;
+  using keydown_0_repeat_signal_t = signal<void()>;
+  using keydown_0_repeat_slot_t = keydown_0_repeat_signal_t::slot_type;
+  using keydown_1_repeat_signal_t = signal<void()>;
+  using keydown_1_repeat_slot_t = keydown_1_repeat_signal_t::slot_type;
+  using keydown_2_repeat_signal_t = signal<void()>;
+  using keydown_2_repeat_slot_t = keydown_2_repeat_signal_t::slot_type;
+  using keydown_3_repeat_signal_t = signal<void()>;
+  using keydown_3_repeat_slot_t = keydown_3_repeat_signal_t::slot_type;
+  using keydown_4_repeat_signal_t = signal<void()>;
+  using keydown_4_repeat_slot_t = keydown_4_repeat_signal_t::slot_type;
+  using keydown_5_repeat_signal_t = signal<void()>;
+  using keydown_5_repeat_slot_t = keydown_5_repeat_signal_t::slot_type;
+  using keydown_6_repeat_signal_t = signal<void()>;
+  using keydown_6_repeat_slot_t = keydown_6_repeat_signal_t::slot_type;
+  using keydown_7_repeat_signal_t = signal<void()>;
+  using keydown_7_repeat_slot_t = keydown_7_repeat_signal_t::slot_type;
+  using keydown_8_repeat_signal_t = signal<void()>;
+  using keydown_8_repeat_slot_t = keydown_8_repeat_signal_t::slot_type;
+  using keydown_9_repeat_signal_t = signal<void()>;
+  using keydown_9_repeat_slot_t = keydown_9_repeat_signal_t::slot_type;
+  using keydown_colon_repeat_signal_t = signal<void()>;
+  using keydown_colon_repeat_slot_t = keydown_colon_repeat_signal_t::slot_type;
+  using keydown_semicolon_repeat_signal_t = signal<void()>;
+  using keydown_semicolon_repeat_slot_t
+    = keydown_semicolon_repeat_signal_t::slot_type;
+  using keydown_less_repeat_signal_t = signal<void()>;
+  using keydown_less_repeat_slot_t = keydown_less_repeat_signal_t::slot_type;
+  using keydown_equals_repeat_signal_t = signal<void()>;
+  using keydown_equals_repeat_slot_t
+    = keydown_equals_repeat_signal_t::slot_type;
+  using keydown_greater_repeat_signal_t = signal<void()>;
+  using keydown_greater_repeat_slot_t
+    = keydown_greater_repeat_signal_t::slot_type;
+  using keydown_question_repeat_signal_t = signal<void()>;
+  using keydown_question_repeat_slot_t
+    = keydown_question_repeat_signal_t::slot_type;
+  using keydown_at_repeat_signal_t = signal<void()>;
+  using keydown_at_repeat_slot_t = keydown_at_repeat_signal_t::slot_type;
+  using keydown_leftbracket_repeat_signal_t = signal<void()>;
+  using keydown_leftbracket_repeat_slot_t
+    = keydown_leftbracket_repeat_signal_t::slot_type;
+  using keydown_backslash_repeat_signal_t = signal<void()>;
+  using keydown_backslash_repeat_slot_t
+    = keydown_backslash_repeat_signal_t::slot_type;
+  using keydown_rightbracket_repeat_signal_t = signal<void()>;
+  using keydown_rightbracket_repeat_slot_t
+    = keydown_rightbracket_repeat_signal_t::slot_type;
+  using keydown_caret_repeat_signal_t = signal<void()>;
+  using keydown_caret_repeat_slot_t = keydown_caret_repeat_signal_t::slot_type;
+  using keydown_underscore_repeat_signal_t = signal<void()>;
+  using keydown_underscore_repeat_slot_t
+    = keydown_underscore_repeat_signal_t::slot_type;
+  using keydown_backquote_repeat_signal_t = signal<void()>;
+  using keydown_backquote_repeat_slot_t
+    = keydown_backquote_repeat_signal_t::slot_type;
+  using keydown_a_repeat_signal_t = signal<void()>;
+  using keydown_a_repeat_slot_t = keydown_a_repeat_signal_t::slot_type;
+  using keydown_b_repeat_signal_t = signal<void()>;
+  using keydown_b_repeat_slot_t = keydown_b_repeat_signal_t::slot_type;
+  using keydown_c_repeat_signal_t = signal<void()>;
+  using keydown_c_repeat_slot_t = keydown_c_repeat_signal_t::slot_type;
+  using keydown_d_repeat_signal_t = signal<void()>;
+  using keydown_d_repeat_slot_t = keydown_d_repeat_signal_t::slot_type;
+  using keydown_e_repeat_signal_t = signal<void()>;
+  using keydown_e_repeat_slot_t = keydown_e_repeat_signal_t::slot_type;
+  using keydown_f_repeat_signal_t = signal<void()>;
+  using keydown_f_repeat_slot_t = keydown_f_repeat_signal_t::slot_type;
+  using keydown_g_repeat_signal_t = signal<void()>;
+  using keydown_g_repeat_slot_t = keydown_g_repeat_signal_t::slot_type;
+  using keydown_h_repeat_signal_t = signal<void()>;
+  using keydown_h_repeat_slot_t = keydown_h_repeat_signal_t::slot_type;
+  using keydown_i_repeat_signal_t = signal<void()>;
+  using keydown_i_repeat_slot_t = keydown_i_repeat_signal_t::slot_type;
+  using keydown_j_repeat_signal_t = signal<void()>;
+  using keydown_j_repeat_slot_t = keydown_j_repeat_signal_t::slot_type;
+  using keydown_k_repeat_signal_t = signal<void()>;
+  using keydown_k_repeat_slot_t = keydown_k_repeat_signal_t::slot_type;
+  using keydown_l_repeat_signal_t = signal<void()>;
+  using keydown_l_repeat_slot_t = keydown_l_repeat_signal_t::slot_type;
+  using keydown_m_repeat_signal_t = signal<void()>;
+  using keydown_m_repeat_slot_t = keydown_m_repeat_signal_t::slot_type;
+  using keydown_n_repeat_signal_t = signal<void()>;
+  using keydown_n_repeat_slot_t = keydown_n_repeat_signal_t::slot_type;
+  using keydown_o_repeat_signal_t = signal<void()>;
+  using keydown_o_repeat_slot_t = keydown_o_repeat_signal_t::slot_type;
+  using keydown_p_repeat_signal_t = signal<void()>;
+  using keydown_p_repeat_slot_t = keydown_p_repeat_signal_t::slot_type;
+  using keydown_q_repeat_signal_t = signal<void()>;
+  using keydown_q_repeat_slot_t = keydown_q_repeat_signal_t::slot_type;
+  using keydown_r_repeat_signal_t = signal<void()>;
+  using keydown_r_repeat_slot_t = keydown_r_repeat_signal_t::slot_type;
+  using keydown_s_repeat_signal_t = signal<void()>;
+  using keydown_s_repeat_slot_t = keydown_s_repeat_signal_t::slot_type;
+  using keydown_t_repeat_signal_t = signal<void()>;
+  using keydown_t_repeat_slot_t = keydown_t_repeat_signal_t::slot_type;
+  using keydown_u_repeat_signal_t = signal<void()>;
+  using keydown_u_repeat_slot_t = keydown_u_repeat_signal_t::slot_type;
+  using keydown_v_repeat_signal_t = signal<void()>;
+  using keydown_v_repeat_slot_t = keydown_v_repeat_signal_t::slot_type;
+  using keydown_w_repeat_signal_t = signal<void()>;
+  using keydown_w_repeat_slot_t = keydown_w_repeat_signal_t::slot_type;
+  using keydown_x_repeat_signal_t = signal<void()>;
+  using keydown_x_repeat_slot_t = keydown_x_repeat_signal_t::slot_type;
+  using keydown_y_repeat_signal_t = signal<void()>;
+  using keydown_y_repeat_slot_t = keydown_y_repeat_signal_t::slot_type;
+  using keydown_z_repeat_signal_t = signal<void()>;
+  using keydown_z_repeat_slot_t = keydown_z_repeat_signal_t::slot_type;
+  using keydown_delete_repeat_signal_t = signal<void()>;
+  using keydown_delete_repeat_slot_t
+    = keydown_delete_repeat_signal_t::slot_type;
+  using keydown_capslock_repeat_signal_t = signal<void()>;
+  using keydown_capslock_repeat_slot_t
+    = keydown_capslock_repeat_signal_t::slot_type;
+  using keydown_f1_repeat_signal_t = signal<void()>;
+  using keydown_f1_repeat_slot_t = keydown_f1_repeat_signal_t::slot_type;
+  using keydown_f2_repeat_signal_t = signal<void()>;
+  using keydown_f2_repeat_slot_t = keydown_f2_repeat_signal_t::slot_type;
+  using keydown_f3_repeat_signal_t = signal<void()>;
+  using keydown_f3_repeat_slot_t = keydown_f3_repeat_signal_t::slot_type;
+  using keydown_f4_repeat_signal_t = signal<void()>;
+  using keydown_f4_repeat_slot_t = keydown_f4_repeat_signal_t::slot_type;
+  using keydown_f5_repeat_signal_t = signal<void()>;
+  using keydown_f5_repeat_slot_t = keydown_f5_repeat_signal_t::slot_type;
+  using keydown_f6_repeat_signal_t = signal<void()>;
+  using keydown_f6_repeat_slot_t = keydown_f6_repeat_signal_t::slot_type;
+  using keydown_f7_repeat_signal_t = signal<void()>;
+  using keydown_f7_repeat_slot_t = keydown_f7_repeat_signal_t::slot_type;
+  using keydown_f8_repeat_signal_t = signal<void()>;
+  using keydown_f8_repeat_slot_t = keydown_f8_repeat_signal_t::slot_type;
+  using keydown_f9_repeat_signal_t = signal<void()>;
+  using keydown_f9_repeat_slot_t = keydown_f9_repeat_signal_t::slot_type;
+  using keydown_f10_repeat_signal_t = signal<void()>;
+  using keydown_f10_repeat_slot_t = keydown_f10_repeat_signal_t::slot_type;
+  using keydown_f11_repeat_signal_t = signal<void()>;
+  using keydown_f11_repeat_slot_t = keydown_f11_repeat_signal_t::slot_type;
+  using keydown_f12_repeat_signal_t = signal<void()>;
+  using keydown_f12_repeat_slot_t = keydown_f12_repeat_signal_t::slot_type;
+  using keydown_printscreen_repeat_signal_t = signal<void()>;
+  using keydown_printscreen_repeat_slot_t
+    = keydown_printscreen_repeat_signal_t::slot_type;
+  using keydown_scrolllock_repeat_signal_t = signal<void()>;
+  using keydown_scrolllock_repeat_slot_t
+    = keydown_scrolllock_repeat_signal_t::slot_type;
+  using keydown_pause_repeat_signal_t = signal<void()>;
+  using keydown_pause_repeat_slot_t = keydown_pause_repeat_signal_t::slot_type;
+  using keydown_insert_repeat_signal_t = signal<void()>;
+  using keydown_insert_repeat_slot_t
+    = keydown_insert_repeat_signal_t::slot_type;
+  using keydown_home_repeat_signal_t = signal<void()>;
+  using keydown_home_repeat_slot_t = keydown_home_repeat_signal_t::slot_type;
+  using keydown_pageup_repeat_signal_t = signal<void()>;
+  using keydown_pageup_repeat_slot_t
+    = keydown_pageup_repeat_signal_t::slot_type;
+  using keydown_end_repeat_signal_t = signal<void()>;
+  using keydown_end_repeat_slot_t = keydown_end_repeat_signal_t::slot_type;
+  using keydown_pagedown_repeat_signal_t = signal<void()>;
+  using keydown_pagedown_repeat_slot_t
+    = keydown_pagedown_repeat_signal_t::slot_type;
+  using keydown_right_repeat_signal_t = signal<void()>;
+  using keydown_right_repeat_slot_t = keydown_right_repeat_signal_t::slot_type;
+  using keydown_left_repeat_signal_t = signal<void()>;
+  using keydown_left_repeat_slot_t = keydown_left_repeat_signal_t::slot_type;
+  using keydown_down_repeat_signal_t = signal<void()>;
+  using keydown_down_repeat_slot_t = keydown_down_repeat_signal_t::slot_type;
+  using keydown_up_repeat_signal_t = signal<void()>;
+  using keydown_up_repeat_slot_t = keydown_up_repeat_signal_t::slot_type;
+  using keydown_numlockclear_repeat_signal_t = signal<void()>;
+  using keydown_numlockclear_repeat_slot_t
+    = keydown_numlockclear_repeat_signal_t::slot_type;
+  using keydown_kp_divide_repeat_signal_t = signal<void()>;
+  using keydown_kp_divide_repeat_slot_t
+    = keydown_kp_divide_repeat_signal_t::slot_type;
+  using keydown_kp_multiply_repeat_signal_t = signal<void()>;
+  using keydown_kp_multiply_repeat_slot_t
+    = keydown_kp_multiply_repeat_signal_t::slot_type;
+  using keydown_kp_minus_repeat_signal_t = signal<void()>;
+  using keydown_kp_minus_repeat_slot_t
+    = keydown_kp_minus_repeat_signal_t::slot_type;
+  using keydown_kp_plus_repeat_signal_t = signal<void()>;
+  using keydown_kp_plus_repeat_slot_t
+    = keydown_kp_plus_repeat_signal_t::slot_type;
+  using keydown_kp_enter_repeat_signal_t = signal<void()>;
+  using keydown_kp_enter_repeat_slot_t
+    = keydown_kp_enter_repeat_signal_t::slot_type;
+  using keydown_kp_1_repeat_signal_t = signal<void()>;
+  using keydown_kp_1_repeat_slot_t = keydown_kp_1_repeat_signal_t::slot_type;
+  using keydown_kp_2_repeat_signal_t = signal<void()>;
+  using keydown_kp_2_repeat_slot_t = keydown_kp_2_repeat_signal_t::slot_type;
+  using keydown_kp_3_repeat_signal_t = signal<void()>;
+  using keydown_kp_3_repeat_slot_t = keydown_kp_3_repeat_signal_t::slot_type;
+  using keydown_kp_4_repeat_signal_t = signal<void()>;
+  using keydown_kp_4_repeat_slot_t = keydown_kp_4_repeat_signal_t::slot_type;
+  using keydown_kp_5_repeat_signal_t = signal<void()>;
+  using keydown_kp_5_repeat_slot_t = keydown_kp_5_repeat_signal_t::slot_type;
+  using keydown_kp_6_repeat_signal_t = signal<void()>;
+  using keydown_kp_6_repeat_slot_t = keydown_kp_6_repeat_signal_t::slot_type;
+  using keydown_kp_7_repeat_signal_t = signal<void()>;
+  using keydown_kp_7_repeat_slot_t = keydown_kp_7_repeat_signal_t::slot_type;
+  using keydown_kp_8_repeat_signal_t = signal<void()>;
+  using keydown_kp_8_repeat_slot_t = keydown_kp_8_repeat_signal_t::slot_type;
+  using keydown_kp_9_repeat_signal_t = signal<void()>;
+  using keydown_kp_9_repeat_slot_t = keydown_kp_9_repeat_signal_t::slot_type;
+  using keydown_kp_0_repeat_signal_t = signal<void()>;
+  using keydown_kp_0_repeat_slot_t = keydown_kp_0_repeat_signal_t::slot_type;
+  using keydown_kp_period_repeat_signal_t = signal<void()>;
+  using keydown_kp_period_repeat_slot_t
+    = keydown_kp_period_repeat_signal_t::slot_type;
+  using keydown_application_repeat_signal_t = signal<void()>;
+  using keydown_application_repeat_slot_t
+    = keydown_application_repeat_signal_t::slot_type;
+  using keydown_power_repeat_signal_t = signal<void()>;
+  using keydown_power_repeat_slot_t = keydown_power_repeat_signal_t::slot_type;
+  using keydown_kp_equals_repeat_signal_t = signal<void()>;
+  using keydown_kp_equals_repeat_slot_t
+    = keydown_kp_equals_repeat_signal_t::slot_type;
+  using keydown_f13_repeat_signal_t = signal<void()>;
+  using keydown_f13_repeat_slot_t = keydown_f13_repeat_signal_t::slot_type;
+  using keydown_f14_repeat_signal_t = signal<void()>;
+  using keydown_f14_repeat_slot_t = keydown_f14_repeat_signal_t::slot_type;
+  using keydown_f15_repeat_signal_t = signal<void()>;
+  using keydown_f15_repeat_slot_t = keydown_f15_repeat_signal_t::slot_type;
+  using keydown_f16_repeat_signal_t = signal<void()>;
+  using keydown_f16_repeat_slot_t = keydown_f16_repeat_signal_t::slot_type;
+  using keydown_f17_repeat_signal_t = signal<void()>;
+  using keydown_f17_repeat_slot_t = keydown_f17_repeat_signal_t::slot_type;
+  using keydown_f18_repeat_signal_t = signal<void()>;
+  using keydown_f18_repeat_slot_t = keydown_f18_repeat_signal_t::slot_type;
+  using keydown_f19_repeat_signal_t = signal<void()>;
+  using keydown_f19_repeat_slot_t = keydown_f19_repeat_signal_t::slot_type;
+  using keydown_f20_repeat_signal_t = signal<void()>;
+  using keydown_f20_repeat_slot_t = keydown_f20_repeat_signal_t::slot_type;
+  using keydown_f21_repeat_signal_t = signal<void()>;
+  using keydown_f21_repeat_slot_t = keydown_f21_repeat_signal_t::slot_type;
+  using keydown_f22_repeat_signal_t = signal<void()>;
+  using keydown_f22_repeat_slot_t = keydown_f22_repeat_signal_t::slot_type;
+  using keydown_f23_repeat_signal_t = signal<void()>;
+  using keydown_f23_repeat_slot_t = keydown_f23_repeat_signal_t::slot_type;
+  using keydown_f24_repeat_signal_t = signal<void()>;
+  using keydown_f24_repeat_slot_t = keydown_f24_repeat_signal_t::slot_type;
+  using keydown_execute_repeat_signal_t = signal<void()>;
+  using keydown_execute_repeat_slot_t
+    = keydown_execute_repeat_signal_t::slot_type;
+  using keydown_help_repeat_signal_t = signal<void()>;
+  using keydown_help_repeat_slot_t = keydown_help_repeat_signal_t::slot_type;
+  using keydown_menu_repeat_signal_t = signal<void()>;
+  using keydown_menu_repeat_slot_t = keydown_menu_repeat_signal_t::slot_type;
+  using keydown_select_repeat_signal_t = signal<void()>;
+  using keydown_select_repeat_slot_t
+    = keydown_select_repeat_signal_t::slot_type;
+  using keydown_stop_repeat_signal_t = signal<void()>;
+  using keydown_stop_repeat_slot_t = keydown_stop_repeat_signal_t::slot_type;
+  using keydown_again_repeat_signal_t = signal<void()>;
+  using keydown_again_repeat_slot_t = keydown_again_repeat_signal_t::slot_type;
+  using keydown_undo_repeat_signal_t = signal<void()>;
+  using keydown_undo_repeat_slot_t = keydown_undo_repeat_signal_t::slot_type;
+  using keydown_cut_repeat_signal_t = signal<void()>;
+  using keydown_cut_repeat_slot_t = keydown_cut_repeat_signal_t::slot_type;
+  using keydown_copy_repeat_signal_t = signal<void()>;
+  using keydown_copy_repeat_slot_t = keydown_copy_repeat_signal_t::slot_type;
+  using keydown_paste_repeat_signal_t = signal<void()>;
+  using keydown_paste_repeat_slot_t = keydown_paste_repeat_signal_t::slot_type;
+  using keydown_find_repeat_signal_t = signal<void()>;
+  using keydown_find_repeat_slot_t = keydown_find_repeat_signal_t::slot_type;
+  using keydown_mute_repeat_signal_t = signal<void()>;
+  using keydown_mute_repeat_slot_t = keydown_mute_repeat_signal_t::slot_type;
+  using keydown_volumeup_repeat_signal_t = signal<void()>;
+  using keydown_volumeup_repeat_slot_t
+    = keydown_volumeup_repeat_signal_t::slot_type;
+  using keydown_volumedown_repeat_signal_t = signal<void()>;
+  using keydown_volumedown_repeat_slot_t
+    = keydown_volumedown_repeat_signal_t::slot_type;
+  using keydown_kp_comma_repeat_signal_t = signal<void()>;
+  using keydown_kp_comma_repeat_slot_t
+    = keydown_kp_comma_repeat_signal_t::slot_type;
+  using keydown_kp_equalsas400_repeat_signal_t = signal<void()>;
+  using keydown_kp_equalsas400_repeat_slot_t
+    = keydown_kp_equalsas400_repeat_signal_t::slot_type;
+  using keydown_alterase_repeat_signal_t = signal<void()>;
+  using keydown_alterase_repeat_slot_t
+    = keydown_alterase_repeat_signal_t::slot_type;
+  using keydown_sysreq_repeat_signal_t = signal<void()>;
+  using keydown_sysreq_repeat_slot_t
+    = keydown_sysreq_repeat_signal_t::slot_type;
+  using keydown_cancel_repeat_signal_t = signal<void()>;
+  using keydown_cancel_repeat_slot_t
+    = keydown_cancel_repeat_signal_t::slot_type;
+  using keydown_clear_repeat_signal_t = signal<void()>;
+  using keydown_clear_repeat_slot_t = keydown_clear_repeat_signal_t::slot_type;
+  using keydown_prior_repeat_signal_t = signal<void()>;
+  using keydown_prior_repeat_slot_t = keydown_prior_repeat_signal_t::slot_type;
+  using keydown_return2_repeat_signal_t = signal<void()>;
+  using keydown_return2_repeat_slot_t
+    = keydown_return2_repeat_signal_t::slot_type;
+  using keydown_separator_repeat_signal_t = signal<void()>;
+  using keydown_separator_repeat_slot_t
+    = keydown_separator_repeat_signal_t::slot_type;
+  using keydown_out_repeat_signal_t = signal<void()>;
+  using keydown_out_repeat_slot_t = keydown_out_repeat_signal_t::slot_type;
+  using keydown_oper_repeat_signal_t = signal<void()>;
+  using keydown_oper_repeat_slot_t = keydown_oper_repeat_signal_t::slot_type;
+  using keydown_clearagain_repeat_signal_t = signal<void()>;
+  using keydown_clearagain_repeat_slot_t
+    = keydown_clearagain_repeat_signal_t::slot_type;
+  using keydown_crsel_repeat_signal_t = signal<void()>;
+  using keydown_crsel_repeat_slot_t = keydown_crsel_repeat_signal_t::slot_type;
+  using keydown_exsel_repeat_signal_t = signal<void()>;
+  using keydown_exsel_repeat_slot_t = keydown_exsel_repeat_signal_t::slot_type;
+  using keydown_kp_00_repeat_signal_t = signal<void()>;
+  using keydown_kp_00_repeat_slot_t = keydown_kp_00_repeat_signal_t::slot_type;
+  using keydown_kp_000_repeat_signal_t = signal<void()>;
+  using keydown_kp_000_repeat_slot_t
+    = keydown_kp_000_repeat_signal_t::slot_type;
+  using keydown_thousandsseparator_repeat_signal_t = signal<void()>;
+  using keydown_thousandsseparator_repeat_slot_t
+    = keydown_thousandsseparator_repeat_signal_t::slot_type;
+  using keydown_decimalseparator_repeat_signal_t = signal<void()>;
+  using keydown_decimalseparator_repeat_slot_t
+    = keydown_decimalseparator_repeat_signal_t::slot_type;
+  using keydown_currencyunit_repeat_signal_t = signal<void()>;
+  using keydown_currencyunit_repeat_slot_t
+    = keydown_currencyunit_repeat_signal_t::slot_type;
+  using keydown_currencysubunit_repeat_signal_t = signal<void()>;
+  using keydown_currencysubunit_repeat_slot_t
+    = keydown_currencysubunit_repeat_signal_t::slot_type;
+  using keydown_kp_leftparen_repeat_signal_t = signal<void()>;
+  using keydown_kp_leftparen_repeat_slot_t
+    = keydown_kp_leftparen_repeat_signal_t::slot_type;
+  using keydown_kp_rightparen_repeat_signal_t = signal<void()>;
+  using keydown_kp_rightparen_repeat_slot_t
+    = keydown_kp_rightparen_repeat_signal_t::slot_type;
+  using keydown_kp_leftbrace_repeat_signal_t = signal<void()>;
+  using keydown_kp_leftbrace_repeat_slot_t
+    = keydown_kp_leftbrace_repeat_signal_t::slot_type;
+  using keydown_kp_rightbrace_repeat_signal_t = signal<void()>;
+  using keydown_kp_rightbrace_repeat_slot_t
+    = keydown_kp_rightbrace_repeat_signal_t::slot_type;
+  using keydown_kp_tab_repeat_signal_t = signal<void()>;
+  using keydown_kp_tab_repeat_slot_t
+    = keydown_kp_tab_repeat_signal_t::slot_type;
+  using keydown_kp_backspace_repeat_signal_t = signal<void()>;
+  using keydown_kp_backspace_repeat_slot_t
+    = keydown_kp_backspace_repeat_signal_t::slot_type;
+  using keydown_kp_a_repeat_signal_t = signal<void()>;
+  using keydown_kp_a_repeat_slot_t = keydown_kp_a_repeat_signal_t::slot_type;
+  using keydown_kp_b_repeat_signal_t = signal<void()>;
+  using keydown_kp_b_repeat_slot_t = keydown_kp_b_repeat_signal_t::slot_type;
+  using keydown_kp_c_repeat_signal_t = signal<void()>;
+  using keydown_kp_c_repeat_slot_t = keydown_kp_c_repeat_signal_t::slot_type;
+  using keydown_kp_d_repeat_signal_t = signal<void()>;
+  using keydown_kp_d_repeat_slot_t = keydown_kp_d_repeat_signal_t::slot_type;
+  using keydown_kp_e_repeat_signal_t = signal<void()>;
+  using keydown_kp_e_repeat_slot_t = keydown_kp_e_repeat_signal_t::slot_type;
+  using keydown_kp_f_repeat_signal_t = signal<void()>;
+  using keydown_kp_f_repeat_slot_t = keydown_kp_f_repeat_signal_t::slot_type;
+  using keydown_kp_xor_repeat_signal_t = signal<void()>;
+  using keydown_kp_xor_repeat_slot_t
+    = keydown_kp_xor_repeat_signal_t::slot_type;
+  using keydown_kp_power_repeat_signal_t = signal<void()>;
+  using keydown_kp_power_repeat_slot_t
+    = keydown_kp_power_repeat_signal_t::slot_type;
+  using keydown_kp_percent_repeat_signal_t = signal<void()>;
+  using keydown_kp_percent_repeat_slot_t
+    = keydown_kp_percent_repeat_signal_t::slot_type;
+  using keydown_kp_less_repeat_signal_t = signal<void()>;
+  using keydown_kp_less_repeat_slot_t
+    = keydown_kp_less_repeat_signal_t::slot_type;
+  using keydown_kp_greater_repeat_signal_t = signal<void()>;
+  using keydown_kp_greater_repeat_slot_t
+    = keydown_kp_greater_repeat_signal_t::slot_type;
+  using keydown_kp_ampersand_repeat_signal_t = signal<void()>;
+  using keydown_kp_ampersand_repeat_slot_t
+    = keydown_kp_ampersand_repeat_signal_t::slot_type;
+  using keydown_kp_dblampersand_repeat_signal_t = signal<void()>;
+  using keydown_kp_dblampersand_repeat_slot_t
+    = keydown_kp_dblampersand_repeat_signal_t::slot_type;
+  using keydown_kp_verticalbar_repeat_signal_t = signal<void()>;
+  using keydown_kp_verticalbar_repeat_slot_t
+    = keydown_kp_verticalbar_repeat_signal_t::slot_type;
+  using keydown_kp_dblverticalbar_repeat_signal_t = signal<void()>;
+  using keydown_kp_dblverticalbar_repeat_slot_t
+    = keydown_kp_dblverticalbar_repeat_signal_t::slot_type;
+  using keydown_kp_colon_repeat_signal_t = signal<void()>;
+  using keydown_kp_colon_repeat_slot_t
+    = keydown_kp_colon_repeat_signal_t::slot_type;
+  using keydown_kp_hash_repeat_signal_t = signal<void()>;
+  using keydown_kp_hash_repeat_slot_t
+    = keydown_kp_hash_repeat_signal_t::slot_type;
+  using keydown_kp_space_repeat_signal_t = signal<void()>;
+  using keydown_kp_space_repeat_slot_t
+    = keydown_kp_space_repeat_signal_t::slot_type;
+  using keydown_kp_at_repeat_signal_t = signal<void()>;
+  using keydown_kp_at_repeat_slot_t = keydown_kp_at_repeat_signal_t::slot_type;
+  using keydown_kp_exclam_repeat_signal_t = signal<void()>;
+  using keydown_kp_exclam_repeat_slot_t
+    = keydown_kp_exclam_repeat_signal_t::slot_type;
+  using keydown_kp_memstore_repeat_signal_t = signal<void()>;
+  using keydown_kp_memstore_repeat_slot_t
+    = keydown_kp_memstore_repeat_signal_t::slot_type;
+  using keydown_kp_memrecall_repeat_signal_t = signal<void()>;
+  using keydown_kp_memrecall_repeat_slot_t
+    = keydown_kp_memrecall_repeat_signal_t::slot_type;
+  using keydown_kp_memclear_repeat_signal_t = signal<void()>;
+  using keydown_kp_memclear_repeat_slot_t
+    = keydown_kp_memclear_repeat_signal_t::slot_type;
+  using keydown_kp_memadd_repeat_signal_t = signal<void()>;
+  using keydown_kp_memadd_repeat_slot_t
+    = keydown_kp_memadd_repeat_signal_t::slot_type;
+  using keydown_kp_memsubtract_repeat_signal_t = signal<void()>;
+  using keydown_kp_memsubtract_repeat_slot_t
+    = keydown_kp_memsubtract_repeat_signal_t::slot_type;
+  using keydown_kp_memmultiply_repeat_signal_t = signal<void()>;
+  using keydown_kp_memmultiply_repeat_slot_t
+    = keydown_kp_memmultiply_repeat_signal_t::slot_type;
+  using keydown_kp_memdivide_repeat_signal_t = signal<void()>;
+  using keydown_kp_memdivide_repeat_slot_t
+    = keydown_kp_memdivide_repeat_signal_t::slot_type;
+  using keydown_kp_plusminus_repeat_signal_t = signal<void()>;
+  using keydown_kp_plusminus_repeat_slot_t
+    = keydown_kp_plusminus_repeat_signal_t::slot_type;
+  using keydown_kp_clear_repeat_signal_t = signal<void()>;
+  using keydown_kp_clear_repeat_slot_t
+    = keydown_kp_clear_repeat_signal_t::slot_type;
+  using keydown_kp_clearentry_repeat_signal_t = signal<void()>;
+  using keydown_kp_clearentry_repeat_slot_t
+    = keydown_kp_clearentry_repeat_signal_t::slot_type;
+  using keydown_kp_binary_repeat_signal_t = signal<void()>;
+  using keydown_kp_binary_repeat_slot_t
+    = keydown_kp_binary_repeat_signal_t::slot_type;
+  using keydown_kp_octal_repeat_signal_t = signal<void()>;
+  using keydown_kp_octal_repeat_slot_t
+    = keydown_kp_octal_repeat_signal_t::slot_type;
+  using keydown_kp_decimal_repeat_signal_t = signal<void()>;
+  using keydown_kp_decimal_repeat_slot_t
+    = keydown_kp_decimal_repeat_signal_t::slot_type;
+  using keydown_kp_hexadecimal_repeat_signal_t = signal<void()>;
+  using keydown_kp_hexadecimal_repeat_slot_t
+    = keydown_kp_hexadecimal_repeat_signal_t::slot_type;
+  using keydown_lctrl_repeat_signal_t = signal<void()>;
+  using keydown_lctrl_repeat_slot_t = keydown_lctrl_repeat_signal_t::slot_type;
+  using keydown_lshift_repeat_signal_t = signal<void()>;
+  using keydown_lshift_repeat_slot_t
+    = keydown_lshift_repeat_signal_t::slot_type;
+  using keydown_lalt_repeat_signal_t = signal<void()>;
+  using keydown_lalt_repeat_slot_t = keydown_lalt_repeat_signal_t::slot_type;
+  using keydown_lgui_repeat_signal_t = signal<void()>;
+  using keydown_lgui_repeat_slot_t = keydown_lgui_repeat_signal_t::slot_type;
+  using keydown_rctrl_repeat_signal_t = signal<void()>;
+  using keydown_rctrl_repeat_slot_t = keydown_rctrl_repeat_signal_t::slot_type;
+  using keydown_rshift_repeat_signal_t = signal<void()>;
+  using keydown_rshift_repeat_slot_t
+    = keydown_rshift_repeat_signal_t::slot_type;
+  using keydown_ralt_repeat_signal_t = signal<void()>;
+  using keydown_ralt_repeat_slot_t = keydown_ralt_repeat_signal_t::slot_type;
+  using keydown_rgui_repeat_signal_t = signal<void()>;
+  using keydown_rgui_repeat_slot_t = keydown_rgui_repeat_signal_t::slot_type;
+  using keydown_mode_repeat_signal_t = signal<void()>;
+  using keydown_mode_repeat_slot_t = keydown_mode_repeat_signal_t::slot_type;
+  using keydown_audionext_repeat_signal_t = signal<void()>;
+  using keydown_audionext_repeat_slot_t
+    = keydown_audionext_repeat_signal_t::slot_type;
+  using keydown_audioprev_repeat_signal_t = signal<void()>;
+  using keydown_audioprev_repeat_slot_t
+    = keydown_audioprev_repeat_signal_t::slot_type;
+  using keydown_audiostop_repeat_signal_t = signal<void()>;
+  using keydown_audiostop_repeat_slot_t
+    = keydown_audiostop_repeat_signal_t::slot_type;
+  using keydown_audioplay_repeat_signal_t = signal<void()>;
+  using keydown_audioplay_repeat_slot_t
+    = keydown_audioplay_repeat_signal_t::slot_type;
+  using keydown_audiomute_repeat_signal_t = signal<void()>;
+  using keydown_audiomute_repeat_slot_t
+    = keydown_audiomute_repeat_signal_t::slot_type;
+  using keydown_mediaselect_repeat_signal_t = signal<void()>;
+  using keydown_mediaselect_repeat_slot_t
+    = keydown_mediaselect_repeat_signal_t::slot_type;
+  using keydown_www_repeat_signal_t = signal<void()>;
+  using keydown_www_repeat_slot_t = keydown_www_repeat_signal_t::slot_type;
+  using keydown_mail_repeat_signal_t = signal<void()>;
+  using keydown_mail_repeat_slot_t = keydown_mail_repeat_signal_t::slot_type;
+  using keydown_calculator_repeat_signal_t = signal<void()>;
+  using keydown_calculator_repeat_slot_t
+    = keydown_calculator_repeat_signal_t::slot_type;
+  using keydown_computer_repeat_signal_t = signal<void()>;
+  using keydown_computer_repeat_slot_t
+    = keydown_computer_repeat_signal_t::slot_type;
+  using keydown_ac_search_repeat_signal_t = signal<void()>;
+  using keydown_ac_search_repeat_slot_t
+    = keydown_ac_search_repeat_signal_t::slot_type;
+  using keydown_ac_home_repeat_signal_t = signal<void()>;
+  using keydown_ac_home_repeat_slot_t
+    = keydown_ac_home_repeat_signal_t::slot_type;
+  using keydown_ac_back_repeat_signal_t = signal<void()>;
+  using keydown_ac_back_repeat_slot_t
+    = keydown_ac_back_repeat_signal_t::slot_type;
+  using keydown_ac_forward_repeat_signal_t = signal<void()>;
+  using keydown_ac_forward_repeat_slot_t
+    = keydown_ac_forward_repeat_signal_t::slot_type;
+  using keydown_ac_stop_repeat_signal_t = signal<void()>;
+  using keydown_ac_stop_repeat_slot_t
+    = keydown_ac_stop_repeat_signal_t::slot_type;
+  using keydown_ac_refresh_repeat_signal_t = signal<void()>;
+  using keydown_ac_refresh_repeat_slot_t
+    = keydown_ac_refresh_repeat_signal_t::slot_type;
+  using keydown_ac_bookmarks_repeat_signal_t = signal<void()>;
+  using keydown_ac_bookmarks_repeat_slot_t
+    = keydown_ac_bookmarks_repeat_signal_t::slot_type;
+  using keydown_brightnessdown_repeat_signal_t = signal<void()>;
+  using keydown_brightnessdown_repeat_slot_t
+    = keydown_brightnessdown_repeat_signal_t::slot_type;
+  using keydown_brightnessup_repeat_signal_t = signal<void()>;
+  using keydown_brightnessup_repeat_slot_t
+    = keydown_brightnessup_repeat_signal_t::slot_type;
+  using keydown_displayswitch_repeat_signal_t = signal<void()>;
+  using keydown_displayswitch_repeat_slot_t
+    = keydown_displayswitch_repeat_signal_t::slot_type;
+  using keydown_kbdillumtoggle_repeat_signal_t = signal<void()>;
+  using keydown_kbdillumtoggle_repeat_slot_t
+    = keydown_kbdillumtoggle_repeat_signal_t::slot_type;
+  using keydown_kbdillumdown_repeat_signal_t = signal<void()>;
+  using keydown_kbdillumdown_repeat_slot_t
+    = keydown_kbdillumdown_repeat_signal_t::slot_type;
+  using keydown_kbdillumup_repeat_signal_t = signal<void()>;
+  using keydown_kbdillumup_repeat_slot_t
+    = keydown_kbdillumup_repeat_signal_t::slot_type;
+  using keydown_eject_repeat_signal_t = signal<void()>;
+  using keydown_eject_repeat_slot_t = keydown_eject_repeat_signal_t::slot_type;
+  using keydown_sleep_repeat_signal_t = signal<void()>;
+  using keydown_sleep_repeat_slot_t = keydown_sleep_repeat_signal_t::slot_type;
+  using keydown_unknown_nonrepeat_signal_t = signal<void()>;
+  using keydown_unknown_nonrepeat_slot_t
+    = keydown_unknown_nonrepeat_signal_t::slot_type;
+  using keydown_backspace_nonrepeat_signal_t = signal<void()>;
+  using keydown_backspace_nonrepeat_slot_t
+    = keydown_backspace_nonrepeat_signal_t::slot_type;
+  using keydown_tab_nonrepeat_signal_t = signal<void()>;
+  using keydown_tab_nonrepeat_slot_t
+    = keydown_tab_nonrepeat_signal_t::slot_type;
+  using keydown_return_nonrepeat_signal_t = signal<void()>;
+  using keydown_return_nonrepeat_slot_t
+    = keydown_return_nonrepeat_signal_t::slot_type;
+  using keydown_escape_nonrepeat_signal_t = signal<void()>;
+  using keydown_escape_nonrepeat_slot_t
+    = keydown_escape_nonrepeat_signal_t::slot_type;
+  using keydown_space_nonrepeat_signal_t = signal<void()>;
+  using keydown_space_nonrepeat_slot_t
+    = keydown_space_nonrepeat_signal_t::slot_type;
+  using keydown_exclaim_nonrepeat_signal_t = signal<void()>;
+  using keydown_exclaim_nonrepeat_slot_t
+    = keydown_exclaim_nonrepeat_signal_t::slot_type;
+  using keydown_quotedbl_nonrepeat_signal_t = signal<void()>;
+  using keydown_quotedbl_nonrepeat_slot_t
+    = keydown_quotedbl_nonrepeat_signal_t::slot_type;
+  using keydown_hash_nonrepeat_signal_t = signal<void()>;
+  using keydown_hash_nonrepeat_slot_t
+    = keydown_hash_nonrepeat_signal_t::slot_type;
+  using keydown_dollar_nonrepeat_signal_t = signal<void()>;
+  using keydown_dollar_nonrepeat_slot_t
+    = keydown_dollar_nonrepeat_signal_t::slot_type;
+  using keydown_percent_nonrepeat_signal_t = signal<void()>;
+  using keydown_percent_nonrepeat_slot_t
+    = keydown_percent_nonrepeat_signal_t::slot_type;
+  using keydown_ampersand_nonrepeat_signal_t = signal<void()>;
+  using keydown_ampersand_nonrepeat_slot_t
+    = keydown_ampersand_nonrepeat_signal_t::slot_type;
+  using keydown_quote_nonrepeat_signal_t = signal<void()>;
+  using keydown_quote_nonrepeat_slot_t
+    = keydown_quote_nonrepeat_signal_t::slot_type;
+  using keydown_leftparen_nonrepeat_signal_t = signal<void()>;
+  using keydown_leftparen_nonrepeat_slot_t
+    = keydown_leftparen_nonrepeat_signal_t::slot_type;
+  using keydown_rightparen_nonrepeat_signal_t = signal<void()>;
+  using keydown_rightparen_nonrepeat_slot_t
+    = keydown_rightparen_nonrepeat_signal_t::slot_type;
+  using keydown_asterisk_nonrepeat_signal_t = signal<void()>;
+  using keydown_asterisk_nonrepeat_slot_t
+    = keydown_asterisk_nonrepeat_signal_t::slot_type;
+  using keydown_plus_nonrepeat_signal_t = signal<void()>;
+  using keydown_plus_nonrepeat_slot_t
+    = keydown_plus_nonrepeat_signal_t::slot_type;
+  using keydown_comma_nonrepeat_signal_t = signal<void()>;
+  using keydown_comma_nonrepeat_slot_t
+    = keydown_comma_nonrepeat_signal_t::slot_type;
+  using keydown_minus_nonrepeat_signal_t = signal<void()>;
+  using keydown_minus_nonrepeat_slot_t
+    = keydown_minus_nonrepeat_signal_t::slot_type;
+  using keydown_period_nonrepeat_signal_t = signal<void()>;
+  using keydown_period_nonrepeat_slot_t
+    = keydown_period_nonrepeat_signal_t::slot_type;
+  using keydown_slash_nonrepeat_signal_t = signal<void()>;
+  using keydown_slash_nonrepeat_slot_t
+    = keydown_slash_nonrepeat_signal_t::slot_type;
+  using keydown_0_nonrepeat_signal_t = signal<void()>;
+  using keydown_0_nonrepeat_slot_t = keydown_0_nonrepeat_signal_t::slot_type;
+  using keydown_1_nonrepeat_signal_t = signal<void()>;
+  using keydown_1_nonrepeat_slot_t = keydown_1_nonrepeat_signal_t::slot_type;
+  using keydown_2_nonrepeat_signal_t = signal<void()>;
+  using keydown_2_nonrepeat_slot_t = keydown_2_nonrepeat_signal_t::slot_type;
+  using keydown_3_nonrepeat_signal_t = signal<void()>;
+  using keydown_3_nonrepeat_slot_t = keydown_3_nonrepeat_signal_t::slot_type;
+  using keydown_4_nonrepeat_signal_t = signal<void()>;
+  using keydown_4_nonrepeat_slot_t = keydown_4_nonrepeat_signal_t::slot_type;
+  using keydown_5_nonrepeat_signal_t = signal<void()>;
+  using keydown_5_nonrepeat_slot_t = keydown_5_nonrepeat_signal_t::slot_type;
+  using keydown_6_nonrepeat_signal_t = signal<void()>;
+  using keydown_6_nonrepeat_slot_t = keydown_6_nonrepeat_signal_t::slot_type;
+  using keydown_7_nonrepeat_signal_t = signal<void()>;
+  using keydown_7_nonrepeat_slot_t = keydown_7_nonrepeat_signal_t::slot_type;
+  using keydown_8_nonrepeat_signal_t = signal<void()>;
+  using keydown_8_nonrepeat_slot_t = keydown_8_nonrepeat_signal_t::slot_type;
+  using keydown_9_nonrepeat_signal_t = signal<void()>;
+  using keydown_9_nonrepeat_slot_t = keydown_9_nonrepeat_signal_t::slot_type;
+  using keydown_colon_nonrepeat_signal_t = signal<void()>;
+  using keydown_colon_nonrepeat_slot_t
+    = keydown_colon_nonrepeat_signal_t::slot_type;
+  using keydown_semicolon_nonrepeat_signal_t = signal<void()>;
+  using keydown_semicolon_nonrepeat_slot_t
+    = keydown_semicolon_nonrepeat_signal_t::slot_type;
+  using keydown_less_nonrepeat_signal_t = signal<void()>;
+  using keydown_less_nonrepeat_slot_t
+    = keydown_less_nonrepeat_signal_t::slot_type;
+  using keydown_equals_nonrepeat_signal_t = signal<void()>;
+  using keydown_equals_nonrepeat_slot_t
+    = keydown_equals_nonrepeat_signal_t::slot_type;
+  using keydown_greater_nonrepeat_signal_t = signal<void()>;
+  using keydown_greater_nonrepeat_slot_t
+    = keydown_greater_nonrepeat_signal_t::slot_type;
+  using keydown_question_nonrepeat_signal_t = signal<void()>;
+  using keydown_question_nonrepeat_slot_t
+    = keydown_question_nonrepeat_signal_t::slot_type;
+  using keydown_at_nonrepeat_signal_t = signal<void()>;
+  using keydown_at_nonrepeat_slot_t = keydown_at_nonrepeat_signal_t::slot_type;
+  using keydown_leftbracket_nonrepeat_signal_t = signal<void()>;
+  using keydown_leftbracket_nonrepeat_slot_t
+    = keydown_leftbracket_nonrepeat_signal_t::slot_type;
+  using keydown_backslash_nonrepeat_signal_t = signal<void()>;
+  using keydown_backslash_nonrepeat_slot_t
+    = keydown_backslash_nonrepeat_signal_t::slot_type;
+  using keydown_rightbracket_nonrepeat_signal_t = signal<void()>;
+  using keydown_rightbracket_nonrepeat_slot_t
+    = keydown_rightbracket_nonrepeat_signal_t::slot_type;
+  using keydown_caret_nonrepeat_signal_t = signal<void()>;
+  using keydown_caret_nonrepeat_slot_t
+    = keydown_caret_nonrepeat_signal_t::slot_type;
+  using keydown_underscore_nonrepeat_signal_t = signal<void()>;
+  using keydown_underscore_nonrepeat_slot_t
+    = keydown_underscore_nonrepeat_signal_t::slot_type;
+  using keydown_backquote_nonrepeat_signal_t = signal<void()>;
+  using keydown_backquote_nonrepeat_slot_t
+    = keydown_backquote_nonrepeat_signal_t::slot_type;
+  using keydown_a_nonrepeat_signal_t = signal<void()>;
+  using keydown_a_nonrepeat_slot_t = keydown_a_nonrepeat_signal_t::slot_type;
+  using keydown_b_nonrepeat_signal_t = signal<void()>;
+  using keydown_b_nonrepeat_slot_t = keydown_b_nonrepeat_signal_t::slot_type;
+  using keydown_c_nonrepeat_signal_t = signal<void()>;
+  using keydown_c_nonrepeat_slot_t = keydown_c_nonrepeat_signal_t::slot_type;
+  using keydown_d_nonrepeat_signal_t = signal<void()>;
+  using keydown_d_nonrepeat_slot_t = keydown_d_nonrepeat_signal_t::slot_type;
+  using keydown_e_nonrepeat_signal_t = signal<void()>;
+  using keydown_e_nonrepeat_slot_t = keydown_e_nonrepeat_signal_t::slot_type;
+  using keydown_f_nonrepeat_signal_t = signal<void()>;
+  using keydown_f_nonrepeat_slot_t = keydown_f_nonrepeat_signal_t::slot_type;
+  using keydown_g_nonrepeat_signal_t = signal<void()>;
+  using keydown_g_nonrepeat_slot_t = keydown_g_nonrepeat_signal_t::slot_type;
+  using keydown_h_nonrepeat_signal_t = signal<void()>;
+  using keydown_h_nonrepeat_slot_t = keydown_h_nonrepeat_signal_t::slot_type;
+  using keydown_i_nonrepeat_signal_t = signal<void()>;
+  using keydown_i_nonrepeat_slot_t = keydown_i_nonrepeat_signal_t::slot_type;
+  using keydown_j_nonrepeat_signal_t = signal<void()>;
+  using keydown_j_nonrepeat_slot_t = keydown_j_nonrepeat_signal_t::slot_type;
+  using keydown_k_nonrepeat_signal_t = signal<void()>;
+  using keydown_k_nonrepeat_slot_t = keydown_k_nonrepeat_signal_t::slot_type;
+  using keydown_l_nonrepeat_signal_t = signal<void()>;
+  using keydown_l_nonrepeat_slot_t = keydown_l_nonrepeat_signal_t::slot_type;
+  using keydown_m_nonrepeat_signal_t = signal<void()>;
+  using keydown_m_nonrepeat_slot_t = keydown_m_nonrepeat_signal_t::slot_type;
+  using keydown_n_nonrepeat_signal_t = signal<void()>;
+  using keydown_n_nonrepeat_slot_t = keydown_n_nonrepeat_signal_t::slot_type;
+  using keydown_o_nonrepeat_signal_t = signal<void()>;
+  using keydown_o_nonrepeat_slot_t = keydown_o_nonrepeat_signal_t::slot_type;
+  using keydown_p_nonrepeat_signal_t = signal<void()>;
+  using keydown_p_nonrepeat_slot_t = keydown_p_nonrepeat_signal_t::slot_type;
+  using keydown_q_nonrepeat_signal_t = signal<void()>;
+  using keydown_q_nonrepeat_slot_t = keydown_q_nonrepeat_signal_t::slot_type;
+  using keydown_r_nonrepeat_signal_t = signal<void()>;
+  using keydown_r_nonrepeat_slot_t = keydown_r_nonrepeat_signal_t::slot_type;
+  using keydown_s_nonrepeat_signal_t = signal<void()>;
+  using keydown_s_nonrepeat_slot_t = keydown_s_nonrepeat_signal_t::slot_type;
+  using keydown_t_nonrepeat_signal_t = signal<void()>;
+  using keydown_t_nonrepeat_slot_t = keydown_t_nonrepeat_signal_t::slot_type;
+  using keydown_u_nonrepeat_signal_t = signal<void()>;
+  using keydown_u_nonrepeat_slot_t = keydown_u_nonrepeat_signal_t::slot_type;
+  using keydown_v_nonrepeat_signal_t = signal<void()>;
+  using keydown_v_nonrepeat_slot_t = keydown_v_nonrepeat_signal_t::slot_type;
+  using keydown_w_nonrepeat_signal_t = signal<void()>;
+  using keydown_w_nonrepeat_slot_t = keydown_w_nonrepeat_signal_t::slot_type;
+  using keydown_x_nonrepeat_signal_t = signal<void()>;
+  using keydown_x_nonrepeat_slot_t = keydown_x_nonrepeat_signal_t::slot_type;
+  using keydown_y_nonrepeat_signal_t = signal<void()>;
+  using keydown_y_nonrepeat_slot_t = keydown_y_nonrepeat_signal_t::slot_type;
+  using keydown_z_nonrepeat_signal_t = signal<void()>;
+  using keydown_z_nonrepeat_slot_t = keydown_z_nonrepeat_signal_t::slot_type;
+  using keydown_delete_nonrepeat_signal_t = signal<void()>;
+  using keydown_delete_nonrepeat_slot_t
+    = keydown_delete_nonrepeat_signal_t::slot_type;
+  using keydown_capslock_nonrepeat_signal_t = signal<void()>;
+  using keydown_capslock_nonrepeat_slot_t
+    = keydown_capslock_nonrepeat_signal_t::slot_type;
+  using keydown_f1_nonrepeat_signal_t = signal<void()>;
+  using keydown_f1_nonrepeat_slot_t = keydown_f1_nonrepeat_signal_t::slot_type;
+  using keydown_f2_nonrepeat_signal_t = signal<void()>;
+  using keydown_f2_nonrepeat_slot_t = keydown_f2_nonrepeat_signal_t::slot_type;
+  using keydown_f3_nonrepeat_signal_t = signal<void()>;
+  using keydown_f3_nonrepeat_slot_t = keydown_f3_nonrepeat_signal_t::slot_type;
+  using keydown_f4_nonrepeat_signal_t = signal<void()>;
+  using keydown_f4_nonrepeat_slot_t = keydown_f4_nonrepeat_signal_t::slot_type;
+  using keydown_f5_nonrepeat_signal_t = signal<void()>;
+  using keydown_f5_nonrepeat_slot_t = keydown_f5_nonrepeat_signal_t::slot_type;
+  using keydown_f6_nonrepeat_signal_t = signal<void()>;
+  using keydown_f6_nonrepeat_slot_t = keydown_f6_nonrepeat_signal_t::slot_type;
+  using keydown_f7_nonrepeat_signal_t = signal<void()>;
+  using keydown_f7_nonrepeat_slot_t = keydown_f7_nonrepeat_signal_t::slot_type;
+  using keydown_f8_nonrepeat_signal_t = signal<void()>;
+  using keydown_f8_nonrepeat_slot_t = keydown_f8_nonrepeat_signal_t::slot_type;
+  using keydown_f9_nonrepeat_signal_t = signal<void()>;
+  using keydown_f9_nonrepeat_slot_t = keydown_f9_nonrepeat_signal_t::slot_type;
+  using keydown_f10_nonrepeat_signal_t = signal<void()>;
+  using keydown_f10_nonrepeat_slot_t
+    = keydown_f10_nonrepeat_signal_t::slot_type;
+  using keydown_f11_nonrepeat_signal_t = signal<void()>;
+  using keydown_f11_nonrepeat_slot_t
+    = keydown_f11_nonrepeat_signal_t::slot_type;
+  using keydown_f12_nonrepeat_signal_t = signal<void()>;
+  using keydown_f12_nonrepeat_slot_t
+    = keydown_f12_nonrepeat_signal_t::slot_type;
+  using keydown_printscreen_nonrepeat_signal_t = signal<void()>;
+  using keydown_printscreen_nonrepeat_slot_t
+    = keydown_printscreen_nonrepeat_signal_t::slot_type;
+  using keydown_scrolllock_nonrepeat_signal_t = signal<void()>;
+  using keydown_scrolllock_nonrepeat_slot_t
+    = keydown_scrolllock_nonrepeat_signal_t::slot_type;
+  using keydown_pause_nonrepeat_signal_t = signal<void()>;
+  using keydown_pause_nonrepeat_slot_t
+    = keydown_pause_nonrepeat_signal_t::slot_type;
+  using keydown_insert_nonrepeat_signal_t = signal<void()>;
+  using keydown_insert_nonrepeat_slot_t
+    = keydown_insert_nonrepeat_signal_t::slot_type;
+  using keydown_home_nonrepeat_signal_t = signal<void()>;
+  using keydown_home_nonrepeat_slot_t
+    = keydown_home_nonrepeat_signal_t::slot_type;
+  using keydown_pageup_nonrepeat_signal_t = signal<void()>;
+  using keydown_pageup_nonrepeat_slot_t
+    = keydown_pageup_nonrepeat_signal_t::slot_type;
+  using keydown_end_nonrepeat_signal_t = signal<void()>;
+  using keydown_end_nonrepeat_slot_t
+    = keydown_end_nonrepeat_signal_t::slot_type;
+  using keydown_pagedown_nonrepeat_signal_t = signal<void()>;
+  using keydown_pagedown_nonrepeat_slot_t
+    = keydown_pagedown_nonrepeat_signal_t::slot_type;
+  using keydown_right_nonrepeat_signal_t = signal<void()>;
+  using keydown_right_nonrepeat_slot_t
+    = keydown_right_nonrepeat_signal_t::slot_type;
+  using keydown_left_nonrepeat_signal_t = signal<void()>;
+  using keydown_left_nonrepeat_slot_t
+    = keydown_left_nonrepeat_signal_t::slot_type;
+  using keydown_down_nonrepeat_signal_t = signal<void()>;
+  using keydown_down_nonrepeat_slot_t
+    = keydown_down_nonrepeat_signal_t::slot_type;
+  using keydown_up_nonrepeat_signal_t = signal<void()>;
+  using keydown_up_nonrepeat_slot_t = keydown_up_nonrepeat_signal_t::slot_type;
+  using keydown_numlockclear_nonrepeat_signal_t = signal<void()>;
+  using keydown_numlockclear_nonrepeat_slot_t
+    = keydown_numlockclear_nonrepeat_signal_t::slot_type;
+  using keydown_kp_divide_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_divide_nonrepeat_slot_t
+    = keydown_kp_divide_nonrepeat_signal_t::slot_type;
+  using keydown_kp_multiply_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_multiply_nonrepeat_slot_t
+    = keydown_kp_multiply_nonrepeat_signal_t::slot_type;
+  using keydown_kp_minus_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_minus_nonrepeat_slot_t
+    = keydown_kp_minus_nonrepeat_signal_t::slot_type;
+  using keydown_kp_plus_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_plus_nonrepeat_slot_t
+    = keydown_kp_plus_nonrepeat_signal_t::slot_type;
+  using keydown_kp_enter_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_enter_nonrepeat_slot_t
+    = keydown_kp_enter_nonrepeat_signal_t::slot_type;
+  using keydown_kp_1_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_1_nonrepeat_slot_t
+    = keydown_kp_1_nonrepeat_signal_t::slot_type;
+  using keydown_kp_2_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_2_nonrepeat_slot_t
+    = keydown_kp_2_nonrepeat_signal_t::slot_type;
+  using keydown_kp_3_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_3_nonrepeat_slot_t
+    = keydown_kp_3_nonrepeat_signal_t::slot_type;
+  using keydown_kp_4_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_4_nonrepeat_slot_t
+    = keydown_kp_4_nonrepeat_signal_t::slot_type;
+  using keydown_kp_5_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_5_nonrepeat_slot_t
+    = keydown_kp_5_nonrepeat_signal_t::slot_type;
+  using keydown_kp_6_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_6_nonrepeat_slot_t
+    = keydown_kp_6_nonrepeat_signal_t::slot_type;
+  using keydown_kp_7_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_7_nonrepeat_slot_t
+    = keydown_kp_7_nonrepeat_signal_t::slot_type;
+  using keydown_kp_8_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_8_nonrepeat_slot_t
+    = keydown_kp_8_nonrepeat_signal_t::slot_type;
+  using keydown_kp_9_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_9_nonrepeat_slot_t
+    = keydown_kp_9_nonrepeat_signal_t::slot_type;
+  using keydown_kp_0_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_0_nonrepeat_slot_t
+    = keydown_kp_0_nonrepeat_signal_t::slot_type;
+  using keydown_kp_period_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_period_nonrepeat_slot_t
+    = keydown_kp_period_nonrepeat_signal_t::slot_type;
+  using keydown_application_nonrepeat_signal_t = signal<void()>;
+  using keydown_application_nonrepeat_slot_t
+    = keydown_application_nonrepeat_signal_t::slot_type;
+  using keydown_power_nonrepeat_signal_t = signal<void()>;
+  using keydown_power_nonrepeat_slot_t
+    = keydown_power_nonrepeat_signal_t::slot_type;
+  using keydown_kp_equals_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_equals_nonrepeat_slot_t
+    = keydown_kp_equals_nonrepeat_signal_t::slot_type;
+  using keydown_f13_nonrepeat_signal_t = signal<void()>;
+  using keydown_f13_nonrepeat_slot_t
+    = keydown_f13_nonrepeat_signal_t::slot_type;
+  using keydown_f14_nonrepeat_signal_t = signal<void()>;
+  using keydown_f14_nonrepeat_slot_t
+    = keydown_f14_nonrepeat_signal_t::slot_type;
+  using keydown_f15_nonrepeat_signal_t = signal<void()>;
+  using keydown_f15_nonrepeat_slot_t
+    = keydown_f15_nonrepeat_signal_t::slot_type;
+  using keydown_f16_nonrepeat_signal_t = signal<void()>;
+  using keydown_f16_nonrepeat_slot_t
+    = keydown_f16_nonrepeat_signal_t::slot_type;
+  using keydown_f17_nonrepeat_signal_t = signal<void()>;
+  using keydown_f17_nonrepeat_slot_t
+    = keydown_f17_nonrepeat_signal_t::slot_type;
+  using keydown_f18_nonrepeat_signal_t = signal<void()>;
+  using keydown_f18_nonrepeat_slot_t
+    = keydown_f18_nonrepeat_signal_t::slot_type;
+  using keydown_f19_nonrepeat_signal_t = signal<void()>;
+  using keydown_f19_nonrepeat_slot_t
+    = keydown_f19_nonrepeat_signal_t::slot_type;
+  using keydown_f20_nonrepeat_signal_t = signal<void()>;
+  using keydown_f20_nonrepeat_slot_t
+    = keydown_f20_nonrepeat_signal_t::slot_type;
+  using keydown_f21_nonrepeat_signal_t = signal<void()>;
+  using keydown_f21_nonrepeat_slot_t
+    = keydown_f21_nonrepeat_signal_t::slot_type;
+  using keydown_f22_nonrepeat_signal_t = signal<void()>;
+  using keydown_f22_nonrepeat_slot_t
+    = keydown_f22_nonrepeat_signal_t::slot_type;
+  using keydown_f23_nonrepeat_signal_t = signal<void()>;
+  using keydown_f23_nonrepeat_slot_t
+    = keydown_f23_nonrepeat_signal_t::slot_type;
+  using keydown_f24_nonrepeat_signal_t = signal<void()>;
+  using keydown_f24_nonrepeat_slot_t
+    = keydown_f24_nonrepeat_signal_t::slot_type;
+  using keydown_execute_nonrepeat_signal_t = signal<void()>;
+  using keydown_execute_nonrepeat_slot_t
+    = keydown_execute_nonrepeat_signal_t::slot_type;
+  using keydown_help_nonrepeat_signal_t = signal<void()>;
+  using keydown_help_nonrepeat_slot_t
+    = keydown_help_nonrepeat_signal_t::slot_type;
+  using keydown_menu_nonrepeat_signal_t = signal<void()>;
+  using keydown_menu_nonrepeat_slot_t
+    = keydown_menu_nonrepeat_signal_t::slot_type;
+  using keydown_select_nonrepeat_signal_t = signal<void()>;
+  using keydown_select_nonrepeat_slot_t
+    = keydown_select_nonrepeat_signal_t::slot_type;
+  using keydown_stop_nonrepeat_signal_t = signal<void()>;
+  using keydown_stop_nonrepeat_slot_t
+    = keydown_stop_nonrepeat_signal_t::slot_type;
+  using keydown_again_nonrepeat_signal_t = signal<void()>;
+  using keydown_again_nonrepeat_slot_t
+    = keydown_again_nonrepeat_signal_t::slot_type;
+  using keydown_undo_nonrepeat_signal_t = signal<void()>;
+  using keydown_undo_nonrepeat_slot_t
+    = keydown_undo_nonrepeat_signal_t::slot_type;
+  using keydown_cut_nonrepeat_signal_t = signal<void()>;
+  using keydown_cut_nonrepeat_slot_t
+    = keydown_cut_nonrepeat_signal_t::slot_type;
+  using keydown_copy_nonrepeat_signal_t = signal<void()>;
+  using keydown_copy_nonrepeat_slot_t
+    = keydown_copy_nonrepeat_signal_t::slot_type;
+  using keydown_paste_nonrepeat_signal_t = signal<void()>;
+  using keydown_paste_nonrepeat_slot_t
+    = keydown_paste_nonrepeat_signal_t::slot_type;
+  using keydown_find_nonrepeat_signal_t = signal<void()>;
+  using keydown_find_nonrepeat_slot_t
+    = keydown_find_nonrepeat_signal_t::slot_type;
+  using keydown_mute_nonrepeat_signal_t = signal<void()>;
+  using keydown_mute_nonrepeat_slot_t
+    = keydown_mute_nonrepeat_signal_t::slot_type;
+  using keydown_volumeup_nonrepeat_signal_t = signal<void()>;
+  using keydown_volumeup_nonrepeat_slot_t
+    = keydown_volumeup_nonrepeat_signal_t::slot_type;
+  using keydown_volumedown_nonrepeat_signal_t = signal<void()>;
+  using keydown_volumedown_nonrepeat_slot_t
+    = keydown_volumedown_nonrepeat_signal_t::slot_type;
+  using keydown_kp_comma_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_comma_nonrepeat_slot_t
+    = keydown_kp_comma_nonrepeat_signal_t::slot_type;
+  using keydown_kp_equalsas400_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_equalsas400_nonrepeat_slot_t
+    = keydown_kp_equalsas400_nonrepeat_signal_t::slot_type;
+  using keydown_alterase_nonrepeat_signal_t = signal<void()>;
+  using keydown_alterase_nonrepeat_slot_t
+    = keydown_alterase_nonrepeat_signal_t::slot_type;
+  using keydown_sysreq_nonrepeat_signal_t = signal<void()>;
+  using keydown_sysreq_nonrepeat_slot_t
+    = keydown_sysreq_nonrepeat_signal_t::slot_type;
+  using keydown_cancel_nonrepeat_signal_t = signal<void()>;
+  using keydown_cancel_nonrepeat_slot_t
+    = keydown_cancel_nonrepeat_signal_t::slot_type;
+  using keydown_clear_nonrepeat_signal_t = signal<void()>;
+  using keydown_clear_nonrepeat_slot_t
+    = keydown_clear_nonrepeat_signal_t::slot_type;
+  using keydown_prior_nonrepeat_signal_t = signal<void()>;
+  using keydown_prior_nonrepeat_slot_t
+    = keydown_prior_nonrepeat_signal_t::slot_type;
+  using keydown_return2_nonrepeat_signal_t = signal<void()>;
+  using keydown_return2_nonrepeat_slot_t
+    = keydown_return2_nonrepeat_signal_t::slot_type;
+  using keydown_separator_nonrepeat_signal_t = signal<void()>;
+  using keydown_separator_nonrepeat_slot_t
+    = keydown_separator_nonrepeat_signal_t::slot_type;
+  using keydown_out_nonrepeat_signal_t = signal<void()>;
+  using keydown_out_nonrepeat_slot_t
+    = keydown_out_nonrepeat_signal_t::slot_type;
+  using keydown_oper_nonrepeat_signal_t = signal<void()>;
+  using keydown_oper_nonrepeat_slot_t
+    = keydown_oper_nonrepeat_signal_t::slot_type;
+  using keydown_clearagain_nonrepeat_signal_t = signal<void()>;
+  using keydown_clearagain_nonrepeat_slot_t
+    = keydown_clearagain_nonrepeat_signal_t::slot_type;
+  using keydown_crsel_nonrepeat_signal_t = signal<void()>;
+  using keydown_crsel_nonrepeat_slot_t
+    = keydown_crsel_nonrepeat_signal_t::slot_type;
+  using keydown_exsel_nonrepeat_signal_t = signal<void()>;
+  using keydown_exsel_nonrepeat_slot_t
+    = keydown_exsel_nonrepeat_signal_t::slot_type;
+  using keydown_kp_00_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_00_nonrepeat_slot_t
+    = keydown_kp_00_nonrepeat_signal_t::slot_type;
+  using keydown_kp_000_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_000_nonrepeat_slot_t
+    = keydown_kp_000_nonrepeat_signal_t::slot_type;
+  using keydown_thousandsseparator_nonrepeat_signal_t = signal<void()>;
+  using keydown_thousandsseparator_nonrepeat_slot_t
+    = keydown_thousandsseparator_nonrepeat_signal_t::slot_type;
+  using keydown_decimalseparator_nonrepeat_signal_t = signal<void()>;
+  using keydown_decimalseparator_nonrepeat_slot_t
+    = keydown_decimalseparator_nonrepeat_signal_t::slot_type;
+  using keydown_currencyunit_nonrepeat_signal_t = signal<void()>;
+  using keydown_currencyunit_nonrepeat_slot_t
+    = keydown_currencyunit_nonrepeat_signal_t::slot_type;
+  using keydown_currencysubunit_nonrepeat_signal_t = signal<void()>;
+  using keydown_currencysubunit_nonrepeat_slot_t
+    = keydown_currencysubunit_nonrepeat_signal_t::slot_type;
+  using keydown_kp_leftparen_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_leftparen_nonrepeat_slot_t
+    = keydown_kp_leftparen_nonrepeat_signal_t::slot_type;
+  using keydown_kp_rightparen_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_rightparen_nonrepeat_slot_t
+    = keydown_kp_rightparen_nonrepeat_signal_t::slot_type;
+  using keydown_kp_leftbrace_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_leftbrace_nonrepeat_slot_t
+    = keydown_kp_leftbrace_nonrepeat_signal_t::slot_type;
+  using keydown_kp_rightbrace_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_rightbrace_nonrepeat_slot_t
+    = keydown_kp_rightbrace_nonrepeat_signal_t::slot_type;
+  using keydown_kp_tab_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_tab_nonrepeat_slot_t
+    = keydown_kp_tab_nonrepeat_signal_t::slot_type;
+  using keydown_kp_backspace_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_backspace_nonrepeat_slot_t
+    = keydown_kp_backspace_nonrepeat_signal_t::slot_type;
+  using keydown_kp_a_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_a_nonrepeat_slot_t
+    = keydown_kp_a_nonrepeat_signal_t::slot_type;
+  using keydown_kp_b_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_b_nonrepeat_slot_t
+    = keydown_kp_b_nonrepeat_signal_t::slot_type;
+  using keydown_kp_c_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_c_nonrepeat_slot_t
+    = keydown_kp_c_nonrepeat_signal_t::slot_type;
+  using keydown_kp_d_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_d_nonrepeat_slot_t
+    = keydown_kp_d_nonrepeat_signal_t::slot_type;
+  using keydown_kp_e_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_e_nonrepeat_slot_t
+    = keydown_kp_e_nonrepeat_signal_t::slot_type;
+  using keydown_kp_f_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_f_nonrepeat_slot_t
+    = keydown_kp_f_nonrepeat_signal_t::slot_type;
+  using keydown_kp_xor_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_xor_nonrepeat_slot_t
+    = keydown_kp_xor_nonrepeat_signal_t::slot_type;
+  using keydown_kp_power_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_power_nonrepeat_slot_t
+    = keydown_kp_power_nonrepeat_signal_t::slot_type;
+  using keydown_kp_percent_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_percent_nonrepeat_slot_t
+    = keydown_kp_percent_nonrepeat_signal_t::slot_type;
+  using keydown_kp_less_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_less_nonrepeat_slot_t
+    = keydown_kp_less_nonrepeat_signal_t::slot_type;
+  using keydown_kp_greater_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_greater_nonrepeat_slot_t
+    = keydown_kp_greater_nonrepeat_signal_t::slot_type;
+  using keydown_kp_ampersand_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_ampersand_nonrepeat_slot_t
+    = keydown_kp_ampersand_nonrepeat_signal_t::slot_type;
+  using keydown_kp_dblampersand_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_dblampersand_nonrepeat_slot_t
+    = keydown_kp_dblampersand_nonrepeat_signal_t::slot_type;
+  using keydown_kp_verticalbar_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_verticalbar_nonrepeat_slot_t
+    = keydown_kp_verticalbar_nonrepeat_signal_t::slot_type;
+  using keydown_kp_dblverticalbar_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_dblverticalbar_nonrepeat_slot_t
+    = keydown_kp_dblverticalbar_nonrepeat_signal_t::slot_type;
+  using keydown_kp_colon_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_colon_nonrepeat_slot_t
+    = keydown_kp_colon_nonrepeat_signal_t::slot_type;
+  using keydown_kp_hash_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_hash_nonrepeat_slot_t
+    = keydown_kp_hash_nonrepeat_signal_t::slot_type;
+  using keydown_kp_space_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_space_nonrepeat_slot_t
+    = keydown_kp_space_nonrepeat_signal_t::slot_type;
+  using keydown_kp_at_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_at_nonrepeat_slot_t
+    = keydown_kp_at_nonrepeat_signal_t::slot_type;
+  using keydown_kp_exclam_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_exclam_nonrepeat_slot_t
+    = keydown_kp_exclam_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memstore_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memstore_nonrepeat_slot_t
+    = keydown_kp_memstore_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memrecall_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memrecall_nonrepeat_slot_t
+    = keydown_kp_memrecall_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memclear_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memclear_nonrepeat_slot_t
+    = keydown_kp_memclear_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memadd_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memadd_nonrepeat_slot_t
+    = keydown_kp_memadd_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memsubtract_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memsubtract_nonrepeat_slot_t
+    = keydown_kp_memsubtract_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memmultiply_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memmultiply_nonrepeat_slot_t
+    = keydown_kp_memmultiply_nonrepeat_signal_t::slot_type;
+  using keydown_kp_memdivide_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_memdivide_nonrepeat_slot_t
+    = keydown_kp_memdivide_nonrepeat_signal_t::slot_type;
+  using keydown_kp_plusminus_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_plusminus_nonrepeat_slot_t
+    = keydown_kp_plusminus_nonrepeat_signal_t::slot_type;
+  using keydown_kp_clear_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_clear_nonrepeat_slot_t
+    = keydown_kp_clear_nonrepeat_signal_t::slot_type;
+  using keydown_kp_clearentry_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_clearentry_nonrepeat_slot_t
+    = keydown_kp_clearentry_nonrepeat_signal_t::slot_type;
+  using keydown_kp_binary_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_binary_nonrepeat_slot_t
+    = keydown_kp_binary_nonrepeat_signal_t::slot_type;
+  using keydown_kp_octal_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_octal_nonrepeat_slot_t
+    = keydown_kp_octal_nonrepeat_signal_t::slot_type;
+  using keydown_kp_decimal_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_decimal_nonrepeat_slot_t
+    = keydown_kp_decimal_nonrepeat_signal_t::slot_type;
+  using keydown_kp_hexadecimal_nonrepeat_signal_t = signal<void()>;
+  using keydown_kp_hexadecimal_nonrepeat_slot_t
+    = keydown_kp_hexadecimal_nonrepeat_signal_t::slot_type;
+  using keydown_lctrl_nonrepeat_signal_t = signal<void()>;
+  using keydown_lctrl_nonrepeat_slot_t
+    = keydown_lctrl_nonrepeat_signal_t::slot_type;
+  using keydown_lshift_nonrepeat_signal_t = signal<void()>;
+  using keydown_lshift_nonrepeat_slot_t
+    = keydown_lshift_nonrepeat_signal_t::slot_type;
+  using keydown_lalt_nonrepeat_signal_t = signal<void()>;
+  using keydown_lalt_nonrepeat_slot_t
+    = keydown_lalt_nonrepeat_signal_t::slot_type;
+  using keydown_lgui_nonrepeat_signal_t = signal<void()>;
+  using keydown_lgui_nonrepeat_slot_t
+    = keydown_lgui_nonrepeat_signal_t::slot_type;
+  using keydown_rctrl_nonrepeat_signal_t = signal<void()>;
+  using keydown_rctrl_nonrepeat_slot_t
+    = keydown_rctrl_nonrepeat_signal_t::slot_type;
+  using keydown_rshift_nonrepeat_signal_t = signal<void()>;
+  using keydown_rshift_nonrepeat_slot_t
+    = keydown_rshift_nonrepeat_signal_t::slot_type;
+  using keydown_ralt_nonrepeat_signal_t = signal<void()>;
+  using keydown_ralt_nonrepeat_slot_t
+    = keydown_ralt_nonrepeat_signal_t::slot_type;
+  using keydown_rgui_nonrepeat_signal_t = signal<void()>;
+  using keydown_rgui_nonrepeat_slot_t
+    = keydown_rgui_nonrepeat_signal_t::slot_type;
+  using keydown_mode_nonrepeat_signal_t = signal<void()>;
+  using keydown_mode_nonrepeat_slot_t
+    = keydown_mode_nonrepeat_signal_t::slot_type;
+  using keydown_audionext_nonrepeat_signal_t = signal<void()>;
+  using keydown_audionext_nonrepeat_slot_t
+    = keydown_audionext_nonrepeat_signal_t::slot_type;
+  using keydown_audioprev_nonrepeat_signal_t = signal<void()>;
+  using keydown_audioprev_nonrepeat_slot_t
+    = keydown_audioprev_nonrepeat_signal_t::slot_type;
+  using keydown_audiostop_nonrepeat_signal_t = signal<void()>;
+  using keydown_audiostop_nonrepeat_slot_t
+    = keydown_audiostop_nonrepeat_signal_t::slot_type;
+  using keydown_audioplay_nonrepeat_signal_t = signal<void()>;
+  using keydown_audioplay_nonrepeat_slot_t
+    = keydown_audioplay_nonrepeat_signal_t::slot_type;
+  using keydown_audiomute_nonrepeat_signal_t = signal<void()>;
+  using keydown_audiomute_nonrepeat_slot_t
+    = keydown_audiomute_nonrepeat_signal_t::slot_type;
+  using keydown_mediaselect_nonrepeat_signal_t = signal<void()>;
+  using keydown_mediaselect_nonrepeat_slot_t
+    = keydown_mediaselect_nonrepeat_signal_t::slot_type;
+  using keydown_www_nonrepeat_signal_t = signal<void()>;
+  using keydown_www_nonrepeat_slot_t
+    = keydown_www_nonrepeat_signal_t::slot_type;
+  using keydown_mail_nonrepeat_signal_t = signal<void()>;
+  using keydown_mail_nonrepeat_slot_t
+    = keydown_mail_nonrepeat_signal_t::slot_type;
+  using keydown_calculator_nonrepeat_signal_t = signal<void()>;
+  using keydown_calculator_nonrepeat_slot_t
+    = keydown_calculator_nonrepeat_signal_t::slot_type;
+  using keydown_computer_nonrepeat_signal_t = signal<void()>;
+  using keydown_computer_nonrepeat_slot_t
+    = keydown_computer_nonrepeat_signal_t::slot_type;
+  using keydown_ac_search_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_search_nonrepeat_slot_t
+    = keydown_ac_search_nonrepeat_signal_t::slot_type;
+  using keydown_ac_home_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_home_nonrepeat_slot_t
+    = keydown_ac_home_nonrepeat_signal_t::slot_type;
+  using keydown_ac_back_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_back_nonrepeat_slot_t
+    = keydown_ac_back_nonrepeat_signal_t::slot_type;
+  using keydown_ac_forward_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_forward_nonrepeat_slot_t
+    = keydown_ac_forward_nonrepeat_signal_t::slot_type;
+  using keydown_ac_stop_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_stop_nonrepeat_slot_t
+    = keydown_ac_stop_nonrepeat_signal_t::slot_type;
+  using keydown_ac_refresh_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_refresh_nonrepeat_slot_t
+    = keydown_ac_refresh_nonrepeat_signal_t::slot_type;
+  using keydown_ac_bookmarks_nonrepeat_signal_t = signal<void()>;
+  using keydown_ac_bookmarks_nonrepeat_slot_t
+    = keydown_ac_bookmarks_nonrepeat_signal_t::slot_type;
+  using keydown_brightnessdown_nonrepeat_signal_t = signal<void()>;
+  using keydown_brightnessdown_nonrepeat_slot_t
+    = keydown_brightnessdown_nonrepeat_signal_t::slot_type;
+  using keydown_brightnessup_nonrepeat_signal_t = signal<void()>;
+  using keydown_brightnessup_nonrepeat_slot_t
+    = keydown_brightnessup_nonrepeat_signal_t::slot_type;
+  using keydown_displayswitch_nonrepeat_signal_t = signal<void()>;
+  using keydown_displayswitch_nonrepeat_slot_t
+    = keydown_displayswitch_nonrepeat_signal_t::slot_type;
+  using keydown_kbdillumtoggle_nonrepeat_signal_t = signal<void()>;
+  using keydown_kbdillumtoggle_nonrepeat_slot_t
+    = keydown_kbdillumtoggle_nonrepeat_signal_t::slot_type;
+  using keydown_kbdillumdown_nonrepeat_signal_t = signal<void()>;
+  using keydown_kbdillumdown_nonrepeat_slot_t
+    = keydown_kbdillumdown_nonrepeat_signal_t::slot_type;
+  using keydown_kbdillumup_nonrepeat_signal_t = signal<void()>;
+  using keydown_kbdillumup_nonrepeat_slot_t
+    = keydown_kbdillumup_nonrepeat_signal_t::slot_type;
+  using keydown_eject_nonrepeat_signal_t = signal<void()>;
+  using keydown_eject_nonrepeat_slot_t
+    = keydown_eject_nonrepeat_signal_t::slot_type;
+  using keydown_sleep_nonrepeat_signal_t = signal<void()>;
+  using keydown_sleep_nonrepeat_slot_t
+    = keydown_sleep_nonrepeat_signal_t::slot_type;
   using keyup_unknown_signal_t = signal<void()>;
   using keyup_unknown_slot_t = keyup_unknown_signal_t::slot_type;
   using keyup_backspace_signal_t = signal<void()>;
@@ -980,242 +1736,478 @@ struct event_dispatch {
   event_dispatch();
 
   void quit() const;
-  void keydown_unknown() const;
-  void keydown_backspace() const;
-  void keydown_tab() const;
-  void keydown_return() const;
-  void keydown_escape() const;
-  void keydown_space() const;
-  void keydown_exclaim() const;
-  void keydown_quotedbl() const;
-  void keydown_hash() const;
-  void keydown_dollar() const;
-  void keydown_percent() const;
-  void keydown_ampersand() const;
-  void keydown_quote() const;
-  void keydown_leftparen() const;
-  void keydown_rightparen() const;
-  void keydown_asterisk() const;
-  void keydown_plus() const;
-  void keydown_comma() const;
-  void keydown_minus() const;
-  void keydown_period() const;
-  void keydown_slash() const;
-  void keydown_0() const;
-  void keydown_1() const;
-  void keydown_2() const;
-  void keydown_3() const;
-  void keydown_4() const;
-  void keydown_5() const;
-  void keydown_6() const;
-  void keydown_7() const;
-  void keydown_8() const;
-  void keydown_9() const;
-  void keydown_colon() const;
-  void keydown_semicolon() const;
-  void keydown_less() const;
-  void keydown_equals() const;
-  void keydown_greater() const;
-  void keydown_question() const;
-  void keydown_at() const;
-  void keydown_leftbracket() const;
-  void keydown_backslash() const;
-  void keydown_rightbracket() const;
-  void keydown_caret() const;
-  void keydown_underscore() const;
-  void keydown_backquote() const;
-  void keydown_a() const;
-  void keydown_b() const;
-  void keydown_c() const;
-  void keydown_d() const;
-  void keydown_e() const;
-  void keydown_f() const;
-  void keydown_g() const;
-  void keydown_h() const;
-  void keydown_i() const;
-  void keydown_j() const;
-  void keydown_k() const;
-  void keydown_l() const;
-  void keydown_m() const;
-  void keydown_n() const;
-  void keydown_o() const;
-  void keydown_p() const;
-  void keydown_q() const;
-  void keydown_r() const;
-  void keydown_s() const;
-  void keydown_t() const;
-  void keydown_u() const;
-  void keydown_v() const;
-  void keydown_w() const;
-  void keydown_x() const;
-  void keydown_y() const;
-  void keydown_z() const;
-  void keydown_delete() const;
-  void keydown_capslock() const;
-  void keydown_f1() const;
-  void keydown_f2() const;
-  void keydown_f3() const;
-  void keydown_f4() const;
-  void keydown_f5() const;
-  void keydown_f6() const;
-  void keydown_f7() const;
-  void keydown_f8() const;
-  void keydown_f9() const;
-  void keydown_f10() const;
-  void keydown_f11() const;
-  void keydown_f12() const;
-  void keydown_printscreen() const;
-  void keydown_scrolllock() const;
-  void keydown_pause() const;
-  void keydown_insert() const;
-  void keydown_home() const;
-  void keydown_pageup() const;
-  void keydown_end() const;
-  void keydown_pagedown() const;
-  void keydown_right() const;
-  void keydown_left() const;
-  void keydown_down() const;
-  void keydown_up() const;
-  void keydown_numlockclear() const;
-  void keydown_kp_divide() const;
-  void keydown_kp_multiply() const;
-  void keydown_kp_minus() const;
-  void keydown_kp_plus() const;
-  void keydown_kp_enter() const;
-  void keydown_kp_1() const;
-  void keydown_kp_2() const;
-  void keydown_kp_3() const;
-  void keydown_kp_4() const;
-  void keydown_kp_5() const;
-  void keydown_kp_6() const;
-  void keydown_kp_7() const;
-  void keydown_kp_8() const;
-  void keydown_kp_9() const;
-  void keydown_kp_0() const;
-  void keydown_kp_period() const;
-  void keydown_application() const;
-  void keydown_power() const;
-  void keydown_kp_equals() const;
-  void keydown_f13() const;
-  void keydown_f14() const;
-  void keydown_f15() const;
-  void keydown_f16() const;
-  void keydown_f17() const;
-  void keydown_f18() const;
-  void keydown_f19() const;
-  void keydown_f20() const;
-  void keydown_f21() const;
-  void keydown_f22() const;
-  void keydown_f23() const;
-  void keydown_f24() const;
-  void keydown_execute() const;
-  void keydown_help() const;
-  void keydown_menu() const;
-  void keydown_select() const;
-  void keydown_stop() const;
-  void keydown_again() const;
-  void keydown_undo() const;
-  void keydown_cut() const;
-  void keydown_copy() const;
-  void keydown_paste() const;
-  void keydown_find() const;
-  void keydown_mute() const;
-  void keydown_volumeup() const;
-  void keydown_volumedown() const;
-  void keydown_kp_comma() const;
-  void keydown_kp_equalsas400() const;
-  void keydown_alterase() const;
-  void keydown_sysreq() const;
-  void keydown_cancel() const;
-  void keydown_clear() const;
-  void keydown_prior() const;
-  void keydown_return2() const;
-  void keydown_separator() const;
-  void keydown_out() const;
-  void keydown_oper() const;
-  void keydown_clearagain() const;
-  void keydown_crsel() const;
-  void keydown_exsel() const;
-  void keydown_kp_00() const;
-  void keydown_kp_000() const;
-  void keydown_thousandsseparator() const;
-  void keydown_decimalseparator() const;
-  void keydown_currencyunit() const;
-  void keydown_currencysubunit() const;
-  void keydown_kp_leftparen() const;
-  void keydown_kp_rightparen() const;
-  void keydown_kp_leftbrace() const;
-  void keydown_kp_rightbrace() const;
-  void keydown_kp_tab() const;
-  void keydown_kp_backspace() const;
-  void keydown_kp_a() const;
-  void keydown_kp_b() const;
-  void keydown_kp_c() const;
-  void keydown_kp_d() const;
-  void keydown_kp_e() const;
-  void keydown_kp_f() const;
-  void keydown_kp_xor() const;
-  void keydown_kp_power() const;
-  void keydown_kp_percent() const;
-  void keydown_kp_less() const;
-  void keydown_kp_greater() const;
-  void keydown_kp_ampersand() const;
-  void keydown_kp_dblampersand() const;
-  void keydown_kp_verticalbar() const;
-  void keydown_kp_dblverticalbar() const;
-  void keydown_kp_colon() const;
-  void keydown_kp_hash() const;
-  void keydown_kp_space() const;
-  void keydown_kp_at() const;
-  void keydown_kp_exclam() const;
-  void keydown_kp_memstore() const;
-  void keydown_kp_memrecall() const;
-  void keydown_kp_memclear() const;
-  void keydown_kp_memadd() const;
-  void keydown_kp_memsubtract() const;
-  void keydown_kp_memmultiply() const;
-  void keydown_kp_memdivide() const;
-  void keydown_kp_plusminus() const;
-  void keydown_kp_clear() const;
-  void keydown_kp_clearentry() const;
-  void keydown_kp_binary() const;
-  void keydown_kp_octal() const;
-  void keydown_kp_decimal() const;
-  void keydown_kp_hexadecimal() const;
-  void keydown_lctrl() const;
-  void keydown_lshift() const;
-  void keydown_lalt() const;
-  void keydown_lgui() const;
-  void keydown_rctrl() const;
-  void keydown_rshift() const;
-  void keydown_ralt() const;
-  void keydown_rgui() const;
-  void keydown_mode() const;
-  void keydown_audionext() const;
-  void keydown_audioprev() const;
-  void keydown_audiostop() const;
-  void keydown_audioplay() const;
-  void keydown_audiomute() const;
-  void keydown_mediaselect() const;
-  void keydown_www() const;
-  void keydown_mail() const;
-  void keydown_calculator() const;
-  void keydown_computer() const;
-  void keydown_ac_search() const;
-  void keydown_ac_home() const;
-  void keydown_ac_back() const;
-  void keydown_ac_forward() const;
-  void keydown_ac_stop() const;
-  void keydown_ac_refresh() const;
-  void keydown_ac_bookmarks() const;
-  void keydown_brightnessdown() const;
-  void keydown_brightnessup() const;
-  void keydown_displayswitch() const;
-  void keydown_kbdillumtoggle() const;
-  void keydown_kbdillumdown() const;
-  void keydown_kbdillumup() const;
-  void keydown_eject() const;
-  void keydown_sleep() const;
+  void keydown_unknown_repeat() const;
+  void keydown_backspace_repeat() const;
+  void keydown_tab_repeat() const;
+  void keydown_return_repeat() const;
+  void keydown_escape_repeat() const;
+  void keydown_space_repeat() const;
+  void keydown_exclaim_repeat() const;
+  void keydown_quotedbl_repeat() const;
+  void keydown_hash_repeat() const;
+  void keydown_dollar_repeat() const;
+  void keydown_percent_repeat() const;
+  void keydown_ampersand_repeat() const;
+  void keydown_quote_repeat() const;
+  void keydown_leftparen_repeat() const;
+  void keydown_rightparen_repeat() const;
+  void keydown_asterisk_repeat() const;
+  void keydown_plus_repeat() const;
+  void keydown_comma_repeat() const;
+  void keydown_minus_repeat() const;
+  void keydown_period_repeat() const;
+  void keydown_slash_repeat() const;
+  void keydown_0_repeat() const;
+  void keydown_1_repeat() const;
+  void keydown_2_repeat() const;
+  void keydown_3_repeat() const;
+  void keydown_4_repeat() const;
+  void keydown_5_repeat() const;
+  void keydown_6_repeat() const;
+  void keydown_7_repeat() const;
+  void keydown_8_repeat() const;
+  void keydown_9_repeat() const;
+  void keydown_colon_repeat() const;
+  void keydown_semicolon_repeat() const;
+  void keydown_less_repeat() const;
+  void keydown_equals_repeat() const;
+  void keydown_greater_repeat() const;
+  void keydown_question_repeat() const;
+  void keydown_at_repeat() const;
+  void keydown_leftbracket_repeat() const;
+  void keydown_backslash_repeat() const;
+  void keydown_rightbracket_repeat() const;
+  void keydown_caret_repeat() const;
+  void keydown_underscore_repeat() const;
+  void keydown_backquote_repeat() const;
+  void keydown_a_repeat() const;
+  void keydown_b_repeat() const;
+  void keydown_c_repeat() const;
+  void keydown_d_repeat() const;
+  void keydown_e_repeat() const;
+  void keydown_f_repeat() const;
+  void keydown_g_repeat() const;
+  void keydown_h_repeat() const;
+  void keydown_i_repeat() const;
+  void keydown_j_repeat() const;
+  void keydown_k_repeat() const;
+  void keydown_l_repeat() const;
+  void keydown_m_repeat() const;
+  void keydown_n_repeat() const;
+  void keydown_o_repeat() const;
+  void keydown_p_repeat() const;
+  void keydown_q_repeat() const;
+  void keydown_r_repeat() const;
+  void keydown_s_repeat() const;
+  void keydown_t_repeat() const;
+  void keydown_u_repeat() const;
+  void keydown_v_repeat() const;
+  void keydown_w_repeat() const;
+  void keydown_x_repeat() const;
+  void keydown_y_repeat() const;
+  void keydown_z_repeat() const;
+  void keydown_delete_repeat() const;
+  void keydown_capslock_repeat() const;
+  void keydown_f1_repeat() const;
+  void keydown_f2_repeat() const;
+  void keydown_f3_repeat() const;
+  void keydown_f4_repeat() const;
+  void keydown_f5_repeat() const;
+  void keydown_f6_repeat() const;
+  void keydown_f7_repeat() const;
+  void keydown_f8_repeat() const;
+  void keydown_f9_repeat() const;
+  void keydown_f10_repeat() const;
+  void keydown_f11_repeat() const;
+  void keydown_f12_repeat() const;
+  void keydown_printscreen_repeat() const;
+  void keydown_scrolllock_repeat() const;
+  void keydown_pause_repeat() const;
+  void keydown_insert_repeat() const;
+  void keydown_home_repeat() const;
+  void keydown_pageup_repeat() const;
+  void keydown_end_repeat() const;
+  void keydown_pagedown_repeat() const;
+  void keydown_right_repeat() const;
+  void keydown_left_repeat() const;
+  void keydown_down_repeat() const;
+  void keydown_up_repeat() const;
+  void keydown_numlockclear_repeat() const;
+  void keydown_kp_divide_repeat() const;
+  void keydown_kp_multiply_repeat() const;
+  void keydown_kp_minus_repeat() const;
+  void keydown_kp_plus_repeat() const;
+  void keydown_kp_enter_repeat() const;
+  void keydown_kp_1_repeat() const;
+  void keydown_kp_2_repeat() const;
+  void keydown_kp_3_repeat() const;
+  void keydown_kp_4_repeat() const;
+  void keydown_kp_5_repeat() const;
+  void keydown_kp_6_repeat() const;
+  void keydown_kp_7_repeat() const;
+  void keydown_kp_8_repeat() const;
+  void keydown_kp_9_repeat() const;
+  void keydown_kp_0_repeat() const;
+  void keydown_kp_period_repeat() const;
+  void keydown_application_repeat() const;
+  void keydown_power_repeat() const;
+  void keydown_kp_equals_repeat() const;
+  void keydown_f13_repeat() const;
+  void keydown_f14_repeat() const;
+  void keydown_f15_repeat() const;
+  void keydown_f16_repeat() const;
+  void keydown_f17_repeat() const;
+  void keydown_f18_repeat() const;
+  void keydown_f19_repeat() const;
+  void keydown_f20_repeat() const;
+  void keydown_f21_repeat() const;
+  void keydown_f22_repeat() const;
+  void keydown_f23_repeat() const;
+  void keydown_f24_repeat() const;
+  void keydown_execute_repeat() const;
+  void keydown_help_repeat() const;
+  void keydown_menu_repeat() const;
+  void keydown_select_repeat() const;
+  void keydown_stop_repeat() const;
+  void keydown_again_repeat() const;
+  void keydown_undo_repeat() const;
+  void keydown_cut_repeat() const;
+  void keydown_copy_repeat() const;
+  void keydown_paste_repeat() const;
+  void keydown_find_repeat() const;
+  void keydown_mute_repeat() const;
+  void keydown_volumeup_repeat() const;
+  void keydown_volumedown_repeat() const;
+  void keydown_kp_comma_repeat() const;
+  void keydown_kp_equalsas400_repeat() const;
+  void keydown_alterase_repeat() const;
+  void keydown_sysreq_repeat() const;
+  void keydown_cancel_repeat() const;
+  void keydown_clear_repeat() const;
+  void keydown_prior_repeat() const;
+  void keydown_return2_repeat() const;
+  void keydown_separator_repeat() const;
+  void keydown_out_repeat() const;
+  void keydown_oper_repeat() const;
+  void keydown_clearagain_repeat() const;
+  void keydown_crsel_repeat() const;
+  void keydown_exsel_repeat() const;
+  void keydown_kp_00_repeat() const;
+  void keydown_kp_000_repeat() const;
+  void keydown_thousandsseparator_repeat() const;
+  void keydown_decimalseparator_repeat() const;
+  void keydown_currencyunit_repeat() const;
+  void keydown_currencysubunit_repeat() const;
+  void keydown_kp_leftparen_repeat() const;
+  void keydown_kp_rightparen_repeat() const;
+  void keydown_kp_leftbrace_repeat() const;
+  void keydown_kp_rightbrace_repeat() const;
+  void keydown_kp_tab_repeat() const;
+  void keydown_kp_backspace_repeat() const;
+  void keydown_kp_a_repeat() const;
+  void keydown_kp_b_repeat() const;
+  void keydown_kp_c_repeat() const;
+  void keydown_kp_d_repeat() const;
+  void keydown_kp_e_repeat() const;
+  void keydown_kp_f_repeat() const;
+  void keydown_kp_xor_repeat() const;
+  void keydown_kp_power_repeat() const;
+  void keydown_kp_percent_repeat() const;
+  void keydown_kp_less_repeat() const;
+  void keydown_kp_greater_repeat() const;
+  void keydown_kp_ampersand_repeat() const;
+  void keydown_kp_dblampersand_repeat() const;
+  void keydown_kp_verticalbar_repeat() const;
+  void keydown_kp_dblverticalbar_repeat() const;
+  void keydown_kp_colon_repeat() const;
+  void keydown_kp_hash_repeat() const;
+  void keydown_kp_space_repeat() const;
+  void keydown_kp_at_repeat() const;
+  void keydown_kp_exclam_repeat() const;
+  void keydown_kp_memstore_repeat() const;
+  void keydown_kp_memrecall_repeat() const;
+  void keydown_kp_memclear_repeat() const;
+  void keydown_kp_memadd_repeat() const;
+  void keydown_kp_memsubtract_repeat() const;
+  void keydown_kp_memmultiply_repeat() const;
+  void keydown_kp_memdivide_repeat() const;
+  void keydown_kp_plusminus_repeat() const;
+  void keydown_kp_clear_repeat() const;
+  void keydown_kp_clearentry_repeat() const;
+  void keydown_kp_binary_repeat() const;
+  void keydown_kp_octal_repeat() const;
+  void keydown_kp_decimal_repeat() const;
+  void keydown_kp_hexadecimal_repeat() const;
+  void keydown_lctrl_repeat() const;
+  void keydown_lshift_repeat() const;
+  void keydown_lalt_repeat() const;
+  void keydown_lgui_repeat() const;
+  void keydown_rctrl_repeat() const;
+  void keydown_rshift_repeat() const;
+  void keydown_ralt_repeat() const;
+  void keydown_rgui_repeat() const;
+  void keydown_mode_repeat() const;
+  void keydown_audionext_repeat() const;
+  void keydown_audioprev_repeat() const;
+  void keydown_audiostop_repeat() const;
+  void keydown_audioplay_repeat() const;
+  void keydown_audiomute_repeat() const;
+  void keydown_mediaselect_repeat() const;
+  void keydown_www_repeat() const;
+  void keydown_mail_repeat() const;
+  void keydown_calculator_repeat() const;
+  void keydown_computer_repeat() const;
+  void keydown_ac_search_repeat() const;
+  void keydown_ac_home_repeat() const;
+  void keydown_ac_back_repeat() const;
+  void keydown_ac_forward_repeat() const;
+  void keydown_ac_stop_repeat() const;
+  void keydown_ac_refresh_repeat() const;
+  void keydown_ac_bookmarks_repeat() const;
+  void keydown_brightnessdown_repeat() const;
+  void keydown_brightnessup_repeat() const;
+  void keydown_displayswitch_repeat() const;
+  void keydown_kbdillumtoggle_repeat() const;
+  void keydown_kbdillumdown_repeat() const;
+  void keydown_kbdillumup_repeat() const;
+  void keydown_eject_repeat() const;
+  void keydown_sleep_repeat() const;
+  void keydown_unknown_nonrepeat() const;
+  void keydown_backspace_nonrepeat() const;
+  void keydown_tab_nonrepeat() const;
+  void keydown_return_nonrepeat() const;
+  void keydown_escape_nonrepeat() const;
+  void keydown_space_nonrepeat() const;
+  void keydown_exclaim_nonrepeat() const;
+  void keydown_quotedbl_nonrepeat() const;
+  void keydown_hash_nonrepeat() const;
+  void keydown_dollar_nonrepeat() const;
+  void keydown_percent_nonrepeat() const;
+  void keydown_ampersand_nonrepeat() const;
+  void keydown_quote_nonrepeat() const;
+  void keydown_leftparen_nonrepeat() const;
+  void keydown_rightparen_nonrepeat() const;
+  void keydown_asterisk_nonrepeat() const;
+  void keydown_plus_nonrepeat() const;
+  void keydown_comma_nonrepeat() const;
+  void keydown_minus_nonrepeat() const;
+  void keydown_period_nonrepeat() const;
+  void keydown_slash_nonrepeat() const;
+  void keydown_0_nonrepeat() const;
+  void keydown_1_nonrepeat() const;
+  void keydown_2_nonrepeat() const;
+  void keydown_3_nonrepeat() const;
+  void keydown_4_nonrepeat() const;
+  void keydown_5_nonrepeat() const;
+  void keydown_6_nonrepeat() const;
+  void keydown_7_nonrepeat() const;
+  void keydown_8_nonrepeat() const;
+  void keydown_9_nonrepeat() const;
+  void keydown_colon_nonrepeat() const;
+  void keydown_semicolon_nonrepeat() const;
+  void keydown_less_nonrepeat() const;
+  void keydown_equals_nonrepeat() const;
+  void keydown_greater_nonrepeat() const;
+  void keydown_question_nonrepeat() const;
+  void keydown_at_nonrepeat() const;
+  void keydown_leftbracket_nonrepeat() const;
+  void keydown_backslash_nonrepeat() const;
+  void keydown_rightbracket_nonrepeat() const;
+  void keydown_caret_nonrepeat() const;
+  void keydown_underscore_nonrepeat() const;
+  void keydown_backquote_nonrepeat() const;
+  void keydown_a_nonrepeat() const;
+  void keydown_b_nonrepeat() const;
+  void keydown_c_nonrepeat() const;
+  void keydown_d_nonrepeat() const;
+  void keydown_e_nonrepeat() const;
+  void keydown_f_nonrepeat() const;
+  void keydown_g_nonrepeat() const;
+  void keydown_h_nonrepeat() const;
+  void keydown_i_nonrepeat() const;
+  void keydown_j_nonrepeat() const;
+  void keydown_k_nonrepeat() const;
+  void keydown_l_nonrepeat() const;
+  void keydown_m_nonrepeat() const;
+  void keydown_n_nonrepeat() const;
+  void keydown_o_nonrepeat() const;
+  void keydown_p_nonrepeat() const;
+  void keydown_q_nonrepeat() const;
+  void keydown_r_nonrepeat() const;
+  void keydown_s_nonrepeat() const;
+  void keydown_t_nonrepeat() const;
+  void keydown_u_nonrepeat() const;
+  void keydown_v_nonrepeat() const;
+  void keydown_w_nonrepeat() const;
+  void keydown_x_nonrepeat() const;
+  void keydown_y_nonrepeat() const;
+  void keydown_z_nonrepeat() const;
+  void keydown_delete_nonrepeat() const;
+  void keydown_capslock_nonrepeat() const;
+  void keydown_f1_nonrepeat() const;
+  void keydown_f2_nonrepeat() const;
+  void keydown_f3_nonrepeat() const;
+  void keydown_f4_nonrepeat() const;
+  void keydown_f5_nonrepeat() const;
+  void keydown_f6_nonrepeat() const;
+  void keydown_f7_nonrepeat() const;
+  void keydown_f8_nonrepeat() const;
+  void keydown_f9_nonrepeat() const;
+  void keydown_f10_nonrepeat() const;
+  void keydown_f11_nonrepeat() const;
+  void keydown_f12_nonrepeat() const;
+  void keydown_printscreen_nonrepeat() const;
+  void keydown_scrolllock_nonrepeat() const;
+  void keydown_pause_nonrepeat() const;
+  void keydown_insert_nonrepeat() const;
+  void keydown_home_nonrepeat() const;
+  void keydown_pageup_nonrepeat() const;
+  void keydown_end_nonrepeat() const;
+  void keydown_pagedown_nonrepeat() const;
+  void keydown_right_nonrepeat() const;
+  void keydown_left_nonrepeat() const;
+  void keydown_down_nonrepeat() const;
+  void keydown_up_nonrepeat() const;
+  void keydown_numlockclear_nonrepeat() const;
+  void keydown_kp_divide_nonrepeat() const;
+  void keydown_kp_multiply_nonrepeat() const;
+  void keydown_kp_minus_nonrepeat() const;
+  void keydown_kp_plus_nonrepeat() const;
+  void keydown_kp_enter_nonrepeat() const;
+  void keydown_kp_1_nonrepeat() const;
+  void keydown_kp_2_nonrepeat() const;
+  void keydown_kp_3_nonrepeat() const;
+  void keydown_kp_4_nonrepeat() const;
+  void keydown_kp_5_nonrepeat() const;
+  void keydown_kp_6_nonrepeat() const;
+  void keydown_kp_7_nonrepeat() const;
+  void keydown_kp_8_nonrepeat() const;
+  void keydown_kp_9_nonrepeat() const;
+  void keydown_kp_0_nonrepeat() const;
+  void keydown_kp_period_nonrepeat() const;
+  void keydown_application_nonrepeat() const;
+  void keydown_power_nonrepeat() const;
+  void keydown_kp_equals_nonrepeat() const;
+  void keydown_f13_nonrepeat() const;
+  void keydown_f14_nonrepeat() const;
+  void keydown_f15_nonrepeat() const;
+  void keydown_f16_nonrepeat() const;
+  void keydown_f17_nonrepeat() const;
+  void keydown_f18_nonrepeat() const;
+  void keydown_f19_nonrepeat() const;
+  void keydown_f20_nonrepeat() const;
+  void keydown_f21_nonrepeat() const;
+  void keydown_f22_nonrepeat() const;
+  void keydown_f23_nonrepeat() const;
+  void keydown_f24_nonrepeat() const;
+  void keydown_execute_nonrepeat() const;
+  void keydown_help_nonrepeat() const;
+  void keydown_menu_nonrepeat() const;
+  void keydown_select_nonrepeat() const;
+  void keydown_stop_nonrepeat() const;
+  void keydown_again_nonrepeat() const;
+  void keydown_undo_nonrepeat() const;
+  void keydown_cut_nonrepeat() const;
+  void keydown_copy_nonrepeat() const;
+  void keydown_paste_nonrepeat() const;
+  void keydown_find_nonrepeat() const;
+  void keydown_mute_nonrepeat() const;
+  void keydown_volumeup_nonrepeat() const;
+  void keydown_volumedown_nonrepeat() const;
+  void keydown_kp_comma_nonrepeat() const;
+  void keydown_kp_equalsas400_nonrepeat() const;
+  void keydown_alterase_nonrepeat() const;
+  void keydown_sysreq_nonrepeat() const;
+  void keydown_cancel_nonrepeat() const;
+  void keydown_clear_nonrepeat() const;
+  void keydown_prior_nonrepeat() const;
+  void keydown_return2_nonrepeat() const;
+  void keydown_separator_nonrepeat() const;
+  void keydown_out_nonrepeat() const;
+  void keydown_oper_nonrepeat() const;
+  void keydown_clearagain_nonrepeat() const;
+  void keydown_crsel_nonrepeat() const;
+  void keydown_exsel_nonrepeat() const;
+  void keydown_kp_00_nonrepeat() const;
+  void keydown_kp_000_nonrepeat() const;
+  void keydown_thousandsseparator_nonrepeat() const;
+  void keydown_decimalseparator_nonrepeat() const;
+  void keydown_currencyunit_nonrepeat() const;
+  void keydown_currencysubunit_nonrepeat() const;
+  void keydown_kp_leftparen_nonrepeat() const;
+  void keydown_kp_rightparen_nonrepeat() const;
+  void keydown_kp_leftbrace_nonrepeat() const;
+  void keydown_kp_rightbrace_nonrepeat() const;
+  void keydown_kp_tab_nonrepeat() const;
+  void keydown_kp_backspace_nonrepeat() const;
+  void keydown_kp_a_nonrepeat() const;
+  void keydown_kp_b_nonrepeat() const;
+  void keydown_kp_c_nonrepeat() const;
+  void keydown_kp_d_nonrepeat() const;
+  void keydown_kp_e_nonrepeat() const;
+  void keydown_kp_f_nonrepeat() const;
+  void keydown_kp_xor_nonrepeat() const;
+  void keydown_kp_power_nonrepeat() const;
+  void keydown_kp_percent_nonrepeat() const;
+  void keydown_kp_less_nonrepeat() const;
+  void keydown_kp_greater_nonrepeat() const;
+  void keydown_kp_ampersand_nonrepeat() const;
+  void keydown_kp_dblampersand_nonrepeat() const;
+  void keydown_kp_verticalbar_nonrepeat() const;
+  void keydown_kp_dblverticalbar_nonrepeat() const;
+  void keydown_kp_colon_nonrepeat() const;
+  void keydown_kp_hash_nonrepeat() const;
+  void keydown_kp_space_nonrepeat() const;
+  void keydown_kp_at_nonrepeat() const;
+  void keydown_kp_exclam_nonrepeat() const;
+  void keydown_kp_memstore_nonrepeat() const;
+  void keydown_kp_memrecall_nonrepeat() const;
+  void keydown_kp_memclear_nonrepeat() const;
+  void keydown_kp_memadd_nonrepeat() const;
+  void keydown_kp_memsubtract_nonrepeat() const;
+  void keydown_kp_memmultiply_nonrepeat() const;
+  void keydown_kp_memdivide_nonrepeat() const;
+  void keydown_kp_plusminus_nonrepeat() const;
+  void keydown_kp_clear_nonrepeat() const;
+  void keydown_kp_clearentry_nonrepeat() const;
+  void keydown_kp_binary_nonrepeat() const;
+  void keydown_kp_octal_nonrepeat() const;
+  void keydown_kp_decimal_nonrepeat() const;
+  void keydown_kp_hexadecimal_nonrepeat() const;
+  void keydown_lctrl_nonrepeat() const;
+  void keydown_lshift_nonrepeat() const;
+  void keydown_lalt_nonrepeat() const;
+  void keydown_lgui_nonrepeat() const;
+  void keydown_rctrl_nonrepeat() const;
+  void keydown_rshift_nonrepeat() const;
+  void keydown_ralt_nonrepeat() const;
+  void keydown_rgui_nonrepeat() const;
+  void keydown_mode_nonrepeat() const;
+  void keydown_audionext_nonrepeat() const;
+  void keydown_audioprev_nonrepeat() const;
+  void keydown_audiostop_nonrepeat() const;
+  void keydown_audioplay_nonrepeat() const;
+  void keydown_audiomute_nonrepeat() const;
+  void keydown_mediaselect_nonrepeat() const;
+  void keydown_www_nonrepeat() const;
+  void keydown_mail_nonrepeat() const;
+  void keydown_calculator_nonrepeat() const;
+  void keydown_computer_nonrepeat() const;
+  void keydown_ac_search_nonrepeat() const;
+  void keydown_ac_home_nonrepeat() const;
+  void keydown_ac_back_nonrepeat() const;
+  void keydown_ac_forward_nonrepeat() const;
+  void keydown_ac_stop_nonrepeat() const;
+  void keydown_ac_refresh_nonrepeat() const;
+  void keydown_ac_bookmarks_nonrepeat() const;
+  void keydown_brightnessdown_nonrepeat() const;
+  void keydown_brightnessup_nonrepeat() const;
+  void keydown_displayswitch_nonrepeat() const;
+  void keydown_kbdillumtoggle_nonrepeat() const;
+  void keydown_kbdillumdown_nonrepeat() const;
+  void keydown_kbdillumup_nonrepeat() const;
+  void keydown_eject_nonrepeat() const;
+  void keydown_sleep_nonrepeat() const;
   void keyup_unknown() const;
   void keyup_backspace() const;
   void keyup_tab() const;
@@ -1454,254 +2446,742 @@ struct event_dispatch {
   void keyup_sleep() const;
 
   connection on_quit(quit_slot_t const& op);
-  connection on_keydown_unknown(keydown_unknown_slot_t const& op);
-  connection on_keydown_backspace(keydown_backspace_slot_t const& op);
-  connection on_keydown_tab(keydown_tab_slot_t const& op);
-  connection on_keydown_return(keydown_return_slot_t const& op);
-  connection on_keydown_escape(keydown_escape_slot_t const& op);
-  connection on_keydown_space(keydown_space_slot_t const& op);
-  connection on_keydown_exclaim(keydown_exclaim_slot_t const& op);
-  connection on_keydown_quotedbl(keydown_quotedbl_slot_t const& op);
-  connection on_keydown_hash(keydown_hash_slot_t const& op);
-  connection on_keydown_dollar(keydown_dollar_slot_t const& op);
-  connection on_keydown_percent(keydown_percent_slot_t const& op);
-  connection on_keydown_ampersand(keydown_ampersand_slot_t const& op);
-  connection on_keydown_quote(keydown_quote_slot_t const& op);
-  connection on_keydown_leftparen(keydown_leftparen_slot_t const& op);
-  connection on_keydown_rightparen(keydown_rightparen_slot_t const& op);
-  connection on_keydown_asterisk(keydown_asterisk_slot_t const& op);
-  connection on_keydown_plus(keydown_plus_slot_t const& op);
-  connection on_keydown_comma(keydown_comma_slot_t const& op);
-  connection on_keydown_minus(keydown_minus_slot_t const& op);
-  connection on_keydown_period(keydown_period_slot_t const& op);
-  connection on_keydown_slash(keydown_slash_slot_t const& op);
-  connection on_keydown_0(keydown_0_slot_t const& op);
-  connection on_keydown_1(keydown_1_slot_t const& op);
-  connection on_keydown_2(keydown_2_slot_t const& op);
-  connection on_keydown_3(keydown_3_slot_t const& op);
-  connection on_keydown_4(keydown_4_slot_t const& op);
-  connection on_keydown_5(keydown_5_slot_t const& op);
-  connection on_keydown_6(keydown_6_slot_t const& op);
-  connection on_keydown_7(keydown_7_slot_t const& op);
-  connection on_keydown_8(keydown_8_slot_t const& op);
-  connection on_keydown_9(keydown_9_slot_t const& op);
-  connection on_keydown_colon(keydown_colon_slot_t const& op);
-  connection on_keydown_semicolon(keydown_semicolon_slot_t const& op);
-  connection on_keydown_less(keydown_less_slot_t const& op);
-  connection on_keydown_equals(keydown_equals_slot_t const& op);
-  connection on_keydown_greater(keydown_greater_slot_t const& op);
-  connection on_keydown_question(keydown_question_slot_t const& op);
-  connection on_keydown_at(keydown_at_slot_t const& op);
-  connection on_keydown_leftbracket(keydown_leftbracket_slot_t const& op);
-  connection on_keydown_backslash(keydown_backslash_slot_t const& op);
-  connection on_keydown_rightbracket(keydown_rightbracket_slot_t const& op);
-  connection on_keydown_caret(keydown_caret_slot_t const& op);
-  connection on_keydown_underscore(keydown_underscore_slot_t const& op);
-  connection on_keydown_backquote(keydown_backquote_slot_t const& op);
-  connection on_keydown_a(keydown_a_slot_t const& op);
-  connection on_keydown_b(keydown_b_slot_t const& op);
-  connection on_keydown_c(keydown_c_slot_t const& op);
-  connection on_keydown_d(keydown_d_slot_t const& op);
-  connection on_keydown_e(keydown_e_slot_t const& op);
-  connection on_keydown_f(keydown_f_slot_t const& op);
-  connection on_keydown_g(keydown_g_slot_t const& op);
-  connection on_keydown_h(keydown_h_slot_t const& op);
-  connection on_keydown_i(keydown_i_slot_t const& op);
-  connection on_keydown_j(keydown_j_slot_t const& op);
-  connection on_keydown_k(keydown_k_slot_t const& op);
-  connection on_keydown_l(keydown_l_slot_t const& op);
-  connection on_keydown_m(keydown_m_slot_t const& op);
-  connection on_keydown_n(keydown_n_slot_t const& op);
-  connection on_keydown_o(keydown_o_slot_t const& op);
-  connection on_keydown_p(keydown_p_slot_t const& op);
-  connection on_keydown_q(keydown_q_slot_t const& op);
-  connection on_keydown_r(keydown_r_slot_t const& op);
-  connection on_keydown_s(keydown_s_slot_t const& op);
-  connection on_keydown_t(keydown_t_slot_t const& op);
-  connection on_keydown_u(keydown_u_slot_t const& op);
-  connection on_keydown_v(keydown_v_slot_t const& op);
-  connection on_keydown_w(keydown_w_slot_t const& op);
-  connection on_keydown_x(keydown_x_slot_t const& op);
-  connection on_keydown_y(keydown_y_slot_t const& op);
-  connection on_keydown_z(keydown_z_slot_t const& op);
-  connection on_keydown_delete(keydown_delete_slot_t const& op);
-  connection on_keydown_capslock(keydown_capslock_slot_t const& op);
-  connection on_keydown_f1(keydown_f1_slot_t const& op);
-  connection on_keydown_f2(keydown_f2_slot_t const& op);
-  connection on_keydown_f3(keydown_f3_slot_t const& op);
-  connection on_keydown_f4(keydown_f4_slot_t const& op);
-  connection on_keydown_f5(keydown_f5_slot_t const& op);
-  connection on_keydown_f6(keydown_f6_slot_t const& op);
-  connection on_keydown_f7(keydown_f7_slot_t const& op);
-  connection on_keydown_f8(keydown_f8_slot_t const& op);
-  connection on_keydown_f9(keydown_f9_slot_t const& op);
-  connection on_keydown_f10(keydown_f10_slot_t const& op);
-  connection on_keydown_f11(keydown_f11_slot_t const& op);
-  connection on_keydown_f12(keydown_f12_slot_t const& op);
-  connection on_keydown_printscreen(keydown_printscreen_slot_t const& op);
-  connection on_keydown_scrolllock(keydown_scrolllock_slot_t const& op);
-  connection on_keydown_pause(keydown_pause_slot_t const& op);
-  connection on_keydown_insert(keydown_insert_slot_t const& op);
-  connection on_keydown_home(keydown_home_slot_t const& op);
-  connection on_keydown_pageup(keydown_pageup_slot_t const& op);
-  connection on_keydown_end(keydown_end_slot_t const& op);
-  connection on_keydown_pagedown(keydown_pagedown_slot_t const& op);
-  connection on_keydown_right(keydown_right_slot_t const& op);
-  connection on_keydown_left(keydown_left_slot_t const& op);
-  connection on_keydown_down(keydown_down_slot_t const& op);
-  connection on_keydown_up(keydown_up_slot_t const& op);
-  connection on_keydown_numlockclear(keydown_numlockclear_slot_t const& op);
-  connection on_keydown_kp_divide(keydown_kp_divide_slot_t const& op);
-  connection on_keydown_kp_multiply(keydown_kp_multiply_slot_t const& op);
-  connection on_keydown_kp_minus(keydown_kp_minus_slot_t const& op);
-  connection on_keydown_kp_plus(keydown_kp_plus_slot_t const& op);
-  connection on_keydown_kp_enter(keydown_kp_enter_slot_t const& op);
-  connection on_keydown_kp_1(keydown_kp_1_slot_t const& op);
-  connection on_keydown_kp_2(keydown_kp_2_slot_t const& op);
-  connection on_keydown_kp_3(keydown_kp_3_slot_t const& op);
-  connection on_keydown_kp_4(keydown_kp_4_slot_t const& op);
-  connection on_keydown_kp_5(keydown_kp_5_slot_t const& op);
-  connection on_keydown_kp_6(keydown_kp_6_slot_t const& op);
-  connection on_keydown_kp_7(keydown_kp_7_slot_t const& op);
-  connection on_keydown_kp_8(keydown_kp_8_slot_t const& op);
-  connection on_keydown_kp_9(keydown_kp_9_slot_t const& op);
-  connection on_keydown_kp_0(keydown_kp_0_slot_t const& op);
-  connection on_keydown_kp_period(keydown_kp_period_slot_t const& op);
-  connection on_keydown_application(keydown_application_slot_t const& op);
-  connection on_keydown_power(keydown_power_slot_t const& op);
-  connection on_keydown_kp_equals(keydown_kp_equals_slot_t const& op);
-  connection on_keydown_f13(keydown_f13_slot_t const& op);
-  connection on_keydown_f14(keydown_f14_slot_t const& op);
-  connection on_keydown_f15(keydown_f15_slot_t const& op);
-  connection on_keydown_f16(keydown_f16_slot_t const& op);
-  connection on_keydown_f17(keydown_f17_slot_t const& op);
-  connection on_keydown_f18(keydown_f18_slot_t const& op);
-  connection on_keydown_f19(keydown_f19_slot_t const& op);
-  connection on_keydown_f20(keydown_f20_slot_t const& op);
-  connection on_keydown_f21(keydown_f21_slot_t const& op);
-  connection on_keydown_f22(keydown_f22_slot_t const& op);
-  connection on_keydown_f23(keydown_f23_slot_t const& op);
-  connection on_keydown_f24(keydown_f24_slot_t const& op);
-  connection on_keydown_execute(keydown_execute_slot_t const& op);
-  connection on_keydown_help(keydown_help_slot_t const& op);
-  connection on_keydown_menu(keydown_menu_slot_t const& op);
-  connection on_keydown_select(keydown_select_slot_t const& op);
-  connection on_keydown_stop(keydown_stop_slot_t const& op);
-  connection on_keydown_again(keydown_again_slot_t const& op);
-  connection on_keydown_undo(keydown_undo_slot_t const& op);
-  connection on_keydown_cut(keydown_cut_slot_t const& op);
-  connection on_keydown_copy(keydown_copy_slot_t const& op);
-  connection on_keydown_paste(keydown_paste_slot_t const& op);
-  connection on_keydown_find(keydown_find_slot_t const& op);
-  connection on_keydown_mute(keydown_mute_slot_t const& op);
-  connection on_keydown_volumeup(keydown_volumeup_slot_t const& op);
-  connection on_keydown_volumedown(keydown_volumedown_slot_t const& op);
-  connection on_keydown_kp_comma(keydown_kp_comma_slot_t const& op);
-  connection on_keydown_kp_equalsas400(
-    keydown_kp_equalsas400_slot_t const& op);
-  connection on_keydown_alterase(keydown_alterase_slot_t const& op);
-  connection on_keydown_sysreq(keydown_sysreq_slot_t const& op);
-  connection on_keydown_cancel(keydown_cancel_slot_t const& op);
-  connection on_keydown_clear(keydown_clear_slot_t const& op);
-  connection on_keydown_prior(keydown_prior_slot_t const& op);
-  connection on_keydown_return2(keydown_return2_slot_t const& op);
-  connection on_keydown_separator(keydown_separator_slot_t const& op);
-  connection on_keydown_out(keydown_out_slot_t const& op);
-  connection on_keydown_oper(keydown_oper_slot_t const& op);
-  connection on_keydown_clearagain(keydown_clearagain_slot_t const& op);
-  connection on_keydown_crsel(keydown_crsel_slot_t const& op);
-  connection on_keydown_exsel(keydown_exsel_slot_t const& op);
-  connection on_keydown_kp_00(keydown_kp_00_slot_t const& op);
-  connection on_keydown_kp_000(keydown_kp_000_slot_t const& op);
-  connection on_keydown_thousandsseparator(
-    keydown_thousandsseparator_slot_t const& op);
-  connection on_keydown_decimalseparator(
-    keydown_decimalseparator_slot_t const& op);
-  connection on_keydown_currencyunit(keydown_currencyunit_slot_t const& op);
-  connection on_keydown_currencysubunit(
-    keydown_currencysubunit_slot_t const& op);
-  connection on_keydown_kp_leftparen(keydown_kp_leftparen_slot_t const& op);
-  connection on_keydown_kp_rightparen(keydown_kp_rightparen_slot_t const& op);
-  connection on_keydown_kp_leftbrace(keydown_kp_leftbrace_slot_t const& op);
-  connection on_keydown_kp_rightbrace(keydown_kp_rightbrace_slot_t const& op);
-  connection on_keydown_kp_tab(keydown_kp_tab_slot_t const& op);
-  connection on_keydown_kp_backspace(keydown_kp_backspace_slot_t const& op);
-  connection on_keydown_kp_a(keydown_kp_a_slot_t const& op);
-  connection on_keydown_kp_b(keydown_kp_b_slot_t const& op);
-  connection on_keydown_kp_c(keydown_kp_c_slot_t const& op);
-  connection on_keydown_kp_d(keydown_kp_d_slot_t const& op);
-  connection on_keydown_kp_e(keydown_kp_e_slot_t const& op);
-  connection on_keydown_kp_f(keydown_kp_f_slot_t const& op);
-  connection on_keydown_kp_xor(keydown_kp_xor_slot_t const& op);
-  connection on_keydown_kp_power(keydown_kp_power_slot_t const& op);
-  connection on_keydown_kp_percent(keydown_kp_percent_slot_t const& op);
-  connection on_keydown_kp_less(keydown_kp_less_slot_t const& op);
-  connection on_keydown_kp_greater(keydown_kp_greater_slot_t const& op);
-  connection on_keydown_kp_ampersand(keydown_kp_ampersand_slot_t const& op);
-  connection on_keydown_kp_dblampersand(
-    keydown_kp_dblampersand_slot_t const& op);
-  connection on_keydown_kp_verticalbar(
-    keydown_kp_verticalbar_slot_t const& op);
-  connection on_keydown_kp_dblverticalbar(
-    keydown_kp_dblverticalbar_slot_t const& op);
-  connection on_keydown_kp_colon(keydown_kp_colon_slot_t const& op);
-  connection on_keydown_kp_hash(keydown_kp_hash_slot_t const& op);
-  connection on_keydown_kp_space(keydown_kp_space_slot_t const& op);
-  connection on_keydown_kp_at(keydown_kp_at_slot_t const& op);
-  connection on_keydown_kp_exclam(keydown_kp_exclam_slot_t const& op);
-  connection on_keydown_kp_memstore(keydown_kp_memstore_slot_t const& op);
-  connection on_keydown_kp_memrecall(keydown_kp_memrecall_slot_t const& op);
-  connection on_keydown_kp_memclear(keydown_kp_memclear_slot_t const& op);
-  connection on_keydown_kp_memadd(keydown_kp_memadd_slot_t const& op);
-  connection on_keydown_kp_memsubtract(
-    keydown_kp_memsubtract_slot_t const& op);
-  connection on_keydown_kp_memmultiply(
-    keydown_kp_memmultiply_slot_t const& op);
-  connection on_keydown_kp_memdivide(keydown_kp_memdivide_slot_t const& op);
-  connection on_keydown_kp_plusminus(keydown_kp_plusminus_slot_t const& op);
-  connection on_keydown_kp_clear(keydown_kp_clear_slot_t const& op);
-  connection on_keydown_kp_clearentry(keydown_kp_clearentry_slot_t const& op);
-  connection on_keydown_kp_binary(keydown_kp_binary_slot_t const& op);
-  connection on_keydown_kp_octal(keydown_kp_octal_slot_t const& op);
-  connection on_keydown_kp_decimal(keydown_kp_decimal_slot_t const& op);
-  connection on_keydown_kp_hexadecimal(
-    keydown_kp_hexadecimal_slot_t const& op);
-  connection on_keydown_lctrl(keydown_lctrl_slot_t const& op);
-  connection on_keydown_lshift(keydown_lshift_slot_t const& op);
-  connection on_keydown_lalt(keydown_lalt_slot_t const& op);
-  connection on_keydown_lgui(keydown_lgui_slot_t const& op);
-  connection on_keydown_rctrl(keydown_rctrl_slot_t const& op);
-  connection on_keydown_rshift(keydown_rshift_slot_t const& op);
-  connection on_keydown_ralt(keydown_ralt_slot_t const& op);
-  connection on_keydown_rgui(keydown_rgui_slot_t const& op);
-  connection on_keydown_mode(keydown_mode_slot_t const& op);
-  connection on_keydown_audionext(keydown_audionext_slot_t const& op);
-  connection on_keydown_audioprev(keydown_audioprev_slot_t const& op);
-  connection on_keydown_audiostop(keydown_audiostop_slot_t const& op);
-  connection on_keydown_audioplay(keydown_audioplay_slot_t const& op);
-  connection on_keydown_audiomute(keydown_audiomute_slot_t const& op);
-  connection on_keydown_mediaselect(keydown_mediaselect_slot_t const& op);
-  connection on_keydown_www(keydown_www_slot_t const& op);
-  connection on_keydown_mail(keydown_mail_slot_t const& op);
-  connection on_keydown_calculator(keydown_calculator_slot_t const& op);
-  connection on_keydown_computer(keydown_computer_slot_t const& op);
-  connection on_keydown_ac_search(keydown_ac_search_slot_t const& op);
-  connection on_keydown_ac_home(keydown_ac_home_slot_t const& op);
-  connection on_keydown_ac_back(keydown_ac_back_slot_t const& op);
-  connection on_keydown_ac_forward(keydown_ac_forward_slot_t const& op);
-  connection on_keydown_ac_stop(keydown_ac_stop_slot_t const& op);
-  connection on_keydown_ac_refresh(keydown_ac_refresh_slot_t const& op);
-  connection on_keydown_ac_bookmarks(keydown_ac_bookmarks_slot_t const& op);
-  connection on_keydown_brightnessdown(
-    keydown_brightnessdown_slot_t const& op);
-  connection on_keydown_brightnessup(keydown_brightnessup_slot_t const& op);
-  connection on_keydown_displayswitch(keydown_displayswitch_slot_t const& op);
-  connection on_keydown_kbdillumtoggle(
-    keydown_kbdillumtoggle_slot_t const& op);
-  connection on_keydown_kbdillumdown(keydown_kbdillumdown_slot_t const& op);
-  connection on_keydown_kbdillumup(keydown_kbdillumup_slot_t const& op);
-  connection on_keydown_eject(keydown_eject_slot_t const& op);
-  connection on_keydown_sleep(keydown_sleep_slot_t const& op);
+  connection on_keydown_unknown_repeat(
+    keydown_unknown_repeat_slot_t const& op);
+  connection on_keydown_backspace_repeat(
+    keydown_backspace_repeat_slot_t const& op);
+  connection on_keydown_tab_repeat(keydown_tab_repeat_slot_t const& op);
+  connection on_keydown_return_repeat(keydown_return_repeat_slot_t const& op);
+  connection on_keydown_escape_repeat(keydown_escape_repeat_slot_t const& op);
+  connection on_keydown_space_repeat(keydown_space_repeat_slot_t const& op);
+  connection on_keydown_exclaim_repeat(
+    keydown_exclaim_repeat_slot_t const& op);
+  connection on_keydown_quotedbl_repeat(
+    keydown_quotedbl_repeat_slot_t const& op);
+  connection on_keydown_hash_repeat(keydown_hash_repeat_slot_t const& op);
+  connection on_keydown_dollar_repeat(keydown_dollar_repeat_slot_t const& op);
+  connection on_keydown_percent_repeat(
+    keydown_percent_repeat_slot_t const& op);
+  connection on_keydown_ampersand_repeat(
+    keydown_ampersand_repeat_slot_t const& op);
+  connection on_keydown_quote_repeat(keydown_quote_repeat_slot_t const& op);
+  connection on_keydown_leftparen_repeat(
+    keydown_leftparen_repeat_slot_t const& op);
+  connection on_keydown_rightparen_repeat(
+    keydown_rightparen_repeat_slot_t const& op);
+  connection on_keydown_asterisk_repeat(
+    keydown_asterisk_repeat_slot_t const& op);
+  connection on_keydown_plus_repeat(keydown_plus_repeat_slot_t const& op);
+  connection on_keydown_comma_repeat(keydown_comma_repeat_slot_t const& op);
+  connection on_keydown_minus_repeat(keydown_minus_repeat_slot_t const& op);
+  connection on_keydown_period_repeat(keydown_period_repeat_slot_t const& op);
+  connection on_keydown_slash_repeat(keydown_slash_repeat_slot_t const& op);
+  connection on_keydown_0_repeat(keydown_0_repeat_slot_t const& op);
+  connection on_keydown_1_repeat(keydown_1_repeat_slot_t const& op);
+  connection on_keydown_2_repeat(keydown_2_repeat_slot_t const& op);
+  connection on_keydown_3_repeat(keydown_3_repeat_slot_t const& op);
+  connection on_keydown_4_repeat(keydown_4_repeat_slot_t const& op);
+  connection on_keydown_5_repeat(keydown_5_repeat_slot_t const& op);
+  connection on_keydown_6_repeat(keydown_6_repeat_slot_t const& op);
+  connection on_keydown_7_repeat(keydown_7_repeat_slot_t const& op);
+  connection on_keydown_8_repeat(keydown_8_repeat_slot_t const& op);
+  connection on_keydown_9_repeat(keydown_9_repeat_slot_t const& op);
+  connection on_keydown_colon_repeat(keydown_colon_repeat_slot_t const& op);
+  connection on_keydown_semicolon_repeat(
+    keydown_semicolon_repeat_slot_t const& op);
+  connection on_keydown_less_repeat(keydown_less_repeat_slot_t const& op);
+  connection on_keydown_equals_repeat(keydown_equals_repeat_slot_t const& op);
+  connection on_keydown_greater_repeat(
+    keydown_greater_repeat_slot_t const& op);
+  connection on_keydown_question_repeat(
+    keydown_question_repeat_slot_t const& op);
+  connection on_keydown_at_repeat(keydown_at_repeat_slot_t const& op);
+  connection on_keydown_leftbracket_repeat(
+    keydown_leftbracket_repeat_slot_t const& op);
+  connection on_keydown_backslash_repeat(
+    keydown_backslash_repeat_slot_t const& op);
+  connection on_keydown_rightbracket_repeat(
+    keydown_rightbracket_repeat_slot_t const& op);
+  connection on_keydown_caret_repeat(keydown_caret_repeat_slot_t const& op);
+  connection on_keydown_underscore_repeat(
+    keydown_underscore_repeat_slot_t const& op);
+  connection on_keydown_backquote_repeat(
+    keydown_backquote_repeat_slot_t const& op);
+  connection on_keydown_a_repeat(keydown_a_repeat_slot_t const& op);
+  connection on_keydown_b_repeat(keydown_b_repeat_slot_t const& op);
+  connection on_keydown_c_repeat(keydown_c_repeat_slot_t const& op);
+  connection on_keydown_d_repeat(keydown_d_repeat_slot_t const& op);
+  connection on_keydown_e_repeat(keydown_e_repeat_slot_t const& op);
+  connection on_keydown_f_repeat(keydown_f_repeat_slot_t const& op);
+  connection on_keydown_g_repeat(keydown_g_repeat_slot_t const& op);
+  connection on_keydown_h_repeat(keydown_h_repeat_slot_t const& op);
+  connection on_keydown_i_repeat(keydown_i_repeat_slot_t const& op);
+  connection on_keydown_j_repeat(keydown_j_repeat_slot_t const& op);
+  connection on_keydown_k_repeat(keydown_k_repeat_slot_t const& op);
+  connection on_keydown_l_repeat(keydown_l_repeat_slot_t const& op);
+  connection on_keydown_m_repeat(keydown_m_repeat_slot_t const& op);
+  connection on_keydown_n_repeat(keydown_n_repeat_slot_t const& op);
+  connection on_keydown_o_repeat(keydown_o_repeat_slot_t const& op);
+  connection on_keydown_p_repeat(keydown_p_repeat_slot_t const& op);
+  connection on_keydown_q_repeat(keydown_q_repeat_slot_t const& op);
+  connection on_keydown_r_repeat(keydown_r_repeat_slot_t const& op);
+  connection on_keydown_s_repeat(keydown_s_repeat_slot_t const& op);
+  connection on_keydown_t_repeat(keydown_t_repeat_slot_t const& op);
+  connection on_keydown_u_repeat(keydown_u_repeat_slot_t const& op);
+  connection on_keydown_v_repeat(keydown_v_repeat_slot_t const& op);
+  connection on_keydown_w_repeat(keydown_w_repeat_slot_t const& op);
+  connection on_keydown_x_repeat(keydown_x_repeat_slot_t const& op);
+  connection on_keydown_y_repeat(keydown_y_repeat_slot_t const& op);
+  connection on_keydown_z_repeat(keydown_z_repeat_slot_t const& op);
+  connection on_keydown_delete_repeat(keydown_delete_repeat_slot_t const& op);
+  connection on_keydown_capslock_repeat(
+    keydown_capslock_repeat_slot_t const& op);
+  connection on_keydown_f1_repeat(keydown_f1_repeat_slot_t const& op);
+  connection on_keydown_f2_repeat(keydown_f2_repeat_slot_t const& op);
+  connection on_keydown_f3_repeat(keydown_f3_repeat_slot_t const& op);
+  connection on_keydown_f4_repeat(keydown_f4_repeat_slot_t const& op);
+  connection on_keydown_f5_repeat(keydown_f5_repeat_slot_t const& op);
+  connection on_keydown_f6_repeat(keydown_f6_repeat_slot_t const& op);
+  connection on_keydown_f7_repeat(keydown_f7_repeat_slot_t const& op);
+  connection on_keydown_f8_repeat(keydown_f8_repeat_slot_t const& op);
+  connection on_keydown_f9_repeat(keydown_f9_repeat_slot_t const& op);
+  connection on_keydown_f10_repeat(keydown_f10_repeat_slot_t const& op);
+  connection on_keydown_f11_repeat(keydown_f11_repeat_slot_t const& op);
+  connection on_keydown_f12_repeat(keydown_f12_repeat_slot_t const& op);
+  connection on_keydown_printscreen_repeat(
+    keydown_printscreen_repeat_slot_t const& op);
+  connection on_keydown_scrolllock_repeat(
+    keydown_scrolllock_repeat_slot_t const& op);
+  connection on_keydown_pause_repeat(keydown_pause_repeat_slot_t const& op);
+  connection on_keydown_insert_repeat(keydown_insert_repeat_slot_t const& op);
+  connection on_keydown_home_repeat(keydown_home_repeat_slot_t const& op);
+  connection on_keydown_pageup_repeat(keydown_pageup_repeat_slot_t const& op);
+  connection on_keydown_end_repeat(keydown_end_repeat_slot_t const& op);
+  connection on_keydown_pagedown_repeat(
+    keydown_pagedown_repeat_slot_t const& op);
+  connection on_keydown_right_repeat(keydown_right_repeat_slot_t const& op);
+  connection on_keydown_left_repeat(keydown_left_repeat_slot_t const& op);
+  connection on_keydown_down_repeat(keydown_down_repeat_slot_t const& op);
+  connection on_keydown_up_repeat(keydown_up_repeat_slot_t const& op);
+  connection on_keydown_numlockclear_repeat(
+    keydown_numlockclear_repeat_slot_t const& op);
+  connection on_keydown_kp_divide_repeat(
+    keydown_kp_divide_repeat_slot_t const& op);
+  connection on_keydown_kp_multiply_repeat(
+    keydown_kp_multiply_repeat_slot_t const& op);
+  connection on_keydown_kp_minus_repeat(
+    keydown_kp_minus_repeat_slot_t const& op);
+  connection on_keydown_kp_plus_repeat(
+    keydown_kp_plus_repeat_slot_t const& op);
+  connection on_keydown_kp_enter_repeat(
+    keydown_kp_enter_repeat_slot_t const& op);
+  connection on_keydown_kp_1_repeat(keydown_kp_1_repeat_slot_t const& op);
+  connection on_keydown_kp_2_repeat(keydown_kp_2_repeat_slot_t const& op);
+  connection on_keydown_kp_3_repeat(keydown_kp_3_repeat_slot_t const& op);
+  connection on_keydown_kp_4_repeat(keydown_kp_4_repeat_slot_t const& op);
+  connection on_keydown_kp_5_repeat(keydown_kp_5_repeat_slot_t const& op);
+  connection on_keydown_kp_6_repeat(keydown_kp_6_repeat_slot_t const& op);
+  connection on_keydown_kp_7_repeat(keydown_kp_7_repeat_slot_t const& op);
+  connection on_keydown_kp_8_repeat(keydown_kp_8_repeat_slot_t const& op);
+  connection on_keydown_kp_9_repeat(keydown_kp_9_repeat_slot_t const& op);
+  connection on_keydown_kp_0_repeat(keydown_kp_0_repeat_slot_t const& op);
+  connection on_keydown_kp_period_repeat(
+    keydown_kp_period_repeat_slot_t const& op);
+  connection on_keydown_application_repeat(
+    keydown_application_repeat_slot_t const& op);
+  connection on_keydown_power_repeat(keydown_power_repeat_slot_t const& op);
+  connection on_keydown_kp_equals_repeat(
+    keydown_kp_equals_repeat_slot_t const& op);
+  connection on_keydown_f13_repeat(keydown_f13_repeat_slot_t const& op);
+  connection on_keydown_f14_repeat(keydown_f14_repeat_slot_t const& op);
+  connection on_keydown_f15_repeat(keydown_f15_repeat_slot_t const& op);
+  connection on_keydown_f16_repeat(keydown_f16_repeat_slot_t const& op);
+  connection on_keydown_f17_repeat(keydown_f17_repeat_slot_t const& op);
+  connection on_keydown_f18_repeat(keydown_f18_repeat_slot_t const& op);
+  connection on_keydown_f19_repeat(keydown_f19_repeat_slot_t const& op);
+  connection on_keydown_f20_repeat(keydown_f20_repeat_slot_t const& op);
+  connection on_keydown_f21_repeat(keydown_f21_repeat_slot_t const& op);
+  connection on_keydown_f22_repeat(keydown_f22_repeat_slot_t const& op);
+  connection on_keydown_f23_repeat(keydown_f23_repeat_slot_t const& op);
+  connection on_keydown_f24_repeat(keydown_f24_repeat_slot_t const& op);
+  connection on_keydown_execute_repeat(
+    keydown_execute_repeat_slot_t const& op);
+  connection on_keydown_help_repeat(keydown_help_repeat_slot_t const& op);
+  connection on_keydown_menu_repeat(keydown_menu_repeat_slot_t const& op);
+  connection on_keydown_select_repeat(keydown_select_repeat_slot_t const& op);
+  connection on_keydown_stop_repeat(keydown_stop_repeat_slot_t const& op);
+  connection on_keydown_again_repeat(keydown_again_repeat_slot_t const& op);
+  connection on_keydown_undo_repeat(keydown_undo_repeat_slot_t const& op);
+  connection on_keydown_cut_repeat(keydown_cut_repeat_slot_t const& op);
+  connection on_keydown_copy_repeat(keydown_copy_repeat_slot_t const& op);
+  connection on_keydown_paste_repeat(keydown_paste_repeat_slot_t const& op);
+  connection on_keydown_find_repeat(keydown_find_repeat_slot_t const& op);
+  connection on_keydown_mute_repeat(keydown_mute_repeat_slot_t const& op);
+  connection on_keydown_volumeup_repeat(
+    keydown_volumeup_repeat_slot_t const& op);
+  connection on_keydown_volumedown_repeat(
+    keydown_volumedown_repeat_slot_t const& op);
+  connection on_keydown_kp_comma_repeat(
+    keydown_kp_comma_repeat_slot_t const& op);
+  connection on_keydown_kp_equalsas400_repeat(
+    keydown_kp_equalsas400_repeat_slot_t const& op);
+  connection on_keydown_alterase_repeat(
+    keydown_alterase_repeat_slot_t const& op);
+  connection on_keydown_sysreq_repeat(keydown_sysreq_repeat_slot_t const& op);
+  connection on_keydown_cancel_repeat(keydown_cancel_repeat_slot_t const& op);
+  connection on_keydown_clear_repeat(keydown_clear_repeat_slot_t const& op);
+  connection on_keydown_prior_repeat(keydown_prior_repeat_slot_t const& op);
+  connection on_keydown_return2_repeat(
+    keydown_return2_repeat_slot_t const& op);
+  connection on_keydown_separator_repeat(
+    keydown_separator_repeat_slot_t const& op);
+  connection on_keydown_out_repeat(keydown_out_repeat_slot_t const& op);
+  connection on_keydown_oper_repeat(keydown_oper_repeat_slot_t const& op);
+  connection on_keydown_clearagain_repeat(
+    keydown_clearagain_repeat_slot_t const& op);
+  connection on_keydown_crsel_repeat(keydown_crsel_repeat_slot_t const& op);
+  connection on_keydown_exsel_repeat(keydown_exsel_repeat_slot_t const& op);
+  connection on_keydown_kp_00_repeat(keydown_kp_00_repeat_slot_t const& op);
+  connection on_keydown_kp_000_repeat(keydown_kp_000_repeat_slot_t const& op);
+  connection on_keydown_thousandsseparator_repeat(
+    keydown_thousandsseparator_repeat_slot_t const& op);
+  connection on_keydown_decimalseparator_repeat(
+    keydown_decimalseparator_repeat_slot_t const& op);
+  connection on_keydown_currencyunit_repeat(
+    keydown_currencyunit_repeat_slot_t const& op);
+  connection on_keydown_currencysubunit_repeat(
+    keydown_currencysubunit_repeat_slot_t const& op);
+  connection on_keydown_kp_leftparen_repeat(
+    keydown_kp_leftparen_repeat_slot_t const& op);
+  connection on_keydown_kp_rightparen_repeat(
+    keydown_kp_rightparen_repeat_slot_t const& op);
+  connection on_keydown_kp_leftbrace_repeat(
+    keydown_kp_leftbrace_repeat_slot_t const& op);
+  connection on_keydown_kp_rightbrace_repeat(
+    keydown_kp_rightbrace_repeat_slot_t const& op);
+  connection on_keydown_kp_tab_repeat(keydown_kp_tab_repeat_slot_t const& op);
+  connection on_keydown_kp_backspace_repeat(
+    keydown_kp_backspace_repeat_slot_t const& op);
+  connection on_keydown_kp_a_repeat(keydown_kp_a_repeat_slot_t const& op);
+  connection on_keydown_kp_b_repeat(keydown_kp_b_repeat_slot_t const& op);
+  connection on_keydown_kp_c_repeat(keydown_kp_c_repeat_slot_t const& op);
+  connection on_keydown_kp_d_repeat(keydown_kp_d_repeat_slot_t const& op);
+  connection on_keydown_kp_e_repeat(keydown_kp_e_repeat_slot_t const& op);
+  connection on_keydown_kp_f_repeat(keydown_kp_f_repeat_slot_t const& op);
+  connection on_keydown_kp_xor_repeat(keydown_kp_xor_repeat_slot_t const& op);
+  connection on_keydown_kp_power_repeat(
+    keydown_kp_power_repeat_slot_t const& op);
+  connection on_keydown_kp_percent_repeat(
+    keydown_kp_percent_repeat_slot_t const& op);
+  connection on_keydown_kp_less_repeat(
+    keydown_kp_less_repeat_slot_t const& op);
+  connection on_keydown_kp_greater_repeat(
+    keydown_kp_greater_repeat_slot_t const& op);
+  connection on_keydown_kp_ampersand_repeat(
+    keydown_kp_ampersand_repeat_slot_t const& op);
+  connection on_keydown_kp_dblampersand_repeat(
+    keydown_kp_dblampersand_repeat_slot_t const& op);
+  connection on_keydown_kp_verticalbar_repeat(
+    keydown_kp_verticalbar_repeat_slot_t const& op);
+  connection on_keydown_kp_dblverticalbar_repeat(
+    keydown_kp_dblverticalbar_repeat_slot_t const& op);
+  connection on_keydown_kp_colon_repeat(
+    keydown_kp_colon_repeat_slot_t const& op);
+  connection on_keydown_kp_hash_repeat(
+    keydown_kp_hash_repeat_slot_t const& op);
+  connection on_keydown_kp_space_repeat(
+    keydown_kp_space_repeat_slot_t const& op);
+  connection on_keydown_kp_at_repeat(keydown_kp_at_repeat_slot_t const& op);
+  connection on_keydown_kp_exclam_repeat(
+    keydown_kp_exclam_repeat_slot_t const& op);
+  connection on_keydown_kp_memstore_repeat(
+    keydown_kp_memstore_repeat_slot_t const& op);
+  connection on_keydown_kp_memrecall_repeat(
+    keydown_kp_memrecall_repeat_slot_t const& op);
+  connection on_keydown_kp_memclear_repeat(
+    keydown_kp_memclear_repeat_slot_t const& op);
+  connection on_keydown_kp_memadd_repeat(
+    keydown_kp_memadd_repeat_slot_t const& op);
+  connection on_keydown_kp_memsubtract_repeat(
+    keydown_kp_memsubtract_repeat_slot_t const& op);
+  connection on_keydown_kp_memmultiply_repeat(
+    keydown_kp_memmultiply_repeat_slot_t const& op);
+  connection on_keydown_kp_memdivide_repeat(
+    keydown_kp_memdivide_repeat_slot_t const& op);
+  connection on_keydown_kp_plusminus_repeat(
+    keydown_kp_plusminus_repeat_slot_t const& op);
+  connection on_keydown_kp_clear_repeat(
+    keydown_kp_clear_repeat_slot_t const& op);
+  connection on_keydown_kp_clearentry_repeat(
+    keydown_kp_clearentry_repeat_slot_t const& op);
+  connection on_keydown_kp_binary_repeat(
+    keydown_kp_binary_repeat_slot_t const& op);
+  connection on_keydown_kp_octal_repeat(
+    keydown_kp_octal_repeat_slot_t const& op);
+  connection on_keydown_kp_decimal_repeat(
+    keydown_kp_decimal_repeat_slot_t const& op);
+  connection on_keydown_kp_hexadecimal_repeat(
+    keydown_kp_hexadecimal_repeat_slot_t const& op);
+  connection on_keydown_lctrl_repeat(keydown_lctrl_repeat_slot_t const& op);
+  connection on_keydown_lshift_repeat(keydown_lshift_repeat_slot_t const& op);
+  connection on_keydown_lalt_repeat(keydown_lalt_repeat_slot_t const& op);
+  connection on_keydown_lgui_repeat(keydown_lgui_repeat_slot_t const& op);
+  connection on_keydown_rctrl_repeat(keydown_rctrl_repeat_slot_t const& op);
+  connection on_keydown_rshift_repeat(keydown_rshift_repeat_slot_t const& op);
+  connection on_keydown_ralt_repeat(keydown_ralt_repeat_slot_t const& op);
+  connection on_keydown_rgui_repeat(keydown_rgui_repeat_slot_t const& op);
+  connection on_keydown_mode_repeat(keydown_mode_repeat_slot_t const& op);
+  connection on_keydown_audionext_repeat(
+    keydown_audionext_repeat_slot_t const& op);
+  connection on_keydown_audioprev_repeat(
+    keydown_audioprev_repeat_slot_t const& op);
+  connection on_keydown_audiostop_repeat(
+    keydown_audiostop_repeat_slot_t const& op);
+  connection on_keydown_audioplay_repeat(
+    keydown_audioplay_repeat_slot_t const& op);
+  connection on_keydown_audiomute_repeat(
+    keydown_audiomute_repeat_slot_t const& op);
+  connection on_keydown_mediaselect_repeat(
+    keydown_mediaselect_repeat_slot_t const& op);
+  connection on_keydown_www_repeat(keydown_www_repeat_slot_t const& op);
+  connection on_keydown_mail_repeat(keydown_mail_repeat_slot_t const& op);
+  connection on_keydown_calculator_repeat(
+    keydown_calculator_repeat_slot_t const& op);
+  connection on_keydown_computer_repeat(
+    keydown_computer_repeat_slot_t const& op);
+  connection on_keydown_ac_search_repeat(
+    keydown_ac_search_repeat_slot_t const& op);
+  connection on_keydown_ac_home_repeat(
+    keydown_ac_home_repeat_slot_t const& op);
+  connection on_keydown_ac_back_repeat(
+    keydown_ac_back_repeat_slot_t const& op);
+  connection on_keydown_ac_forward_repeat(
+    keydown_ac_forward_repeat_slot_t const& op);
+  connection on_keydown_ac_stop_repeat(
+    keydown_ac_stop_repeat_slot_t const& op);
+  connection on_keydown_ac_refresh_repeat(
+    keydown_ac_refresh_repeat_slot_t const& op);
+  connection on_keydown_ac_bookmarks_repeat(
+    keydown_ac_bookmarks_repeat_slot_t const& op);
+  connection on_keydown_brightnessdown_repeat(
+    keydown_brightnessdown_repeat_slot_t const& op);
+  connection on_keydown_brightnessup_repeat(
+    keydown_brightnessup_repeat_slot_t const& op);
+  connection on_keydown_displayswitch_repeat(
+    keydown_displayswitch_repeat_slot_t const& op);
+  connection on_keydown_kbdillumtoggle_repeat(
+    keydown_kbdillumtoggle_repeat_slot_t const& op);
+  connection on_keydown_kbdillumdown_repeat(
+    keydown_kbdillumdown_repeat_slot_t const& op);
+  connection on_keydown_kbdillumup_repeat(
+    keydown_kbdillumup_repeat_slot_t const& op);
+  connection on_keydown_eject_repeat(keydown_eject_repeat_slot_t const& op);
+  connection on_keydown_sleep_repeat(keydown_sleep_repeat_slot_t const& op);
+  connection on_keydown_unknown_nonrepeat(
+    keydown_unknown_nonrepeat_slot_t const& op);
+  connection on_keydown_backspace_nonrepeat(
+    keydown_backspace_nonrepeat_slot_t const& op);
+  connection on_keydown_tab_nonrepeat(keydown_tab_nonrepeat_slot_t const& op);
+  connection on_keydown_return_nonrepeat(
+    keydown_return_nonrepeat_slot_t const& op);
+  connection on_keydown_escape_nonrepeat(
+    keydown_escape_nonrepeat_slot_t const& op);
+  connection on_keydown_space_nonrepeat(
+    keydown_space_nonrepeat_slot_t const& op);
+  connection on_keydown_exclaim_nonrepeat(
+    keydown_exclaim_nonrepeat_slot_t const& op);
+  connection on_keydown_quotedbl_nonrepeat(
+    keydown_quotedbl_nonrepeat_slot_t const& op);
+  connection on_keydown_hash_nonrepeat(
+    keydown_hash_nonrepeat_slot_t const& op);
+  connection on_keydown_dollar_nonrepeat(
+    keydown_dollar_nonrepeat_slot_t const& op);
+  connection on_keydown_percent_nonrepeat(
+    keydown_percent_nonrepeat_slot_t const& op);
+  connection on_keydown_ampersand_nonrepeat(
+    keydown_ampersand_nonrepeat_slot_t const& op);
+  connection on_keydown_quote_nonrepeat(
+    keydown_quote_nonrepeat_slot_t const& op);
+  connection on_keydown_leftparen_nonrepeat(
+    keydown_leftparen_nonrepeat_slot_t const& op);
+  connection on_keydown_rightparen_nonrepeat(
+    keydown_rightparen_nonrepeat_slot_t const& op);
+  connection on_keydown_asterisk_nonrepeat(
+    keydown_asterisk_nonrepeat_slot_t const& op);
+  connection on_keydown_plus_nonrepeat(
+    keydown_plus_nonrepeat_slot_t const& op);
+  connection on_keydown_comma_nonrepeat(
+    keydown_comma_nonrepeat_slot_t const& op);
+  connection on_keydown_minus_nonrepeat(
+    keydown_minus_nonrepeat_slot_t const& op);
+  connection on_keydown_period_nonrepeat(
+    keydown_period_nonrepeat_slot_t const& op);
+  connection on_keydown_slash_nonrepeat(
+    keydown_slash_nonrepeat_slot_t const& op);
+  connection on_keydown_0_nonrepeat(keydown_0_nonrepeat_slot_t const& op);
+  connection on_keydown_1_nonrepeat(keydown_1_nonrepeat_slot_t const& op);
+  connection on_keydown_2_nonrepeat(keydown_2_nonrepeat_slot_t const& op);
+  connection on_keydown_3_nonrepeat(keydown_3_nonrepeat_slot_t const& op);
+  connection on_keydown_4_nonrepeat(keydown_4_nonrepeat_slot_t const& op);
+  connection on_keydown_5_nonrepeat(keydown_5_nonrepeat_slot_t const& op);
+  connection on_keydown_6_nonrepeat(keydown_6_nonrepeat_slot_t const& op);
+  connection on_keydown_7_nonrepeat(keydown_7_nonrepeat_slot_t const& op);
+  connection on_keydown_8_nonrepeat(keydown_8_nonrepeat_slot_t const& op);
+  connection on_keydown_9_nonrepeat(keydown_9_nonrepeat_slot_t const& op);
+  connection on_keydown_colon_nonrepeat(
+    keydown_colon_nonrepeat_slot_t const& op);
+  connection on_keydown_semicolon_nonrepeat(
+    keydown_semicolon_nonrepeat_slot_t const& op);
+  connection on_keydown_less_nonrepeat(
+    keydown_less_nonrepeat_slot_t const& op);
+  connection on_keydown_equals_nonrepeat(
+    keydown_equals_nonrepeat_slot_t const& op);
+  connection on_keydown_greater_nonrepeat(
+    keydown_greater_nonrepeat_slot_t const& op);
+  connection on_keydown_question_nonrepeat(
+    keydown_question_nonrepeat_slot_t const& op);
+  connection on_keydown_at_nonrepeat(keydown_at_nonrepeat_slot_t const& op);
+  connection on_keydown_leftbracket_nonrepeat(
+    keydown_leftbracket_nonrepeat_slot_t const& op);
+  connection on_keydown_backslash_nonrepeat(
+    keydown_backslash_nonrepeat_slot_t const& op);
+  connection on_keydown_rightbracket_nonrepeat(
+    keydown_rightbracket_nonrepeat_slot_t const& op);
+  connection on_keydown_caret_nonrepeat(
+    keydown_caret_nonrepeat_slot_t const& op);
+  connection on_keydown_underscore_nonrepeat(
+    keydown_underscore_nonrepeat_slot_t const& op);
+  connection on_keydown_backquote_nonrepeat(
+    keydown_backquote_nonrepeat_slot_t const& op);
+  connection on_keydown_a_nonrepeat(keydown_a_nonrepeat_slot_t const& op);
+  connection on_keydown_b_nonrepeat(keydown_b_nonrepeat_slot_t const& op);
+  connection on_keydown_c_nonrepeat(keydown_c_nonrepeat_slot_t const& op);
+  connection on_keydown_d_nonrepeat(keydown_d_nonrepeat_slot_t const& op);
+  connection on_keydown_e_nonrepeat(keydown_e_nonrepeat_slot_t const& op);
+  connection on_keydown_f_nonrepeat(keydown_f_nonrepeat_slot_t const& op);
+  connection on_keydown_g_nonrepeat(keydown_g_nonrepeat_slot_t const& op);
+  connection on_keydown_h_nonrepeat(keydown_h_nonrepeat_slot_t const& op);
+  connection on_keydown_i_nonrepeat(keydown_i_nonrepeat_slot_t const& op);
+  connection on_keydown_j_nonrepeat(keydown_j_nonrepeat_slot_t const& op);
+  connection on_keydown_k_nonrepeat(keydown_k_nonrepeat_slot_t const& op);
+  connection on_keydown_l_nonrepeat(keydown_l_nonrepeat_slot_t const& op);
+  connection on_keydown_m_nonrepeat(keydown_m_nonrepeat_slot_t const& op);
+  connection on_keydown_n_nonrepeat(keydown_n_nonrepeat_slot_t const& op);
+  connection on_keydown_o_nonrepeat(keydown_o_nonrepeat_slot_t const& op);
+  connection on_keydown_p_nonrepeat(keydown_p_nonrepeat_slot_t const& op);
+  connection on_keydown_q_nonrepeat(keydown_q_nonrepeat_slot_t const& op);
+  connection on_keydown_r_nonrepeat(keydown_r_nonrepeat_slot_t const& op);
+  connection on_keydown_s_nonrepeat(keydown_s_nonrepeat_slot_t const& op);
+  connection on_keydown_t_nonrepeat(keydown_t_nonrepeat_slot_t const& op);
+  connection on_keydown_u_nonrepeat(keydown_u_nonrepeat_slot_t const& op);
+  connection on_keydown_v_nonrepeat(keydown_v_nonrepeat_slot_t const& op);
+  connection on_keydown_w_nonrepeat(keydown_w_nonrepeat_slot_t const& op);
+  connection on_keydown_x_nonrepeat(keydown_x_nonrepeat_slot_t const& op);
+  connection on_keydown_y_nonrepeat(keydown_y_nonrepeat_slot_t const& op);
+  connection on_keydown_z_nonrepeat(keydown_z_nonrepeat_slot_t const& op);
+  connection on_keydown_delete_nonrepeat(
+    keydown_delete_nonrepeat_slot_t const& op);
+  connection on_keydown_capslock_nonrepeat(
+    keydown_capslock_nonrepeat_slot_t const& op);
+  connection on_keydown_f1_nonrepeat(keydown_f1_nonrepeat_slot_t const& op);
+  connection on_keydown_f2_nonrepeat(keydown_f2_nonrepeat_slot_t const& op);
+  connection on_keydown_f3_nonrepeat(keydown_f3_nonrepeat_slot_t const& op);
+  connection on_keydown_f4_nonrepeat(keydown_f4_nonrepeat_slot_t const& op);
+  connection on_keydown_f5_nonrepeat(keydown_f5_nonrepeat_slot_t const& op);
+  connection on_keydown_f6_nonrepeat(keydown_f6_nonrepeat_slot_t const& op);
+  connection on_keydown_f7_nonrepeat(keydown_f7_nonrepeat_slot_t const& op);
+  connection on_keydown_f8_nonrepeat(keydown_f8_nonrepeat_slot_t const& op);
+  connection on_keydown_f9_nonrepeat(keydown_f9_nonrepeat_slot_t const& op);
+  connection on_keydown_f10_nonrepeat(keydown_f10_nonrepeat_slot_t const& op);
+  connection on_keydown_f11_nonrepeat(keydown_f11_nonrepeat_slot_t const& op);
+  connection on_keydown_f12_nonrepeat(keydown_f12_nonrepeat_slot_t const& op);
+  connection on_keydown_printscreen_nonrepeat(
+    keydown_printscreen_nonrepeat_slot_t const& op);
+  connection on_keydown_scrolllock_nonrepeat(
+    keydown_scrolllock_nonrepeat_slot_t const& op);
+  connection on_keydown_pause_nonrepeat(
+    keydown_pause_nonrepeat_slot_t const& op);
+  connection on_keydown_insert_nonrepeat(
+    keydown_insert_nonrepeat_slot_t const& op);
+  connection on_keydown_home_nonrepeat(
+    keydown_home_nonrepeat_slot_t const& op);
+  connection on_keydown_pageup_nonrepeat(
+    keydown_pageup_nonrepeat_slot_t const& op);
+  connection on_keydown_end_nonrepeat(keydown_end_nonrepeat_slot_t const& op);
+  connection on_keydown_pagedown_nonrepeat(
+    keydown_pagedown_nonrepeat_slot_t const& op);
+  connection on_keydown_right_nonrepeat(
+    keydown_right_nonrepeat_slot_t const& op);
+  connection on_keydown_left_nonrepeat(
+    keydown_left_nonrepeat_slot_t const& op);
+  connection on_keydown_down_nonrepeat(
+    keydown_down_nonrepeat_slot_t const& op);
+  connection on_keydown_up_nonrepeat(keydown_up_nonrepeat_slot_t const& op);
+  connection on_keydown_numlockclear_nonrepeat(
+    keydown_numlockclear_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_divide_nonrepeat(
+    keydown_kp_divide_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_multiply_nonrepeat(
+    keydown_kp_multiply_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_minus_nonrepeat(
+    keydown_kp_minus_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_plus_nonrepeat(
+    keydown_kp_plus_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_enter_nonrepeat(
+    keydown_kp_enter_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_1_nonrepeat(
+    keydown_kp_1_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_2_nonrepeat(
+    keydown_kp_2_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_3_nonrepeat(
+    keydown_kp_3_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_4_nonrepeat(
+    keydown_kp_4_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_5_nonrepeat(
+    keydown_kp_5_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_6_nonrepeat(
+    keydown_kp_6_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_7_nonrepeat(
+    keydown_kp_7_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_8_nonrepeat(
+    keydown_kp_8_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_9_nonrepeat(
+    keydown_kp_9_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_0_nonrepeat(
+    keydown_kp_0_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_period_nonrepeat(
+    keydown_kp_period_nonrepeat_slot_t const& op);
+  connection on_keydown_application_nonrepeat(
+    keydown_application_nonrepeat_slot_t const& op);
+  connection on_keydown_power_nonrepeat(
+    keydown_power_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_equals_nonrepeat(
+    keydown_kp_equals_nonrepeat_slot_t const& op);
+  connection on_keydown_f13_nonrepeat(keydown_f13_nonrepeat_slot_t const& op);
+  connection on_keydown_f14_nonrepeat(keydown_f14_nonrepeat_slot_t const& op);
+  connection on_keydown_f15_nonrepeat(keydown_f15_nonrepeat_slot_t const& op);
+  connection on_keydown_f16_nonrepeat(keydown_f16_nonrepeat_slot_t const& op);
+  connection on_keydown_f17_nonrepeat(keydown_f17_nonrepeat_slot_t const& op);
+  connection on_keydown_f18_nonrepeat(keydown_f18_nonrepeat_slot_t const& op);
+  connection on_keydown_f19_nonrepeat(keydown_f19_nonrepeat_slot_t const& op);
+  connection on_keydown_f20_nonrepeat(keydown_f20_nonrepeat_slot_t const& op);
+  connection on_keydown_f21_nonrepeat(keydown_f21_nonrepeat_slot_t const& op);
+  connection on_keydown_f22_nonrepeat(keydown_f22_nonrepeat_slot_t const& op);
+  connection on_keydown_f23_nonrepeat(keydown_f23_nonrepeat_slot_t const& op);
+  connection on_keydown_f24_nonrepeat(keydown_f24_nonrepeat_slot_t const& op);
+  connection on_keydown_execute_nonrepeat(
+    keydown_execute_nonrepeat_slot_t const& op);
+  connection on_keydown_help_nonrepeat(
+    keydown_help_nonrepeat_slot_t const& op);
+  connection on_keydown_menu_nonrepeat(
+    keydown_menu_nonrepeat_slot_t const& op);
+  connection on_keydown_select_nonrepeat(
+    keydown_select_nonrepeat_slot_t const& op);
+  connection on_keydown_stop_nonrepeat(
+    keydown_stop_nonrepeat_slot_t const& op);
+  connection on_keydown_again_nonrepeat(
+    keydown_again_nonrepeat_slot_t const& op);
+  connection on_keydown_undo_nonrepeat(
+    keydown_undo_nonrepeat_slot_t const& op);
+  connection on_keydown_cut_nonrepeat(keydown_cut_nonrepeat_slot_t const& op);
+  connection on_keydown_copy_nonrepeat(
+    keydown_copy_nonrepeat_slot_t const& op);
+  connection on_keydown_paste_nonrepeat(
+    keydown_paste_nonrepeat_slot_t const& op);
+  connection on_keydown_find_nonrepeat(
+    keydown_find_nonrepeat_slot_t const& op);
+  connection on_keydown_mute_nonrepeat(
+    keydown_mute_nonrepeat_slot_t const& op);
+  connection on_keydown_volumeup_nonrepeat(
+    keydown_volumeup_nonrepeat_slot_t const& op);
+  connection on_keydown_volumedown_nonrepeat(
+    keydown_volumedown_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_comma_nonrepeat(
+    keydown_kp_comma_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_equalsas400_nonrepeat(
+    keydown_kp_equalsas400_nonrepeat_slot_t const& op);
+  connection on_keydown_alterase_nonrepeat(
+    keydown_alterase_nonrepeat_slot_t const& op);
+  connection on_keydown_sysreq_nonrepeat(
+    keydown_sysreq_nonrepeat_slot_t const& op);
+  connection on_keydown_cancel_nonrepeat(
+    keydown_cancel_nonrepeat_slot_t const& op);
+  connection on_keydown_clear_nonrepeat(
+    keydown_clear_nonrepeat_slot_t const& op);
+  connection on_keydown_prior_nonrepeat(
+    keydown_prior_nonrepeat_slot_t const& op);
+  connection on_keydown_return2_nonrepeat(
+    keydown_return2_nonrepeat_slot_t const& op);
+  connection on_keydown_separator_nonrepeat(
+    keydown_separator_nonrepeat_slot_t const& op);
+  connection on_keydown_out_nonrepeat(keydown_out_nonrepeat_slot_t const& op);
+  connection on_keydown_oper_nonrepeat(
+    keydown_oper_nonrepeat_slot_t const& op);
+  connection on_keydown_clearagain_nonrepeat(
+    keydown_clearagain_nonrepeat_slot_t const& op);
+  connection on_keydown_crsel_nonrepeat(
+    keydown_crsel_nonrepeat_slot_t const& op);
+  connection on_keydown_exsel_nonrepeat(
+    keydown_exsel_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_00_nonrepeat(
+    keydown_kp_00_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_000_nonrepeat(
+    keydown_kp_000_nonrepeat_slot_t const& op);
+  connection on_keydown_thousandsseparator_nonrepeat(
+    keydown_thousandsseparator_nonrepeat_slot_t const& op);
+  connection on_keydown_decimalseparator_nonrepeat(
+    keydown_decimalseparator_nonrepeat_slot_t const& op);
+  connection on_keydown_currencyunit_nonrepeat(
+    keydown_currencyunit_nonrepeat_slot_t const& op);
+  connection on_keydown_currencysubunit_nonrepeat(
+    keydown_currencysubunit_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_leftparen_nonrepeat(
+    keydown_kp_leftparen_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_rightparen_nonrepeat(
+    keydown_kp_rightparen_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_leftbrace_nonrepeat(
+    keydown_kp_leftbrace_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_rightbrace_nonrepeat(
+    keydown_kp_rightbrace_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_tab_nonrepeat(
+    keydown_kp_tab_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_backspace_nonrepeat(
+    keydown_kp_backspace_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_a_nonrepeat(
+    keydown_kp_a_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_b_nonrepeat(
+    keydown_kp_b_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_c_nonrepeat(
+    keydown_kp_c_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_d_nonrepeat(
+    keydown_kp_d_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_e_nonrepeat(
+    keydown_kp_e_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_f_nonrepeat(
+    keydown_kp_f_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_xor_nonrepeat(
+    keydown_kp_xor_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_power_nonrepeat(
+    keydown_kp_power_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_percent_nonrepeat(
+    keydown_kp_percent_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_less_nonrepeat(
+    keydown_kp_less_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_greater_nonrepeat(
+    keydown_kp_greater_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_ampersand_nonrepeat(
+    keydown_kp_ampersand_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_dblampersand_nonrepeat(
+    keydown_kp_dblampersand_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_verticalbar_nonrepeat(
+    keydown_kp_verticalbar_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_dblverticalbar_nonrepeat(
+    keydown_kp_dblverticalbar_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_colon_nonrepeat(
+    keydown_kp_colon_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_hash_nonrepeat(
+    keydown_kp_hash_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_space_nonrepeat(
+    keydown_kp_space_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_at_nonrepeat(
+    keydown_kp_at_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_exclam_nonrepeat(
+    keydown_kp_exclam_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memstore_nonrepeat(
+    keydown_kp_memstore_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memrecall_nonrepeat(
+    keydown_kp_memrecall_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memclear_nonrepeat(
+    keydown_kp_memclear_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memadd_nonrepeat(
+    keydown_kp_memadd_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memsubtract_nonrepeat(
+    keydown_kp_memsubtract_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memmultiply_nonrepeat(
+    keydown_kp_memmultiply_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_memdivide_nonrepeat(
+    keydown_kp_memdivide_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_plusminus_nonrepeat(
+    keydown_kp_plusminus_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_clear_nonrepeat(
+    keydown_kp_clear_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_clearentry_nonrepeat(
+    keydown_kp_clearentry_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_binary_nonrepeat(
+    keydown_kp_binary_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_octal_nonrepeat(
+    keydown_kp_octal_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_decimal_nonrepeat(
+    keydown_kp_decimal_nonrepeat_slot_t const& op);
+  connection on_keydown_kp_hexadecimal_nonrepeat(
+    keydown_kp_hexadecimal_nonrepeat_slot_t const& op);
+  connection on_keydown_lctrl_nonrepeat(
+    keydown_lctrl_nonrepeat_slot_t const& op);
+  connection on_keydown_lshift_nonrepeat(
+    keydown_lshift_nonrepeat_slot_t const& op);
+  connection on_keydown_lalt_nonrepeat(
+    keydown_lalt_nonrepeat_slot_t const& op);
+  connection on_keydown_lgui_nonrepeat(
+    keydown_lgui_nonrepeat_slot_t const& op);
+  connection on_keydown_rctrl_nonrepeat(
+    keydown_rctrl_nonrepeat_slot_t const& op);
+  connection on_keydown_rshift_nonrepeat(
+    keydown_rshift_nonrepeat_slot_t const& op);
+  connection on_keydown_ralt_nonrepeat(
+    keydown_ralt_nonrepeat_slot_t const& op);
+  connection on_keydown_rgui_nonrepeat(
+    keydown_rgui_nonrepeat_slot_t const& op);
+  connection on_keydown_mode_nonrepeat(
+    keydown_mode_nonrepeat_slot_t const& op);
+  connection on_keydown_audionext_nonrepeat(
+    keydown_audionext_nonrepeat_slot_t const& op);
+  connection on_keydown_audioprev_nonrepeat(
+    keydown_audioprev_nonrepeat_slot_t const& op);
+  connection on_keydown_audiostop_nonrepeat(
+    keydown_audiostop_nonrepeat_slot_t const& op);
+  connection on_keydown_audioplay_nonrepeat(
+    keydown_audioplay_nonrepeat_slot_t const& op);
+  connection on_keydown_audiomute_nonrepeat(
+    keydown_audiomute_nonrepeat_slot_t const& op);
+  connection on_keydown_mediaselect_nonrepeat(
+    keydown_mediaselect_nonrepeat_slot_t const& op);
+  connection on_keydown_www_nonrepeat(keydown_www_nonrepeat_slot_t const& op);
+  connection on_keydown_mail_nonrepeat(
+    keydown_mail_nonrepeat_slot_t const& op);
+  connection on_keydown_calculator_nonrepeat(
+    keydown_calculator_nonrepeat_slot_t const& op);
+  connection on_keydown_computer_nonrepeat(
+    keydown_computer_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_search_nonrepeat(
+    keydown_ac_search_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_home_nonrepeat(
+    keydown_ac_home_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_back_nonrepeat(
+    keydown_ac_back_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_forward_nonrepeat(
+    keydown_ac_forward_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_stop_nonrepeat(
+    keydown_ac_stop_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_refresh_nonrepeat(
+    keydown_ac_refresh_nonrepeat_slot_t const& op);
+  connection on_keydown_ac_bookmarks_nonrepeat(
+    keydown_ac_bookmarks_nonrepeat_slot_t const& op);
+  connection on_keydown_brightnessdown_nonrepeat(
+    keydown_brightnessdown_nonrepeat_slot_t const& op);
+  connection on_keydown_brightnessup_nonrepeat(
+    keydown_brightnessup_nonrepeat_slot_t const& op);
+  connection on_keydown_displayswitch_nonrepeat(
+    keydown_displayswitch_nonrepeat_slot_t const& op);
+  connection on_keydown_kbdillumtoggle_nonrepeat(
+    keydown_kbdillumtoggle_nonrepeat_slot_t const& op);
+  connection on_keydown_kbdillumdown_nonrepeat(
+    keydown_kbdillumdown_nonrepeat_slot_t const& op);
+  connection on_keydown_kbdillumup_nonrepeat(
+    keydown_kbdillumup_nonrepeat_slot_t const& op);
+  connection on_keydown_eject_nonrepeat(
+    keydown_eject_nonrepeat_slot_t const& op);
+  connection on_keydown_sleep_nonrepeat(
+    keydown_sleep_nonrepeat_slot_t const& op);
   connection on_keyup_unknown(keyup_unknown_slot_t const& op);
   connection on_keyup_backspace(keyup_backspace_slot_t const& op);
   connection on_keyup_tab(keyup_tab_slot_t const& op);
@@ -1944,242 +3424,512 @@ struct event_dispatch {
 
 private:
   quit_signal_t quit_signal;
-  keydown_unknown_signal_t keydown_unknown_signal;
-  keydown_backspace_signal_t keydown_backspace_signal;
-  keydown_tab_signal_t keydown_tab_signal;
-  keydown_return_signal_t keydown_return_signal;
-  keydown_escape_signal_t keydown_escape_signal;
-  keydown_space_signal_t keydown_space_signal;
-  keydown_exclaim_signal_t keydown_exclaim_signal;
-  keydown_quotedbl_signal_t keydown_quotedbl_signal;
-  keydown_hash_signal_t keydown_hash_signal;
-  keydown_dollar_signal_t keydown_dollar_signal;
-  keydown_percent_signal_t keydown_percent_signal;
-  keydown_ampersand_signal_t keydown_ampersand_signal;
-  keydown_quote_signal_t keydown_quote_signal;
-  keydown_leftparen_signal_t keydown_leftparen_signal;
-  keydown_rightparen_signal_t keydown_rightparen_signal;
-  keydown_asterisk_signal_t keydown_asterisk_signal;
-  keydown_plus_signal_t keydown_plus_signal;
-  keydown_comma_signal_t keydown_comma_signal;
-  keydown_minus_signal_t keydown_minus_signal;
-  keydown_period_signal_t keydown_period_signal;
-  keydown_slash_signal_t keydown_slash_signal;
-  keydown_0_signal_t keydown_0_signal;
-  keydown_1_signal_t keydown_1_signal;
-  keydown_2_signal_t keydown_2_signal;
-  keydown_3_signal_t keydown_3_signal;
-  keydown_4_signal_t keydown_4_signal;
-  keydown_5_signal_t keydown_5_signal;
-  keydown_6_signal_t keydown_6_signal;
-  keydown_7_signal_t keydown_7_signal;
-  keydown_8_signal_t keydown_8_signal;
-  keydown_9_signal_t keydown_9_signal;
-  keydown_colon_signal_t keydown_colon_signal;
-  keydown_semicolon_signal_t keydown_semicolon_signal;
-  keydown_less_signal_t keydown_less_signal;
-  keydown_equals_signal_t keydown_equals_signal;
-  keydown_greater_signal_t keydown_greater_signal;
-  keydown_question_signal_t keydown_question_signal;
-  keydown_at_signal_t keydown_at_signal;
-  keydown_leftbracket_signal_t keydown_leftbracket_signal;
-  keydown_backslash_signal_t keydown_backslash_signal;
-  keydown_rightbracket_signal_t keydown_rightbracket_signal;
-  keydown_caret_signal_t keydown_caret_signal;
-  keydown_underscore_signal_t keydown_underscore_signal;
-  keydown_backquote_signal_t keydown_backquote_signal;
-  keydown_a_signal_t keydown_a_signal;
-  keydown_b_signal_t keydown_b_signal;
-  keydown_c_signal_t keydown_c_signal;
-  keydown_d_signal_t keydown_d_signal;
-  keydown_e_signal_t keydown_e_signal;
-  keydown_f_signal_t keydown_f_signal;
-  keydown_g_signal_t keydown_g_signal;
-  keydown_h_signal_t keydown_h_signal;
-  keydown_i_signal_t keydown_i_signal;
-  keydown_j_signal_t keydown_j_signal;
-  keydown_k_signal_t keydown_k_signal;
-  keydown_l_signal_t keydown_l_signal;
-  keydown_m_signal_t keydown_m_signal;
-  keydown_n_signal_t keydown_n_signal;
-  keydown_o_signal_t keydown_o_signal;
-  keydown_p_signal_t keydown_p_signal;
-  keydown_q_signal_t keydown_q_signal;
-  keydown_r_signal_t keydown_r_signal;
-  keydown_s_signal_t keydown_s_signal;
-  keydown_t_signal_t keydown_t_signal;
-  keydown_u_signal_t keydown_u_signal;
-  keydown_v_signal_t keydown_v_signal;
-  keydown_w_signal_t keydown_w_signal;
-  keydown_x_signal_t keydown_x_signal;
-  keydown_y_signal_t keydown_y_signal;
-  keydown_z_signal_t keydown_z_signal;
-  keydown_delete_signal_t keydown_delete_signal;
-  keydown_capslock_signal_t keydown_capslock_signal;
-  keydown_f1_signal_t keydown_f1_signal;
-  keydown_f2_signal_t keydown_f2_signal;
-  keydown_f3_signal_t keydown_f3_signal;
-  keydown_f4_signal_t keydown_f4_signal;
-  keydown_f5_signal_t keydown_f5_signal;
-  keydown_f6_signal_t keydown_f6_signal;
-  keydown_f7_signal_t keydown_f7_signal;
-  keydown_f8_signal_t keydown_f8_signal;
-  keydown_f9_signal_t keydown_f9_signal;
-  keydown_f10_signal_t keydown_f10_signal;
-  keydown_f11_signal_t keydown_f11_signal;
-  keydown_f12_signal_t keydown_f12_signal;
-  keydown_printscreen_signal_t keydown_printscreen_signal;
-  keydown_scrolllock_signal_t keydown_scrolllock_signal;
-  keydown_pause_signal_t keydown_pause_signal;
-  keydown_insert_signal_t keydown_insert_signal;
-  keydown_home_signal_t keydown_home_signal;
-  keydown_pageup_signal_t keydown_pageup_signal;
-  keydown_end_signal_t keydown_end_signal;
-  keydown_pagedown_signal_t keydown_pagedown_signal;
-  keydown_right_signal_t keydown_right_signal;
-  keydown_left_signal_t keydown_left_signal;
-  keydown_down_signal_t keydown_down_signal;
-  keydown_up_signal_t keydown_up_signal;
-  keydown_numlockclear_signal_t keydown_numlockclear_signal;
-  keydown_kp_divide_signal_t keydown_kp_divide_signal;
-  keydown_kp_multiply_signal_t keydown_kp_multiply_signal;
-  keydown_kp_minus_signal_t keydown_kp_minus_signal;
-  keydown_kp_plus_signal_t keydown_kp_plus_signal;
-  keydown_kp_enter_signal_t keydown_kp_enter_signal;
-  keydown_kp_1_signal_t keydown_kp_1_signal;
-  keydown_kp_2_signal_t keydown_kp_2_signal;
-  keydown_kp_3_signal_t keydown_kp_3_signal;
-  keydown_kp_4_signal_t keydown_kp_4_signal;
-  keydown_kp_5_signal_t keydown_kp_5_signal;
-  keydown_kp_6_signal_t keydown_kp_6_signal;
-  keydown_kp_7_signal_t keydown_kp_7_signal;
-  keydown_kp_8_signal_t keydown_kp_8_signal;
-  keydown_kp_9_signal_t keydown_kp_9_signal;
-  keydown_kp_0_signal_t keydown_kp_0_signal;
-  keydown_kp_period_signal_t keydown_kp_period_signal;
-  keydown_application_signal_t keydown_application_signal;
-  keydown_power_signal_t keydown_power_signal;
-  keydown_kp_equals_signal_t keydown_kp_equals_signal;
-  keydown_f13_signal_t keydown_f13_signal;
-  keydown_f14_signal_t keydown_f14_signal;
-  keydown_f15_signal_t keydown_f15_signal;
-  keydown_f16_signal_t keydown_f16_signal;
-  keydown_f17_signal_t keydown_f17_signal;
-  keydown_f18_signal_t keydown_f18_signal;
-  keydown_f19_signal_t keydown_f19_signal;
-  keydown_f20_signal_t keydown_f20_signal;
-  keydown_f21_signal_t keydown_f21_signal;
-  keydown_f22_signal_t keydown_f22_signal;
-  keydown_f23_signal_t keydown_f23_signal;
-  keydown_f24_signal_t keydown_f24_signal;
-  keydown_execute_signal_t keydown_execute_signal;
-  keydown_help_signal_t keydown_help_signal;
-  keydown_menu_signal_t keydown_menu_signal;
-  keydown_select_signal_t keydown_select_signal;
-  keydown_stop_signal_t keydown_stop_signal;
-  keydown_again_signal_t keydown_again_signal;
-  keydown_undo_signal_t keydown_undo_signal;
-  keydown_cut_signal_t keydown_cut_signal;
-  keydown_copy_signal_t keydown_copy_signal;
-  keydown_paste_signal_t keydown_paste_signal;
-  keydown_find_signal_t keydown_find_signal;
-  keydown_mute_signal_t keydown_mute_signal;
-  keydown_volumeup_signal_t keydown_volumeup_signal;
-  keydown_volumedown_signal_t keydown_volumedown_signal;
-  keydown_kp_comma_signal_t keydown_kp_comma_signal;
-  keydown_kp_equalsas400_signal_t keydown_kp_equalsas400_signal;
-  keydown_alterase_signal_t keydown_alterase_signal;
-  keydown_sysreq_signal_t keydown_sysreq_signal;
-  keydown_cancel_signal_t keydown_cancel_signal;
-  keydown_clear_signal_t keydown_clear_signal;
-  keydown_prior_signal_t keydown_prior_signal;
-  keydown_return2_signal_t keydown_return2_signal;
-  keydown_separator_signal_t keydown_separator_signal;
-  keydown_out_signal_t keydown_out_signal;
-  keydown_oper_signal_t keydown_oper_signal;
-  keydown_clearagain_signal_t keydown_clearagain_signal;
-  keydown_crsel_signal_t keydown_crsel_signal;
-  keydown_exsel_signal_t keydown_exsel_signal;
-  keydown_kp_00_signal_t keydown_kp_00_signal;
-  keydown_kp_000_signal_t keydown_kp_000_signal;
-  keydown_thousandsseparator_signal_t keydown_thousandsseparator_signal;
-  keydown_decimalseparator_signal_t keydown_decimalseparator_signal;
-  keydown_currencyunit_signal_t keydown_currencyunit_signal;
-  keydown_currencysubunit_signal_t keydown_currencysubunit_signal;
-  keydown_kp_leftparen_signal_t keydown_kp_leftparen_signal;
-  keydown_kp_rightparen_signal_t keydown_kp_rightparen_signal;
-  keydown_kp_leftbrace_signal_t keydown_kp_leftbrace_signal;
-  keydown_kp_rightbrace_signal_t keydown_kp_rightbrace_signal;
-  keydown_kp_tab_signal_t keydown_kp_tab_signal;
-  keydown_kp_backspace_signal_t keydown_kp_backspace_signal;
-  keydown_kp_a_signal_t keydown_kp_a_signal;
-  keydown_kp_b_signal_t keydown_kp_b_signal;
-  keydown_kp_c_signal_t keydown_kp_c_signal;
-  keydown_kp_d_signal_t keydown_kp_d_signal;
-  keydown_kp_e_signal_t keydown_kp_e_signal;
-  keydown_kp_f_signal_t keydown_kp_f_signal;
-  keydown_kp_xor_signal_t keydown_kp_xor_signal;
-  keydown_kp_power_signal_t keydown_kp_power_signal;
-  keydown_kp_percent_signal_t keydown_kp_percent_signal;
-  keydown_kp_less_signal_t keydown_kp_less_signal;
-  keydown_kp_greater_signal_t keydown_kp_greater_signal;
-  keydown_kp_ampersand_signal_t keydown_kp_ampersand_signal;
-  keydown_kp_dblampersand_signal_t keydown_kp_dblampersand_signal;
-  keydown_kp_verticalbar_signal_t keydown_kp_verticalbar_signal;
-  keydown_kp_dblverticalbar_signal_t keydown_kp_dblverticalbar_signal;
-  keydown_kp_colon_signal_t keydown_kp_colon_signal;
-  keydown_kp_hash_signal_t keydown_kp_hash_signal;
-  keydown_kp_space_signal_t keydown_kp_space_signal;
-  keydown_kp_at_signal_t keydown_kp_at_signal;
-  keydown_kp_exclam_signal_t keydown_kp_exclam_signal;
-  keydown_kp_memstore_signal_t keydown_kp_memstore_signal;
-  keydown_kp_memrecall_signal_t keydown_kp_memrecall_signal;
-  keydown_kp_memclear_signal_t keydown_kp_memclear_signal;
-  keydown_kp_memadd_signal_t keydown_kp_memadd_signal;
-  keydown_kp_memsubtract_signal_t keydown_kp_memsubtract_signal;
-  keydown_kp_memmultiply_signal_t keydown_kp_memmultiply_signal;
-  keydown_kp_memdivide_signal_t keydown_kp_memdivide_signal;
-  keydown_kp_plusminus_signal_t keydown_kp_plusminus_signal;
-  keydown_kp_clear_signal_t keydown_kp_clear_signal;
-  keydown_kp_clearentry_signal_t keydown_kp_clearentry_signal;
-  keydown_kp_binary_signal_t keydown_kp_binary_signal;
-  keydown_kp_octal_signal_t keydown_kp_octal_signal;
-  keydown_kp_decimal_signal_t keydown_kp_decimal_signal;
-  keydown_kp_hexadecimal_signal_t keydown_kp_hexadecimal_signal;
-  keydown_lctrl_signal_t keydown_lctrl_signal;
-  keydown_lshift_signal_t keydown_lshift_signal;
-  keydown_lalt_signal_t keydown_lalt_signal;
-  keydown_lgui_signal_t keydown_lgui_signal;
-  keydown_rctrl_signal_t keydown_rctrl_signal;
-  keydown_rshift_signal_t keydown_rshift_signal;
-  keydown_ralt_signal_t keydown_ralt_signal;
-  keydown_rgui_signal_t keydown_rgui_signal;
-  keydown_mode_signal_t keydown_mode_signal;
-  keydown_audionext_signal_t keydown_audionext_signal;
-  keydown_audioprev_signal_t keydown_audioprev_signal;
-  keydown_audiostop_signal_t keydown_audiostop_signal;
-  keydown_audioplay_signal_t keydown_audioplay_signal;
-  keydown_audiomute_signal_t keydown_audiomute_signal;
-  keydown_mediaselect_signal_t keydown_mediaselect_signal;
-  keydown_www_signal_t keydown_www_signal;
-  keydown_mail_signal_t keydown_mail_signal;
-  keydown_calculator_signal_t keydown_calculator_signal;
-  keydown_computer_signal_t keydown_computer_signal;
-  keydown_ac_search_signal_t keydown_ac_search_signal;
-  keydown_ac_home_signal_t keydown_ac_home_signal;
-  keydown_ac_back_signal_t keydown_ac_back_signal;
-  keydown_ac_forward_signal_t keydown_ac_forward_signal;
-  keydown_ac_stop_signal_t keydown_ac_stop_signal;
-  keydown_ac_refresh_signal_t keydown_ac_refresh_signal;
-  keydown_ac_bookmarks_signal_t keydown_ac_bookmarks_signal;
-  keydown_brightnessdown_signal_t keydown_brightnessdown_signal;
-  keydown_brightnessup_signal_t keydown_brightnessup_signal;
-  keydown_displayswitch_signal_t keydown_displayswitch_signal;
-  keydown_kbdillumtoggle_signal_t keydown_kbdillumtoggle_signal;
-  keydown_kbdillumdown_signal_t keydown_kbdillumdown_signal;
-  keydown_kbdillumup_signal_t keydown_kbdillumup_signal;
-  keydown_eject_signal_t keydown_eject_signal;
-  keydown_sleep_signal_t keydown_sleep_signal;
+  keydown_unknown_repeat_signal_t keydown_unknown_repeat_signal;
+  keydown_backspace_repeat_signal_t keydown_backspace_repeat_signal;
+  keydown_tab_repeat_signal_t keydown_tab_repeat_signal;
+  keydown_return_repeat_signal_t keydown_return_repeat_signal;
+  keydown_escape_repeat_signal_t keydown_escape_repeat_signal;
+  keydown_space_repeat_signal_t keydown_space_repeat_signal;
+  keydown_exclaim_repeat_signal_t keydown_exclaim_repeat_signal;
+  keydown_quotedbl_repeat_signal_t keydown_quotedbl_repeat_signal;
+  keydown_hash_repeat_signal_t keydown_hash_repeat_signal;
+  keydown_dollar_repeat_signal_t keydown_dollar_repeat_signal;
+  keydown_percent_repeat_signal_t keydown_percent_repeat_signal;
+  keydown_ampersand_repeat_signal_t keydown_ampersand_repeat_signal;
+  keydown_quote_repeat_signal_t keydown_quote_repeat_signal;
+  keydown_leftparen_repeat_signal_t keydown_leftparen_repeat_signal;
+  keydown_rightparen_repeat_signal_t keydown_rightparen_repeat_signal;
+  keydown_asterisk_repeat_signal_t keydown_asterisk_repeat_signal;
+  keydown_plus_repeat_signal_t keydown_plus_repeat_signal;
+  keydown_comma_repeat_signal_t keydown_comma_repeat_signal;
+  keydown_minus_repeat_signal_t keydown_minus_repeat_signal;
+  keydown_period_repeat_signal_t keydown_period_repeat_signal;
+  keydown_slash_repeat_signal_t keydown_slash_repeat_signal;
+  keydown_0_repeat_signal_t keydown_0_repeat_signal;
+  keydown_1_repeat_signal_t keydown_1_repeat_signal;
+  keydown_2_repeat_signal_t keydown_2_repeat_signal;
+  keydown_3_repeat_signal_t keydown_3_repeat_signal;
+  keydown_4_repeat_signal_t keydown_4_repeat_signal;
+  keydown_5_repeat_signal_t keydown_5_repeat_signal;
+  keydown_6_repeat_signal_t keydown_6_repeat_signal;
+  keydown_7_repeat_signal_t keydown_7_repeat_signal;
+  keydown_8_repeat_signal_t keydown_8_repeat_signal;
+  keydown_9_repeat_signal_t keydown_9_repeat_signal;
+  keydown_colon_repeat_signal_t keydown_colon_repeat_signal;
+  keydown_semicolon_repeat_signal_t keydown_semicolon_repeat_signal;
+  keydown_less_repeat_signal_t keydown_less_repeat_signal;
+  keydown_equals_repeat_signal_t keydown_equals_repeat_signal;
+  keydown_greater_repeat_signal_t keydown_greater_repeat_signal;
+  keydown_question_repeat_signal_t keydown_question_repeat_signal;
+  keydown_at_repeat_signal_t keydown_at_repeat_signal;
+  keydown_leftbracket_repeat_signal_t keydown_leftbracket_repeat_signal;
+  keydown_backslash_repeat_signal_t keydown_backslash_repeat_signal;
+  keydown_rightbracket_repeat_signal_t keydown_rightbracket_repeat_signal;
+  keydown_caret_repeat_signal_t keydown_caret_repeat_signal;
+  keydown_underscore_repeat_signal_t keydown_underscore_repeat_signal;
+  keydown_backquote_repeat_signal_t keydown_backquote_repeat_signal;
+  keydown_a_repeat_signal_t keydown_a_repeat_signal;
+  keydown_b_repeat_signal_t keydown_b_repeat_signal;
+  keydown_c_repeat_signal_t keydown_c_repeat_signal;
+  keydown_d_repeat_signal_t keydown_d_repeat_signal;
+  keydown_e_repeat_signal_t keydown_e_repeat_signal;
+  keydown_f_repeat_signal_t keydown_f_repeat_signal;
+  keydown_g_repeat_signal_t keydown_g_repeat_signal;
+  keydown_h_repeat_signal_t keydown_h_repeat_signal;
+  keydown_i_repeat_signal_t keydown_i_repeat_signal;
+  keydown_j_repeat_signal_t keydown_j_repeat_signal;
+  keydown_k_repeat_signal_t keydown_k_repeat_signal;
+  keydown_l_repeat_signal_t keydown_l_repeat_signal;
+  keydown_m_repeat_signal_t keydown_m_repeat_signal;
+  keydown_n_repeat_signal_t keydown_n_repeat_signal;
+  keydown_o_repeat_signal_t keydown_o_repeat_signal;
+  keydown_p_repeat_signal_t keydown_p_repeat_signal;
+  keydown_q_repeat_signal_t keydown_q_repeat_signal;
+  keydown_r_repeat_signal_t keydown_r_repeat_signal;
+  keydown_s_repeat_signal_t keydown_s_repeat_signal;
+  keydown_t_repeat_signal_t keydown_t_repeat_signal;
+  keydown_u_repeat_signal_t keydown_u_repeat_signal;
+  keydown_v_repeat_signal_t keydown_v_repeat_signal;
+  keydown_w_repeat_signal_t keydown_w_repeat_signal;
+  keydown_x_repeat_signal_t keydown_x_repeat_signal;
+  keydown_y_repeat_signal_t keydown_y_repeat_signal;
+  keydown_z_repeat_signal_t keydown_z_repeat_signal;
+  keydown_delete_repeat_signal_t keydown_delete_repeat_signal;
+  keydown_capslock_repeat_signal_t keydown_capslock_repeat_signal;
+  keydown_f1_repeat_signal_t keydown_f1_repeat_signal;
+  keydown_f2_repeat_signal_t keydown_f2_repeat_signal;
+  keydown_f3_repeat_signal_t keydown_f3_repeat_signal;
+  keydown_f4_repeat_signal_t keydown_f4_repeat_signal;
+  keydown_f5_repeat_signal_t keydown_f5_repeat_signal;
+  keydown_f6_repeat_signal_t keydown_f6_repeat_signal;
+  keydown_f7_repeat_signal_t keydown_f7_repeat_signal;
+  keydown_f8_repeat_signal_t keydown_f8_repeat_signal;
+  keydown_f9_repeat_signal_t keydown_f9_repeat_signal;
+  keydown_f10_repeat_signal_t keydown_f10_repeat_signal;
+  keydown_f11_repeat_signal_t keydown_f11_repeat_signal;
+  keydown_f12_repeat_signal_t keydown_f12_repeat_signal;
+  keydown_printscreen_repeat_signal_t keydown_printscreen_repeat_signal;
+  keydown_scrolllock_repeat_signal_t keydown_scrolllock_repeat_signal;
+  keydown_pause_repeat_signal_t keydown_pause_repeat_signal;
+  keydown_insert_repeat_signal_t keydown_insert_repeat_signal;
+  keydown_home_repeat_signal_t keydown_home_repeat_signal;
+  keydown_pageup_repeat_signal_t keydown_pageup_repeat_signal;
+  keydown_end_repeat_signal_t keydown_end_repeat_signal;
+  keydown_pagedown_repeat_signal_t keydown_pagedown_repeat_signal;
+  keydown_right_repeat_signal_t keydown_right_repeat_signal;
+  keydown_left_repeat_signal_t keydown_left_repeat_signal;
+  keydown_down_repeat_signal_t keydown_down_repeat_signal;
+  keydown_up_repeat_signal_t keydown_up_repeat_signal;
+  keydown_numlockclear_repeat_signal_t keydown_numlockclear_repeat_signal;
+  keydown_kp_divide_repeat_signal_t keydown_kp_divide_repeat_signal;
+  keydown_kp_multiply_repeat_signal_t keydown_kp_multiply_repeat_signal;
+  keydown_kp_minus_repeat_signal_t keydown_kp_minus_repeat_signal;
+  keydown_kp_plus_repeat_signal_t keydown_kp_plus_repeat_signal;
+  keydown_kp_enter_repeat_signal_t keydown_kp_enter_repeat_signal;
+  keydown_kp_1_repeat_signal_t keydown_kp_1_repeat_signal;
+  keydown_kp_2_repeat_signal_t keydown_kp_2_repeat_signal;
+  keydown_kp_3_repeat_signal_t keydown_kp_3_repeat_signal;
+  keydown_kp_4_repeat_signal_t keydown_kp_4_repeat_signal;
+  keydown_kp_5_repeat_signal_t keydown_kp_5_repeat_signal;
+  keydown_kp_6_repeat_signal_t keydown_kp_6_repeat_signal;
+  keydown_kp_7_repeat_signal_t keydown_kp_7_repeat_signal;
+  keydown_kp_8_repeat_signal_t keydown_kp_8_repeat_signal;
+  keydown_kp_9_repeat_signal_t keydown_kp_9_repeat_signal;
+  keydown_kp_0_repeat_signal_t keydown_kp_0_repeat_signal;
+  keydown_kp_period_repeat_signal_t keydown_kp_period_repeat_signal;
+  keydown_application_repeat_signal_t keydown_application_repeat_signal;
+  keydown_power_repeat_signal_t keydown_power_repeat_signal;
+  keydown_kp_equals_repeat_signal_t keydown_kp_equals_repeat_signal;
+  keydown_f13_repeat_signal_t keydown_f13_repeat_signal;
+  keydown_f14_repeat_signal_t keydown_f14_repeat_signal;
+  keydown_f15_repeat_signal_t keydown_f15_repeat_signal;
+  keydown_f16_repeat_signal_t keydown_f16_repeat_signal;
+  keydown_f17_repeat_signal_t keydown_f17_repeat_signal;
+  keydown_f18_repeat_signal_t keydown_f18_repeat_signal;
+  keydown_f19_repeat_signal_t keydown_f19_repeat_signal;
+  keydown_f20_repeat_signal_t keydown_f20_repeat_signal;
+  keydown_f21_repeat_signal_t keydown_f21_repeat_signal;
+  keydown_f22_repeat_signal_t keydown_f22_repeat_signal;
+  keydown_f23_repeat_signal_t keydown_f23_repeat_signal;
+  keydown_f24_repeat_signal_t keydown_f24_repeat_signal;
+  keydown_execute_repeat_signal_t keydown_execute_repeat_signal;
+  keydown_help_repeat_signal_t keydown_help_repeat_signal;
+  keydown_menu_repeat_signal_t keydown_menu_repeat_signal;
+  keydown_select_repeat_signal_t keydown_select_repeat_signal;
+  keydown_stop_repeat_signal_t keydown_stop_repeat_signal;
+  keydown_again_repeat_signal_t keydown_again_repeat_signal;
+  keydown_undo_repeat_signal_t keydown_undo_repeat_signal;
+  keydown_cut_repeat_signal_t keydown_cut_repeat_signal;
+  keydown_copy_repeat_signal_t keydown_copy_repeat_signal;
+  keydown_paste_repeat_signal_t keydown_paste_repeat_signal;
+  keydown_find_repeat_signal_t keydown_find_repeat_signal;
+  keydown_mute_repeat_signal_t keydown_mute_repeat_signal;
+  keydown_volumeup_repeat_signal_t keydown_volumeup_repeat_signal;
+  keydown_volumedown_repeat_signal_t keydown_volumedown_repeat_signal;
+  keydown_kp_comma_repeat_signal_t keydown_kp_comma_repeat_signal;
+  keydown_kp_equalsas400_repeat_signal_t keydown_kp_equalsas400_repeat_signal;
+  keydown_alterase_repeat_signal_t keydown_alterase_repeat_signal;
+  keydown_sysreq_repeat_signal_t keydown_sysreq_repeat_signal;
+  keydown_cancel_repeat_signal_t keydown_cancel_repeat_signal;
+  keydown_clear_repeat_signal_t keydown_clear_repeat_signal;
+  keydown_prior_repeat_signal_t keydown_prior_repeat_signal;
+  keydown_return2_repeat_signal_t keydown_return2_repeat_signal;
+  keydown_separator_repeat_signal_t keydown_separator_repeat_signal;
+  keydown_out_repeat_signal_t keydown_out_repeat_signal;
+  keydown_oper_repeat_signal_t keydown_oper_repeat_signal;
+  keydown_clearagain_repeat_signal_t keydown_clearagain_repeat_signal;
+  keydown_crsel_repeat_signal_t keydown_crsel_repeat_signal;
+  keydown_exsel_repeat_signal_t keydown_exsel_repeat_signal;
+  keydown_kp_00_repeat_signal_t keydown_kp_00_repeat_signal;
+  keydown_kp_000_repeat_signal_t keydown_kp_000_repeat_signal;
+  keydown_thousandsseparator_repeat_signal_t
+    keydown_thousandsseparator_repeat_signal;
+  keydown_decimalseparator_repeat_signal_t
+    keydown_decimalseparator_repeat_signal;
+  keydown_currencyunit_repeat_signal_t keydown_currencyunit_repeat_signal;
+  keydown_currencysubunit_repeat_signal_t
+    keydown_currencysubunit_repeat_signal;
+  keydown_kp_leftparen_repeat_signal_t keydown_kp_leftparen_repeat_signal;
+  keydown_kp_rightparen_repeat_signal_t keydown_kp_rightparen_repeat_signal;
+  keydown_kp_leftbrace_repeat_signal_t keydown_kp_leftbrace_repeat_signal;
+  keydown_kp_rightbrace_repeat_signal_t keydown_kp_rightbrace_repeat_signal;
+  keydown_kp_tab_repeat_signal_t keydown_kp_tab_repeat_signal;
+  keydown_kp_backspace_repeat_signal_t keydown_kp_backspace_repeat_signal;
+  keydown_kp_a_repeat_signal_t keydown_kp_a_repeat_signal;
+  keydown_kp_b_repeat_signal_t keydown_kp_b_repeat_signal;
+  keydown_kp_c_repeat_signal_t keydown_kp_c_repeat_signal;
+  keydown_kp_d_repeat_signal_t keydown_kp_d_repeat_signal;
+  keydown_kp_e_repeat_signal_t keydown_kp_e_repeat_signal;
+  keydown_kp_f_repeat_signal_t keydown_kp_f_repeat_signal;
+  keydown_kp_xor_repeat_signal_t keydown_kp_xor_repeat_signal;
+  keydown_kp_power_repeat_signal_t keydown_kp_power_repeat_signal;
+  keydown_kp_percent_repeat_signal_t keydown_kp_percent_repeat_signal;
+  keydown_kp_less_repeat_signal_t keydown_kp_less_repeat_signal;
+  keydown_kp_greater_repeat_signal_t keydown_kp_greater_repeat_signal;
+  keydown_kp_ampersand_repeat_signal_t keydown_kp_ampersand_repeat_signal;
+  keydown_kp_dblampersand_repeat_signal_t
+    keydown_kp_dblampersand_repeat_signal;
+  keydown_kp_verticalbar_repeat_signal_t keydown_kp_verticalbar_repeat_signal;
+  keydown_kp_dblverticalbar_repeat_signal_t
+    keydown_kp_dblverticalbar_repeat_signal;
+  keydown_kp_colon_repeat_signal_t keydown_kp_colon_repeat_signal;
+  keydown_kp_hash_repeat_signal_t keydown_kp_hash_repeat_signal;
+  keydown_kp_space_repeat_signal_t keydown_kp_space_repeat_signal;
+  keydown_kp_at_repeat_signal_t keydown_kp_at_repeat_signal;
+  keydown_kp_exclam_repeat_signal_t keydown_kp_exclam_repeat_signal;
+  keydown_kp_memstore_repeat_signal_t keydown_kp_memstore_repeat_signal;
+  keydown_kp_memrecall_repeat_signal_t keydown_kp_memrecall_repeat_signal;
+  keydown_kp_memclear_repeat_signal_t keydown_kp_memclear_repeat_signal;
+  keydown_kp_memadd_repeat_signal_t keydown_kp_memadd_repeat_signal;
+  keydown_kp_memsubtract_repeat_signal_t keydown_kp_memsubtract_repeat_signal;
+  keydown_kp_memmultiply_repeat_signal_t keydown_kp_memmultiply_repeat_signal;
+  keydown_kp_memdivide_repeat_signal_t keydown_kp_memdivide_repeat_signal;
+  keydown_kp_plusminus_repeat_signal_t keydown_kp_plusminus_repeat_signal;
+  keydown_kp_clear_repeat_signal_t keydown_kp_clear_repeat_signal;
+  keydown_kp_clearentry_repeat_signal_t keydown_kp_clearentry_repeat_signal;
+  keydown_kp_binary_repeat_signal_t keydown_kp_binary_repeat_signal;
+  keydown_kp_octal_repeat_signal_t keydown_kp_octal_repeat_signal;
+  keydown_kp_decimal_repeat_signal_t keydown_kp_decimal_repeat_signal;
+  keydown_kp_hexadecimal_repeat_signal_t keydown_kp_hexadecimal_repeat_signal;
+  keydown_lctrl_repeat_signal_t keydown_lctrl_repeat_signal;
+  keydown_lshift_repeat_signal_t keydown_lshift_repeat_signal;
+  keydown_lalt_repeat_signal_t keydown_lalt_repeat_signal;
+  keydown_lgui_repeat_signal_t keydown_lgui_repeat_signal;
+  keydown_rctrl_repeat_signal_t keydown_rctrl_repeat_signal;
+  keydown_rshift_repeat_signal_t keydown_rshift_repeat_signal;
+  keydown_ralt_repeat_signal_t keydown_ralt_repeat_signal;
+  keydown_rgui_repeat_signal_t keydown_rgui_repeat_signal;
+  keydown_mode_repeat_signal_t keydown_mode_repeat_signal;
+  keydown_audionext_repeat_signal_t keydown_audionext_repeat_signal;
+  keydown_audioprev_repeat_signal_t keydown_audioprev_repeat_signal;
+  keydown_audiostop_repeat_signal_t keydown_audiostop_repeat_signal;
+  keydown_audioplay_repeat_signal_t keydown_audioplay_repeat_signal;
+  keydown_audiomute_repeat_signal_t keydown_audiomute_repeat_signal;
+  keydown_mediaselect_repeat_signal_t keydown_mediaselect_repeat_signal;
+  keydown_www_repeat_signal_t keydown_www_repeat_signal;
+  keydown_mail_repeat_signal_t keydown_mail_repeat_signal;
+  keydown_calculator_repeat_signal_t keydown_calculator_repeat_signal;
+  keydown_computer_repeat_signal_t keydown_computer_repeat_signal;
+  keydown_ac_search_repeat_signal_t keydown_ac_search_repeat_signal;
+  keydown_ac_home_repeat_signal_t keydown_ac_home_repeat_signal;
+  keydown_ac_back_repeat_signal_t keydown_ac_back_repeat_signal;
+  keydown_ac_forward_repeat_signal_t keydown_ac_forward_repeat_signal;
+  keydown_ac_stop_repeat_signal_t keydown_ac_stop_repeat_signal;
+  keydown_ac_refresh_repeat_signal_t keydown_ac_refresh_repeat_signal;
+  keydown_ac_bookmarks_repeat_signal_t keydown_ac_bookmarks_repeat_signal;
+  keydown_brightnessdown_repeat_signal_t keydown_brightnessdown_repeat_signal;
+  keydown_brightnessup_repeat_signal_t keydown_brightnessup_repeat_signal;
+  keydown_displayswitch_repeat_signal_t keydown_displayswitch_repeat_signal;
+  keydown_kbdillumtoggle_repeat_signal_t keydown_kbdillumtoggle_repeat_signal;
+  keydown_kbdillumdown_repeat_signal_t keydown_kbdillumdown_repeat_signal;
+  keydown_kbdillumup_repeat_signal_t keydown_kbdillumup_repeat_signal;
+  keydown_eject_repeat_signal_t keydown_eject_repeat_signal;
+  keydown_sleep_repeat_signal_t keydown_sleep_repeat_signal;
+  keydown_unknown_nonrepeat_signal_t keydown_unknown_nonrepeat_signal;
+  keydown_backspace_nonrepeat_signal_t keydown_backspace_nonrepeat_signal;
+  keydown_tab_nonrepeat_signal_t keydown_tab_nonrepeat_signal;
+  keydown_return_nonrepeat_signal_t keydown_return_nonrepeat_signal;
+  keydown_escape_nonrepeat_signal_t keydown_escape_nonrepeat_signal;
+  keydown_space_nonrepeat_signal_t keydown_space_nonrepeat_signal;
+  keydown_exclaim_nonrepeat_signal_t keydown_exclaim_nonrepeat_signal;
+  keydown_quotedbl_nonrepeat_signal_t keydown_quotedbl_nonrepeat_signal;
+  keydown_hash_nonrepeat_signal_t keydown_hash_nonrepeat_signal;
+  keydown_dollar_nonrepeat_signal_t keydown_dollar_nonrepeat_signal;
+  keydown_percent_nonrepeat_signal_t keydown_percent_nonrepeat_signal;
+  keydown_ampersand_nonrepeat_signal_t keydown_ampersand_nonrepeat_signal;
+  keydown_quote_nonrepeat_signal_t keydown_quote_nonrepeat_signal;
+  keydown_leftparen_nonrepeat_signal_t keydown_leftparen_nonrepeat_signal;
+  keydown_rightparen_nonrepeat_signal_t keydown_rightparen_nonrepeat_signal;
+  keydown_asterisk_nonrepeat_signal_t keydown_asterisk_nonrepeat_signal;
+  keydown_plus_nonrepeat_signal_t keydown_plus_nonrepeat_signal;
+  keydown_comma_nonrepeat_signal_t keydown_comma_nonrepeat_signal;
+  keydown_minus_nonrepeat_signal_t keydown_minus_nonrepeat_signal;
+  keydown_period_nonrepeat_signal_t keydown_period_nonrepeat_signal;
+  keydown_slash_nonrepeat_signal_t keydown_slash_nonrepeat_signal;
+  keydown_0_nonrepeat_signal_t keydown_0_nonrepeat_signal;
+  keydown_1_nonrepeat_signal_t keydown_1_nonrepeat_signal;
+  keydown_2_nonrepeat_signal_t keydown_2_nonrepeat_signal;
+  keydown_3_nonrepeat_signal_t keydown_3_nonrepeat_signal;
+  keydown_4_nonrepeat_signal_t keydown_4_nonrepeat_signal;
+  keydown_5_nonrepeat_signal_t keydown_5_nonrepeat_signal;
+  keydown_6_nonrepeat_signal_t keydown_6_nonrepeat_signal;
+  keydown_7_nonrepeat_signal_t keydown_7_nonrepeat_signal;
+  keydown_8_nonrepeat_signal_t keydown_8_nonrepeat_signal;
+  keydown_9_nonrepeat_signal_t keydown_9_nonrepeat_signal;
+  keydown_colon_nonrepeat_signal_t keydown_colon_nonrepeat_signal;
+  keydown_semicolon_nonrepeat_signal_t keydown_semicolon_nonrepeat_signal;
+  keydown_less_nonrepeat_signal_t keydown_less_nonrepeat_signal;
+  keydown_equals_nonrepeat_signal_t keydown_equals_nonrepeat_signal;
+  keydown_greater_nonrepeat_signal_t keydown_greater_nonrepeat_signal;
+  keydown_question_nonrepeat_signal_t keydown_question_nonrepeat_signal;
+  keydown_at_nonrepeat_signal_t keydown_at_nonrepeat_signal;
+  keydown_leftbracket_nonrepeat_signal_t keydown_leftbracket_nonrepeat_signal;
+  keydown_backslash_nonrepeat_signal_t keydown_backslash_nonrepeat_signal;
+  keydown_rightbracket_nonrepeat_signal_t
+    keydown_rightbracket_nonrepeat_signal;
+  keydown_caret_nonrepeat_signal_t keydown_caret_nonrepeat_signal;
+  keydown_underscore_nonrepeat_signal_t keydown_underscore_nonrepeat_signal;
+  keydown_backquote_nonrepeat_signal_t keydown_backquote_nonrepeat_signal;
+  keydown_a_nonrepeat_signal_t keydown_a_nonrepeat_signal;
+  keydown_b_nonrepeat_signal_t keydown_b_nonrepeat_signal;
+  keydown_c_nonrepeat_signal_t keydown_c_nonrepeat_signal;
+  keydown_d_nonrepeat_signal_t keydown_d_nonrepeat_signal;
+  keydown_e_nonrepeat_signal_t keydown_e_nonrepeat_signal;
+  keydown_f_nonrepeat_signal_t keydown_f_nonrepeat_signal;
+  keydown_g_nonrepeat_signal_t keydown_g_nonrepeat_signal;
+  keydown_h_nonrepeat_signal_t keydown_h_nonrepeat_signal;
+  keydown_i_nonrepeat_signal_t keydown_i_nonrepeat_signal;
+  keydown_j_nonrepeat_signal_t keydown_j_nonrepeat_signal;
+  keydown_k_nonrepeat_signal_t keydown_k_nonrepeat_signal;
+  keydown_l_nonrepeat_signal_t keydown_l_nonrepeat_signal;
+  keydown_m_nonrepeat_signal_t keydown_m_nonrepeat_signal;
+  keydown_n_nonrepeat_signal_t keydown_n_nonrepeat_signal;
+  keydown_o_nonrepeat_signal_t keydown_o_nonrepeat_signal;
+  keydown_p_nonrepeat_signal_t keydown_p_nonrepeat_signal;
+  keydown_q_nonrepeat_signal_t keydown_q_nonrepeat_signal;
+  keydown_r_nonrepeat_signal_t keydown_r_nonrepeat_signal;
+  keydown_s_nonrepeat_signal_t keydown_s_nonrepeat_signal;
+  keydown_t_nonrepeat_signal_t keydown_t_nonrepeat_signal;
+  keydown_u_nonrepeat_signal_t keydown_u_nonrepeat_signal;
+  keydown_v_nonrepeat_signal_t keydown_v_nonrepeat_signal;
+  keydown_w_nonrepeat_signal_t keydown_w_nonrepeat_signal;
+  keydown_x_nonrepeat_signal_t keydown_x_nonrepeat_signal;
+  keydown_y_nonrepeat_signal_t keydown_y_nonrepeat_signal;
+  keydown_z_nonrepeat_signal_t keydown_z_nonrepeat_signal;
+  keydown_delete_nonrepeat_signal_t keydown_delete_nonrepeat_signal;
+  keydown_capslock_nonrepeat_signal_t keydown_capslock_nonrepeat_signal;
+  keydown_f1_nonrepeat_signal_t keydown_f1_nonrepeat_signal;
+  keydown_f2_nonrepeat_signal_t keydown_f2_nonrepeat_signal;
+  keydown_f3_nonrepeat_signal_t keydown_f3_nonrepeat_signal;
+  keydown_f4_nonrepeat_signal_t keydown_f4_nonrepeat_signal;
+  keydown_f5_nonrepeat_signal_t keydown_f5_nonrepeat_signal;
+  keydown_f6_nonrepeat_signal_t keydown_f6_nonrepeat_signal;
+  keydown_f7_nonrepeat_signal_t keydown_f7_nonrepeat_signal;
+  keydown_f8_nonrepeat_signal_t keydown_f8_nonrepeat_signal;
+  keydown_f9_nonrepeat_signal_t keydown_f9_nonrepeat_signal;
+  keydown_f10_nonrepeat_signal_t keydown_f10_nonrepeat_signal;
+  keydown_f11_nonrepeat_signal_t keydown_f11_nonrepeat_signal;
+  keydown_f12_nonrepeat_signal_t keydown_f12_nonrepeat_signal;
+  keydown_printscreen_nonrepeat_signal_t keydown_printscreen_nonrepeat_signal;
+  keydown_scrolllock_nonrepeat_signal_t keydown_scrolllock_nonrepeat_signal;
+  keydown_pause_nonrepeat_signal_t keydown_pause_nonrepeat_signal;
+  keydown_insert_nonrepeat_signal_t keydown_insert_nonrepeat_signal;
+  keydown_home_nonrepeat_signal_t keydown_home_nonrepeat_signal;
+  keydown_pageup_nonrepeat_signal_t keydown_pageup_nonrepeat_signal;
+  keydown_end_nonrepeat_signal_t keydown_end_nonrepeat_signal;
+  keydown_pagedown_nonrepeat_signal_t keydown_pagedown_nonrepeat_signal;
+  keydown_right_nonrepeat_signal_t keydown_right_nonrepeat_signal;
+  keydown_left_nonrepeat_signal_t keydown_left_nonrepeat_signal;
+  keydown_down_nonrepeat_signal_t keydown_down_nonrepeat_signal;
+  keydown_up_nonrepeat_signal_t keydown_up_nonrepeat_signal;
+  keydown_numlockclear_nonrepeat_signal_t
+    keydown_numlockclear_nonrepeat_signal;
+  keydown_kp_divide_nonrepeat_signal_t keydown_kp_divide_nonrepeat_signal;
+  keydown_kp_multiply_nonrepeat_signal_t keydown_kp_multiply_nonrepeat_signal;
+  keydown_kp_minus_nonrepeat_signal_t keydown_kp_minus_nonrepeat_signal;
+  keydown_kp_plus_nonrepeat_signal_t keydown_kp_plus_nonrepeat_signal;
+  keydown_kp_enter_nonrepeat_signal_t keydown_kp_enter_nonrepeat_signal;
+  keydown_kp_1_nonrepeat_signal_t keydown_kp_1_nonrepeat_signal;
+  keydown_kp_2_nonrepeat_signal_t keydown_kp_2_nonrepeat_signal;
+  keydown_kp_3_nonrepeat_signal_t keydown_kp_3_nonrepeat_signal;
+  keydown_kp_4_nonrepeat_signal_t keydown_kp_4_nonrepeat_signal;
+  keydown_kp_5_nonrepeat_signal_t keydown_kp_5_nonrepeat_signal;
+  keydown_kp_6_nonrepeat_signal_t keydown_kp_6_nonrepeat_signal;
+  keydown_kp_7_nonrepeat_signal_t keydown_kp_7_nonrepeat_signal;
+  keydown_kp_8_nonrepeat_signal_t keydown_kp_8_nonrepeat_signal;
+  keydown_kp_9_nonrepeat_signal_t keydown_kp_9_nonrepeat_signal;
+  keydown_kp_0_nonrepeat_signal_t keydown_kp_0_nonrepeat_signal;
+  keydown_kp_period_nonrepeat_signal_t keydown_kp_period_nonrepeat_signal;
+  keydown_application_nonrepeat_signal_t keydown_application_nonrepeat_signal;
+  keydown_power_nonrepeat_signal_t keydown_power_nonrepeat_signal;
+  keydown_kp_equals_nonrepeat_signal_t keydown_kp_equals_nonrepeat_signal;
+  keydown_f13_nonrepeat_signal_t keydown_f13_nonrepeat_signal;
+  keydown_f14_nonrepeat_signal_t keydown_f14_nonrepeat_signal;
+  keydown_f15_nonrepeat_signal_t keydown_f15_nonrepeat_signal;
+  keydown_f16_nonrepeat_signal_t keydown_f16_nonrepeat_signal;
+  keydown_f17_nonrepeat_signal_t keydown_f17_nonrepeat_signal;
+  keydown_f18_nonrepeat_signal_t keydown_f18_nonrepeat_signal;
+  keydown_f19_nonrepeat_signal_t keydown_f19_nonrepeat_signal;
+  keydown_f20_nonrepeat_signal_t keydown_f20_nonrepeat_signal;
+  keydown_f21_nonrepeat_signal_t keydown_f21_nonrepeat_signal;
+  keydown_f22_nonrepeat_signal_t keydown_f22_nonrepeat_signal;
+  keydown_f23_nonrepeat_signal_t keydown_f23_nonrepeat_signal;
+  keydown_f24_nonrepeat_signal_t keydown_f24_nonrepeat_signal;
+  keydown_execute_nonrepeat_signal_t keydown_execute_nonrepeat_signal;
+  keydown_help_nonrepeat_signal_t keydown_help_nonrepeat_signal;
+  keydown_menu_nonrepeat_signal_t keydown_menu_nonrepeat_signal;
+  keydown_select_nonrepeat_signal_t keydown_select_nonrepeat_signal;
+  keydown_stop_nonrepeat_signal_t keydown_stop_nonrepeat_signal;
+  keydown_again_nonrepeat_signal_t keydown_again_nonrepeat_signal;
+  keydown_undo_nonrepeat_signal_t keydown_undo_nonrepeat_signal;
+  keydown_cut_nonrepeat_signal_t keydown_cut_nonrepeat_signal;
+  keydown_copy_nonrepeat_signal_t keydown_copy_nonrepeat_signal;
+  keydown_paste_nonrepeat_signal_t keydown_paste_nonrepeat_signal;
+  keydown_find_nonrepeat_signal_t keydown_find_nonrepeat_signal;
+  keydown_mute_nonrepeat_signal_t keydown_mute_nonrepeat_signal;
+  keydown_volumeup_nonrepeat_signal_t keydown_volumeup_nonrepeat_signal;
+  keydown_volumedown_nonrepeat_signal_t keydown_volumedown_nonrepeat_signal;
+  keydown_kp_comma_nonrepeat_signal_t keydown_kp_comma_nonrepeat_signal;
+  keydown_kp_equalsas400_nonrepeat_signal_t
+    keydown_kp_equalsas400_nonrepeat_signal;
+  keydown_alterase_nonrepeat_signal_t keydown_alterase_nonrepeat_signal;
+  keydown_sysreq_nonrepeat_signal_t keydown_sysreq_nonrepeat_signal;
+  keydown_cancel_nonrepeat_signal_t keydown_cancel_nonrepeat_signal;
+  keydown_clear_nonrepeat_signal_t keydown_clear_nonrepeat_signal;
+  keydown_prior_nonrepeat_signal_t keydown_prior_nonrepeat_signal;
+  keydown_return2_nonrepeat_signal_t keydown_return2_nonrepeat_signal;
+  keydown_separator_nonrepeat_signal_t keydown_separator_nonrepeat_signal;
+  keydown_out_nonrepeat_signal_t keydown_out_nonrepeat_signal;
+  keydown_oper_nonrepeat_signal_t keydown_oper_nonrepeat_signal;
+  keydown_clearagain_nonrepeat_signal_t keydown_clearagain_nonrepeat_signal;
+  keydown_crsel_nonrepeat_signal_t keydown_crsel_nonrepeat_signal;
+  keydown_exsel_nonrepeat_signal_t keydown_exsel_nonrepeat_signal;
+  keydown_kp_00_nonrepeat_signal_t keydown_kp_00_nonrepeat_signal;
+  keydown_kp_000_nonrepeat_signal_t keydown_kp_000_nonrepeat_signal;
+  keydown_thousandsseparator_nonrepeat_signal_t
+    keydown_thousandsseparator_nonrepeat_signal;
+  keydown_decimalseparator_nonrepeat_signal_t
+    keydown_decimalseparator_nonrepeat_signal;
+  keydown_currencyunit_nonrepeat_signal_t
+    keydown_currencyunit_nonrepeat_signal;
+  keydown_currencysubunit_nonrepeat_signal_t
+    keydown_currencysubunit_nonrepeat_signal;
+  keydown_kp_leftparen_nonrepeat_signal_t
+    keydown_kp_leftparen_nonrepeat_signal;
+  keydown_kp_rightparen_nonrepeat_signal_t
+    keydown_kp_rightparen_nonrepeat_signal;
+  keydown_kp_leftbrace_nonrepeat_signal_t
+    keydown_kp_leftbrace_nonrepeat_signal;
+  keydown_kp_rightbrace_nonrepeat_signal_t
+    keydown_kp_rightbrace_nonrepeat_signal;
+  keydown_kp_tab_nonrepeat_signal_t keydown_kp_tab_nonrepeat_signal;
+  keydown_kp_backspace_nonrepeat_signal_t
+    keydown_kp_backspace_nonrepeat_signal;
+  keydown_kp_a_nonrepeat_signal_t keydown_kp_a_nonrepeat_signal;
+  keydown_kp_b_nonrepeat_signal_t keydown_kp_b_nonrepeat_signal;
+  keydown_kp_c_nonrepeat_signal_t keydown_kp_c_nonrepeat_signal;
+  keydown_kp_d_nonrepeat_signal_t keydown_kp_d_nonrepeat_signal;
+  keydown_kp_e_nonrepeat_signal_t keydown_kp_e_nonrepeat_signal;
+  keydown_kp_f_nonrepeat_signal_t keydown_kp_f_nonrepeat_signal;
+  keydown_kp_xor_nonrepeat_signal_t keydown_kp_xor_nonrepeat_signal;
+  keydown_kp_power_nonrepeat_signal_t keydown_kp_power_nonrepeat_signal;
+  keydown_kp_percent_nonrepeat_signal_t keydown_kp_percent_nonrepeat_signal;
+  keydown_kp_less_nonrepeat_signal_t keydown_kp_less_nonrepeat_signal;
+  keydown_kp_greater_nonrepeat_signal_t keydown_kp_greater_nonrepeat_signal;
+  keydown_kp_ampersand_nonrepeat_signal_t
+    keydown_kp_ampersand_nonrepeat_signal;
+  keydown_kp_dblampersand_nonrepeat_signal_t
+    keydown_kp_dblampersand_nonrepeat_signal;
+  keydown_kp_verticalbar_nonrepeat_signal_t
+    keydown_kp_verticalbar_nonrepeat_signal;
+  keydown_kp_dblverticalbar_nonrepeat_signal_t
+    keydown_kp_dblverticalbar_nonrepeat_signal;
+  keydown_kp_colon_nonrepeat_signal_t keydown_kp_colon_nonrepeat_signal;
+  keydown_kp_hash_nonrepeat_signal_t keydown_kp_hash_nonrepeat_signal;
+  keydown_kp_space_nonrepeat_signal_t keydown_kp_space_nonrepeat_signal;
+  keydown_kp_at_nonrepeat_signal_t keydown_kp_at_nonrepeat_signal;
+  keydown_kp_exclam_nonrepeat_signal_t keydown_kp_exclam_nonrepeat_signal;
+  keydown_kp_memstore_nonrepeat_signal_t keydown_kp_memstore_nonrepeat_signal;
+  keydown_kp_memrecall_nonrepeat_signal_t
+    keydown_kp_memrecall_nonrepeat_signal;
+  keydown_kp_memclear_nonrepeat_signal_t keydown_kp_memclear_nonrepeat_signal;
+  keydown_kp_memadd_nonrepeat_signal_t keydown_kp_memadd_nonrepeat_signal;
+  keydown_kp_memsubtract_nonrepeat_signal_t
+    keydown_kp_memsubtract_nonrepeat_signal;
+  keydown_kp_memmultiply_nonrepeat_signal_t
+    keydown_kp_memmultiply_nonrepeat_signal;
+  keydown_kp_memdivide_nonrepeat_signal_t
+    keydown_kp_memdivide_nonrepeat_signal;
+  keydown_kp_plusminus_nonrepeat_signal_t
+    keydown_kp_plusminus_nonrepeat_signal;
+  keydown_kp_clear_nonrepeat_signal_t keydown_kp_clear_nonrepeat_signal;
+  keydown_kp_clearentry_nonrepeat_signal_t
+    keydown_kp_clearentry_nonrepeat_signal;
+  keydown_kp_binary_nonrepeat_signal_t keydown_kp_binary_nonrepeat_signal;
+  keydown_kp_octal_nonrepeat_signal_t keydown_kp_octal_nonrepeat_signal;
+  keydown_kp_decimal_nonrepeat_signal_t keydown_kp_decimal_nonrepeat_signal;
+  keydown_kp_hexadecimal_nonrepeat_signal_t
+    keydown_kp_hexadecimal_nonrepeat_signal;
+  keydown_lctrl_nonrepeat_signal_t keydown_lctrl_nonrepeat_signal;
+  keydown_lshift_nonrepeat_signal_t keydown_lshift_nonrepeat_signal;
+  keydown_lalt_nonrepeat_signal_t keydown_lalt_nonrepeat_signal;
+  keydown_lgui_nonrepeat_signal_t keydown_lgui_nonrepeat_signal;
+  keydown_rctrl_nonrepeat_signal_t keydown_rctrl_nonrepeat_signal;
+  keydown_rshift_nonrepeat_signal_t keydown_rshift_nonrepeat_signal;
+  keydown_ralt_nonrepeat_signal_t keydown_ralt_nonrepeat_signal;
+  keydown_rgui_nonrepeat_signal_t keydown_rgui_nonrepeat_signal;
+  keydown_mode_nonrepeat_signal_t keydown_mode_nonrepeat_signal;
+  keydown_audionext_nonrepeat_signal_t keydown_audionext_nonrepeat_signal;
+  keydown_audioprev_nonrepeat_signal_t keydown_audioprev_nonrepeat_signal;
+  keydown_audiostop_nonrepeat_signal_t keydown_audiostop_nonrepeat_signal;
+  keydown_audioplay_nonrepeat_signal_t keydown_audioplay_nonrepeat_signal;
+  keydown_audiomute_nonrepeat_signal_t keydown_audiomute_nonrepeat_signal;
+  keydown_mediaselect_nonrepeat_signal_t keydown_mediaselect_nonrepeat_signal;
+  keydown_www_nonrepeat_signal_t keydown_www_nonrepeat_signal;
+  keydown_mail_nonrepeat_signal_t keydown_mail_nonrepeat_signal;
+  keydown_calculator_nonrepeat_signal_t keydown_calculator_nonrepeat_signal;
+  keydown_computer_nonrepeat_signal_t keydown_computer_nonrepeat_signal;
+  keydown_ac_search_nonrepeat_signal_t keydown_ac_search_nonrepeat_signal;
+  keydown_ac_home_nonrepeat_signal_t keydown_ac_home_nonrepeat_signal;
+  keydown_ac_back_nonrepeat_signal_t keydown_ac_back_nonrepeat_signal;
+  keydown_ac_forward_nonrepeat_signal_t keydown_ac_forward_nonrepeat_signal;
+  keydown_ac_stop_nonrepeat_signal_t keydown_ac_stop_nonrepeat_signal;
+  keydown_ac_refresh_nonrepeat_signal_t keydown_ac_refresh_nonrepeat_signal;
+  keydown_ac_bookmarks_nonrepeat_signal_t
+    keydown_ac_bookmarks_nonrepeat_signal;
+  keydown_brightnessdown_nonrepeat_signal_t
+    keydown_brightnessdown_nonrepeat_signal;
+  keydown_brightnessup_nonrepeat_signal_t
+    keydown_brightnessup_nonrepeat_signal;
+  keydown_displayswitch_nonrepeat_signal_t
+    keydown_displayswitch_nonrepeat_signal;
+  keydown_kbdillumtoggle_nonrepeat_signal_t
+    keydown_kbdillumtoggle_nonrepeat_signal;
+  keydown_kbdillumdown_nonrepeat_signal_t
+    keydown_kbdillumdown_nonrepeat_signal;
+  keydown_kbdillumup_nonrepeat_signal_t keydown_kbdillumup_nonrepeat_signal;
+  keydown_eject_nonrepeat_signal_t keydown_eject_nonrepeat_signal;
+  keydown_sleep_nonrepeat_signal_t keydown_sleep_nonrepeat_signal;
   keyup_unknown_signal_t keyup_unknown_signal;
   keyup_backspace_signal_t keyup_backspace_signal;
   keyup_tab_signal_t keyup_tab_signal;
