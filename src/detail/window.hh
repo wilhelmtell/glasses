@@ -7,6 +7,7 @@
 #include "../rectangle_fwd.hh"
 #include "../title_fwd.hh"
 #include "../width_t_fwd.hh"
+#include "../height_t_fwd.hh"
 
 namespace gls {
 namespace detail {
@@ -20,6 +21,7 @@ struct window {
 
   SDL_Window* get() const;
   width_t width() const;
+  height_t height() const;
 
 private:
   using pointer = std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)>;
