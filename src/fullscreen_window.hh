@@ -5,6 +5,8 @@
 #include "rectangle_fwd.hh"
 #include "title_fwd.hh"
 #include <SDL2/SDL.h>
+#include "width_t_fwd.hh"
+#include "height_t_fwd.hh"
 
 namespace gls {
 struct fullscreen_window {
@@ -13,6 +15,8 @@ struct fullscreen_window {
   fullscreen_window(title const& text, rectangle dimensions);
 
   SDL_Window* get() const;
+  width_t width() const;
+  height_t height() const;
 
 private:
   detail::window w;
