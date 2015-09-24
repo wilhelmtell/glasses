@@ -2,9 +2,7 @@
 #include "../src/filename.hh"
 #include <string>
 
-TEST_CASE("default-constructed filename compiles") {
-  gls::filename t;
-}
+TEST_CASE("default-constructed filename compiles") { gls::filename t; }
 
 TEST_CASE("value-initialized filename zeroes out") {
   gls::filename const t{};

@@ -59,7 +59,8 @@ TEST_CASE("to_sdl_rect() unit rectangle") {
 
 TEST_CASE("to_sdl_rect() non-unit rectangle") {
   gls::positioned_rectangle const pr = gls::positioned_rectangle(
-    gls::point{2, 1}, gls::rectangle(gls::dim::width(21), gls::dim::height(8)));
+    gls::point{2, 1},
+    gls::rectangle(gls::dim::width(21), gls::dim::height(8)));
   SDL_Rect const r = gls::to_sdl_rect(pr);
   SDL_Rect const x = {2, 1, 21, 8};
   REQUIRE(r.x == x.x);

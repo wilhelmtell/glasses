@@ -6,7 +6,6 @@ struct length_t {};
 using length = gls::dim::basic_length<length_t>;
 }
 
-
 TEST_CASE("value-initialized length equals 0") {
   test::length const l{};
   REQUIRE(l == 0);

@@ -2,9 +2,7 @@
 #include "../src/title.hh"
 #include <string>
 
-TEST_CASE("default-constructed title compiles") {
-  gls::title t;
-}
+TEST_CASE("default-constructed title compiles") { gls::title t; }
 
 TEST_CASE("value-initialized title zeroes out") {
   gls::title const t{};

@@ -2,9 +2,7 @@
 #include "../src/text.hh"
 #include <string>
 
-TEST_CASE("default-constructed text compiles") {
-  gls::text t;
-}
+TEST_CASE("default-constructed text compiles") { gls::text t; }
 
 TEST_CASE("value-initialized text zeroes out") {
   gls::text const t{};
