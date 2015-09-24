@@ -5,8 +5,8 @@
 
 namespace gls {
 namespace dim {
-struct height_t;
-using height = basic_length<height_t>;
+struct height_t_tag;
+using height = basic_length<height_t_tag>;
 }
 }
 
