@@ -3,8 +3,8 @@
 #include "../src/positioned_rectangle.hh"
 #include "../src/rectangle.hh"
 #include "../src/point.hh"
-#include "../src/width.hh"
-#include "../src/height.hh"
+#include "../src/width_t.hh"
+#include "../src/height_t.hh"
 
 TEST_CASE("q1_rectangle") {
   gls::positioned_rectangle const x(gls::point(-1, 0), gls::unit_rectangle());

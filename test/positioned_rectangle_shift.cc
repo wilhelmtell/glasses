@@ -2,12 +2,12 @@
 #include "../src/positioned_rectangle.hh"
 #include "../src/point.hh"
 #include "../src/rectangle.hh"
-#include "../src/width.hh"
-#include "../src/height.hh"
+#include "../src/width_t.hh"
+#include "../src/height_t.hh"
 #include "positioned_rectangle_io.hh"
 
 namespace {
-gls::rectangle const unit_rectangle(gls::dim::width(1), gls::dim::height(1));
+gls::rectangle const unit_rectangle(gls::width_t(1), gls::height_t(1));
 gls::point const origin(0, 0);
 }
 

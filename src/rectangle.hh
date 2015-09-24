@@ -1,29 +1,27 @@
 #ifndef GLS_RECTANGLE_HH_
 #define GLS_RECTANGLE_HH_
 
-#include "width.hh"
-#include "height.hh"
+#include "width_t.hh"
+#include "height_t.hh"
 
 namespace gls {
 struct rectangle {
   rectangle() = default;
-  rectangle(dim::width w, dim::height h);
+  rectangle(width_t w, height_t h);
 
-  dim::width width() const;
-  dim::height height() const;
+  width_t width() const;
+  height_t height() const;
 
 private:
-  dim::width w;
-  dim::height h;
+  width_t w;
+  height_t h;
 };
 
 bool operator==(rectangle const& lhs, rectangle const& rhs);
 bool operator!=(rectangle const& lhs, rectangle const& rhs);
 rectangle unit_rectangle();
-rectangle xstretched(rectangle const& r,
-                     dim::width::value_type const& addition);
-rectangle ystretched(rectangle const& r,
-                     dim::width::value_type const& addition);
+rectangle xstretched(rectangle const& r, width_t::value_type const& addition);
+rectangle ystretched(rectangle const& r, width_t::value_type const& addition);
 }
 
 #endif

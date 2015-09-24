@@ -2,7 +2,6 @@
 #define GLS_BASIC_LENGTH_HH_
 
 namespace gls {
-namespace dim {
 template <typename T>
 struct basic_length {
   using value_type = int;
@@ -33,7 +32,6 @@ basic_length<T> operator*(basic_length<T> lhs,
 template <typename T>
 basic_length<T> operator/(basic_length<T> lhs,
                           typename basic_length<T>::value_type const& rhs);
-}
 }
 
 #include "basic_length.tcc"
