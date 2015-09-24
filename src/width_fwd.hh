@@ -5,8 +5,8 @@
 
 namespace gls {
 namespace dim {
-struct width_t;
-using width = basic_length<width_t>;
+struct width_t_tag;
+using width = basic_length<width_t_tag>;
 }
 }
 
