@@ -4,7 +4,6 @@
 #include "basic_length.hh"
 
 namespace gls {
-namespace dim {
 template <typename T>
 basic_length<T>::basic_length(typename basic_length<T>::value_type value)
 : value(value) {}
@@ -64,7 +63,6 @@ template <typename T>
 basic_length<T> operator/(basic_length<T> lhs,
                           typename basic_length<T>::value_type const& rhs) {
   return lhs /= rhs;
-}
 }
 }
 

@@ -3,7 +3,7 @@
 
 namespace test {
 struct length_t {};
-using length = gls::dim::basic_length<length_t>;
+using length = gls::basic_length<length_t>;
 }
 
 TEST_CASE("value-initialized length equals 0") {

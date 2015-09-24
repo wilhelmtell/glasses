@@ -5,7 +5,7 @@
 
 namespace gls {
 struct width_t_tag;
-using width_t = dim::basic_length<width_t_tag>;
+using width_t = basic_length<width_t_tag>;
 }
 
 #endif
