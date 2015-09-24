@@ -4,7 +4,7 @@
 #include "surface_creation_error.hh"
 #include "bmp_filename.hh"
 #include "width_t.hh"
-#include "height.hh"
+#include "height_t.hh"
 #include "text.hh"
 #include "colour.hh"
 #include "ttf_font.hh"
@@ -29,7 +29,7 @@ surface::surface(ttf_font const& ttf, text const& t, colour const& c)
 
 width_t surface::width() const { return width_t(s->w); }
 
-dim::height surface::height() const { return dim::height(s->h); }
+height_t surface::height() const { return height_t(s->h); }
 
 SDL_Surface* surface::get() const { return s.get(); }
 }

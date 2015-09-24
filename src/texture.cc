@@ -6,7 +6,7 @@
 #include "bmp_filename.hh"
 #include "ttf_font.hh"
 #include "width_t.hh"
-#include "height.hh"
+#include "height_t.hh"
 #include "text.hh"
 #include "colour.hh"
 #include <cassert>
@@ -53,11 +53,11 @@ width_t texture::width() const {
   return width_t(w);
 }
 
-dim::height texture::height() const {
+height_t texture::height() const {
   int h;
   auto const err = SDL_QueryTexture(get(), nullptr, nullptr, nullptr, &h);
   assert(err == 0);  // XXX: How should I handle an error here?
-  return dim::height(h);
+  return height_t(h);
 }
 
 SDL_Texture* texture::get() const { return t.get(); }

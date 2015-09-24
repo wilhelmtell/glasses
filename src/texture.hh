@@ -8,7 +8,7 @@
 #include "bmp_filename_fwd.hh"
 #include "ttf_font_fwd.hh"
 #include "width_t_fwd.hh"
-#include "height_fwd.hh"
+#include "height_t_fwd.hh"
 #include "text_fwd.hh"
 #include "colour_fwd.hh"
 
@@ -21,7 +21,7 @@ struct texture {
   texture(renderer& r, ttf_font const& ttf, text const& t, colour const& c);
 
   width_t width() const;
-  dim::height height() const;
+  height_t height() const;
 
   SDL_Texture* get() const;
 

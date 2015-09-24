@@ -3,7 +3,7 @@
 
 #include "rectangle.hh"
 #include "width_t_fwd.hh"
-#include "height_fwd.hh"
+#include "height_t_fwd.hh"
 #include "point.hh"
 #include <SDL2/SDL.h>
 
@@ -15,7 +15,7 @@ struct positioned_rectangle {
   point::value_type x() const;
   point::value_type y() const;
   width_t width() const;
-  dim::height height() const;
+  height_t height() const;
 
   friend point top_left(positioned_rectangle const& r);
 

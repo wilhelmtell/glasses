@@ -1,7 +1,7 @@
 #include "positioned_rectangle.hh"
 #include <utility>
 #include "width_t.hh"
-#include "height.hh"
+#include "height_t.hh"
 #include "point.hh"
 #include <SDL2/SDL.h>
 
@@ -15,7 +15,7 @@ point::value_type positioned_rectangle::y() const { return p.y(); }
 
 width_t positioned_rectangle::width() const { return r.width(); }
 
-dim::height positioned_rectangle::height() const { return r.height(); }
+height_t positioned_rectangle::height() const { return r.height(); }
 
 bool operator==(positioned_rectangle const& lhs,
                 positioned_rectangle const& rhs) {

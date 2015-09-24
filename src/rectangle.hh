@@ -2,19 +2,19 @@
 #define GLS_RECTANGLE_HH_
 
 #include "width_t.hh"
-#include "height.hh"
+#include "height_t.hh"
 
 namespace gls {
 struct rectangle {
   rectangle() = default;
-  rectangle(width_t w, dim::height h);
+  rectangle(width_t w, height_t h);
 
   width_t width() const;
-  dim::height height() const;
+  height_t height() const;
 
 private:
   width_t w;
-  dim::height h;
+  height_t h;
 };
 
 bool operator==(rectangle const& lhs, rectangle const& rhs);
