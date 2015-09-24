@@ -2,7 +2,7 @@
 #include "point_io.hh"
 #include "../src/positioned_rectangle.hh"
 #include "../src/point.hh"
-#include "../src/width.hh"
+#include "../src/width_t.hh"
 #include "../src/height.hh"
 
 TEST_CASE("bottom_right() of value-initialized positioned_rectangle") {
@@ -14,13 +14,13 @@ TEST_CASE("bottom_right() of value-initialized positioned_rectangle") {
 TEST_CASE("bottom_right() of positioned_rectangle sitting on origin in Q3") {
   gls::point const x(3, 2);
   gls::positioned_rectangle const r(
-    gls::point(0, 0), gls::rectangle(gls::dim::width(3), gls::dim::height(2)));
+    gls::point(0, 0), gls::rectangle(gls::width_t(3), gls::dim::height(2)));
   REQUIRE(x == gls::bottom_right(r));
 }
 
 TEST_CASE("bottom_right() of positioned_rectangle in Q3") {
   gls::point const x(5, 5);
   gls::positioned_rectangle const r(
-    gls::point(2, 1), gls::rectangle(gls::dim::width(3), gls::dim::height(4)));
+    gls::point(2, 1), gls::rectangle(gls::width_t(3), gls::dim::height(4)));
   REQUIRE(x == gls::bottom_right(r));
 }

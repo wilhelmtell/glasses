@@ -5,7 +5,7 @@
 #include "texture_creation_error.hh"
 #include "bmp_filename.hh"
 #include "ttf_font.hh"
-#include "width.hh"
+#include "width_t.hh"
 #include "height.hh"
 #include "text.hh"
 #include "colour.hh"
@@ -46,11 +46,11 @@ texture::texture(renderer& r,
                  colour const& c)
 : texture(make_texture(r, ttf, t, c)) {}
 
-dim::width texture::width() const {
+width_t texture::width() const {
   int w;
   auto const err = SDL_QueryTexture(get(), nullptr, nullptr, &w, nullptr);
   assert(err == 0);  // XXX: How should I handle an error here?
-  return dim::width(w);
+  return width_t(w);
 }
 
 dim::height texture::height() const {

@@ -3,7 +3,7 @@
 #include <SDL2/SDL_ttf.h>
 #include "surface_creation_error.hh"
 #include "bmp_filename.hh"
-#include "width.hh"
+#include "width_t.hh"
 #include "height.hh"
 #include "text.hh"
 #include "colour.hh"
@@ -27,7 +27,7 @@ surface::surface(bmp_filename const& bmp)
 surface::surface(ttf_font const& ttf, text const& t, colour const& c)
 : surface(TTF_RenderText_Solid(ttf.get(), t.c_str(), sdl_colour(c))) {}
 
-dim::width surface::width() const { return dim::width(s->w); }
+width_t surface::width() const { return width_t(s->w); }
 
 dim::height surface::height() const { return dim::height(s->h); }
 

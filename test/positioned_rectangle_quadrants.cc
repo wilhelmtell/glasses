@@ -3,7 +3,7 @@
 #include "../src/positioned_rectangle.hh"
 #include "../src/rectangle.hh"
 #include "../src/point.hh"
-#include "../src/width.hh"
+#include "../src/width_t.hh"
 #include "../src/height.hh"
 
 TEST_CASE("q1_rectangle") {

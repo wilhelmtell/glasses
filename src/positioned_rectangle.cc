@@ -1,6 +1,6 @@
 #include "positioned_rectangle.hh"
 #include <utility>
-#include "width.hh"
+#include "width_t.hh"
 #include "height.hh"
 #include "point.hh"
 #include <SDL2/SDL.h>
@@ -13,7 +13,7 @@ point::value_type positioned_rectangle::x() const { return p.x(); }
 
 point::value_type positioned_rectangle::y() const { return p.y(); }
 
-dim::width positioned_rectangle::width() const { return r.width(); }
+width_t positioned_rectangle::width() const { return r.width(); }
 
 dim::height positioned_rectangle::height() const { return r.height(); }
 
