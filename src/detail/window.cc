@@ -5,6 +5,8 @@
 #include "../rectangle.hh"
 #include "../point.hh"
 #include "../title.hh"
+#include "../width_t.hh"
+#include "../height_t.hh"
 
 namespace gls {
 namespace detail {
@@ -33,5 +35,17 @@ window::window(title const& text,
     flags) {}
 
 SDL_Window* window::get() const { return w.get(); }
+
+width_t window::width() const {
+  int width;
+  SDL_GetWindowSize(w.get(), &width, nullptr);
+  return width_t(width);
+}
+
+height_t window::height() const {
+  int height;
+  SDL_GetWindowSize(w.get(), nullptr, &height);
+  return height_t(height);
+}
 }
 }
