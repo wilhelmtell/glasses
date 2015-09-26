@@ -5,10 +5,7 @@
 #include "texture_creation_error.hh"
 #include "bmp_filename.hh"
 #include "ttf_font.hh"
-#include "width_t.hh"
-#include "height_t.hh"
 #include "text.hh"
-#include "colour.hh"
 #include <cassert>
 
 namespace {
@@ -21,11 +18,10 @@ SDL_Texture* texture_from_bmp(gls::renderer& renderer,
 SDL_Texture* make_texture(gls::renderer& renderer,
                           gls::ttf_font const& ttf,
                           gls::text const& t,
-                          gls::colour const& c) {
+                          SDL_Color const& c) {
   return SDL_CreateTextureFromSurface(
     renderer.get(),
-    TTF_RenderText_Solid(ttf.get(), t.c_str(),
-                         {c.red(), c.green(), c.blue(), c.alpha()}));
+    TTF_RenderText_Solid(ttf.get(), t.c_str(), {c.r, c.g, c.b, c.a}));
 }
 }
 
@@ -43,21 +39,21 @@ texture::texture(renderer& r, bmp_filename const& bmp)
 texture::texture(renderer& r,
                  ttf_font const& ttf,
                  text const& t,
-                 colour const& c)
+                 SDL_Color const& c)
 : texture(make_texture(r, ttf, t, c)) {}
 
-width_t texture::width() const {
+int texture::width() const {
   int w;
   auto const err = SDL_QueryTexture(get(), nullptr, nullptr, &w, nullptr);
   assert(err == 0);  // XXX: How should I handle an error here?
-  return width_t(w);
+  return w;
 }
 
-height_t texture::height() const {
+int texture::height() const {
   int h;
   auto const err = SDL_QueryTexture(get(), nullptr, nullptr, nullptr, &h);
   assert(err == 0);  // XXX: How should I handle an error here?
-  return height_t(h);
+  return h;
 }
 
 SDL_Texture* texture::get() const { return t.get(); }

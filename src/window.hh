@@ -1,25 +1,23 @@
-#ifndef GLS_WINDOW_HANDLE_HH_
-#define GLS_WINDOW_HANDLE_HH_
+#ifndef GLS_WINDOW_HH_
+#define GLS_WINDOW_HH_
 
-#include "detail/window.hh"
-#include "rectangle_fwd.hh"
-#include "title_fwd.hh"
+#include <memory>
 #include <SDL2/SDL.h>
-#include "width_t_fwd.hh"
-#include "height_t_fwd.hh"
+#include "title_fwd.hh"
 
 namespace gls {
 struct window {
   window() = default;
   explicit window(SDL_Window* w);
-  window(title const& text, rectangle const& dimensions);
+  window(title const& text, SDL_Rect const& bounds, int const& flags);
 
   SDL_Window* get() const;
-  width_t width() const;
-  height_t height() const;
+  int width() const;
+  int height() const;
 
 private:
-  detail::window w;
+  using pointer = std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)>;
+  pointer w;
 };
 }
 
