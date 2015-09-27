@@ -7,8 +7,7 @@
 namespace gls {
 struct renderer {
   explicit renderer(SDL_Renderer* r);
-  template <typename Window>
-  explicit renderer(Window const& w);
+  explicit renderer(SDL_Window* w);
 
   SDL_Renderer* get() const;
 
@@ -18,7 +17,5 @@ private:
   pointer r;
 };
 }
-
-#include "renderer.tcc"
 
 #endif
