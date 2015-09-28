@@ -4,10 +4,7 @@
 #include <memory>
 #include <SDL2/SDL.h>
 #include "bmp_filename_fwd.hh"
-#include "width_t_fwd.hh"
-#include "height_t_fwd.hh"
 #include "text_fwd.hh"
-#include "colour_fwd.hh"
 #include "ttf_font_fwd.hh"
 
 namespace gls {
@@ -15,10 +12,10 @@ struct surface {
   surface() = default;
   explicit surface(SDL_Surface* s);
   explicit surface(bmp_filename const& bmp);
-  surface(ttf_font const& ttf, text const& t, colour const& c);
+  surface(ttf_font const& ttf, text const& t, SDL_Color const& c);
 
-  width_t width() const;
-  height_t height() const;
+  int width() const;
+  int height() const;
 
   SDL_Surface* get() const;
 
