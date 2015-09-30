@@ -1,8 +1,10 @@
 #include "surface.hh"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 #include "surface_creation_error.hh"
 #include "bmp_filename.hh"
+#include "png_filename.hh"
 #include "text.hh"
 #include "ttf_font.hh"
 #include "ttf_filename.hh"
@@ -14,6 +16,9 @@ surface::surface(SDL_Surface* s) : s(s, &SDL_FreeSurface) {
 
 surface::surface(bmp_filename const& bmp)
 : surface(SDL_LoadBMP(bmp.c_str())) {}
+
+surface::surface(png_filename const& png)
+: surface(IMG_Load(png.c_str())) {}
 
 surface::surface(ttf_font const& ttf, text const& t, SDL_Color const& c)
 : surface(TTF_RenderText_Solid(ttf.get(), t.c_str(), c)) {}

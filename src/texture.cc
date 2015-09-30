@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 #include "texture_creation_error.hh"
 #include "bmp_filename.hh"
+#include "png_filename.hh"
 #include "ttf_font.hh"
 #include "text.hh"
 #include <cassert>
@@ -12,6 +13,12 @@ namespace {
 SDL_Texture* texture_from_bmp(gls::renderer& renderer,
                               gls::bmp_filename const& bmp) {
   gls::surface surface(bmp);
+  return SDL_CreateTextureFromSurface(renderer.get(), surface.get());
+}
+
+SDL_Texture* texture_from_png(gls::renderer& renderer,
+                              gls::png_filename const& png) {
+  gls::surface surface(png);
   return SDL_CreateTextureFromSurface(renderer.get(), surface.get());
 }
 
@@ -35,6 +42,9 @@ texture::texture(renderer& r, surface& s)
 
 texture::texture(renderer& r, bmp_filename const& bmp)
 : texture(texture_from_bmp(r, bmp)) {}
+
+texture::texture(renderer& r, png_filename const& png)
+: texture(texture_from_png(r, png)) {}
 
 texture::texture(renderer& r,
                  ttf_font const& ttf,

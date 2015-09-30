@@ -4,6 +4,7 @@
 #include <memory>
 #include <SDL2/SDL.h>
 #include "bmp_filename_fwd.hh"
+#include "png_filename_fwd.hh"
 #include "text_fwd.hh"
 #include "ttf_font_fwd.hh"
 
@@ -12,6 +13,7 @@ struct surface {
   surface() = default;
   explicit surface(SDL_Surface* s);
   explicit surface(bmp_filename const& bmp);
+  explicit surface(png_filename const& png);
   surface(ttf_font const& ttf, text const& t, SDL_Color const& c);
 
   int width() const;
