@@ -12,13 +12,14 @@ struct window {
   window(title const& text, SDL_Rect const& bounds, int const& flags);
 
   SDL_Window* get() const;
-  int width() const;
-  int height() const;
 
 private:
   using pointer = std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)>;
   pointer w;
 };
+
+int width(SDL_Window* w);
+int height(SDL_Window* w);
 }
 
 #endif

@@ -16,15 +16,15 @@ window::window(title const& text, SDL_Rect const& bounds, int const& flags)
 
 SDL_Window* window::get() const { return w.get(); }
 
-int window::width() const {
-  int width;
-  SDL_GetWindowSize(w.get(), &width, nullptr);
-  return width;
+int width(SDL_Window* w) {
+  int value;
+  SDL_GetWindowSize(w, &value, nullptr);
+  return value;
 }
 
-int window::height() const {
-  int height;
-  SDL_GetWindowSize(w.get(), nullptr, &height);
-  return height;
+int height(SDL_Window* w) {
+  int value;
+  SDL_GetWindowSize(w, nullptr, &value);
+  return value;
 }
 }
