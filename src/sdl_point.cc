@@ -21,6 +21,14 @@ bool bounding_left(SDL_Point const& p, SDL_Rect const& b) {
 }
 
 namespace gls {
+bool equal(SDL_Point const& lhs, SDL_Point const& rhs) {
+  return lhs.x == rhs.x && lhs.y == rhs.y;
+}
+
+bool not_equal(SDL_Point const& lhs, SDL_Point const& rhs) {
+  return !equal(lhs, rhs);
+}
+
 bool bounding(SDL_Point const& p, SDL_Rect const& b) {
   return bounding_top(p, b) || bounding_right(p, b) || bounding_bottom(p, b)
          || bounding_left(p, b);
