@@ -7,13 +7,19 @@
 
 namespace gls {
 template <typename DispatchT, typename App>
-void event_loop(DispatchT const* dispatch, App& app) {
+void event_loop(DispatchT const* dispatch, App& app, int const& FPS) {
+  auto t0 = SDL_GetTicks();
   while(true) {
     for(SDL_Event e; SDL_PollEvent(&e);) {
       detail::translate_event(e, dispatch);
       if(e.type == SDL_QUIT) return;
     }
-    update(app);
+    auto t1 = SDL_GetTicks();
+    while(t1 - t0 < (1000u / FPS)) {
+      update(app);
+      t1 = SDL_GetTicks();
+    }
+    t0 = t1;
     draw(app);
   }
 }

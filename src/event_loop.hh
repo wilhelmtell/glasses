@@ -3,7 +3,7 @@
 
 namespace gls {
 template <typename DispatchT, typename App>
-void event_loop(DispatchT const* dispatch, App& app);
+void event_loop(DispatchT const* dispatch, App& app, int const& FPS = 60);
 
 template <typename T>
 void update(T& object);
