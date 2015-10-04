@@ -2,8 +2,8 @@
 #define GLS_EVENT_LOOP_HH_
 
 namespace gls {
-template <typename DispatchT, typename UpdateOp, typename RenderOp>
-void event_loop(DispatchT const* dispatch, UpdateOp update, RenderOp render);
+template <typename DispatchT, typename App>
+void event_loop(DispatchT const* dispatch, App& app);
 }
 
 #include "event_loop.tcc"

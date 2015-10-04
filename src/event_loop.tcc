@@ -6,15 +6,15 @@
 #include "detail/translate_event.hh"
 
 namespace gls {
-template <typename DispatchT, typename UpdateOp, typename RenderOp>
-void event_loop(DispatchT const* dispatch, UpdateOp update, RenderOp render) {
+template <typename DispatchT, typename App>
+void event_loop(DispatchT const* dispatch, App& app) {
   while(true) {
     for(SDL_Event e; SDL_PollEvent(&e);) {
       detail::translate_event(e, dispatch);
       if(e.type == SDL_QUIT) return;
     }
-    update();
-    render();
+    update(app);
+    render(app);
   }
 }
 }
