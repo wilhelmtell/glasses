@@ -17,6 +17,16 @@ void event_loop(DispatchT const* dispatch, App& app) {
     draw(app);
   }
 }
+
+template <typename T>
+void update(T& object) {
+  object.update();
+}
+
+template <typename T>
+void draw(T const& object) {
+  object.draw();
+}
 }
 
 #endif
