@@ -14,7 +14,7 @@ void event_loop(DispatchT const* dispatch, App& app) {
       if(e.type == SDL_QUIT) return;
     }
     update(app);
-    render(app);
+    draw(app);
   }
 }
 }
