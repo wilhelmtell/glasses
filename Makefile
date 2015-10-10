@@ -13,6 +13,13 @@ check: test/check_glasses
 test/check_glasses: src/${OUT_PREFIX}libglasses${OUT_SUFFIX}.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
 
+glasses.zip:
+	git archive --format=zip --prefix=glasses/ master >$@
+glasses.tar.gz:
+	git archive --format=tar --prefix=glasses/ master |gzip -9 >$@
+glasses.tar.xz:
+	git archive --format=tar --prefix=glasses/ master |xz -9 >$@
+
 clean:
 	${RM} ${OBJ}
 
