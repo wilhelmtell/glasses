@@ -13,11 +13,11 @@ check: test/check_glasses
 test/check_glasses: src/${OUT_PREFIX}libglasses${OUT_SUFFIX}.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
 
-glasses.zip:
+glasses.zip: check
 	git archive --format=zip --prefix=glasses/ master >$@
-glasses.tar.gz:
+glasses.tar.gz: check
 	git archive --format=tar --prefix=glasses/ master |gzip -9 >$@
-glasses.tar.xz:
+glasses.tar.xz: check
 	git archive --format=tar --prefix=glasses/ master |xz -9 >$@
 
 clean:
