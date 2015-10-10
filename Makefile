@@ -2,7 +2,7 @@ PREFIX := ${HOME}/usr/
 OBJ := $(patsubst %.cc,%.o,$(wildcard src/*.cc src/detail/*.cc))
 TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc))
 
-.PHONY: clean install uninstall
+.PHONY: clean dist install uninstall
 
 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
@@ -12,6 +12,11 @@ check: test/check_glasses
 
 test/check_glasses: src/${OUT_PREFIX}libglasses${OUT_SUFFIX}.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
+
+dist: check
+	git archive --format=zip --prefix=glasses_$(shell git describe --dirty)/ master >glasses_$(shell git describe --dirty).zip
+	git archive --format=tar --prefix=glasses_$(shell git describe --dirty)/ master |gzip -9 >glasses_$(shell git describe --dirty).tar.gz
+	git archive --format=tar --prefix=glasses_$(shell git describe --dirty)/ master |xz -9 >glasses_$(shell git describe --dirty).tar.xz
 
 clean:
 	${RM} ${OBJ}

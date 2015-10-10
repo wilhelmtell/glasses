@@ -3,3 +3,6 @@
 libglasses.a
 check_glasses
 check
+glasses_*.zip
+glasses_*.tar.gz
+glasses_*.tar.xz
