@@ -2,7 +2,7 @@ PREFIX := ${HOME}/usr/
 OBJ := $(patsubst %.cc,%.o,$(wildcard src/*.cc src/detail/*.cc))
 TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc))
 
-.PHONY: clean install
+.PHONY: clean install uninstall
 
 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
@@ -24,5 +24,11 @@ install: check
 	install -m644 $(wildcard src/detail/*.hh) $(abspath ${PREFIX})/include/glasses/detail/
 	install -m644 $(wildcard src/*.hh) $(abspath ${PREFIX})/include/glasses/
 	install -m644 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a $(abspath ${PREFIX})/lib/
+
+uninstall:
+	rm -f $(abspath ${PREFIX})/lib/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a
+	rm -f $(addprefix $(abspath ${PREFIX})/include/glasses/,$(notdir $(wildcard src/*.hh)))
+	rm -f $(addprefix $(abspath ${PREFIX})/include/glasses/detail/,$(notdir $(wildcard src/detail/*.hh)))
+	rmdir -p $(addprefix $(abspath ${PREFIX})/,lib include/glasses/detail) 2>/dev/null || true
 
 -include ${OBJ:.o=.dep} ${TEST_OBJ:.o=.dep}
