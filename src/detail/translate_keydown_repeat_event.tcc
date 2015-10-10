@@ -8,1417 +8,1417 @@ namespace detail {
 template <typename DispatchT>
 void translate_keydown_unknown_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_unknown_repeat();
+  dispatch->keydown.repeat.unknown();
 }
 
 template <typename DispatchT>
 void translate_keydown_backspace_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_backspace_repeat();
+  dispatch->keydown.repeat.backspace();
 }
 
 template <typename DispatchT>
 void translate_keydown_tab_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_tab_repeat();
+  dispatch->keydown.repeat.tab();
 }
 
 template <typename DispatchT>
 void translate_keydown_return_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_return_repeat();
+  dispatch->keydown.repeat.returnkey();
 }
 
 template <typename DispatchT>
 void translate_keydown_escape_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_escape_repeat();
+  dispatch->keydown.repeat.escape();
 }
 
 template <typename DispatchT>
 void translate_keydown_space_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_space_repeat();
+  dispatch->keydown.repeat.space();
 }
 
 template <typename DispatchT>
 void translate_keydown_exclaim_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_exclaim_repeat();
+  dispatch->keydown.repeat.exclaim();
 }
 
 template <typename DispatchT>
 void translate_keydown_quotedbl_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_quotedbl_repeat();
+  dispatch->keydown.repeat.quotedbl();
 }
 
 template <typename DispatchT>
 void translate_keydown_hash_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_hash_repeat();
+  dispatch->keydown.repeat.hash();
 }
 
 template <typename DispatchT>
 void translate_keydown_dollar_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_dollar_repeat();
+  dispatch->keydown.repeat.dollar();
 }
 
 template <typename DispatchT>
 void translate_keydown_percent_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_percent_repeat();
+  dispatch->keydown.repeat.percent();
 }
 
 template <typename DispatchT>
 void translate_keydown_ampersand_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_ampersand_repeat();
+  dispatch->keydown.repeat.ampersand();
 }
 
 template <typename DispatchT>
 void translate_keydown_quote_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_quote_repeat();
+  dispatch->keydown.repeat.quote();
 }
 
 template <typename DispatchT>
 void translate_keydown_leftparen_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_leftparen_repeat();
+  dispatch->keydown.repeat.leftparen();
 }
 
 template <typename DispatchT>
 void translate_keydown_rightparen_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_rightparen_repeat();
+  dispatch->keydown.repeat.rightparen();
 }
 
 template <typename DispatchT>
 void translate_keydown_asterisk_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_asterisk_repeat();
+  dispatch->keydown.repeat.asterisk();
 }
 
 template <typename DispatchT>
 void translate_keydown_plus_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_plus_repeat();
+  dispatch->keydown.repeat.plus();
 }
 
 template <typename DispatchT>
 void translate_keydown_comma_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_comma_repeat();
+  dispatch->keydown.repeat.comma();
 }
 
 template <typename DispatchT>
 void translate_keydown_minus_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_minus_repeat();
+  dispatch->keydown.repeat.minus();
 }
 
 template <typename DispatchT>
 void translate_keydown_period_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_period_repeat();
+  dispatch->keydown.repeat.period();
 }
 
 template <typename DispatchT>
 void translate_keydown_slash_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_slash_repeat();
+  dispatch->keydown.repeat.slash();
 }
 
 template <typename DispatchT>
-void translate_keydown_0_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_0_repeat();
+void translate_keydown_zero_repeat_event(SDL_Event const&,
+                                         DispatchT const* dispatch) {
+  dispatch->keydown.repeat.zero();
 }
 
 template <typename DispatchT>
-void translate_keydown_1_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_1_repeat();
+void translate_keydown_one_repeat_event(SDL_Event const&,
+                                        DispatchT const* dispatch) {
+  dispatch->keydown.repeat.one();
 }
 
 template <typename DispatchT>
-void translate_keydown_2_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_2_repeat();
+void translate_keydown_two_repeat_event(SDL_Event const&,
+                                        DispatchT const* dispatch) {
+  dispatch->keydown.repeat.two();
 }
 
 template <typename DispatchT>
-void translate_keydown_3_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_3_repeat();
+void translate_keydown_three_repeat_event(SDL_Event const&,
+                                          DispatchT const* dispatch) {
+  dispatch->keydown.repeat.three();
 }
 
 template <typename DispatchT>
-void translate_keydown_4_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_4_repeat();
+void translate_keydown_four_repeat_event(SDL_Event const&,
+                                         DispatchT const* dispatch) {
+  dispatch->keydown.repeat.four();
 }
 
 template <typename DispatchT>
-void translate_keydown_5_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_5_repeat();
+void translate_keydown_five_repeat_event(SDL_Event const&,
+                                         DispatchT const* dispatch) {
+  dispatch->keydown.repeat.five();
 }
 
 template <typename DispatchT>
-void translate_keydown_6_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_6_repeat();
+void translate_keydown_six_repeat_event(SDL_Event const&,
+                                        DispatchT const* dispatch) {
+  dispatch->keydown.repeat.six();
 }
 
 template <typename DispatchT>
-void translate_keydown_7_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_7_repeat();
+void translate_keydown_seven_repeat_event(SDL_Event const&,
+                                          DispatchT const* dispatch) {
+  dispatch->keydown.repeat.seven();
 }
 
 template <typename DispatchT>
-void translate_keydown_8_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_8_repeat();
+void translate_keydown_eight_repeat_event(SDL_Event const&,
+                                          DispatchT const* dispatch) {
+  dispatch->keydown.repeat.eight();
 }
 
 template <typename DispatchT>
-void translate_keydown_9_repeat_event(SDL_Event const&,
-                                      DispatchT const* dispatch) {
-  dispatch->keydown_9_repeat();
+void translate_keydown_nine_repeat_event(SDL_Event const&,
+                                         DispatchT const* dispatch) {
+  dispatch->keydown.repeat.nine();
 }
 
 template <typename DispatchT>
 void translate_keydown_colon_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_colon_repeat();
+  dispatch->keydown.repeat.colon();
 }
 
 template <typename DispatchT>
 void translate_keydown_semicolon_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_semicolon_repeat();
+  dispatch->keydown.repeat.semicolon();
 }
 
 template <typename DispatchT>
 void translate_keydown_less_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_less_repeat();
+  dispatch->keydown.repeat.less();
 }
 
 template <typename DispatchT>
 void translate_keydown_equals_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_equals_repeat();
+  dispatch->keydown.repeat.equals();
 }
 
 template <typename DispatchT>
 void translate_keydown_greater_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_greater_repeat();
+  dispatch->keydown.repeat.greater();
 }
 
 template <typename DispatchT>
 void translate_keydown_question_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_question_repeat();
+  dispatch->keydown.repeat.question();
 }
 
 template <typename DispatchT>
 void translate_keydown_at_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_at_repeat();
+  dispatch->keydown.repeat.at();
 }
 
 template <typename DispatchT>
 void translate_keydown_leftbracket_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_leftbracket_repeat();
+  dispatch->keydown.repeat.leftbracket();
 }
 
 template <typename DispatchT>
 void translate_keydown_backslash_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_backslash_repeat();
+  dispatch->keydown.repeat.backslash();
 }
 
 template <typename DispatchT>
 void translate_keydown_rightbracket_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_rightbracket_repeat();
+  dispatch->keydown.repeat.rightbracket();
 }
 
 template <typename DispatchT>
 void translate_keydown_caret_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_caret_repeat();
+  dispatch->keydown.repeat.caret();
 }
 
 template <typename DispatchT>
 void translate_keydown_underscore_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_underscore_repeat();
+  dispatch->keydown.repeat.underscore();
 }
 
 template <typename DispatchT>
 void translate_keydown_backquote_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_backquote_repeat();
+  dispatch->keydown.repeat.backquote();
 }
 
 template <typename DispatchT>
 void translate_keydown_a_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_a_repeat();
+  dispatch->keydown.repeat.a();
 }
 
 template <typename DispatchT>
 void translate_keydown_b_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_b_repeat();
+  dispatch->keydown.repeat.b();
 }
 
 template <typename DispatchT>
 void translate_keydown_c_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_c_repeat();
+  dispatch->keydown.repeat.c();
 }
 
 template <typename DispatchT>
 void translate_keydown_d_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_d_repeat();
+  dispatch->keydown.repeat.d();
 }
 
 template <typename DispatchT>
 void translate_keydown_e_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_e_repeat();
+  dispatch->keydown.repeat.e();
 }
 
 template <typename DispatchT>
 void translate_keydown_f_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_f_repeat();
+  dispatch->keydown.repeat.f();
 }
 
 template <typename DispatchT>
 void translate_keydown_g_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_g_repeat();
+  dispatch->keydown.repeat.g();
 }
 
 template <typename DispatchT>
 void translate_keydown_h_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_h_repeat();
+  dispatch->keydown.repeat.h();
 }
 
 template <typename DispatchT>
 void translate_keydown_i_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_i_repeat();
+  dispatch->keydown.repeat.i();
 }
 
 template <typename DispatchT>
 void translate_keydown_j_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_j_repeat();
+  dispatch->keydown.repeat.j();
 }
 
 template <typename DispatchT>
 void translate_keydown_k_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_k_repeat();
+  dispatch->keydown.repeat.k();
 }
 
 template <typename DispatchT>
 void translate_keydown_l_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_l_repeat();
+  dispatch->keydown.repeat.l();
 }
 
 template <typename DispatchT>
 void translate_keydown_m_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_m_repeat();
+  dispatch->keydown.repeat.m();
 }
 
 template <typename DispatchT>
 void translate_keydown_n_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_n_repeat();
+  dispatch->keydown.repeat.n();
 }
 
 template <typename DispatchT>
 void translate_keydown_o_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_o_repeat();
+  dispatch->keydown.repeat.o();
 }
 
 template <typename DispatchT>
 void translate_keydown_p_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_p_repeat();
+  dispatch->keydown.repeat.p();
 }
 
 template <typename DispatchT>
 void translate_keydown_q_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_q_repeat();
+  dispatch->keydown.repeat.q();
 }
 
 template <typename DispatchT>
 void translate_keydown_r_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_r_repeat();
+  dispatch->keydown.repeat.r();
 }
 
 template <typename DispatchT>
 void translate_keydown_s_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_s_repeat();
+  dispatch->keydown.repeat.s();
 }
 
 template <typename DispatchT>
 void translate_keydown_t_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_t_repeat();
+  dispatch->keydown.repeat.t();
 }
 
 template <typename DispatchT>
 void translate_keydown_u_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_u_repeat();
+  dispatch->keydown.repeat.u();
 }
 
 template <typename DispatchT>
 void translate_keydown_v_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_v_repeat();
+  dispatch->keydown.repeat.v();
 }
 
 template <typename DispatchT>
 void translate_keydown_w_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_w_repeat();
+  dispatch->keydown.repeat.w();
 }
 
 template <typename DispatchT>
 void translate_keydown_x_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_x_repeat();
+  dispatch->keydown.repeat.x();
 }
 
 template <typename DispatchT>
 void translate_keydown_y_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_y_repeat();
+  dispatch->keydown.repeat.y();
 }
 
 template <typename DispatchT>
 void translate_keydown_z_repeat_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keydown_z_repeat();
+  dispatch->keydown.repeat.z();
 }
 
 template <typename DispatchT>
 void translate_keydown_delete_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_delete_repeat();
+  dispatch->keydown.repeat.deletekey();
 }
 
 template <typename DispatchT>
 void translate_keydown_capslock_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_capslock_repeat();
+  dispatch->keydown.repeat.capslock();
 }
 
 template <typename DispatchT>
 void translate_keydown_f1_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f1_repeat();
+  dispatch->keydown.repeat.f1();
 }
 
 template <typename DispatchT>
 void translate_keydown_f2_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f2_repeat();
+  dispatch->keydown.repeat.f2();
 }
 
 template <typename DispatchT>
 void translate_keydown_f3_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f3_repeat();
+  dispatch->keydown.repeat.f3();
 }
 
 template <typename DispatchT>
 void translate_keydown_f4_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f4_repeat();
+  dispatch->keydown.repeat.f4();
 }
 
 template <typename DispatchT>
 void translate_keydown_f5_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f5_repeat();
+  dispatch->keydown.repeat.f5();
 }
 
 template <typename DispatchT>
 void translate_keydown_f6_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f6_repeat();
+  dispatch->keydown.repeat.f6();
 }
 
 template <typename DispatchT>
 void translate_keydown_f7_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f7_repeat();
+  dispatch->keydown.repeat.f7();
 }
 
 template <typename DispatchT>
 void translate_keydown_f8_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f8_repeat();
+  dispatch->keydown.repeat.f8();
 }
 
 template <typename DispatchT>
 void translate_keydown_f9_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_f9_repeat();
+  dispatch->keydown.repeat.f9();
 }
 
 template <typename DispatchT>
 void translate_keydown_f10_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f10_repeat();
+  dispatch->keydown.repeat.f10();
 }
 
 template <typename DispatchT>
 void translate_keydown_f11_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f11_repeat();
+  dispatch->keydown.repeat.f11();
 }
 
 template <typename DispatchT>
 void translate_keydown_f12_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f12_repeat();
+  dispatch->keydown.repeat.f12();
 }
 
 template <typename DispatchT>
 void translate_keydown_printscreen_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_printscreen_repeat();
+  dispatch->keydown.repeat.printscreen();
 }
 
 template <typename DispatchT>
 void translate_keydown_scrolllock_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_scrolllock_repeat();
+  dispatch->keydown.repeat.scrolllock();
 }
 
 template <typename DispatchT>
 void translate_keydown_pause_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_pause_repeat();
+  dispatch->keydown.repeat.pause();
 }
 
 template <typename DispatchT>
 void translate_keydown_insert_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_insert_repeat();
+  dispatch->keydown.repeat.insert();
 }
 
 template <typename DispatchT>
 void translate_keydown_home_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_home_repeat();
+  dispatch->keydown.repeat.home();
 }
 
 template <typename DispatchT>
 void translate_keydown_pageup_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_pageup_repeat();
+  dispatch->keydown.repeat.pageup();
 }
 
 template <typename DispatchT>
 void translate_keydown_end_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_end_repeat();
+  dispatch->keydown.repeat.end();
 }
 
 template <typename DispatchT>
 void translate_keydown_pagedown_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_pagedown_repeat();
+  dispatch->keydown.repeat.pagedown();
 }
 
 template <typename DispatchT>
 void translate_keydown_right_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_right_repeat();
+  dispatch->keydown.repeat.right();
 }
 
 template <typename DispatchT>
 void translate_keydown_left_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_left_repeat();
+  dispatch->keydown.repeat.left();
 }
 
 template <typename DispatchT>
 void translate_keydown_down_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_down_repeat();
+  dispatch->keydown.repeat.down();
 }
 
 template <typename DispatchT>
 void translate_keydown_up_repeat_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keydown_up_repeat();
+  dispatch->keydown.repeat.up();
 }
 
 template <typename DispatchT>
 void translate_keydown_numlockclear_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_numlockclear_repeat();
+  dispatch->keydown.repeat.numlockclear();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_divide_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_divide_repeat();
+  dispatch->keydown.repeat.kp_divide();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_multiply_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_kp_multiply_repeat();
+  dispatch->keydown.repeat.kp_multiply();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_minus_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_minus_repeat();
+  dispatch->keydown.repeat.kp_minus();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_plus_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_kp_plus_repeat();
+  dispatch->keydown.repeat.kp_plus();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_enter_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_enter_repeat();
+  dispatch->keydown.repeat.kp_enter();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_1_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_1_repeat();
+  dispatch->keydown.repeat.kp_1();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_2_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_2_repeat();
+  dispatch->keydown.repeat.kp_2();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_3_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_3_repeat();
+  dispatch->keydown.repeat.kp_3();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_4_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_4_repeat();
+  dispatch->keydown.repeat.kp_4();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_5_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_5_repeat();
+  dispatch->keydown.repeat.kp_5();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_6_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_6_repeat();
+  dispatch->keydown.repeat.kp_6();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_7_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_7_repeat();
+  dispatch->keydown.repeat.kp_7();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_8_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_8_repeat();
+  dispatch->keydown.repeat.kp_8();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_9_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_9_repeat();
+  dispatch->keydown.repeat.kp_9();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_0_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_0_repeat();
+  dispatch->keydown.repeat.kp_0();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_period_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_period_repeat();
+  dispatch->keydown.repeat.kp_period();
 }
 
 template <typename DispatchT>
 void translate_keydown_application_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_application_repeat();
+  dispatch->keydown.repeat.application();
 }
 
 template <typename DispatchT>
 void translate_keydown_power_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_power_repeat();
+  dispatch->keydown.repeat.power();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_equals_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_equals_repeat();
+  dispatch->keydown.repeat.kp_equals();
 }
 
 template <typename DispatchT>
 void translate_keydown_f13_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f13_repeat();
+  dispatch->keydown.repeat.f13();
 }
 
 template <typename DispatchT>
 void translate_keydown_f14_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f14_repeat();
+  dispatch->keydown.repeat.f14();
 }
 
 template <typename DispatchT>
 void translate_keydown_f15_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f15_repeat();
+  dispatch->keydown.repeat.f15();
 }
 
 template <typename DispatchT>
 void translate_keydown_f16_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f16_repeat();
+  dispatch->keydown.repeat.f16();
 }
 
 template <typename DispatchT>
 void translate_keydown_f17_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f17_repeat();
+  dispatch->keydown.repeat.f17();
 }
 
 template <typename DispatchT>
 void translate_keydown_f18_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f18_repeat();
+  dispatch->keydown.repeat.f18();
 }
 
 template <typename DispatchT>
 void translate_keydown_f19_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f19_repeat();
+  dispatch->keydown.repeat.f19();
 }
 
 template <typename DispatchT>
 void translate_keydown_f20_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f20_repeat();
+  dispatch->keydown.repeat.f20();
 }
 
 template <typename DispatchT>
 void translate_keydown_f21_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f21_repeat();
+  dispatch->keydown.repeat.f21();
 }
 
 template <typename DispatchT>
 void translate_keydown_f22_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f22_repeat();
+  dispatch->keydown.repeat.f22();
 }
 
 template <typename DispatchT>
 void translate_keydown_f23_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f23_repeat();
+  dispatch->keydown.repeat.f23();
 }
 
 template <typename DispatchT>
 void translate_keydown_f24_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_f24_repeat();
+  dispatch->keydown.repeat.f24();
 }
 
 template <typename DispatchT>
 void translate_keydown_execute_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_execute_repeat();
+  dispatch->keydown.repeat.execute();
 }
 
 template <typename DispatchT>
 void translate_keydown_help_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_help_repeat();
+  dispatch->keydown.repeat.help();
 }
 
 template <typename DispatchT>
 void translate_keydown_menu_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_menu_repeat();
+  dispatch->keydown.repeat.menu();
 }
 
 template <typename DispatchT>
 void translate_keydown_select_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_select_repeat();
+  dispatch->keydown.repeat.select();
 }
 
 template <typename DispatchT>
 void translate_keydown_stop_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_stop_repeat();
+  dispatch->keydown.repeat.stop();
 }
 
 template <typename DispatchT>
 void translate_keydown_again_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_again_repeat();
+  dispatch->keydown.repeat.again();
 }
 
 template <typename DispatchT>
 void translate_keydown_undo_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_undo_repeat();
+  dispatch->keydown.repeat.undo();
 }
 
 template <typename DispatchT>
 void translate_keydown_cut_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_cut_repeat();
+  dispatch->keydown.repeat.cut();
 }
 
 template <typename DispatchT>
 void translate_keydown_copy_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_copy_repeat();
+  dispatch->keydown.repeat.copy();
 }
 
 template <typename DispatchT>
 void translate_keydown_paste_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_paste_repeat();
+  dispatch->keydown.repeat.paste();
 }
 
 template <typename DispatchT>
 void translate_keydown_find_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_find_repeat();
+  dispatch->keydown.repeat.find();
 }
 
 template <typename DispatchT>
 void translate_keydown_mute_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_mute_repeat();
+  dispatch->keydown.repeat.mute();
 }
 
 template <typename DispatchT>
 void translate_keydown_volumeup_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_volumeup_repeat();
+  dispatch->keydown.repeat.volumeup();
 }
 
 template <typename DispatchT>
 void translate_keydown_volumedown_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_volumedown_repeat();
+  dispatch->keydown.repeat.volumedown();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_comma_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_comma_repeat();
+  dispatch->keydown.repeat.kp_comma();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_equalsas400_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kp_equalsas400_repeat();
+  dispatch->keydown.repeat.kp_equalsas400();
 }
 
 template <typename DispatchT>
 void translate_keydown_alterase_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_alterase_repeat();
+  dispatch->keydown.repeat.alterase();
 }
 
 template <typename DispatchT>
 void translate_keydown_sysreq_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_sysreq_repeat();
+  dispatch->keydown.repeat.sysreq();
 }
 
 template <typename DispatchT>
 void translate_keydown_cancel_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_cancel_repeat();
+  dispatch->keydown.repeat.cancel();
 }
 
 template <typename DispatchT>
 void translate_keydown_clear_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_clear_repeat();
+  dispatch->keydown.repeat.clear();
 }
 
 template <typename DispatchT>
 void translate_keydown_prior_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_prior_repeat();
+  dispatch->keydown.repeat.prior();
 }
 
 template <typename DispatchT>
 void translate_keydown_return2_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_return2_repeat();
+  dispatch->keydown.repeat.return2();
 }
 
 template <typename DispatchT>
 void translate_keydown_separator_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_separator_repeat();
+  dispatch->keydown.repeat.separator();
 }
 
 template <typename DispatchT>
 void translate_keydown_out_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_out_repeat();
+  dispatch->keydown.repeat.out();
 }
 
 template <typename DispatchT>
 void translate_keydown_oper_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_oper_repeat();
+  dispatch->keydown.repeat.oper();
 }
 
 template <typename DispatchT>
 void translate_keydown_clearagain_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_clearagain_repeat();
+  dispatch->keydown.repeat.clearagain();
 }
 
 template <typename DispatchT>
 void translate_keydown_crsel_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_crsel_repeat();
+  dispatch->keydown.repeat.crsel();
 }
 
 template <typename DispatchT>
 void translate_keydown_exsel_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_exsel_repeat();
+  dispatch->keydown.repeat.exsel();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_00_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_kp_00_repeat();
+  dispatch->keydown.repeat.kp_00();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_000_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_kp_000_repeat();
+  dispatch->keydown.repeat.kp_000();
 }
 
 template <typename DispatchT>
 void translate_keydown_thousandsseparator_repeat_event(
   SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keydown_thousandsseparator_repeat();
+  dispatch->keydown.repeat.thousandsseparator();
 }
 
 template <typename DispatchT>
 void translate_keydown_decimalseparator_repeat_event(
   SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keydown_decimalseparator_repeat();
+  dispatch->keydown.repeat.decimalseparator();
 }
 
 template <typename DispatchT>
 void translate_keydown_currencyunit_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_currencyunit_repeat();
+  dispatch->keydown.repeat.currencyunit();
 }
 
 template <typename DispatchT>
 void translate_keydown_currencysubunit_repeat_event(
   SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keydown_currencysubunit_repeat();
+  dispatch->keydown.repeat.currencysubunit();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_leftparen_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_leftparen_repeat();
+  dispatch->keydown.repeat.kp_leftparen();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_rightparen_repeat_event(SDL_Event const&,
                                                   DispatchT const* dispatch) {
-  dispatch->keydown_kp_rightparen_repeat();
+  dispatch->keydown.repeat.kp_rightparen();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_leftbrace_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_leftbrace_repeat();
+  dispatch->keydown.repeat.kp_leftbrace();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_rightbrace_repeat_event(SDL_Event const&,
                                                   DispatchT const* dispatch) {
-  dispatch->keydown_kp_rightbrace_repeat();
+  dispatch->keydown.repeat.kp_rightbrace();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_tab_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_kp_tab_repeat();
+  dispatch->keydown.repeat.kp_tab();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_backspace_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_backspace_repeat();
+  dispatch->keydown.repeat.kp_backspace();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_a_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_a_repeat();
+  dispatch->keydown.repeat.kp_a();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_b_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_b_repeat();
+  dispatch->keydown.repeat.kp_b();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_c_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_c_repeat();
+  dispatch->keydown.repeat.kp_c();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_d_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_d_repeat();
+  dispatch->keydown.repeat.kp_d();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_e_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_e_repeat();
+  dispatch->keydown.repeat.kp_e();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_f_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_kp_f_repeat();
+  dispatch->keydown.repeat.kp_f();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_xor_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_kp_xor_repeat();
+  dispatch->keydown.repeat.kp_xor();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_power_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_power_repeat();
+  dispatch->keydown.repeat.kp_power();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_percent_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_kp_percent_repeat();
+  dispatch->keydown.repeat.kp_percent();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_less_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_kp_less_repeat();
+  dispatch->keydown.repeat.kp_less();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_greater_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_kp_greater_repeat();
+  dispatch->keydown.repeat.kp_greater();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_ampersand_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_ampersand_repeat();
+  dispatch->keydown.repeat.kp_ampersand();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_dblampersand_repeat_event(
   SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keydown_kp_dblampersand_repeat();
+  dispatch->keydown.repeat.kp_dblampersand();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_verticalbar_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kp_verticalbar_repeat();
+  dispatch->keydown.repeat.kp_verticalbar();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_dblverticalbar_repeat_event(
   SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keydown_kp_dblverticalbar_repeat();
+  dispatch->keydown.repeat.kp_dblverticalbar();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_colon_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_colon_repeat();
+  dispatch->keydown.repeat.kp_colon();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_hash_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_kp_hash_repeat();
+  dispatch->keydown.repeat.kp_hash();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_space_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_space_repeat();
+  dispatch->keydown.repeat.kp_space();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_at_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_kp_at_repeat();
+  dispatch->keydown.repeat.kp_at();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_exclam_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_exclam_repeat();
+  dispatch->keydown.repeat.kp_exclam();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memstore_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_kp_memstore_repeat();
+  dispatch->keydown.repeat.kp_memstore();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memrecall_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_memrecall_repeat();
+  dispatch->keydown.repeat.kp_memrecall();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memclear_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_kp_memclear_repeat();
+  dispatch->keydown.repeat.kp_memclear();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memadd_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_memadd_repeat();
+  dispatch->keydown.repeat.kp_memadd();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memsubtract_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kp_memsubtract_repeat();
+  dispatch->keydown.repeat.kp_memsubtract();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memmultiply_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kp_memmultiply_repeat();
+  dispatch->keydown.repeat.kp_memmultiply();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_memdivide_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_memdivide_repeat();
+  dispatch->keydown.repeat.kp_memdivide();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_plusminus_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kp_plusminus_repeat();
+  dispatch->keydown.repeat.kp_plusminus();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_clear_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_clear_repeat();
+  dispatch->keydown.repeat.kp_clear();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_clearentry_repeat_event(SDL_Event const&,
                                                   DispatchT const* dispatch) {
-  dispatch->keydown_kp_clearentry_repeat();
+  dispatch->keydown.repeat.kp_clearentry();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_binary_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_kp_binary_repeat();
+  dispatch->keydown.repeat.kp_binary();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_octal_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_kp_octal_repeat();
+  dispatch->keydown.repeat.kp_octal();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_decimal_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_kp_decimal_repeat();
+  dispatch->keydown.repeat.kp_decimal();
 }
 
 template <typename DispatchT>
 void translate_keydown_kp_hexadecimal_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kp_hexadecimal_repeat();
+  dispatch->keydown.repeat.kp_hexadecimal();
 }
 
 template <typename DispatchT>
 void translate_keydown_lctrl_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_lctrl_repeat();
+  dispatch->keydown.repeat.lctrl();
 }
 
 template <typename DispatchT>
 void translate_keydown_lshift_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_lshift_repeat();
+  dispatch->keydown.repeat.lshift();
 }
 
 template <typename DispatchT>
 void translate_keydown_lalt_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_lalt_repeat();
+  dispatch->keydown.repeat.lalt();
 }
 
 template <typename DispatchT>
 void translate_keydown_lgui_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_lgui_repeat();
+  dispatch->keydown.repeat.lgui();
 }
 
 template <typename DispatchT>
 void translate_keydown_rctrl_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_rctrl_repeat();
+  dispatch->keydown.repeat.rctrl();
 }
 
 template <typename DispatchT>
 void translate_keydown_rshift_repeat_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keydown_rshift_repeat();
+  dispatch->keydown.repeat.rshift();
 }
 
 template <typename DispatchT>
 void translate_keydown_ralt_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_ralt_repeat();
+  dispatch->keydown.repeat.ralt();
 }
 
 template <typename DispatchT>
 void translate_keydown_rgui_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_rgui_repeat();
+  dispatch->keydown.repeat.rgui();
 }
 
 template <typename DispatchT>
 void translate_keydown_mode_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_mode_repeat();
+  dispatch->keydown.repeat.mode();
 }
 
 template <typename DispatchT>
 void translate_keydown_audionext_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_audionext_repeat();
+  dispatch->keydown.repeat.audionext();
 }
 
 template <typename DispatchT>
 void translate_keydown_audioprev_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_audioprev_repeat();
+  dispatch->keydown.repeat.audioprev();
 }
 
 template <typename DispatchT>
 void translate_keydown_audiostop_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_audiostop_repeat();
+  dispatch->keydown.repeat.audiostop();
 }
 
 template <typename DispatchT>
 void translate_keydown_audioplay_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_audioplay_repeat();
+  dispatch->keydown.repeat.audioplay();
 }
 
 template <typename DispatchT>
 void translate_keydown_audiomute_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_audiomute_repeat();
+  dispatch->keydown.repeat.audiomute();
 }
 
 template <typename DispatchT>
 void translate_keydown_mediaselect_repeat_event(SDL_Event const&,
                                                 DispatchT const* dispatch) {
-  dispatch->keydown_mediaselect_repeat();
+  dispatch->keydown.repeat.mediaselect();
 }
 
 template <typename DispatchT>
 void translate_keydown_www_repeat_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keydown_www_repeat();
+  dispatch->keydown.repeat.www();
 }
 
 template <typename DispatchT>
 void translate_keydown_mail_repeat_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keydown_mail_repeat();
+  dispatch->keydown.repeat.mail();
 }
 
 template <typename DispatchT>
 void translate_keydown_calculator_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_calculator_repeat();
+  dispatch->keydown.repeat.calculator();
 }
 
 template <typename DispatchT>
 void translate_keydown_computer_repeat_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keydown_computer_repeat();
+  dispatch->keydown.repeat.computer();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_search_repeat_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keydown_ac_search_repeat();
+  dispatch->keydown.repeat.ac_search();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_home_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_ac_home_repeat();
+  dispatch->keydown.repeat.ac_home();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_back_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_ac_back_repeat();
+  dispatch->keydown.repeat.ac_back();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_forward_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_ac_forward_repeat();
+  dispatch->keydown.repeat.ac_forward();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_stop_repeat_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keydown_ac_stop_repeat();
+  dispatch->keydown.repeat.ac_stop();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_refresh_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_ac_refresh_repeat();
+  dispatch->keydown.repeat.ac_refresh();
 }
 
 template <typename DispatchT>
 void translate_keydown_ac_bookmarks_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_ac_bookmarks_repeat();
+  dispatch->keydown.repeat.ac_bookmarks();
 }
 
 template <typename DispatchT>
 void translate_keydown_brightnessdown_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_brightnessdown_repeat();
+  dispatch->keydown.repeat.brightnessdown();
 }
 
 template <typename DispatchT>
 void translate_keydown_brightnessup_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_brightnessup_repeat();
+  dispatch->keydown.repeat.brightnessup();
 }
 
 template <typename DispatchT>
 void translate_keydown_displayswitch_repeat_event(SDL_Event const&,
                                                   DispatchT const* dispatch) {
-  dispatch->keydown_displayswitch_repeat();
+  dispatch->keydown.repeat.displayswitch();
 }
 
 template <typename DispatchT>
 void translate_keydown_kbdillumtoggle_repeat_event(SDL_Event const&,
                                                    DispatchT const* dispatch) {
-  dispatch->keydown_kbdillumtoggle_repeat();
+  dispatch->keydown.repeat.kbdillumtoggle();
 }
 
 template <typename DispatchT>
 void translate_keydown_kbdillumdown_repeat_event(SDL_Event const&,
                                                  DispatchT const* dispatch) {
-  dispatch->keydown_kbdillumdown_repeat();
+  dispatch->keydown.repeat.kbdillumdown();
 }
 
 template <typename DispatchT>
 void translate_keydown_kbdillumup_repeat_event(SDL_Event const&,
                                                DispatchT const* dispatch) {
-  dispatch->keydown_kbdillumup_repeat();
+  dispatch->keydown.repeat.kbdillumup();
 }
 
 template <typename DispatchT>
 void translate_keydown_eject_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_eject_repeat();
+  dispatch->keydown.repeat.eject();
 }
 
 template <typename DispatchT>
 void translate_keydown_sleep_repeat_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keydown_sleep_repeat();
+  dispatch->keydown.repeat.sleep();
 }
 
 template <typename DispatchT>
@@ -1467,25 +1467,25 @@ void translate_keydown_repeat_event(SDL_Event const& e,
   else if(e.key.keysym.sym == SDLK_SLASH)
     translate_keydown_slash_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_0)
-    translate_keydown_0_repeat_event(e, dispatch);
+    translate_keydown_zero_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_1)
-    translate_keydown_1_repeat_event(e, dispatch);
+    translate_keydown_one_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_2)
-    translate_keydown_2_repeat_event(e, dispatch);
+    translate_keydown_two_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_3)
-    translate_keydown_3_repeat_event(e, dispatch);
+    translate_keydown_three_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_4)
-    translate_keydown_4_repeat_event(e, dispatch);
+    translate_keydown_four_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_5)
-    translate_keydown_5_repeat_event(e, dispatch);
+    translate_keydown_five_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_6)
-    translate_keydown_6_repeat_event(e, dispatch);
+    translate_keydown_six_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_7)
-    translate_keydown_7_repeat_event(e, dispatch);
+    translate_keydown_seven_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_8)
-    translate_keydown_8_repeat_event(e, dispatch);
+    translate_keydown_eight_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_9)
-    translate_keydown_9_repeat_event(e, dispatch);
+    translate_keydown_nine_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_COLON)
     translate_keydown_colon_repeat_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_SEMICOLON)
