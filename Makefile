@@ -1,7 +1,8 @@
+PREFIX := ${HOME}/usr/
 OBJ := $(patsubst %.cc,%.o,$(wildcard src/*.cc src/detail/*.cc))
 TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc))
 
-.PHONY: clean
+.PHONY: clean install
 
 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
@@ -17,5 +18,11 @@ clean:
 
 %.dep: %.cc
 	${COMPILE.cc} -MG -MM -MP -MT$@ -MT$(<:.cc=.o) $< >$@
+
+install: check
+	install -d -m755 $(addprefix $(abspath ${PREFIX})/,include/glasses/detail lib)
+	install -m644 $(wildcard src/detail/*.hh) $(abspath ${PREFIX})/include/glasses/detail/
+	install -m644 $(wildcard src/*.hh) $(abspath ${PREFIX})/include/glasses/
+	install -m644 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a $(abspath ${PREFIX})/lib/
 
 -include ${OBJ:.o=.dep} ${TEST_OBJ:.o=.dep}
