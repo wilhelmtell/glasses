@@ -1,15 +1,17 @@
 #ifndef GLS_FILENAME_HH_
 #define GLS_FILENAME_HH_
 
+#include <string>
+
 namespace gls {
 struct filename {
   filename() = default;
-  explicit filename(char const* name);
+  explicit filename(std::string name);
 
   char const* c_str() const;
 
 private:
-  char const* name;
+  std::string name;
 };
 }
 

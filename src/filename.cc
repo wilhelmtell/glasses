@@ -1,7 +1,9 @@
 #include "filename.hh"
+#include <string>
+#include <utility>
 
 namespace gls {
-filename::filename(char const* name) : name(name) {}
+filename::filename(std::string name) : name(std::move(name)) {}
 
-char const* filename::c_str() const { return name; }
+char const* filename::c_str() const { return name.c_str(); }
 }
