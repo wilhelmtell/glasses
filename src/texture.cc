@@ -6,7 +6,7 @@
 #include "png_filename.hh"
 #include "ttf_font.hh"
 #include "text.hh"
-#include <cassert>
+#include "sdl_texture.hh"
 
 namespace {
 SDL_Texture* texture_from_bmp(SDL_Renderer* renderer,
@@ -51,19 +51,9 @@ texture::texture(SDL_Renderer* r,
                  SDL_Color const& c)
 : texture(make_texture(r, ttf, t, c)) {}
 
-int texture::width() const {
-  int w;
-  auto const err = SDL_QueryTexture(get(), nullptr, nullptr, &w, nullptr);
-  assert(err == 0);  // XXX: How should I handle an error here?
-  return w;
-}
+int texture::width() const { return gls::width(get()); }
 
-int texture::height() const {
-  int h;
-  auto const err = SDL_QueryTexture(get(), nullptr, nullptr, nullptr, &h);
-  assert(err == 0);  // XXX: How should I handle an error here?
-  return h;
-}
+int texture::height() const { return gls::height(get()); }
 
 SDL_Texture* texture::get() const { return t.get(); }
 }
