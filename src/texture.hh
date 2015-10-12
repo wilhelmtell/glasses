@@ -15,7 +15,10 @@ struct texture {
   texture(SDL_Renderer* r, SDL_Surface* s);
   texture(SDL_Renderer* r, bmp_filename const& bmp);
   texture(SDL_Renderer* r, png_filename const& png);
-  texture(SDL_Renderer* r, ttf_font const& ttf, text const& t, SDL_Color const& c);
+  texture(SDL_Renderer* r,
+          ttf_font const& ttf,
+          text const& t,
+          SDL_Color const& c);
 
   int width() const;
   int height() const;

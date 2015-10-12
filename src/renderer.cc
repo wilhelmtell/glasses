@@ -7,9 +7,7 @@ renderer::renderer(SDL_Renderer* r) : r(r, &SDL_DestroyRenderer) {
   if(r == nullptr) throw renderer_creation_error(SDL_GetError());
 }
 
-renderer::renderer(SDL_Window* w)
-: renderer(SDL_CreateRenderer(w, -1, 0)) {
-}
+renderer::renderer(SDL_Window* w) : renderer(SDL_CreateRenderer(w, -1, 0)) {}
 
 SDL_Renderer* renderer::get() const { return r.get(); }
 }
