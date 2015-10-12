@@ -1,19 +1,11 @@
 #ifndef GLS_BMP_FILENAME_HH_
 #define GLS_BMP_FILENAME_HH_
 
-#include "filename.hh"
-#include <string>
+#include "bmp_filename_fwd.hh"  // bmp_filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct bmp_filename {
-  bmp_filename() = default;
-  explicit bmp_filename(std::string const& name);
-
-  char const* c_str() const;
-
-private:
-  filename name;
-};
+struct bmp_filename_tag {};
 }
 
 #endif

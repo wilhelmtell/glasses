@@ -1,19 +1,11 @@
 #ifndef GLS_TTF_FILENAME_HH_
 #define GLS_TTF_FILENAME_HH_
 
-#include "filename.hh"
-#include <string>
+#include "ttf_filename_fwd.hh"  // ttf_filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct ttf_filename {
-  ttf_filename() = default;
-  explicit ttf_filename(std::string const& name);
-
-  char const* c_str() const;
-
-private:
-  filename name;
-};
+struct ttf_filename_tag {};
 }
 
 #endif

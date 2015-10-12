@@ -1,19 +1,11 @@
 #ifndef GLS_PNG_FILENAME_HH_
 #define GLS_PNG_FILENAME_HH_
 
-#include "filename.hh"
-#include <string>
+#include "png_filename_fwd.hh"  // png_filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct png_filename {
-  png_filename() = default;
-  explicit png_filename(std::string const& name);
-
-  char const* c_str() const;
-
-private:
-  filename name;
-};
+struct png_filename_tag {};
 }
 
 #endif
