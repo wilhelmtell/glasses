@@ -1,19 +1,11 @@
 #ifndef GLS_OTF_FILENAME_HH_
 #define GLS_OTF_FILENAME_HH_
 
-#include "filename.hh"
-#include <string>
+#include "otf_filename_fwd.hh"  // otf_filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct otf_filename {
-  otf_filename() = default;
-  explicit otf_filename(std::string const& name);
-
-  char const* c_str() const;
-
-private:
-  filename name;
-};
+struct otf_filename_tag {};
 }
 
 #endif
