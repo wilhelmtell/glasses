@@ -4,14 +4,12 @@
 #include <memory>
 #include <SDL2/SDL_mixer.h>
 #include "wav_filename_fwd.hh"
-#include "flac_filename_fwd.hh"
 
 namespace gls {
 struct mix_chunk {
   mix_chunk() = default;
   explicit mix_chunk(Mix_Chunk* chunk);
   explicit mix_chunk(wav_filename const& name);
-  explicit mix_chunk(flac_filename const& name);
 
   Mix_Chunk* get() const;
 
