@@ -1,19 +1,11 @@
 #ifndef GLS_WAV_FILENAME_HH_
 #define GLS_WAV_FILENAME_HH_
 
-#include "filename.hh"
-#include <string>
+#include "wav_filename_fwd.hh"  // wav_filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct wav_filename {
-  wav_filename() = default;
-  explicit wav_filename(std::string const& name);
-
-  char const* c_str() const;
-
-private:
-  filename name;
-};
+struct wav_filename_tag {};
 }
 
 #endif
