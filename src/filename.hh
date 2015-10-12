@@ -1,18 +1,11 @@
 #ifndef GLS_FILENAME_HH_
 #define GLS_FILENAME_HH_
 
-#include <string>
+#include "filename_fwd.hh"  // filename is a typedef, defined here
+#include "detail/basic_filename.hh"
 
 namespace gls {
-struct filename {
-  filename() = default;
-  explicit filename(std::string name);
-
-  char const* c_str() const;
-
-private:
-  std::string name;
-};
+struct filename_tag {};
 }
 
 #endif
