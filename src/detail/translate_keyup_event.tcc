@@ -8,1292 +8,1292 @@ namespace detail {
 template <typename DispatchT>
 void translate_keyup_unknown_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_unknown();
+  dispatch->keyup.unknown();
 }
 
 template <typename DispatchT>
 void translate_keyup_backspace_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_backspace();
+  dispatch->keyup.backspace();
 }
 
 template <typename DispatchT>
 void translate_keyup_tab_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_tab();
+  dispatch->keyup.tab();
 }
 
 template <typename DispatchT>
 void translate_keyup_return_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_return();
+  dispatch->keyup.returnkey();
 }
 
 template <typename DispatchT>
 void translate_keyup_escape_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_escape();
+  dispatch->keyup.escape();
 }
 
 template <typename DispatchT>
 void translate_keyup_space_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_space();
+  dispatch->keyup.space();
 }
 
 template <typename DispatchT>
 void translate_keyup_exclaim_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_exclaim();
+  dispatch->keyup.exclaim();
 }
 
 template <typename DispatchT>
 void translate_keyup_quotedbl_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_quotedbl();
+  dispatch->keyup.quotedbl();
 }
 
 template <typename DispatchT>
 void translate_keyup_hash_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_hash();
+  dispatch->keyup.hash();
 }
 
 template <typename DispatchT>
 void translate_keyup_dollar_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_dollar();
+  dispatch->keyup.dollar();
 }
 
 template <typename DispatchT>
 void translate_keyup_percent_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_percent();
+  dispatch->keyup.percent();
 }
 
 template <typename DispatchT>
 void translate_keyup_ampersand_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_ampersand();
+  dispatch->keyup.ampersand();
 }
 
 template <typename DispatchT>
 void translate_keyup_quote_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_quote();
+  dispatch->keyup.quote();
 }
 
 template <typename DispatchT>
 void translate_keyup_leftparen_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_leftparen();
+  dispatch->keyup.leftparen();
 }
 
 template <typename DispatchT>
 void translate_keyup_rightparen_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_rightparen();
+  dispatch->keyup.rightparen();
 }
 
 template <typename DispatchT>
 void translate_keyup_asterisk_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_asterisk();
+  dispatch->keyup.asterisk();
 }
 
 template <typename DispatchT>
 void translate_keyup_plus_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_plus();
+  dispatch->keyup.plus();
 }
 
 template <typename DispatchT>
 void translate_keyup_comma_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_comma();
+  dispatch->keyup.comma();
 }
 
 template <typename DispatchT>
 void translate_keyup_minus_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_minus();
+  dispatch->keyup.minus();
 }
 
 template <typename DispatchT>
 void translate_keyup_period_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_period();
+  dispatch->keyup.period();
 }
 
 template <typename DispatchT>
 void translate_keyup_slash_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_slash();
+  dispatch->keyup.slash();
 }
 
 template <typename DispatchT>
-void translate_keyup_0_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_0();
+void translate_keyup_zero_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.zero();
 }
 
 template <typename DispatchT>
-void translate_keyup_1_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_1();
+void translate_keyup_one_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.one();
 }
 
 template <typename DispatchT>
-void translate_keyup_2_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_2();
+void translate_keyup_two_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.two();
 }
 
 template <typename DispatchT>
-void translate_keyup_3_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_3();
+void translate_keyup_three_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.three();
 }
 
 template <typename DispatchT>
-void translate_keyup_4_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_4();
+void translate_keyup_four_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.four();
 }
 
 template <typename DispatchT>
-void translate_keyup_5_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_5();
+void translate_keyup_five_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.five();
 }
 
 template <typename DispatchT>
-void translate_keyup_6_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_6();
+void translate_keyup_six_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.six();
 }
 
 template <typename DispatchT>
-void translate_keyup_7_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_7();
+void translate_keyup_seven_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.seven();
 }
 
 template <typename DispatchT>
-void translate_keyup_8_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_8();
+void translate_keyup_eight_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.eight();
 }
 
 template <typename DispatchT>
-void translate_keyup_9_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_9();
+void translate_keyup_nine_event(SDL_Event const&, DispatchT const* dispatch) {
+  dispatch->keyup.nine();
 }
 
 template <typename DispatchT>
 void translate_keyup_colon_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_colon();
+  dispatch->keyup.colon();
 }
 
 template <typename DispatchT>
 void translate_keyup_semicolon_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_semicolon();
+  dispatch->keyup.semicolon();
 }
 
 template <typename DispatchT>
 void translate_keyup_less_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_less();
+  dispatch->keyup.less();
 }
 
 template <typename DispatchT>
 void translate_keyup_equals_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_equals();
+  dispatch->keyup.equals();
 }
 
 template <typename DispatchT>
 void translate_keyup_greater_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_greater();
+  dispatch->keyup.greater();
 }
 
 template <typename DispatchT>
 void translate_keyup_question_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_question();
+  dispatch->keyup.question();
 }
 
 template <typename DispatchT>
 void translate_keyup_at_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_at();
+  dispatch->keyup.at();
 }
 
 template <typename DispatchT>
 void translate_keyup_leftbracket_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_leftbracket();
+  dispatch->keyup.leftbracket();
 }
 
 template <typename DispatchT>
 void translate_keyup_backslash_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_backslash();
+  dispatch->keyup.backslash();
 }
 
 template <typename DispatchT>
 void translate_keyup_rightbracket_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_rightbracket();
+  dispatch->keyup.rightbracket();
 }
 
 template <typename DispatchT>
 void translate_keyup_caret_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_caret();
+  dispatch->keyup.caret();
 }
 
 template <typename DispatchT>
 void translate_keyup_underscore_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_underscore();
+  dispatch->keyup.underscore();
 }
 
 template <typename DispatchT>
 void translate_keyup_backquote_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_backquote();
+  dispatch->keyup.backquote();
 }
 
 template <typename DispatchT>
 void translate_keyup_a_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_a();
+  dispatch->keyup.a();
 }
 
 template <typename DispatchT>
 void translate_keyup_b_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_b();
+  dispatch->keyup.b();
 }
 
 template <typename DispatchT>
 void translate_keyup_c_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_c();
+  dispatch->keyup.c();
 }
 
 template <typename DispatchT>
 void translate_keyup_d_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_d();
+  dispatch->keyup.d();
 }
 
 template <typename DispatchT>
 void translate_keyup_e_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_e();
+  dispatch->keyup.e();
 }
 
 template <typename DispatchT>
 void translate_keyup_f_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f();
+  dispatch->keyup.f();
 }
 
 template <typename DispatchT>
 void translate_keyup_g_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_g();
+  dispatch->keyup.g();
 }
 
 template <typename DispatchT>
 void translate_keyup_h_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_h();
+  dispatch->keyup.h();
 }
 
 template <typename DispatchT>
 void translate_keyup_i_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_i();
+  dispatch->keyup.i();
 }
 
 template <typename DispatchT>
 void translate_keyup_j_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_j();
+  dispatch->keyup.j();
 }
 
 template <typename DispatchT>
 void translate_keyup_k_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_k();
+  dispatch->keyup.k();
 }
 
 template <typename DispatchT>
 void translate_keyup_l_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_l();
+  dispatch->keyup.l();
 }
 
 template <typename DispatchT>
 void translate_keyup_m_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_m();
+  dispatch->keyup.m();
 }
 
 template <typename DispatchT>
 void translate_keyup_n_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_n();
+  dispatch->keyup.n();
 }
 
 template <typename DispatchT>
 void translate_keyup_o_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_o();
+  dispatch->keyup.o();
 }
 
 template <typename DispatchT>
 void translate_keyup_p_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_p();
+  dispatch->keyup.p();
 }
 
 template <typename DispatchT>
 void translate_keyup_q_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_q();
+  dispatch->keyup.q();
 }
 
 template <typename DispatchT>
 void translate_keyup_r_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_r();
+  dispatch->keyup.r();
 }
 
 template <typename DispatchT>
 void translate_keyup_s_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_s();
+  dispatch->keyup.s();
 }
 
 template <typename DispatchT>
 void translate_keyup_t_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_t();
+  dispatch->keyup.t();
 }
 
 template <typename DispatchT>
 void translate_keyup_u_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_u();
+  dispatch->keyup.u();
 }
 
 template <typename DispatchT>
 void translate_keyup_v_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_v();
+  dispatch->keyup.v();
 }
 
 template <typename DispatchT>
 void translate_keyup_w_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_w();
+  dispatch->keyup.w();
 }
 
 template <typename DispatchT>
 void translate_keyup_x_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_x();
+  dispatch->keyup.x();
 }
 
 template <typename DispatchT>
 void translate_keyup_y_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_y();
+  dispatch->keyup.y();
 }
 
 template <typename DispatchT>
 void translate_keyup_z_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_z();
+  dispatch->keyup.z();
 }
 
 template <typename DispatchT>
 void translate_keyup_delete_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_delete();
+  dispatch->keyup.deletekey();
 }
 
 template <typename DispatchT>
 void translate_keyup_capslock_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_capslock();
+  dispatch->keyup.capslock();
 }
 
 template <typename DispatchT>
 void translate_keyup_f1_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f1();
+  dispatch->keyup.f1();
 }
 
 template <typename DispatchT>
 void translate_keyup_f2_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f2();
+  dispatch->keyup.f2();
 }
 
 template <typename DispatchT>
 void translate_keyup_f3_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f3();
+  dispatch->keyup.f3();
 }
 
 template <typename DispatchT>
 void translate_keyup_f4_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f4();
+  dispatch->keyup.f4();
 }
 
 template <typename DispatchT>
 void translate_keyup_f5_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f5();
+  dispatch->keyup.f5();
 }
 
 template <typename DispatchT>
 void translate_keyup_f6_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f6();
+  dispatch->keyup.f6();
 }
 
 template <typename DispatchT>
 void translate_keyup_f7_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f7();
+  dispatch->keyup.f7();
 }
 
 template <typename DispatchT>
 void translate_keyup_f8_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f8();
+  dispatch->keyup.f8();
 }
 
 template <typename DispatchT>
 void translate_keyup_f9_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f9();
+  dispatch->keyup.f9();
 }
 
 template <typename DispatchT>
 void translate_keyup_f10_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f10();
+  dispatch->keyup.f10();
 }
 
 template <typename DispatchT>
 void translate_keyup_f11_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f11();
+  dispatch->keyup.f11();
 }
 
 template <typename DispatchT>
 void translate_keyup_f12_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f12();
+  dispatch->keyup.f12();
 }
 
 template <typename DispatchT>
 void translate_keyup_printscreen_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_printscreen();
+  dispatch->keyup.printscreen();
 }
 
 template <typename DispatchT>
 void translate_keyup_scrolllock_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_scrolllock();
+  dispatch->keyup.scrolllock();
 }
 
 template <typename DispatchT>
 void translate_keyup_pause_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_pause();
+  dispatch->keyup.pause();
 }
 
 template <typename DispatchT>
 void translate_keyup_insert_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_insert();
+  dispatch->keyup.insert();
 }
 
 template <typename DispatchT>
 void translate_keyup_home_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_home();
+  dispatch->keyup.home();
 }
 
 template <typename DispatchT>
 void translate_keyup_pageup_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_pageup();
+  dispatch->keyup.pageup();
 }
 
 template <typename DispatchT>
 void translate_keyup_end_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_end();
+  dispatch->keyup.end();
 }
 
 template <typename DispatchT>
 void translate_keyup_pagedown_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_pagedown();
+  dispatch->keyup.pagedown();
 }
 
 template <typename DispatchT>
 void translate_keyup_right_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_right();
+  dispatch->keyup.right();
 }
 
 template <typename DispatchT>
 void translate_keyup_left_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_left();
+  dispatch->keyup.left();
 }
 
 template <typename DispatchT>
 void translate_keyup_down_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_down();
+  dispatch->keyup.down();
 }
 
 template <typename DispatchT>
 void translate_keyup_up_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_up();
+  dispatch->keyup.up();
 }
 
 template <typename DispatchT>
 void translate_keyup_numlockclear_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_numlockclear();
+  dispatch->keyup.numlockclear();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_divide_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_divide();
+  dispatch->keyup.kp_divide();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_multiply_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_kp_multiply();
+  dispatch->keyup.kp_multiply();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_minus_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_minus();
+  dispatch->keyup.kp_minus();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_plus_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_kp_plus();
+  dispatch->keyup.kp_plus();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_enter_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_enter();
+  dispatch->keyup.kp_enter();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_1_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_1();
+  dispatch->keyup.kp_1();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_2_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_2();
+  dispatch->keyup.kp_2();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_3_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_3();
+  dispatch->keyup.kp_3();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_4_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_4();
+  dispatch->keyup.kp_4();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_5_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_5();
+  dispatch->keyup.kp_5();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_6_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_6();
+  dispatch->keyup.kp_6();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_7_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_7();
+  dispatch->keyup.kp_7();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_8_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_8();
+  dispatch->keyup.kp_8();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_9_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_9();
+  dispatch->keyup.kp_9();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_0_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_0();
+  dispatch->keyup.kp_0();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_period_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_period();
+  dispatch->keyup.kp_period();
 }
 
 template <typename DispatchT>
 void translate_keyup_application_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_application();
+  dispatch->keyup.application();
 }
 
 template <typename DispatchT>
 void translate_keyup_power_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_power();
+  dispatch->keyup.power();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_equals_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_equals();
+  dispatch->keyup.kp_equals();
 }
 
 template <typename DispatchT>
 void translate_keyup_f13_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f13();
+  dispatch->keyup.f13();
 }
 
 template <typename DispatchT>
 void translate_keyup_f14_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f14();
+  dispatch->keyup.f14();
 }
 
 template <typename DispatchT>
 void translate_keyup_f15_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f15();
+  dispatch->keyup.f15();
 }
 
 template <typename DispatchT>
 void translate_keyup_f16_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f16();
+  dispatch->keyup.f16();
 }
 
 template <typename DispatchT>
 void translate_keyup_f17_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f17();
+  dispatch->keyup.f17();
 }
 
 template <typename DispatchT>
 void translate_keyup_f18_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f18();
+  dispatch->keyup.f18();
 }
 
 template <typename DispatchT>
 void translate_keyup_f19_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f19();
+  dispatch->keyup.f19();
 }
 
 template <typename DispatchT>
 void translate_keyup_f20_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f20();
+  dispatch->keyup.f20();
 }
 
 template <typename DispatchT>
 void translate_keyup_f21_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f21();
+  dispatch->keyup.f21();
 }
 
 template <typename DispatchT>
 void translate_keyup_f22_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f22();
+  dispatch->keyup.f22();
 }
 
 template <typename DispatchT>
 void translate_keyup_f23_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f23();
+  dispatch->keyup.f23();
 }
 
 template <typename DispatchT>
 void translate_keyup_f24_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_f24();
+  dispatch->keyup.f24();
 }
 
 template <typename DispatchT>
 void translate_keyup_execute_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_execute();
+  dispatch->keyup.execute();
 }
 
 template <typename DispatchT>
 void translate_keyup_help_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_help();
+  dispatch->keyup.help();
 }
 
 template <typename DispatchT>
 void translate_keyup_menu_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_menu();
+  dispatch->keyup.menu();
 }
 
 template <typename DispatchT>
 void translate_keyup_select_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_select();
+  dispatch->keyup.select();
 }
 
 template <typename DispatchT>
 void translate_keyup_stop_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_stop();
+  dispatch->keyup.stop();
 }
 
 template <typename DispatchT>
 void translate_keyup_again_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_again();
+  dispatch->keyup.again();
 }
 
 template <typename DispatchT>
 void translate_keyup_undo_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_undo();
+  dispatch->keyup.undo();
 }
 
 template <typename DispatchT>
 void translate_keyup_cut_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_cut();
+  dispatch->keyup.cut();
 }
 
 template <typename DispatchT>
 void translate_keyup_copy_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_copy();
+  dispatch->keyup.copy();
 }
 
 template <typename DispatchT>
 void translate_keyup_paste_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_paste();
+  dispatch->keyup.paste();
 }
 
 template <typename DispatchT>
 void translate_keyup_find_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_find();
+  dispatch->keyup.find();
 }
 
 template <typename DispatchT>
 void translate_keyup_mute_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_mute();
+  dispatch->keyup.mute();
 }
 
 template <typename DispatchT>
 void translate_keyup_volumeup_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_volumeup();
+  dispatch->keyup.volumeup();
 }
 
 template <typename DispatchT>
 void translate_keyup_volumedown_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_volumedown();
+  dispatch->keyup.volumedown();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_comma_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_comma();
+  dispatch->keyup.kp_comma();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_equalsas400_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kp_equalsas400();
+  dispatch->keyup.kp_equalsas400();
 }
 
 template <typename DispatchT>
 void translate_keyup_alterase_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_alterase();
+  dispatch->keyup.alterase();
 }
 
 template <typename DispatchT>
 void translate_keyup_sysreq_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_sysreq();
+  dispatch->keyup.sysreq();
 }
 
 template <typename DispatchT>
 void translate_keyup_cancel_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_cancel();
+  dispatch->keyup.cancel();
 }
 
 template <typename DispatchT>
 void translate_keyup_clear_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_clear();
+  dispatch->keyup.clear();
 }
 
 template <typename DispatchT>
 void translate_keyup_prior_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_prior();
+  dispatch->keyup.prior();
 }
 
 template <typename DispatchT>
 void translate_keyup_return2_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_return2();
+  dispatch->keyup.return2();
 }
 
 template <typename DispatchT>
 void translate_keyup_separator_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_separator();
+  dispatch->keyup.separator();
 }
 
 template <typename DispatchT>
 void translate_keyup_out_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_out();
+  dispatch->keyup.out();
 }
 
 template <typename DispatchT>
 void translate_keyup_oper_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_oper();
+  dispatch->keyup.oper();
 }
 
 template <typename DispatchT>
 void translate_keyup_clearagain_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_clearagain();
+  dispatch->keyup.clearagain();
 }
 
 template <typename DispatchT>
 void translate_keyup_crsel_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_crsel();
+  dispatch->keyup.crsel();
 }
 
 template <typename DispatchT>
 void translate_keyup_exsel_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_exsel();
+  dispatch->keyup.exsel();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_00_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_00();
+  dispatch->keyup.kp_00();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_000_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_kp_000();
+  dispatch->keyup.kp_000();
 }
 
 template <typename DispatchT>
 void translate_keyup_thousandsseparator_event(SDL_Event const&,
                                               DispatchT const* dispatch) {
-  dispatch->keyup_thousandsseparator();
+  dispatch->keyup.thousandsseparator();
 }
 
 template <typename DispatchT>
 void translate_keyup_decimalseparator_event(SDL_Event const&,
                                             DispatchT const* dispatch) {
-  dispatch->keyup_decimalseparator();
+  dispatch->keyup.decimalseparator();
 }
 
 template <typename DispatchT>
 void translate_keyup_currencyunit_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_currencyunit();
+  dispatch->keyup.currencyunit();
 }
 
 template <typename DispatchT>
 void translate_keyup_currencysubunit_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keyup_currencysubunit();
+  dispatch->keyup.currencysubunit();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_leftparen_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_leftparen();
+  dispatch->keyup.kp_leftparen();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_rightparen_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keyup_kp_rightparen();
+  dispatch->keyup.kp_rightparen();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_leftbrace_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_leftbrace();
+  dispatch->keyup.kp_leftbrace();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_rightbrace_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keyup_kp_rightbrace();
+  dispatch->keyup.kp_rightbrace();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_tab_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_kp_tab();
+  dispatch->keyup.kp_tab();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_backspace_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_backspace();
+  dispatch->keyup.kp_backspace();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_a_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_a();
+  dispatch->keyup.kp_a();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_b_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_b();
+  dispatch->keyup.kp_b();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_c_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_c();
+  dispatch->keyup.kp_c();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_d_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_d();
+  dispatch->keyup.kp_d();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_e_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_e();
+  dispatch->keyup.kp_e();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_f_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_f();
+  dispatch->keyup.kp_f();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_xor_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_kp_xor();
+  dispatch->keyup.kp_xor();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_power_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_power();
+  dispatch->keyup.kp_power();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_percent_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_kp_percent();
+  dispatch->keyup.kp_percent();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_less_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_kp_less();
+  dispatch->keyup.kp_less();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_greater_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_kp_greater();
+  dispatch->keyup.kp_greater();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_ampersand_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_ampersand();
+  dispatch->keyup.kp_ampersand();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_dblampersand_event(SDL_Event const&,
                                            DispatchT const* dispatch) {
-  dispatch->keyup_kp_dblampersand();
+  dispatch->keyup.kp_dblampersand();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_verticalbar_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kp_verticalbar();
+  dispatch->keyup.kp_verticalbar();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_dblverticalbar_event(SDL_Event const&,
                                              DispatchT const* dispatch) {
-  dispatch->keyup_kp_dblverticalbar();
+  dispatch->keyup.kp_dblverticalbar();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_colon_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_colon();
+  dispatch->keyup.kp_colon();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_hash_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_kp_hash();
+  dispatch->keyup.kp_hash();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_space_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_space();
+  dispatch->keyup.kp_space();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_at_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_kp_at();
+  dispatch->keyup.kp_at();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_exclam_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_exclam();
+  dispatch->keyup.kp_exclam();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memstore_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_kp_memstore();
+  dispatch->keyup.kp_memstore();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memrecall_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_memrecall();
+  dispatch->keyup.kp_memrecall();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memclear_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_kp_memclear();
+  dispatch->keyup.kp_memclear();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memadd_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_memadd();
+  dispatch->keyup.kp_memadd();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memsubtract_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kp_memsubtract();
+  dispatch->keyup.kp_memsubtract();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memmultiply_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kp_memmultiply();
+  dispatch->keyup.kp_memmultiply();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_memdivide_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_memdivide();
+  dispatch->keyup.kp_memdivide();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_plusminus_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kp_plusminus();
+  dispatch->keyup.kp_plusminus();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_clear_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_clear();
+  dispatch->keyup.kp_clear();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_clearentry_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keyup_kp_clearentry();
+  dispatch->keyup.kp_clearentry();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_binary_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_kp_binary();
+  dispatch->keyup.kp_binary();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_octal_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_kp_octal();
+  dispatch->keyup.kp_octal();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_decimal_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_kp_decimal();
+  dispatch->keyup.kp_decimal();
 }
 
 template <typename DispatchT>
 void translate_keyup_kp_hexadecimal_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kp_hexadecimal();
+  dispatch->keyup.kp_hexadecimal();
 }
 
 template <typename DispatchT>
 void translate_keyup_lctrl_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_lctrl();
+  dispatch->keyup.lctrl();
 }
 
 template <typename DispatchT>
 void translate_keyup_lshift_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_lshift();
+  dispatch->keyup.lshift();
 }
 
 template <typename DispatchT>
 void translate_keyup_lalt_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_lalt();
+  dispatch->keyup.lalt();
 }
 
 template <typename DispatchT>
 void translate_keyup_lgui_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_lgui();
+  dispatch->keyup.lgui();
 }
 
 template <typename DispatchT>
 void translate_keyup_rctrl_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_rctrl();
+  dispatch->keyup.rctrl();
 }
 
 template <typename DispatchT>
 void translate_keyup_rshift_event(SDL_Event const&,
                                   DispatchT const* dispatch) {
-  dispatch->keyup_rshift();
+  dispatch->keyup.rshift();
 }
 
 template <typename DispatchT>
 void translate_keyup_ralt_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_ralt();
+  dispatch->keyup.ralt();
 }
 
 template <typename DispatchT>
 void translate_keyup_rgui_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_rgui();
+  dispatch->keyup.rgui();
 }
 
 template <typename DispatchT>
 void translate_keyup_mode_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_mode();
+  dispatch->keyup.mode();
 }
 
 template <typename DispatchT>
 void translate_keyup_audionext_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_audionext();
+  dispatch->keyup.audionext();
 }
 
 template <typename DispatchT>
 void translate_keyup_audioprev_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_audioprev();
+  dispatch->keyup.audioprev();
 }
 
 template <typename DispatchT>
 void translate_keyup_audiostop_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_audiostop();
+  dispatch->keyup.audiostop();
 }
 
 template <typename DispatchT>
 void translate_keyup_audioplay_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_audioplay();
+  dispatch->keyup.audioplay();
 }
 
 template <typename DispatchT>
 void translate_keyup_audiomute_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_audiomute();
+  dispatch->keyup.audiomute();
 }
 
 template <typename DispatchT>
 void translate_keyup_mediaselect_event(SDL_Event const&,
                                        DispatchT const* dispatch) {
-  dispatch->keyup_mediaselect();
+  dispatch->keyup.mediaselect();
 }
 
 template <typename DispatchT>
 void translate_keyup_www_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_www();
+  dispatch->keyup.www();
 }
 
 template <typename DispatchT>
 void translate_keyup_mail_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_mail();
+  dispatch->keyup.mail();
 }
 
 template <typename DispatchT>
 void translate_keyup_calculator_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_calculator();
+  dispatch->keyup.calculator();
 }
 
 template <typename DispatchT>
 void translate_keyup_computer_event(SDL_Event const&,
                                     DispatchT const* dispatch) {
-  dispatch->keyup_computer();
+  dispatch->keyup.computer();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_search_event(SDL_Event const&,
                                      DispatchT const* dispatch) {
-  dispatch->keyup_ac_search();
+  dispatch->keyup.ac_search();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_home_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_ac_home();
+  dispatch->keyup.ac_home();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_back_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_ac_back();
+  dispatch->keyup.ac_back();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_forward_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_ac_forward();
+  dispatch->keyup.ac_forward();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_stop_event(SDL_Event const&,
                                    DispatchT const* dispatch) {
-  dispatch->keyup_ac_stop();
+  dispatch->keyup.ac_stop();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_refresh_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_ac_refresh();
+  dispatch->keyup.ac_refresh();
 }
 
 template <typename DispatchT>
 void translate_keyup_ac_bookmarks_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_ac_bookmarks();
+  dispatch->keyup.ac_bookmarks();
 }
 
 template <typename DispatchT>
 void translate_keyup_brightnessdown_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_brightnessdown();
+  dispatch->keyup.brightnessdown();
 }
 
 template <typename DispatchT>
 void translate_keyup_brightnessup_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_brightnessup();
+  dispatch->keyup.brightnessup();
 }
 
 template <typename DispatchT>
 void translate_keyup_displayswitch_event(SDL_Event const&,
                                          DispatchT const* dispatch) {
-  dispatch->keyup_displayswitch();
+  dispatch->keyup.displayswitch();
 }
 
 template <typename DispatchT>
 void translate_keyup_kbdillumtoggle_event(SDL_Event const&,
                                           DispatchT const* dispatch) {
-  dispatch->keyup_kbdillumtoggle();
+  dispatch->keyup.kbdillumtoggle();
 }
 
 template <typename DispatchT>
 void translate_keyup_kbdillumdown_event(SDL_Event const&,
                                         DispatchT const* dispatch) {
-  dispatch->keyup_kbdillumdown();
+  dispatch->keyup.kbdillumdown();
 }
 
 template <typename DispatchT>
 void translate_keyup_kbdillumup_event(SDL_Event const&,
                                       DispatchT const* dispatch) {
-  dispatch->keyup_kbdillumup();
+  dispatch->keyup.kbdillumup();
 }
 
 template <typename DispatchT>
 void translate_keyup_eject_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_eject();
+  dispatch->keyup.eject();
 }
 
 template <typename DispatchT>
 void translate_keyup_sleep_event(SDL_Event const&, DispatchT const* dispatch) {
-  dispatch->keyup_sleep();
+  dispatch->keyup.sleep();
 }
 
 template <typename DispatchT>
@@ -1341,25 +1341,25 @@ void translate_keyup_event(SDL_Event const& e, DispatchT const* dispatch) {
   else if(e.key.keysym.sym == SDLK_SLASH)
     translate_keyup_slash_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_0)
-    translate_keyup_0_event(e, dispatch);
+    translate_keyup_zero_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_1)
-    translate_keyup_1_event(e, dispatch);
+    translate_keyup_one_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_2)
-    translate_keyup_2_event(e, dispatch);
+    translate_keyup_two_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_3)
-    translate_keyup_3_event(e, dispatch);
+    translate_keyup_three_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_4)
-    translate_keyup_4_event(e, dispatch);
+    translate_keyup_four_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_5)
-    translate_keyup_5_event(e, dispatch);
+    translate_keyup_five_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_6)
-    translate_keyup_6_event(e, dispatch);
+    translate_keyup_six_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_7)
-    translate_keyup_7_event(e, dispatch);
+    translate_keyup_seven_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_8)
-    translate_keyup_8_event(e, dispatch);
+    translate_keyup_eight_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_9)
-    translate_keyup_9_event(e, dispatch);
+    translate_keyup_nine_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_COLON)
     translate_keyup_colon_event(e, dispatch);
   else if(e.key.keysym.sym == SDLK_SEMICOLON)
