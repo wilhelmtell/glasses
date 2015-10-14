@@ -4,6 +4,10 @@
 #include <SDL2/SDL.h>
 
 namespace gls {
+bool at(SDL_Rect const& r, SDL_Point const& p) {
+  return r.x == p.x && r.y == p.y;
+}
+
 SDL_Rect unit_rectangle() { return {0, 0, 1, 1}; }
 
 SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {

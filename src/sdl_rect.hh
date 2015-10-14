@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 
 namespace gls {
+bool at(SDL_Rect const& r, SDL_Point const& p);
 SDL_Rect unit_rectangle();
 SDL_Rect xstretched(SDL_Rect const& r, int const& addition);
 SDL_Rect ystretched(SDL_Rect const& r, int const& addition);
