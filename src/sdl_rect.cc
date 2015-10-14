@@ -22,7 +22,8 @@ bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
 }
 
 bool outside(SDL_Rect const& a, SDL_Rect const& b) {
-  return outside(top_left(a), b) && outside(bottom_right(a), b);
+  return outside(top_left(a), b) && outside(bottom_right(a), b)
+         && outside(top_right(a), b) && outside(bottom_left(a), b);
 }
 
 SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }
