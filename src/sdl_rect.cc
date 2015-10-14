@@ -27,6 +27,10 @@ SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }
 
 SDL_Point bottom_right(SDL_Rect const& r) { return {r.x + r.w, r.y + r.h}; }
 
+SDL_Point top_right(SDL_Rect const& r) { return {r.x + r.w, r.y}; }
+
+SDL_Point bottom_left(SDL_Rect const& r) { return {r.x, r.y + r.h}; }
+
 SDL_Rect q1_rectangle() {
   auto const p = shifted_left(origin_point(), 1);
   auto const r = unit_rectangle();

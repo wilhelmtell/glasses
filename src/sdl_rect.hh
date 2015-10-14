@@ -11,6 +11,8 @@ bool intersect(SDL_Rect const& a, SDL_Rect const& b);
 bool outside(SDL_Rect const& a, SDL_Rect const& b);
 SDL_Point top_left(SDL_Rect const& r);
 SDL_Point bottom_right(SDL_Rect const& r);
+SDL_Point top_right(SDL_Rect const& r);
+SDL_Point bottom_left(SDL_Rect const& r);
 SDL_Rect q1_rectangle();
 SDL_Rect q2_rectangle();
 SDL_Rect q3_rectangle();
