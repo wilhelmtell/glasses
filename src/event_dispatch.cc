@@ -16,6 +16,14 @@ void push_quit_event_onto_the_sdl_event_queue(SDL_Event const& e) {
 
 namespace gls {
 event_dispatch::event_dispatch() {
+  // it might seem like handling a quit event from the sdl event queue by
+  // pusing a quit event onto the sdl event queue would cause a ping-pong
+  // effect: translate_event() pumps the event, event_dispatch pushes it back
+  // in, translate_event() pumps it, ... but in the case of a quit event,
+  // event_loop() breaks immediately after receiving it and translating it for
+  // the dispatch. so, a quit event on the sdl queue gets pumped, then
+  // dispatched, which pushes it back onto the queue, and then immediately the
+  // event loop breaks, before the second quit event gets a chance to be seen.
   on_quit(&::push_quit_event_onto_the_sdl_event_queue);
 }
 
