@@ -2,6 +2,7 @@
 #define GLS_POINT_HH_
 
 #include <SDL2/SDL_rect.h>
+#include "sdl_rect_point_common.hh"
 
 namespace gls {
 bool equal(SDL_Point const& lhs, SDL_Point const& rhs);
