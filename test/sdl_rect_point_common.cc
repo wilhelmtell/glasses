@@ -38,3 +38,19 @@ TEST_CASE("inside()") {
     REQUIRE(!gls::inside(p, r));
   }
 }
+
+TEST_CASE("outside()") {
+  SDL_Point const p{1, 1};
+  SECTION("true point outside() rect") {
+    SDL_Rect const r{2, 2, 2, 2};
+    REQUIRE(gls::outside(p, r));
+  }
+  SECTION("false point outside() rect") {
+    SDL_Rect const r{0, 0, 2, 2};
+    REQUIRE(!gls::outside(p, r));
+  }
+  SECTION("point merely bounding with rect is not outside() rect") {
+    SDL_Rect const r{1, 0, 2, 2};
+    REQUIRE(!gls::outside(p, r));
+  }
+}
