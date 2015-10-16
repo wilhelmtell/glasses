@@ -3,6 +3,30 @@
 #include "../src/sdl_point.hh"
 #include "../src/sdl_rect.hh"
 
+TEST_CASE("top_left()") {
+  auto const p = gls::top_left(gls::unit_rectangle());
+  REQUIRE(p.x == 0);
+  REQUIRE(p.y == 0);
+}
+
+TEST_CASE("top_right()") {
+  auto const p = gls::top_right(gls::unit_rectangle());
+  REQUIRE(p.x == 1);
+  REQUIRE(p.y == 0);
+}
+
+TEST_CASE("bottom_left()") {
+  auto const p = gls::bottom_left(gls::unit_rectangle());
+  REQUIRE(p.x == 0);
+  REQUIRE(p.y == 1);
+}
+
+TEST_CASE("bottom_right()") {
+  auto const p = gls::bottom_right(gls::unit_rectangle());
+  REQUIRE(p.x == 1);
+  REQUIRE(p.y == 1);
+}
+
 TEST_CASE("at()") {
   auto const p = gls::origin_point();
   SECTION("true at()") {
@@ -53,30 +77,6 @@ TEST_CASE("outside()") {
     SDL_Rect const r{1, 0, 2, 2};
     REQUIRE(!gls::outside(p, r));
   }
-}
-
-TEST_CASE("top_left()") {
-  auto const p = gls::top_left(gls::unit_rectangle());
-  REQUIRE(p.x == 0);
-  REQUIRE(p.y == 0);
-}
-
-TEST_CASE("top_right()") {
-  auto const p = gls::top_right(gls::unit_rectangle());
-  REQUIRE(p.x == 1);
-  REQUIRE(p.y == 0);
-}
-
-TEST_CASE("bottom_left()") {
-  auto const p = gls::bottom_left(gls::unit_rectangle());
-  REQUIRE(p.x == 0);
-  REQUIRE(p.y == 1);
-}
-
-TEST_CASE("bottom_right()") {
-  auto const p = gls::bottom_right(gls::unit_rectangle());
-  REQUIRE(p.x == 1);
-  REQUIRE(p.y == 1);
 }
 
 TEST_CASE("bounding()") {

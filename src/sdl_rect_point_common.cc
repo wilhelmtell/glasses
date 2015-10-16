@@ -22,6 +22,14 @@ bool bounding_left(SDL_Point const& p, SDL_Rect const& b) {
 }
 
 namespace gls {
+SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }
+
+SDL_Point bottom_right(SDL_Rect const& r) { return {r.x + r.w, r.y + r.h}; }
+
+SDL_Point top_right(SDL_Rect const& r) { return {r.x + r.w, r.y}; }
+
+SDL_Point bottom_left(SDL_Rect const& r) { return {r.x, r.y + r.h}; }
+
 bool bounding(SDL_Point const& p, SDL_Rect const& b) {
   return bounding_top(p, b) || bounding_right(p, b) || bounding_bottom(p, b)
          || bounding_left(p, b);
@@ -38,12 +46,4 @@ bool inside(SDL_Point const& p, SDL_Rect const& b) {
 bool at(SDL_Rect const& r, SDL_Point const& p) {
   return r.x == p.x && r.y == p.y;
 }
-
-SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }
-
-SDL_Point bottom_right(SDL_Rect const& r) { return {r.x + r.w, r.y + r.h}; }
-
-SDL_Point top_right(SDL_Rect const& r) { return {r.x + r.w, r.y}; }
-
-SDL_Point bottom_left(SDL_Rect const& r) { return {r.x, r.y + r.h}; }
 }
