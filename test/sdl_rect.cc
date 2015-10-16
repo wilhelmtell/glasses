@@ -48,3 +48,11 @@ TEST_CASE("wstretched() returns a rect with w + 1") {
   REQUIRE(r.w == 2);
   REQUIRE(r.h == 1);
 }
+
+TEST_CASE("hstretched() returns a rect with h + 1") {
+  auto const r = gls::hstretched(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 2);
+}
