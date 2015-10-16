@@ -206,3 +206,28 @@ TEST_CASE("outside(rect, rect)") {
     REQUIRE(!gls::outside(r1, r0));
   }
 }
+
+TEST_CASE("rect intersect() rect") {
+  SDL_Rect const r0{0, 0, 4, 4};
+  SECTION("top left inside is an intersection") {
+    auto const r1 = gls::shifted_right(gls::shifted_down(r0, 1), 1);
+    REQUIRE(gls::intersect(r0, r1));
+  }
+  SECTION("top right inside is an intersection") {
+    auto const r1 = gls::shifted_left(gls::shifted_down(r0, 1), 1);
+    REQUIRE(gls::intersect(r0, r1));
+  }
+  SECTION("bottom left inside is an intersection") {
+    auto const r1 = gls::shifted_up(gls::shifted_right(r0, 1), 1);
+    REQUIRE(gls::intersect(r0, r1));
+  }
+  SECTION("bottom right inside is an intersection") {
+    auto const r1 = gls::shifted_up(gls::shifted_left(r0, 1), 1);
+    REQUIRE(gls::intersect(r0, r1));
+  }
+  SECTION("entirely inside is an intersection") {
+    auto const smaller_rect = gls::wcompressed(gls::hcompressed(r0, 2), 2);
+    auto const r1 = gls::shifted_down(gls::shifted_right(smaller_rect, 1), 1);
+    REQUIRE(gls::intersect(r0, r1));
+  }
+}
