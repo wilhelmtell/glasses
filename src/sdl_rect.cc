@@ -90,6 +90,4 @@ SDL_Rect shifted_down_right(SDL_Rect const& r, int const& offset) {
   auto const p = shifted_down_right(top_left(r), offset);
   return {p.x, p.y, r.w, r.h};
 }
-
-SDL_Rect to_sdl_rect(SDL_Rect const& r) { return {r.x, r.y, r.w, r.h}; }
 }

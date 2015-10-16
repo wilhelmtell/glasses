@@ -22,7 +22,6 @@ SDL_Rect shifted_up_left(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_up_right(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_down_left(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_down_right(SDL_Rect const& r, int const& offset);
-SDL_Rect to_sdl_rect(SDL_Rect const& r);
 }
 
 #endif
