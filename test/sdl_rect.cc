@@ -40,3 +40,11 @@ TEST_CASE("q4_rectangle() returns a 1x1 rect in the upper left quadrant") {
   REQUIRE(r.w == 1);
   REQUIRE(r.h == 1);
 }
+
+TEST_CASE("wstretched() returns a rect with w + 1") {
+  auto const r = gls::wstretched(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 2);
+  REQUIRE(r.h == 1);
+}
