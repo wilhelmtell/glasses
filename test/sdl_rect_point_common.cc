@@ -22,3 +22,19 @@ TEST_CASE("at()") {
     REQUIRE(!gls::at(r, p));
   }
 }
+
+TEST_CASE("inside()") {
+  SDL_Point const p{1, 1};
+  SECTION("true point inside() rect") {
+    SDL_Rect const r{0, 0, 2, 2};
+    REQUIRE(gls::inside(p, r));
+  }
+  SECTION("false point inside() rect") {
+    SDL_Rect const r{2, 2, 2, 2};
+    REQUIRE(!gls::inside(p, r));
+  }
+  SECTION("point merely bounding with rect is not inside() rect") {
+    SDL_Rect const r{1, 0, 2, 2};
+    REQUIRE(!gls::inside(p, r));
+  }
+}
