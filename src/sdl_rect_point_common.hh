@@ -12,6 +12,10 @@ bool bounding(SDL_Point const& p, SDL_Rect const& b);
 bool outside(SDL_Point const& p, SDL_Rect const& b);
 bool inside(SDL_Point const& p, SDL_Rect const& b);
 bool at(SDL_Rect const& r, SDL_Point const& p);
+bool bounding_on_top(SDL_Point const& p, SDL_Rect const& b);
+bool bounding_on_right(SDL_Point const& p, SDL_Rect const& b);
+bool bounding_on_bottom(SDL_Point const& p, SDL_Rect const& b);
+bool bounding_on_left(SDL_Point const& p, SDL_Rect const& b);
 }
 
 #endif
