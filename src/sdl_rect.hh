@@ -6,14 +6,14 @@
 
 namespace gls {
 SDL_Rect unit_rectangle();
-SDL_Rect xstretched(SDL_Rect const& r, int const& addition);
-SDL_Rect ystretched(SDL_Rect const& r, int const& addition);
-bool intersect(SDL_Rect const& a, SDL_Rect const& b);
-bool outside(SDL_Rect const& a, SDL_Rect const& b);
 SDL_Rect q1_rectangle();
 SDL_Rect q2_rectangle();
 SDL_Rect q3_rectangle();
 SDL_Rect q4_rectangle();
+bool intersect(SDL_Rect const& a, SDL_Rect const& b);
+bool outside(SDL_Rect const& a, SDL_Rect const& b);
+SDL_Rect xstretched(SDL_Rect const& r, int const& addition);
+SDL_Rect ystretched(SDL_Rect const& r, int const& addition);
 SDL_Rect shifted_left(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_right(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_up(SDL_Rect const& r, int const& offset);

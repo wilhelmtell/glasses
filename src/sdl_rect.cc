@@ -7,26 +7,6 @@
 namespace gls {
 SDL_Rect unit_rectangle() { return {0, 0, 1, 1}; }
 
-SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {
-  return {r.x, r.y, r.w + addition, r.h};
-}
-
-SDL_Rect ystretched(SDL_Rect const& r, int const& addition) {
-  return {r.x, r.y, r.w, r.h + addition};
-}
-
-bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
-  return inside(top_left(a), b) || inside(bottom_right(a), b)
-         || bounding(top_left(a), b) || bounding(bottom_right(a), b)
-         || inside(top_right(a), b) || inside(bottom_left(a), b)
-         || bounding(top_right(a), b) || bounding(bottom_left(a), b);
-}
-
-bool outside(SDL_Rect const& a, SDL_Rect const& b) {
-  return outside(top_left(a), b) && outside(bottom_right(a), b)
-         && outside(top_right(a), b) && outside(bottom_left(a), b);
-}
-
 SDL_Rect q1_rectangle() {
   auto const p = shifted_left(origin_point(), 1);
   auto const r = unit_rectangle();
@@ -49,6 +29,26 @@ SDL_Rect q4_rectangle() {
   auto const p = shifted_up_left(origin_point(), 1);
   auto const r = unit_rectangle();
   return {p.x, p.y, r.w, r.h};
+}
+
+bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
+  return inside(top_left(a), b) || inside(bottom_right(a), b)
+         || bounding(top_left(a), b) || bounding(bottom_right(a), b)
+         || inside(top_right(a), b) || inside(bottom_left(a), b)
+         || bounding(top_right(a), b) || bounding(bottom_left(a), b);
+}
+
+bool outside(SDL_Rect const& a, SDL_Rect const& b) {
+  return outside(top_left(a), b) && outside(bottom_right(a), b)
+         && outside(top_right(a), b) && outside(bottom_left(a), b);
+}
+
+SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {
+  return {r.x, r.y, r.w + addition, r.h};
+}
+
+SDL_Rect ystretched(SDL_Rect const& r, int const& addition) {
+  return {r.x, r.y, r.w, r.h + addition};
 }
 
 SDL_Rect shifted_left(SDL_Rect const& r, int const& offset) {
