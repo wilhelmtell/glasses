@@ -2,12 +2,9 @@
 #include "sdl_point.hh"
 #include "sdl_rect.hh"
 #include <SDL2/SDL.h>
+#include "sdl_rect_point_common.hh"
 
 namespace gls {
-bool at(SDL_Rect const& r, SDL_Point const& p) {
-  return r.x == p.x && r.y == p.y;
-}
-
 SDL_Rect unit_rectangle() { return {0, 0, 1, 1}; }
 
 SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {
@@ -29,14 +26,6 @@ bool outside(SDL_Rect const& a, SDL_Rect const& b) {
   return outside(top_left(a), b) && outside(bottom_right(a), b)
          && outside(top_right(a), b) && outside(bottom_left(a), b);
 }
-
-SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }
-
-SDL_Point bottom_right(SDL_Rect const& r) { return {r.x + r.w, r.y + r.h}; }
-
-SDL_Point top_right(SDL_Rect const& r) { return {r.x + r.w, r.y}; }
-
-SDL_Point bottom_left(SDL_Rect const& r) { return {r.x, r.y + r.h}; }
 
 SDL_Rect q1_rectangle() {
   auto const p = shifted_left(origin_point(), 1);
