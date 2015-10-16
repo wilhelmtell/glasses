@@ -43,11 +43,11 @@ bool outside(SDL_Rect const& a, SDL_Rect const& b) {
          && outside(top_right(a), b) && outside(bottom_left(a), b);
 }
 
-SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {
+SDL_Rect wstretched(SDL_Rect const& r, int const& addition) {
   return {r.x, r.y, r.w + addition, r.h};
 }
 
-SDL_Rect ystretched(SDL_Rect const& r, int const& addition) {
+SDL_Rect hstretched(SDL_Rect const& r, int const& addition) {
   return {r.x, r.y, r.w, r.h + addition};
 }
 
