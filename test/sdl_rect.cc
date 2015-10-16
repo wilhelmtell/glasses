@@ -56,3 +56,67 @@ TEST_CASE("hstretched() returns a rect with h + 1") {
   REQUIRE(r.w == 1);
   REQUIRE(r.h == 2);
 }
+
+TEST_CASE("shifted_left()") {
+  auto const r = gls::shifted_left(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == -1);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_right()") {
+  auto const r = gls::shifted_right(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 1);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_up()") {
+  auto const r = gls::shifted_up(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == -1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_down()") {
+  auto const r = gls::shifted_down(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == 1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_up_left()") {
+  auto const r = gls::shifted_up_left(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == -1);
+  REQUIRE(r.y == -1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_up_right()") {
+  auto const r = gls::shifted_up_right(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 1);
+  REQUIRE(r.y == -1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_down_left()") {
+  auto const r = gls::shifted_down_left(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == -1);
+  REQUIRE(r.y == 1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("shifted_down_right()") {
+  auto const r = gls::shifted_down_right(gls::unit_rectangle(), 1);
+  REQUIRE(r.x == 1);
+  REQUIRE(r.y == 1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
