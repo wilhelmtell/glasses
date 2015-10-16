@@ -54,3 +54,47 @@ TEST_CASE("outside()") {
     REQUIRE(!gls::outside(p, r));
   }
 }
+
+TEST_CASE("bounding()") {
+  SDL_Point const p{1, 1};
+  SECTION("point bounding() rect on the left") {
+    SDL_Rect const r{1, 0, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the right") {
+    SDL_Rect const r{-1, 0, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the top") {
+    SDL_Rect const r{0, 1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the bottom") {
+    SDL_Rect const r{0, -1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the top left") {
+    SDL_Rect const r{1, 1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the top right") {
+    SDL_Rect const r{-1, 1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the bottom left") {
+    SDL_Rect const r{1, -1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point bounding() rect on the bottom right") {
+    SDL_Rect const r{-1, -1, 2, 2};
+    REQUIRE(gls::bounding(p, r));
+  }
+  SECTION("point outside rect is not bounding() with rect") {
+    SDL_Rect const r{2, 2, 2, 2};
+    REQUIRE(!gls::bounding(p, r));
+  }
+  SECTION("point inside rect is not bounding() with rect") {
+    SDL_Rect const r{2, 2, 2, 2};
+    REQUIRE(!gls::bounding(p, r));
+  }
+}
