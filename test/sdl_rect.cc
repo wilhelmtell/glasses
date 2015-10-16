@@ -8,3 +8,35 @@ TEST_CASE("unit_rectangle() returns a 1x1 rect at origin") {
   REQUIRE(r.w == 1);
   REQUIRE(r.h == 1);
 }
+
+TEST_CASE("q1_rectangle() returns a 1x1 rect in the bottom left quadrant") {
+  auto const r = gls::q1_rectangle();
+  REQUIRE(r.x == -1);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("q2_rectangle() returns a 1x1 rect in the bottom right quadrant") {
+  auto const r = gls::q2_rectangle();
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == 0);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("q3_rectangle() returns a 1x1 rect in the upper right quadrant") {
+  auto const r = gls::q3_rectangle();
+  REQUIRE(r.x == 0);
+  REQUIRE(r.y == -1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
+
+TEST_CASE("q4_rectangle() returns a 1x1 rect in the upper left quadrant") {
+  auto const r = gls::q4_rectangle();
+  REQUIRE(r.x == -1);
+  REQUIRE(r.y == -1);
+  REQUIRE(r.w == 1);
+  REQUIRE(r.h == 1);
+}
