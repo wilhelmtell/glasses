@@ -73,6 +73,12 @@ TEST_CASE("bottom_left()") {
   REQUIRE(p.y == 1);
 }
 
+TEST_CASE("bottom_right()") {
+  auto const p = gls::bottom_right(gls::unit_rectangle());
+  REQUIRE(p.x == 1);
+  REQUIRE(p.y == 1);
+}
+
 TEST_CASE("bounding()") {
   SDL_Point const p{1, 1};
   SECTION("point bounding() rect on the left") {
