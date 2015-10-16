@@ -14,6 +14,8 @@ bool intersect(SDL_Rect const& a, SDL_Rect const& b);
 bool outside(SDL_Rect const& a, SDL_Rect const& b);
 SDL_Rect wstretched(SDL_Rect const& r, int const& addition);
 SDL_Rect hstretched(SDL_Rect const& r, int const& addition);
+SDL_Rect wcompressed(SDL_Rect const& r, int const& subtraction);
+SDL_Rect hcompressed(SDL_Rect const& r, int const& subtraction);
 SDL_Rect shifted_left(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_right(SDL_Rect const& r, int const& offset);
 SDL_Rect shifted_up(SDL_Rect const& r, int const& offset);

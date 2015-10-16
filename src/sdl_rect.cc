@@ -51,6 +51,14 @@ SDL_Rect hstretched(SDL_Rect const& r, int const& addition) {
   return {r.x, r.y, r.w, r.h + addition};
 }
 
+SDL_Rect wcompressed(SDL_Rect const& r, int const& subtraction) {
+  return {r.x, r.y, r.w - subtraction, r.h};
+}
+
+SDL_Rect hcompressed(SDL_Rect const& r, int const& subtraction) {
+  return {r.x, r.y, r.w, r.h - subtraction};
+}
+
 SDL_Rect shifted_left(SDL_Rect const& r, int const& offset) {
   auto const p = shifted_left(top_left(r), offset);
   return {p.x, p.y, r.w, r.h};
