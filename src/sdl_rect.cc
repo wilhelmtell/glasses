@@ -32,10 +32,10 @@ SDL_Rect q4_rectangle() {
 }
 
 bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
-  return inside(top_left(a), b) || inside(bottom_right(a), b)
-         || bounding(top_left(a), b) || bounding(bottom_right(a), b)
-         || inside(top_right(a), b) || inside(bottom_left(a), b)
-         || bounding(top_right(a), b) || bounding(bottom_left(a), b);
+  return inside(top_left(a), b) || bounding(top_left(a), b)
+         || inside(bottom_right(a), b) || bounding(bottom_right(a), b)
+         || inside(top_right(a), b) || bounding(top_right(a), b)
+         || inside(bottom_left(a), b) || bounding(bottom_left(a), b);
 }
 
 bool outside(SDL_Rect const& a, SDL_Rect const& b) {
