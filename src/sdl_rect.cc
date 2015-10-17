@@ -31,11 +31,9 @@ SDL_Rect q4_rectangle() {
   return {p.x, p.y, r.w, r.h};
 }
 
-bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
-  return inside(top_left(a), b) || inside(bottom_right(a), b)
-         || bounding(top_left(a), b) || bounding(bottom_right(a), b)
-         || inside(top_right(a), b) || inside(bottom_left(a), b)
-         || bounding(top_right(a), b) || bounding(bottom_left(a), b);
+bool inside(SDL_Rect const& a, SDL_Rect const& b) {
+  return inside(top_left(a), b) && inside(bottom_right(a), b)
+         && inside(bottom_left(a), b) && inside(top_right(a), b);
 }
 
 bool outside(SDL_Rect const& a, SDL_Rect const& b) {
@@ -43,12 +41,28 @@ bool outside(SDL_Rect const& a, SDL_Rect const& b) {
          && outside(top_right(a), b) && outside(bottom_left(a), b);
 }
 
-SDL_Rect xstretched(SDL_Rect const& r, int const& addition) {
+bool intersect(SDL_Rect const& a, SDL_Rect const& b) {
+  return inside(top_left(a), b) || bounding(top_left(a), b)
+         || inside(bottom_right(a), b) || bounding(bottom_right(a), b)
+         || inside(top_right(a), b) || bounding(top_right(a), b)
+         || inside(bottom_left(a), b) || bounding(bottom_left(a), b)
+         || inside(b, a);
+}
+
+SDL_Rect wstretched(SDL_Rect const& r, int const& addition) {
   return {r.x, r.y, r.w + addition, r.h};
 }
 
-SDL_Rect ystretched(SDL_Rect const& r, int const& addition) {
+SDL_Rect hstretched(SDL_Rect const& r, int const& addition) {
   return {r.x, r.y, r.w, r.h + addition};
+}
+
+SDL_Rect wcompressed(SDL_Rect const& r, int const& subtraction) {
+  return {r.x, r.y, r.w - subtraction, r.h};
+}
+
+SDL_Rect hcompressed(SDL_Rect const& r, int const& subtraction) {
+  return {r.x, r.y, r.w, r.h - subtraction};
 }
 
 SDL_Rect shifted_left(SDL_Rect const& r, int const& offset) {
@@ -90,6 +104,4 @@ SDL_Rect shifted_down_right(SDL_Rect const& r, int const& offset) {
   auto const p = shifted_down_right(top_left(r), offset);
   return {p.x, p.y, r.w, r.h};
 }
-
-SDL_Rect to_sdl_rect(SDL_Rect const& r) { return {r.x, r.y, r.w, r.h}; }
 }
