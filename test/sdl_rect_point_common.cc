@@ -47,7 +47,7 @@ TEST_CASE("at()") {
   }
 }
 
-TEST_CASE("inside()") {
+TEST_CASE("inside(point, rect)") {
   SDL_Point const p{1, 1};
   SECTION("true point inside() rect") {
     SDL_Rect const r{0, 0, 2, 2};

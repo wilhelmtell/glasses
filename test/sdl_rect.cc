@@ -138,3 +138,37 @@ TEST_CASE("shifted_down_right()") {
   REQUIRE(r.w == 1);
   REQUIRE(r.h == 1);
 }
+
+TEST_CASE("inside(rect, rect)") {
+  SDL_Rect const r0{0, 0, 4, 4};
+  SECTION("merely top left within is not inside()") {
+    auto const r1 = gls::shifted_down(gls::shifted_right(r0, 1), 1);
+    REQUIRE(!gls::inside(r1, r0));
+  }
+  SECTION("merely bottom right within is not inside()") {
+    auto const r1 = gls::shifted_up(gls::shifted_left(r0, 1), 1);
+    REQUIRE(!gls::inside(r1, r0));
+  }
+  SECTION("merely top right within is not inside()") {
+    auto const r1 = gls::shifted_down(gls::shifted_left(r0, 1), 1);
+    REQUIRE(!gls::inside(r1, r0));
+  }
+  SECTION("merely bottom left within is not inside()") {
+    auto const r1 = gls::shifted_up(gls::shifted_right(r0, 1), 1);
+    REQUIRE(!gls::inside(r1, r0));
+  }
+  SECTION("all corners within is inside()") {
+    auto const compressed = gls::wcompressed(gls::hcompressed(r0, 2), 2);
+    auto const r1 = gls::shifted_right(gls::shifted_down(compressed, 1), 1);
+    REQUIRE(gls::inside(r1, r0));
+  }
+  SECTION("all corners outside is not inside()") {
+    auto const stretched = gls::wstretched(gls::hstretched(r0, 2), 2);
+    auto const r1 = gls::shifted_left(gls::shifted_up(stretched, 1), 1);
+    REQUIRE(!gls::inside(r1, r0));
+  }
+  SECTION("all corners matching (i.e. rect copy) is not inside()") {
+    auto const r1 = r0;
+    REQUIRE(!gls::inside(r1, r0));
+  }
+}
