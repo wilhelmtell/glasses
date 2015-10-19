@@ -4,9 +4,7 @@
 namespace {
 using slot = gls::event_dispatch::slot;
 using connection = gls::event_dispatch::connection;
-}
 
-namespace {
 void push_quit_event_onto_the_sdl_event_queue(SDL_Event const& e) {
   SDL_Event sdl_quit_event;
   sdl_quit_event.type = SDL_QUIT;

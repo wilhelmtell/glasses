@@ -3,9 +3,7 @@
 
 TEST_CASE("equal()") {
   SDL_Point const lhs{0, 0};
-  SECTION("equals itself") {
-    REQUIRE(gls::equal(lhs, lhs));
-  }
+  SECTION("equals itself") { REQUIRE(gls::equal(lhs, lhs)); }
   SECTION("doesn't equal a point with a different y") {
     SDL_Point const rhs{lhs.x, lhs.y + 1};
     REQUIRE(!gls::equal(lhs, rhs));
