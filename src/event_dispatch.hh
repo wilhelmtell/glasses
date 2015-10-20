@@ -18,6 +18,7 @@ struct event_dispatch {
   void mousemotion(SDL_Event const& e) const;
   void mousebuttondown(SDL_Event const& e) const;
   void mousebuttonup(SDL_Event const& e) const;
+  void userevent(SDL_Event const& e) const;
 
   connection on_quit(slot const& op);
   connection on_keydown(slot const& op);
@@ -25,6 +26,7 @@ struct event_dispatch {
   connection on_mousemotion(slot const& op);
   connection on_mousebuttondown(slot const& op);
   connection on_mousebuttonup(slot const& op);
+  connection on_userevent(slot const& op);
 
 private:
   signal quit_signal;
@@ -33,6 +35,7 @@ private:
   signal mousemotion_signal;
   signal mousebuttondown_signal;
   signal mousebuttonup_signal;
+  signal userevent_signal;
 };
 }
 
