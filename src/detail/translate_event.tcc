@@ -20,6 +20,8 @@ void translate_event(SDL_Event const& e, DispatchT const* d) {
     d->mousebuttondown(e);
   else if(e.type == SDL_MOUSEBUTTONUP)
     d->mousebuttonup(e);
+  else if(e.type == SDL_USEREVENT)
+    d->userevent(e);
 }
 }
 }

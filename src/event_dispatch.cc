@@ -68,4 +68,12 @@ void event_dispatch::mousebuttonup(SDL_Event const& e) const {
 connection event_dispatch::on_mousebuttonup(slot const& op) {
   return mousebuttonup_signal.connect(op);
 }
+
+void event_dispatch::userevent(SDL_Event const& e) const {
+  userevent_signal(e);
+}
+
+connection event_dispatch::on_userevent(slot const& op) {
+  return userevent_signal.connect(op);
+}
 }
