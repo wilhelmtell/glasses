@@ -4,12 +4,6 @@
 namespace {
 using slot = gls::event_dispatch::slot;
 using connection = gls::event_dispatch::connection;
-
-void push_quit_event_onto_the_sdl_event_queue(SDL_Event const& e) {
-  SDL_Event sdl_quit_event;
-  sdl_quit_event.type = SDL_QUIT;
-  SDL_PushEvent(&sdl_quit_event);
-}
 }
 
 namespace gls {
@@ -22,7 +16,7 @@ event_dispatch::event_dispatch() {
   // the dispatch. so, a quit event on the sdl queue gets pumped, then
   // dispatched, which pushes it back onto the queue, and then immediately the
   // event loop breaks, before the second quit event gets a chance to be seen.
-  on_quit(&::push_quit_event_onto_the_sdl_event_queue);
+  on_quit([](auto e) { SDL_PushEvent(&e); });
 }
 
 void event_dispatch::quit(SDL_Event const& e) const { quit_signal(e); }
