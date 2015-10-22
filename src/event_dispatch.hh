@@ -9,6 +9,7 @@ struct event_dispatch {
   using signal = boost::signals2::signal<void(SDL_Event const&)>;
   using slot = signal::slot_type;
   using connection = boost::signals2::connection;
+  using scoped_connection = boost::signals2::scoped_connection;
 
   event_dispatch();
 
