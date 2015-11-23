@@ -8,18 +8,24 @@
 namespace gls {
 template <typename DispatchT, typename App>
 void event_loop(DispatchT const* dispatch, App& app, int const& FPS) {
-  auto t0 = SDL_GetTicks();
+  auto const SECONDS_PER_FRAME = 1.0 / FPS;
+  auto const TICKS_PER_SECOND = 1000;  // as per SDL_GetTicks()
+  auto const SECONDS_PER_TICK = 1.0 / TICKS_PER_SECOND;
+  auto const TICKS_PER_FRAME = SECONDS_PER_FRAME * TICKS_PER_SECOND;
+  auto tick0 = SDL_GetTicks();
+  auto lag = 0.0;
   while(true) {
+    auto tick = SDL_GetTicks();
+    auto elapsed = tick - tick0;
+    lag += elapsed;
     for(SDL_Event e; SDL_PollEvent(&e);) {
       detail::translate_event(e, dispatch);
       if(e.type == SDL_QUIT) return;
     }
-    auto t1 = SDL_GetTicks();
-    while(t1 - t0 < (1000u / FPS)) {
+    for(; lag >= TICKS_PER_FRAME; lag -= TICKS_PER_FRAME) {
       update(app);
-      t1 = SDL_GetTicks();
     }
-    t0 = t1;
+    tick0 = tick;
     draw(app);
   }
 }
