@@ -167,9 +167,9 @@ TEST_CASE("inside(rect, rect)") {
     auto const r1 = gls::shifted_left(gls::shifted_up(stretched, 1), 1);
     REQUIRE(!gls::inside(r1, r0));
   }
-  SECTION("all corners matching (i.e. rect copy) is not inside()") {
+  SECTION("all corners matching (i.e. rect copy) is inside()") {
     auto const r1 = r0;
-    REQUIRE(!gls::inside(r1, r0));
+    REQUIRE(gls::inside(r1, r0));
   }
 }
 
