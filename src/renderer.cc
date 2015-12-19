@@ -8,7 +8,8 @@ renderer::renderer(SDL_Renderer* r) : r(r, &SDL_DestroyRenderer) {
 }
 
 renderer::renderer(SDL_Window* w)
-: renderer(SDL_CreateRenderer(w, -1, SDL_RENDERER_ACCELERATED)) {}
+: renderer(SDL_CreateRenderer(
+    w, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC)) {}
 
 SDL_Renderer* renderer::get() const { return r.get(); }
 }
