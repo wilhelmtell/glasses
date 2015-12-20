@@ -21,9 +21,7 @@ bool outside(SDL_Point const& p, SDL_Rect const& b) {
   return p.x < b.x || p.x > b.x + b.w || p.y < b.y || p.y > b.y + b.h;
 }
 
-bool inside(SDL_Point const& p, SDL_Rect const& b) {
-  return !outside(p, b) && !bounding(p, b);
-}
+bool inside(SDL_Point const& p, SDL_Rect const& b) { return !outside(p, b); }
 
 bool at(SDL_Rect const& r, SDL_Point const& p) {
   return r.x == p.x && r.y == p.y;

@@ -57,9 +57,9 @@ TEST_CASE("inside(point, rect)") {
     SDL_Rect const r{2, 2, 2, 2};
     REQUIRE(!gls::inside(p, r));
   }
-  SECTION("point merely bounding with rect is not inside() rect") {
+  SECTION("point bounding with rect is inside() rect") {
     SDL_Rect const r{1, 0, 2, 2};
-    REQUIRE(!gls::inside(p, r));
+    REQUIRE(gls::inside(p, r));
   }
 }
 
