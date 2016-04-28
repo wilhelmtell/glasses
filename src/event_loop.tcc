@@ -10,7 +10,6 @@ template <typename DispatchT, typename App>
 void event_loop(DispatchT const* dispatch, App& app, int const& FPS) {
   auto const SECONDS_PER_FRAME = 1.0 / FPS;
   auto const TICKS_PER_SECOND = 1000;  // as per SDL_GetTicks()
-  auto const SECONDS_PER_TICK = 1.0 / TICKS_PER_SECOND;
   auto const TICKS_PER_FRAME = SECONDS_PER_FRAME * TICKS_PER_SECOND;
   auto tick0 = SDL_GetTicks();
   auto lag = 0.0;
