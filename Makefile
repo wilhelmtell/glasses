@@ -10,7 +10,7 @@ src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
 
 check: test/check_glasses
-	test/check_glasses
+	test/check_glasses --reporter compact
 
 test/check_glasses: src/${OUT_PREFIX}libglasses${OUT_SUFFIX}.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
