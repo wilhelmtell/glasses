@@ -4,13 +4,13 @@ TEST_OBJ := $(patsubst %.cc,%.o,$(wildcard test/*.cc))
 PKGCONFIG_VERSION := 0.3
 
 
-.PHONY: clean dist install uninstall
+.PHONY: clean dist install uninstall check
 
 src/lib${OUT_PREFIX}glasses${OUT_SUFFIX}.a: ${OBJ}
 	${AR} ${ARFLAGS} $@ $^
 
 check: test/check_glasses
-	test/check_glasses && touch $@
+	test/check_glasses
 
 test/check_glasses: src/${OUT_PREFIX}libglasses${OUT_SUFFIX}.a ${TEST_OBJ}
 	${LINK.cc} ${OUTPUT_OPTION} $^
