@@ -1,8 +1,8 @@
 *.o
 *.dep
-libglasses.a
+*.a
 check_glasses
-check
 glasses_*.zip
 glasses_*.tar.gz
 glasses_*.tar.xz
+src/static_config.hh
