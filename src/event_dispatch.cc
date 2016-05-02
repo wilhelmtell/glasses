@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 
 namespace {
-using slot = gls::event_dispatch::slot;
+using slot_sdl = gls::event_dispatch::slot_sdl;
 using connection = gls::event_dispatch::connection;
 }
 
@@ -21,19 +21,19 @@ event_dispatch::event_dispatch() {
 
 void event_dispatch::quit(SDL_Event const& e) const { quit_signal(e); }
 
-connection event_dispatch::on_quit(slot const& op) {
+connection event_dispatch::on_quit(slot_sdl const& op) {
   return quit_signal.connect(op);
 }
 
 void event_dispatch::keydown(SDL_Event const& e) const { keydown_signal(e); }
 
-connection event_dispatch::on_keydown(slot const& op) {
+connection event_dispatch::on_keydown(slot_sdl const& op) {
   return keydown_signal.connect(op);
 }
 
 void event_dispatch::keyup(SDL_Event const& e) const { keyup_signal(e); }
 
-connection event_dispatch::on_keyup(slot const& op) {
+connection event_dispatch::on_keyup(slot_sdl const& op) {
   return keyup_signal.connect(op);
 }
 
@@ -41,7 +41,7 @@ void event_dispatch::mousemotion(SDL_Event const& e) const {
   mousemotion_signal(e);
 }
 
-connection event_dispatch::on_mousemotion(slot const& op) {
+connection event_dispatch::on_mousemotion(slot_sdl const& op) {
   return mousemotion_signal.connect(op);
 }
 
@@ -49,7 +49,7 @@ void event_dispatch::mousebuttondown(SDL_Event const& e) const {
   mousebuttondown_signal(e);
 }
 
-connection event_dispatch::on_mousebuttondown(slot const& op) {
+connection event_dispatch::on_mousebuttondown(slot_sdl const& op) {
   return mousebuttondown_signal.connect(op);
 }
 
@@ -57,7 +57,7 @@ void event_dispatch::mousebuttonup(SDL_Event const& e) const {
   mousebuttonup_signal(e);
 }
 
-connection event_dispatch::on_mousebuttonup(slot const& op) {
+connection event_dispatch::on_mousebuttonup(slot_sdl const& op) {
   return mousebuttonup_signal.connect(op);
 }
 
@@ -65,7 +65,7 @@ void event_dispatch::userevent(SDL_Event const& e) const {
   userevent_signal(e);
 }
 
-connection event_dispatch::on_userevent(slot const& op) {
+connection event_dispatch::on_userevent(slot_sdl const& op) {
   return userevent_signal.connect(op);
 }
 }

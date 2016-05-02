@@ -6,8 +6,13 @@
 
 namespace gls {
 struct event_dispatch {
-  using signal = boost::signals2::signal<void(SDL_Event const&)>;
-  using slot = signal::slot_type;
+  template <typename T>
+  using signal = boost::signals2::signal<T>;
+  template <typename T>
+  using slot = typename signal<T>::slot_type;
+
+  using signal_sdl = signal<void(SDL_Event const&)>;
+  using slot_sdl = signal_sdl::slot_type;
   using connection = boost::signals2::connection;
   using scoped_connection = boost::signals2::scoped_connection;
 
@@ -21,22 +26,22 @@ struct event_dispatch {
   void mousebuttonup(SDL_Event const& e) const;
   void userevent(SDL_Event const& e) const;
 
-  connection on_quit(slot const& op);
-  connection on_keydown(slot const& op);
-  connection on_keyup(slot const& op);
-  connection on_mousemotion(slot const& op);
-  connection on_mousebuttondown(slot const& op);
-  connection on_mousebuttonup(slot const& op);
-  connection on_userevent(slot const& op);
+  connection on_quit(slot_sdl const& op);
+  connection on_keydown(slot_sdl const& op);
+  connection on_keyup(slot_sdl const& op);
+  connection on_mousemotion(slot_sdl const& op);
+  connection on_mousebuttondown(slot_sdl const& op);
+  connection on_mousebuttonup(slot_sdl const& op);
+  connection on_userevent(slot_sdl const& op);
 
 private:
-  signal quit_signal;
-  signal keydown_signal;
-  signal keyup_signal;
-  signal mousemotion_signal;
-  signal mousebuttondown_signal;
-  signal mousebuttonup_signal;
-  signal userevent_signal;
+  signal_sdl quit_signal;
+  signal_sdl keydown_signal;
+  signal_sdl keyup_signal;
+  signal_sdl mousemotion_signal;
+  signal_sdl mousebuttondown_signal;
+  signal_sdl mousebuttonup_signal;
+  signal_sdl userevent_signal;
 };
 }
 
