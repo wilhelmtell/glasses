@@ -22,11 +22,16 @@ void event_loop(DispatchT const* dispatch, App& app, int const& FPS) {
       if(e.type == SDL_QUIT) return;
     }
     for(; lag >= TICKS_PER_FRAME; lag -= TICKS_PER_FRAME) {
-      update(app);
+      update(app, elapsed);
     }
     tick0 = tick;
     draw(app);
   }
+}
+
+template <typename T, typename D>
+void update(T& object, D const& delta) {
+  object.update(delta);
 }
 
 template <typename T>
