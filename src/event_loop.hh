@@ -9,6 +9,8 @@ template <typename T, typename D>
 void update(T& object, D const& delta);
 template <typename T>
 void update(T& object);
+template <typename T, typename F>
+void draw(T const& object, F const& frame);
 template <typename T>
 void draw(T const& object);
 }
