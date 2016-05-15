@@ -19,6 +19,7 @@ else
   CXXFLAGS := -std=c++${CXX_STD} -O2
 endif
 PKGCONFIG_VERSION := 0.3
+ARFLAGS := r
 
 .PHONY: all check install uninstall dist clean distclean clean-out clean-test distclean-out distclean-test
 
