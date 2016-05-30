@@ -1,130 +1,130 @@
 #include <catch/catch.hpp>
-#include "../src/sdl_rect_point_common.hh"
-#include "../src/sdl_point.hh"
-#include "../src/sdl_rect.hh"
+#include "../src/rectangle_point_common.hh"
+#include "../src/point.hh"
+#include "../src/rectangle.hh"
 
 TEST_CASE("top_left()") {
-  auto const p = gls::top_left(gls::unit_rectangle());
+  auto const p = gls::top_left(gls::unit_rectangle<float>());
   REQUIRE(p.x == 0);
   REQUIRE(p.y == 0);
 }
 
 TEST_CASE("top_right()") {
-  auto const p = gls::top_right(gls::unit_rectangle());
+  auto const p = gls::top_right(gls::unit_rectangle<float>());
   REQUIRE(p.x == 1);
   REQUIRE(p.y == 0);
 }
 
 TEST_CASE("bottom_left()") {
-  auto const p = gls::bottom_left(gls::unit_rectangle());
+  auto const p = gls::bottom_left(gls::unit_rectangle<float>());
   REQUIRE(p.x == 0);
   REQUIRE(p.y == 1);
 }
 
 TEST_CASE("bottom_right()") {
-  auto const p = gls::bottom_right(gls::unit_rectangle());
+  auto const p = gls::bottom_right(gls::unit_rectangle<float>());
   REQUIRE(p.x == 1);
   REQUIRE(p.y == 1);
 }
 
 TEST_CASE("at()") {
-  auto const p = gls::origin_point();
+  auto const p = gls::origin_point<float>();
   SECTION("true at()") {
-    auto const r = gls::unit_rectangle();
+    auto const r = gls::unit_rectangle<float>();
     REQUIRE(gls::at(r, p));
   }
   SECTION("false at()") {
-    SDL_Rect const r{1, 1, 1, 1};
+    gls::rectangle<float> const r{1, 1, 1, 1};
     REQUIRE(!gls::at(r, p));
   }
   SECTION("point inside rect is not at() rect") {
-    SDL_Rect const r{-1, -1, 2, 2};
+    gls::rectangle<float> const r{-1, -1, 2, 2};
     REQUIRE(!gls::at(r, p));
   }
   SECTION("point merely bounding with rect is not at() rect") {
-    SDL_Rect const r{0, -1, 2, 2};
+    gls::rectangle<float> const r{0, -1, 2, 2};
     REQUIRE(!gls::at(r, p));
   }
 }
 
 TEST_CASE("inside(point, rect)") {
-  SDL_Point const p{1, 1};
+  gls::point<float> const p{1, 1};
   SECTION("true point inside() rect") {
-    SDL_Rect const r{0, 0, 2, 2};
+    gls::rectangle<float> const r{0, 0, 2, 2};
     REQUIRE(gls::inside(p, r));
   }
   SECTION("false point inside() rect") {
-    SDL_Rect const r{2, 2, 2, 2};
+    gls::rectangle<float> const r{2, 2, 2, 2};
     REQUIRE(!gls::inside(p, r));
   }
   SECTION("point bounding with rect is inside() rect") {
-    SDL_Rect const r{1, 0, 2, 2};
+    gls::rectangle<float> const r{1, 0, 2, 2};
     REQUIRE(gls::inside(p, r));
   }
 }
 
 TEST_CASE("outside()") {
-  SDL_Point const p{1, 1};
+  gls::point<float> const p{1, 1};
   SECTION("true point outside() rect") {
-    SDL_Rect const r{2, 2, 2, 2};
+    gls::rectangle<float> const r{2, 2, 2, 2};
     REQUIRE(gls::outside(p, r));
   }
   SECTION("false point outside() rect") {
-    SDL_Rect const r{0, 0, 2, 2};
+    gls::rectangle<float> const r{0, 0, 2, 2};
     REQUIRE(!gls::outside(p, r));
   }
   SECTION("point merely bounding with rect is not outside() rect") {
-    SDL_Rect const r{1, 0, 2, 2};
+    gls::rectangle<float> const r{1, 0, 2, 2};
     REQUIRE(!gls::outside(p, r));
   }
 }
 
 TEST_CASE("bounding()") {
-  SDL_Point const p{1, 1};
+  gls::point<float> const p{1, 1};
   SECTION("point bounding() rect on the left") {
-    SDL_Rect const r{1, 0, 2, 2};
+    gls::rectangle<float> const r{1, 0, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the right") {
-    SDL_Rect const r{-1, 0, 2, 2};
+    gls::rectangle<float> const r{-1, 0, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the top") {
-    SDL_Rect const r{0, 1, 2, 2};
+    gls::rectangle<float> const r{0, 1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the bottom") {
-    SDL_Rect const r{0, -1, 2, 2};
+    gls::rectangle<float> const r{0, -1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the top left") {
-    SDL_Rect const r{1, 1, 2, 2};
+    gls::rectangle<float> const r{1, 1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the top right") {
-    SDL_Rect const r{-1, 1, 2, 2};
+    gls::rectangle<float> const r{-1, 1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the bottom left") {
-    SDL_Rect const r{1, -1, 2, 2};
+    gls::rectangle<float> const r{1, -1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point bounding() rect on the bottom right") {
-    SDL_Rect const r{-1, -1, 2, 2};
+    gls::rectangle<float> const r{-1, -1, 2, 2};
     REQUIRE(gls::bounding(p, r));
   }
   SECTION("point outside rect is not bounding() with rect") {
-    SDL_Rect const r{2, 2, 2, 2};
+    gls::rectangle<float> const r{2, 2, 2, 2};
     REQUIRE(!gls::bounding(p, r));
   }
   SECTION("point inside rect is not bounding() with rect") {
-    SDL_Rect const r{2, 2, 2, 2};
+    gls::rectangle<float> const r{2, 2, 2, 2};
     REQUIRE(!gls::bounding(p, r));
   }
 }
 
 TEST_CASE("bounding_on_top()") {
-  SDL_Rect const r{0, 0, 4, 4};
+  gls::rectangle<float> const r{0, 0, 4, 4};
   SECTION("point on top bound is bounding_on_top()") {
     auto const p = gls::shifted_right(gls::top_left(r), 1);
     REQUIRE(gls::bounding_on_top(p, r));
@@ -170,7 +170,7 @@ TEST_CASE("bounding_on_top()") {
 }
 
 TEST_CASE("bounding_on_right()") {
-  SDL_Rect const r{0, 0, 4, 4};
+  gls::rectangle<float> const r{0, 0, 4, 4};
   SECTION("point on top bound is not bounding_on_right()") {
     auto const p = gls::shifted_right(gls::top_left(r), 1);
     REQUIRE(!gls::bounding_on_right(p, r));
@@ -216,7 +216,7 @@ TEST_CASE("bounding_on_right()") {
 }
 
 TEST_CASE("bounding_on_bottom()") {
-  SDL_Rect const r{0, 0, 4, 4};
+  gls::rectangle<float> const r{0, 0, 4, 4};
   SECTION("point on top bound is not bounding_on_bottom()") {
     auto const p = gls::shifted_right(gls::top_left(r), 1);
     REQUIRE(!gls::bounding_on_bottom(p, r));
@@ -262,7 +262,7 @@ TEST_CASE("bounding_on_bottom()") {
 }
 
 TEST_CASE("bounding_on_left()") {
-  SDL_Rect const r{0, 0, 4, 4};
+  gls::rectangle<float> const r{0, 0, 4, 4};
   SECTION("point on top bound is not bounding_on_left()") {
     auto const p = gls::shifted_right(gls::top_left(r), 1);
     REQUIRE(!gls::bounding_on_left(p, r));
