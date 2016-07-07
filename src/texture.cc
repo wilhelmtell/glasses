@@ -25,9 +25,9 @@ SDL_Texture* make_texture(SDL_Renderer* renderer,
                           gls::ttf_font const& ttf,
                           gls::text const& t,
                           SDL_Color const& c) {
-  return SDL_CreateTextureFromSurface(
-    renderer,
-    TTF_RenderText_Solid(ttf.get(), t.c_str(), {c.r, c.g, c.b, c.a}));
+  gls::surface surface(
+    TTF_RenderText_Solid(ttf.get(), t.c_str(), SDL_Color{c.r, c.g, c.b, c.a}));
+  return SDL_CreateTextureFromSurface(renderer, surface.get());
 }
 }
 
