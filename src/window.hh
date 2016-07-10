@@ -7,7 +7,7 @@
 
 namespace gls {
 struct window {
-  window() = default;
+  window();
   explicit window(SDL_Window* w);
   window(title const& text, SDL_Rect const& bounds, int const& flags);
 
