@@ -5,6 +5,8 @@
 #include "title.hh"
 
 namespace gls {
+window::window() : w{nullptr, [](SDL_Window*) {}} {}
+
 window::window(SDL_Window* w) : w(w, &SDL_DestroyWindow) {}
 
 window::window(title const& text, SDL_Rect const& bounds, int const& flags)

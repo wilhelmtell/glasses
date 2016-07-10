@@ -6,6 +6,8 @@
 #include "otf_filename.hh"
 
 namespace gls {
+ttf_font::ttf_font() : f{nullptr, [](TTF_Font*) {}} {}
+
 ttf_font::ttf_font(TTF_Font* font) : f(font, &TTF_CloseFont) {
   if(f == nullptr) throw ttf_font_open_error(TTF_GetError());
 }

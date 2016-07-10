@@ -10,7 +10,7 @@
 
 namespace gls {
 struct surface {
-  surface() = default;
+  surface();
   explicit surface(SDL_Surface* s);
   explicit surface(bmp_filename const& bmp);
   explicit surface(png_filename const& png);

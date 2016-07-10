@@ -4,6 +4,8 @@
 #include "wav_filename.hh"
 
 namespace gls {
+mix_chunk::mix_chunk() : c{nullptr, [](Mix_Chunk*) {}} {}
+
 mix_chunk::mix_chunk(Mix_Chunk* chunk) : c(chunk, &Mix_FreeChunk) {
   if(c == nullptr) throw mix_chunk_open_error(Mix_GetError());
 }

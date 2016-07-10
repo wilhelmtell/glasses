@@ -32,6 +32,8 @@ SDL_Texture* make_texture(SDL_Renderer* renderer,
 }
 
 namespace gls {
+texture::texture() : t{nullptr, [](SDL_Texture*) {}} {}
+
 texture::texture(SDL_Texture* t) : t(t, &SDL_DestroyTexture) {
   if(!this->t) throw texture_creation_error(SDL_GetError());
 }
