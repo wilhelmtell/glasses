@@ -11,7 +11,7 @@
 namespace gls {
 struct surface {
   surface();
-  explicit surface(SDL_Surface* s);
+  surface(SDL_Surface* s);
   explicit surface(bmp_filename const& bmp);
   explicit surface(png_filename const& png);
   surface(ttf_font const& ttf, text const& t, SDL_Color const& c);
