@@ -8,7 +8,7 @@
 namespace gls {
 struct mix_chunk {
   mix_chunk();
-  explicit mix_chunk(Mix_Chunk* chunk);
+  mix_chunk(Mix_Chunk* chunk);
   explicit mix_chunk(wav_filename const& name);
 
   Mix_Chunk* get() const;
