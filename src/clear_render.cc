@@ -1,6 +1,6 @@
 #include "clear_render.hh"
-#include "logical_init.hh"
 #include "logical_cleanup.hh"
+#include "logical_init.hh"
 #include <SDL2/SDL.h>
 
 namespace gls {

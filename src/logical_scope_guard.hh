@@ -1,9 +1,9 @@
 #ifndef GLS_LOGICAL_SCOPE_GUARD_HH_
 #define GLS_LOGICAL_SCOPE_GUARD_HH_
 
-#include <functional>
 #include "logical_cleanup.hh"
 #include "logical_init.hh"
+#include <functional>
 
 namespace gls {
 struct logical_scope_guard {

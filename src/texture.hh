@@ -1,12 +1,12 @@
 #ifndef GLS_TEXTURE_HH_
 #define GLS_TEXTURE_HH_
 
-#include <memory>
-#include <SDL2/SDL.h>
 #include "bmp_filename_fwd.hh"
 #include "png_filename_fwd.hh"
-#include "ttf_font_fwd.hh"
 #include "text_fwd.hh"
+#include "ttf_font_fwd.hh"
+#include <SDL2/SDL.h>
+#include <memory>
 
 namespace gls {
 struct texture {

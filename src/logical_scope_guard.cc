@@ -1,6 +1,6 @@
 #include "logical_scope_guard.hh"
-#include "logical_init.hh"
 #include "logical_cleanup.hh"
+#include "logical_init.hh"
 #include <utility>
 
 namespace gls {

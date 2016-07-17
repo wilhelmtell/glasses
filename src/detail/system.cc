@@ -1,7 +1,7 @@
 #include "system.hh"
-#include <SDL2/SDL.h>
 #include "../logical_cleanup.hh"
 #include "../system_init_error.hh"
+#include <SDL2/SDL.h>
 
 namespace {
 void init_or_throw(int const& flags) {

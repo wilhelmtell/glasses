@@ -1,9 +1,9 @@
 #ifndef GLS_EVENT_LOOP_TCC_
 #define GLS_EVENT_LOOP_TCC_
 
+#include "detail/translate_event.hh"
 #include "event_loop.hh"
 #include <SDL2/SDL.h>
-#include "detail/translate_event.hh"
 
 namespace gls {
 template <typename DispatchT, typename App>

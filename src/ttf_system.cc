@@ -1,8 +1,8 @@
 #include "ttf_system.hh"
-#include <SDL2/SDL_ttf.h>
 #include "logical_cleanup.hh"
 #include "logical_init.hh"
 #include "ttf_system_init_error.hh"
+#include <SDL2/SDL_ttf.h>
 
 namespace {
 void init_ttf_or_throw() {

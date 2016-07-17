@@ -1,9 +1,9 @@
 #ifndef GLS_MIX_CHUNK_HH_
 #define GLS_MIX_CHUNK_HH_
 
-#include <memory>
-#include <SDL2/SDL_mixer.h>
 #include "wav_filename_fwd.hh"
+#include <SDL2/SDL_mixer.h>
+#include <memory>
 
 namespace gls {
 struct mix_chunk {

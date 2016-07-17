@@ -1,13 +1,13 @@
 #include "surface.hh"
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
-#include "surface_creation_error.hh"
 #include "bmp_filename.hh"
 #include "png_filename.hh"
+#include "surface_creation_error.hh"
 #include "text.hh"
-#include "ttf_font.hh"
 #include "ttf_filename.hh"
+#include "ttf_font.hh"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 
 namespace gls {
 surface::surface() : s{nullptr, [](SDL_Surface*) {}} {}

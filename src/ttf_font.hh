@@ -1,11 +1,11 @@
 #ifndef GLS_TTF_FONT_HH_
 #define GLS_TTF_FONT_HH_
 
-#include <memory>
+#include "otf_filename_fwd.hh"
+#include "ttf_filename_fwd.hh"
 #include <SDL2/SDL_ttf.h>
 #include <cstddef>
-#include "ttf_filename_fwd.hh"
-#include "otf_filename_fwd.hh"
+#include <memory>
 
 namespace gls {
 struct ttf_font {

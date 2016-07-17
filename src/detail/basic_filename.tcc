@@ -8,8 +8,7 @@
 namespace gls {
 namespace detail {
 template <typename T>
-basic_filename<T>::basic_filename(std::string name)
-: name(std::move(name)) {}
+basic_filename<T>::basic_filename(std::string name) : name(std::move(name)) {}
 
 template <typename T>
 char const* basic_filename<T>::c_str() const {

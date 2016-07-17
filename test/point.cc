@@ -1,5 +1,5 @@
-#include <catch/catch.hpp>
 #include "../src/point.hh"
+#include <catch/catch.hpp>
 
 TEST_CASE("equal()") {
   gls::point<float> const lhs{0, 0};

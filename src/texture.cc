@@ -1,12 +1,12 @@
 #include "texture.hh"
-#include "surface.hh"
-#include <SDL2/SDL.h>
-#include "texture_creation_error.hh"
 #include "bmp_filename.hh"
 #include "png_filename.hh"
-#include "ttf_font.hh"
-#include "text.hh"
 #include "sdl_texture.hh"
+#include "surface.hh"
+#include "text.hh"
+#include "texture_creation_error.hh"
+#include "ttf_font.hh"
+#include <SDL2/SDL.h>
 
 namespace {
 SDL_Texture* texture_from_bmp(SDL_Renderer* renderer,

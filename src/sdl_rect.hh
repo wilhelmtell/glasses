@@ -1,8 +1,8 @@
 #ifndef GLS_SDL_RECT_HH_
 #define GLS_SDL_RECT_HH_
 
-#include <SDL2/SDL_rect.h>
 #include "sdl_rect_point_common.hh"
+#include <SDL2/SDL_rect.h>
 
 namespace gls {
 SDL_Rect unit_rectangle();

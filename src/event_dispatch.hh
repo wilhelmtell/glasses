@@ -1,8 +1,8 @@
 #ifndef GLS_EVENT_DISPATCH_HH_
 #define GLS_EVENT_DISPATCH_HH_
 
-#include <boost/signals2.hpp>
 #include <SDL2/SDL.h>
+#include <boost/signals2.hpp>
 
 namespace gls {
 struct event_dispatch {

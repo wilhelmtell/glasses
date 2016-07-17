@@ -1,8 +1,8 @@
 #include "mix_audio.hh"
-#include <SDL2/SDL_mixer.h>
 #include "logical_cleanup.hh"
 #include "logical_init.hh"
 #include "mix_open_audio_error.hh"
+#include <SDL2/SDL_mixer.h>
 
 namespace {
 void open_audio_or_throw(int const& frequency,
@@ -20,7 +20,7 @@ mix_audio::mix_audio(int const& frequency,
                      int const& channels,
                      int chunksize)
 : guard(logical_init([&] {
-  open_audio_or_throw(frequency, format, channels, chunksize);
-}),
+          open_audio_or_throw(frequency, format, channels, chunksize);
+        }),
         logical_cleanup(&Mix_CloseAudio)) {}
 }

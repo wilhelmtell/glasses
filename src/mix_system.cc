@@ -1,8 +1,8 @@
 #include "mix_system.hh"
-#include <SDL2/SDL_mixer.h>
 #include "logical_cleanup.hh"
 #include "logical_init.hh"
 #include "mix_system_init_error.hh"
+#include <SDL2/SDL_mixer.h>
 
 namespace {
 void init_mix_or_throw(int const& flags) {

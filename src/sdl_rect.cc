@@ -1,8 +1,8 @@
-#include <utility>
-#include "sdl_point.hh"
 #include "sdl_rect.hh"
-#include <SDL2/SDL.h>
+#include "sdl_point.hh"
 #include "sdl_rect_point_common.hh"
+#include <SDL2/SDL.h>
+#include <utility>
 
 namespace gls {
 SDL_Rect unit_rectangle() { return {0, 0, 1, 1}; }

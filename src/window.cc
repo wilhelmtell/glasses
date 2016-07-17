@@ -1,8 +1,8 @@
 #include "window.hh"
-#include <SDL2/SDL.h>
-#include "window_creation_error.hh"
 #include "sdl_point.hh"
 #include "title.hh"
+#include "window_creation_error.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 window::window() : w{nullptr, [](SDL_Window*) {}} {}

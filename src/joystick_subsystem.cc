@@ -1,6 +1,6 @@
 #include "joystick_subsystem.hh"
-#include <SDL2/SDL.h>
 #include "subsystem_init_error.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 joystick_subsystem::joystick_subsystem() {

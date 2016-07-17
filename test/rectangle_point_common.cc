@@ -1,7 +1,7 @@
-#include <catch/catch.hpp>
 #include "../src/rectangle_point_common.hh"
 #include "../src/point.hh"
 #include "../src/rectangle.hh"
+#include <catch/catch.hpp>
 
 TEST_CASE("top_left()") {
   auto const p = gls::top_left(gls::unit_rectangle<float>());

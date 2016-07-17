@@ -1,5 +1,5 @@
-#include <catch/catch.hpp>
 #include "../src/logical_cleanup.hh"
+#include <catch/catch.hpp>
 
 TEST_CASE("logical_cleanup ctor") {
   int touched = 0;

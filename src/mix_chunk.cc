@@ -1,7 +1,7 @@
 #include "mix_chunk.hh"
 #include "mix_chunk_open_error.hh"
-#include <SDL2/SDL_mixer.h>
 #include "wav_filename.hh"
+#include <SDL2/SDL_mixer.h>
 
 namespace gls {
 mix_chunk::mix_chunk() : c{nullptr, [](Mix_Chunk*) {}} {}

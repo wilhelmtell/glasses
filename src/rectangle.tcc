@@ -1,8 +1,8 @@
 #ifndef GLS_RECTANGLE_TCC_
 #define GLS_RECTANGLE_TCC_
 
-#include "rectangle.hh"
 #include "point.hh"
+#include "rectangle.hh"
 
 namespace gls {
 template <typename T>

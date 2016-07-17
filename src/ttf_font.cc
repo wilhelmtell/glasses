@@ -1,9 +1,9 @@
 #include "ttf_font.hh"
+#include "otf_filename.hh"
+#include "ttf_filename.hh"
 #include "ttf_font_open_error.hh"
 #include <SDL2/SDL_ttf.h>
 #include <cstddef>
-#include "ttf_filename.hh"
-#include "otf_filename.hh"
 
 namespace gls {
 ttf_font::ttf_font() : f{nullptr, [](TTF_Font*) {}} {}

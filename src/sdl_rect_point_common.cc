@@ -1,7 +1,7 @@
-#include <SDL2/SDL_rect.h>
 #include "sdl_rect_point_common.hh"
 #include "sdl_point.hh"
 #include "sdl_rect.hh"
+#include <SDL2/SDL_rect.h>
 
 namespace gls {
 SDL_Point top_left(SDL_Rect const& r) { return {r.x, r.y}; }

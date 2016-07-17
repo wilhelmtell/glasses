@@ -1,5 +1,5 @@
-#include <catch/catch.hpp>
 #include "../src/rectangle.hh"
+#include <catch/catch.hpp>
 
 TEST_CASE("unit_rectangle() returns a 1x1 rect at origin") {
   auto const r = gls::unit_rectangle<float>();

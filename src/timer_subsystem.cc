@@ -1,6 +1,6 @@
 #include "timer_subsystem.hh"
-#include <SDL2/SDL.h>
 #include "subsystem_init_error.hh"
+#include <SDL2/SDL.h>
 
 namespace gls {
 timer_subsystem::timer_subsystem() {

@@ -1,8 +1,8 @@
 #ifndef GLS_RENDERER_HH_
 #define GLS_RENDERER_HH_
 
-#include <memory>
 #include <SDL2/SDL.h>
+#include <memory>
 
 namespace gls {
 struct renderer {
@@ -12,8 +12,8 @@ struct renderer {
   SDL_Renderer* get() const;
 
 private:
-  using pointer
-    = std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>;
+  using pointer =
+    std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>;
   pointer r;
 };
 }

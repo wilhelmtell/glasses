@@ -1,9 +1,9 @@
 #ifndef GLS_WINDOW_HH_
 #define GLS_WINDOW_HH_
 
-#include <memory>
-#include <SDL2/SDL.h>
 #include "title_fwd.hh"
+#include <SDL2/SDL.h>
+#include <memory>
 
 namespace gls {
 struct window {
