@@ -21,9 +21,10 @@ void event_loop(DispatchT const* dispatch, App& app, int const& FPS) {
       detail::translate_event(e, dispatch);
       if(e.type == SDL_QUIT) return;
     }
-    for(; lag >= TICKS_PER_FRAME; lag -= TICKS_PER_FRAME) {
+    do {
       update(app, elapsed);
-    }
+      lag -= TICKS_PER_FRAME;
+    } while(lag >= TICKS_PER_FRAME);
     tick0 = tick;
     draw(app, lag / TICKS_PER_FRAME);
   }
