@@ -1,11 +1,11 @@
-prefix=
+prefix=@CMAKE_INSTALL_PREFIX@
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
 
 Name: glasses
 Description: Glasses - an SDL2 wrapper for C++
-Version:
+Version: @PROJECT_VERSION@
 Requires: sdl2 >= 2.0.3, SDL2_image >= 2.0.0, SDL2_mixer >= 2.0.0, SDL2_ttf >= 2.0.12
 Cflags: -I${includedir}/glasses
 Libs: -L${libdir} -lglasses

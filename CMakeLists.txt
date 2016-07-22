@@ -7,6 +7,133 @@ configure_file(
   )
 
 set(
+  GLASSES_LIB_HHS
+  src/audio_subsystem.hh
+  src/audio_subsystem_fwd.hh
+  src/bmp_filename.hh
+  src/bmp_filename_fwd.hh
+  src/clear_render.hh
+  src/clear_render_fwd.hh
+  src/event_dispatch.hh
+  src/event_dispatch_fwd.hh
+  src/event_loop.hh
+  src/events_subsystem.hh
+  src/events_subsystem_fwd.hh
+  src/filename.hh
+  src/filename_fwd.hh
+  src/flac_filename.hh
+  src/flac_filename_fwd.hh
+  src/gamecontroller_subsystem.hh
+  src/gamecontroller_subsystem_fwd.hh
+  src/haptic_subsystem.hh
+  src/haptic_subsystem_fwd.hh
+  src/joystick_subsystem.hh
+  src/joystick_subsystem_fwd.hh
+  src/logical_cleanup.hh
+  src/logical_cleanup_fwd.hh
+  src/logical_init.hh
+  src/logical_init_fwd.hh
+  src/logical_scope_guard.hh
+  src/logical_scope_guard_fwd.hh
+  src/minimal_system.hh
+  src/minimal_system_fwd.hh
+  src/mix_audio.hh
+  src/mix_audio_fwd.hh
+  src/mix_chunk.hh
+  src/mix_chunk_fwd.hh
+  src/mix_chunk_open_error.hh
+  src/mix_chunk_open_error_fwd.hh
+  src/mix_open_audio_error.hh
+  src/mix_open_audio_error_fwd.hh
+  src/mix_system.hh
+  src/mix_system_fwd.hh
+  src/mix_system_init_error.hh
+  src/mix_system_init_error_fwd.hh
+  src/otf_filename.hh
+  src/otf_filename_fwd.hh
+  src/png_filename.hh
+  src/png_filename_fwd.hh
+  src/point.hh
+  src/point_fwd.hh
+  src/rectangle.hh
+  src/rectangle_fwd.hh
+  src/rectangle_point_common.hh
+  src/renderer.hh
+  src/renderer_creation_error.hh
+  src/renderer_creation_error_fwd.hh
+  src/renderer_fwd.hh
+  src/sdl_point.hh
+  src/sdl_rect.hh
+  src/sdl_rect_point_common.hh
+  src/sdl_texture.hh
+  src/sdl_texture_fwd.hh
+  src/subsystem_init_error.hh
+  src/subsystem_init_error_fwd.hh
+  src/surface.hh
+  src/surface_creation_error.hh
+  src/surface_creation_error_fwd.hh
+  src/surface_fwd.hh
+  src/system.hh
+  src/system_fwd.hh
+  src/system_init_error.hh
+  src/system_init_error_fwd.hh
+  src/text.hh
+  src/text_fwd.hh
+  src/texture.hh
+  src/texture_creation_error.hh
+  src/texture_creation_error_fwd.hh
+  src/texture_fwd.hh
+  src/timer_subsystem.hh
+  src/timer_subsystem_fwd.hh
+  src/title.hh
+  src/title_fwd.hh
+  src/ttf_filename.hh
+  src/ttf_filename_fwd.hh
+  src/ttf_font.hh
+  src/ttf_font_fwd.hh
+  src/ttf_font_open_error.hh
+  src/ttf_font_open_error_fwd.hh
+  src/ttf_system.hh
+  src/ttf_system_fwd.hh
+  src/ttf_system_init_error.hh
+  src/ttf_system_init_error_fwd.hh
+  src/video_subsystem.hh
+  src/video_subsystem_fwd.hh
+  src/wav_filename.hh
+  src/wav_filename_fwd.hh
+  src/window.hh
+  src/window_creation_error.hh
+  src/window_creation_error_fwd.hh
+  src/window_fwd.hh
+  )
+
+set(
+  GLASSES_LIB_TCCS
+  src/detail/basic_filename.tcc
+  src/detail/translate_event.tcc
+  src/event_loop.tcc
+  src/logical_init.tcc
+  src/point.tcc
+  src/rectangle.tcc
+  src/rectangle_point_common.tcc
+  )
+
+set(
+  GLASSES_LIB_DETAIL_HHS
+  src/detail/basic_filename.hh
+  src/detail/basic_filename_fwd.hh
+  src/detail/system.hh
+  src/detail/system_fwd.hh
+  src/detail/translate_event.hh
+  )
+
+set(
+  GLASSES_LIB_DETAIL_TCCS
+  src/detail/basic_filename.tcc
+  src/detail/translate_event.tcc
+  )
+
+set(
   GLASSES_LIB_TUS
   src/audio_subsystem.cc
   src/clear_render.cc
@@ -92,6 +219,32 @@ pkg_check_modules(
 include_directories(
   "${sdl2_INCLUDE_DIRS}"
   )
+
+install(
+  TARGETS
+  glasses_lib
+  ARCHIVE
+  DESTINATION lib
+  )
+
+install(
+  FILES
+  ${GLASSES_LIB_DETAIL_HHS}
+  ${GLASSES_LIB_DETAIL_TCCS}
+  DESTINATION include/detail
+  )
+
+install(
+  FILES
+  ${GLASSES_LIB_HHS}
+  ${GLASSES_LIB_TCCS}
+  DESTINATION include
+  )
+
+if(PKG_CONFIG_FOUND)
+  configure_file("glasses.pc.in" "glasses.pc" @ONLY)
+  install(FILES "${PROJECT_BINARY_DIR}/glasses.pc" DESTINATION lib/pkgconfig)
+endif()
 
 add_dependencies(check_logical_cleanup_bin glasses_lib)
 target_link_libraries(
