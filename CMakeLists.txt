@@ -134,7 +134,7 @@ set(
   )
 
 set(
-  GLASSES_LIB_TUS
+  GLASSES_LIB_CCS
   src/audio_subsystem.cc
   src/clear_render.cc
   src/detail/system.cc
@@ -177,7 +177,7 @@ set(
   src/window_creation_error.cc
   )
 
-add_library(glasses_lib ${GLASSES_LIB_TUS})
+add_library(glasses_lib ${GLASSES_LIB_CCS})
 
 add_executable(check_logical_cleanup_bin test/logical_cleanup.cc)
 add_executable(check_logical_init_bin test/logical_init.cc)
