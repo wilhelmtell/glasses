@@ -52,21 +52,19 @@ set(
 
 add_library(glasses_lib ${GLASSES_LIB_TUS})
 
-add_executable(
-  check_glasses_bin
-  test/check_glasses.cc
-  test/logical_cleanup.cc
-  test/logical_init.cc
-  test/point.cc
-  test/rectangle.cc
-  test/rectangle_point_common.cc
-  )
-
-add_dependencies(check_glasses_bin glasses_lib)
+add_executable(check_logical_cleanup_bin test/logical_cleanup.cc)
+add_executable(check_logical_init_bin test/logical_init.cc)
+add_executable(check_point_bin test/point.cc)
+add_executable(check_rectangle_bin test/rectangle.cc)
+add_executable(check_rectangle_point_common_bin test/rectangle_point_common.cc)
 
 set_target_properties(
   glasses_lib
-  check_glasses_bin
+  check_logical_cleanup_bin
+  check_logical_init_bin
+  check_point_bin
+  check_rectangle_bin
+  check_rectangle_point_common_bin
   PROPERTIES
   CXX_STANDARD 14
   CXX_STANDARD_REQUIRED true
@@ -79,15 +77,8 @@ set_target_properties(
   OUTPUT_NAME glasses
   )
 
-set_target_properties(
-  check_glasses_bin
-  PROPERTIES
-  OUTPUT_NAME check_glasses
-  )
-
 find_package(Boost 1.60.0 REQUIRED)
 include_directories("${Boost_INCLUDE_DIRS}")
-target_link_libraries(check_glasses_bin "${Boost_LIBRARIES}")
 
 include(FindPkgConfig)
 pkg_check_modules(
@@ -101,10 +92,51 @@ pkg_check_modules(
 include_directories(
   "${sdl2_INCLUDE_DIRS}"
   )
-target_link_libraries(check_glasses_bin "${sdl2_LIBRARIES}")
 
-target_link_libraries(check_glasses_bin glasses_lib)
+add_dependencies(check_logical_cleanup_bin glasses_lib)
+target_link_libraries(
+  check_logical_cleanup_bin
+  "${Boost_LIBRARIES}"
+  "${sdl2_LIBRARIES}"
+  glasses_lib
+  )
+
+add_dependencies(check_logical_init_bin glasses_lib)
+target_link_libraries(
+  check_logical_init_bin
+  "${Boost_LIBRARIES}"
+  "${sdl2_LIBRARIES}"
+  glasses_lib
+  )
+
+add_dependencies(check_point_bin glasses_lib)
+target_link_libraries(
+  check_point_bin
+  "${Boost_LIBRARIES}"
+  "${sdl2_LIBRARIES}"
+  glasses_lib
+  )
+
+add_dependencies(check_rectangle_bin glasses_lib)
+target_link_libraries(
+  check_rectangle_bin
+  "${Boost_LIBRARIES}"
+  "${sdl2_LIBRARIES}"
+  glasses_lib
+  )
+
+add_dependencies(check_rectangle_point_common_bin glasses_lib)
+target_link_libraries(
+  check_rectangle_point_common_bin
+  "${Boost_LIBRARIES}"
+  "${sdl2_LIBRARIES}"
+  glasses_lib
+  )
 
 enable_testing()
 
-add_test(check_glasses check_glasses --reporter=compact)
+add_test(check_logical_cleanup check_logical_cleanup_bin --reporter=compact)
+add_test(check_logical_init check_logical_init_bin --reporter=compact)
+add_test(check_point check_point_bin --reporter=compact)
+add_test(check_rectangle check_rectangle_bin --reporter=compact)
+add_test(check_rectangle_point_common check_rectangle_point_common_bin --reporter=compact)

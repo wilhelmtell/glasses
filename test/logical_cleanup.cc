@@ -1,3 +1,4 @@
+#define CATCH_CONFIG_MAIN
 #include "../src/logical_cleanup.hh"
 #include <catch/catch.hpp>
 
