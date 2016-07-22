@@ -201,8 +201,7 @@ set_target_properties(
 set_target_properties(
   glasses_lib
   PROPERTIES
-  DEBUG_OUTPUT_NAME glassesd
-  RELEASE_OUTPUT_NAME glasses
+  OUTPUT_NAME glasses
   )
 
 find_package(Boost 1.60.0 REQUIRED)
