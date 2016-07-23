@@ -13,7 +13,7 @@ namespace gls {
 surface::surface() : s{nullptr, [](SDL_Surface*) {}} {}
 
 surface::surface(SDL_Surface* s) : s(s, &SDL_FreeSurface) {
-  if(!s) throw surface_creation_error(SDL_GetError());
+  if(s == nullptr) throw surface_creation_error(SDL_GetError());
 }
 
 surface::surface(bmp_filename const& bmp)
