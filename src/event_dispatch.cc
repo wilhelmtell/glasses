@@ -4,7 +4,7 @@
 namespace {
 using slot_sdl = gls::event_dispatch::slot_sdl;
 using connection = gls::event_dispatch::connection;
-}
+}  // namespace
 
 namespace gls {
 event_dispatch::event_dispatch() {
@@ -68,4 +68,4 @@ void event_dispatch::userevent(SDL_Event const& e) const {
 connection event_dispatch::on_userevent(slot_sdl const& op) {
   return userevent_signal.connect(op);
 }
-}
+}  // namespace gls

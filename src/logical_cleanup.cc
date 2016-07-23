@@ -5,7 +5,8 @@
 namespace gls {
 logical_cleanup::logical_cleanup(std::function<void()> c) : c(std::move(c)) {}
 
-logical_cleanup::logical_cleanup(logical_cleanup&& rhs) : c(std::move(rhs.c)) {
+logical_cleanup::logical_cleanup(logical_cleanup&& rhs) noexcept
+  : c(std::move(rhs.c)) {
   // when rhs destructs, there are only 2 possibilities: either it will call
   // its cleanup function, or it will throw a std::bad_function_call. which
   // case will take place though is unspecified after a move. therefore, we
@@ -41,7 +42,7 @@ logical_cleanup::logical_cleanup(logical_cleanup&& rhs) : c(std::move(rhs.c)) {
   rhs.c = nullptr;
 }
 
-logical_cleanup& logical_cleanup::operator=(logical_cleanup&& rhs) {
+logical_cleanup& logical_cleanup::operator=(logical_cleanup&& rhs) noexcept {
   c = std::move(rhs.c);
   rhs.c = nullptr;
   return *this;
@@ -50,4 +51,4 @@ logical_cleanup& logical_cleanup::operator=(logical_cleanup&& rhs) {
 logical_cleanup::~logical_cleanup() {
   if(c) c();
 }
-}
+}  // namespace gls

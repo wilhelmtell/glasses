@@ -7,4 +7,4 @@ timer_subsystem::timer_subsystem() {
   if(SDL_InitSubSystem(SDL_INIT_TIMER) < 0)
     throw subsystem_init_error(SDL_GetError());
 }
-}
+}  // namespace gls

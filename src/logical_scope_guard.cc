@@ -7,6 +7,6 @@ namespace gls {
 logical_scope_guard::logical_scope_guard(logical_cleanup c)
 : c(std::move(c)) {}
 
-logical_scope_guard::logical_scope_guard(logical_init, logical_cleanup c)
+logical_scope_guard::logical_scope_guard(logical_init /*i*/, logical_cleanup c)
 : c(std::move(c)) {}
-}
+}  // namespace gls

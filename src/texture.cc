@@ -29,7 +29,7 @@ SDL_Texture* make_texture(SDL_Renderer* renderer,
     TTF_RenderText_Solid(ttf.get(), t.c_str(), SDL_Color{c.r, c.g, c.b, c.a}));
   return SDL_CreateTextureFromSurface(renderer, surface.get());
 }
-}
+}  // namespace
 
 namespace gls {
 texture::texture() : t{nullptr, [](SDL_Texture*) {}} {}
@@ -58,4 +58,4 @@ int texture::width() const { return gls::width(get()); }
 int texture::height() const { return gls::height(get()); }
 
 SDL_Texture* texture::get() const { return t.get(); }
-}
+}  // namespace gls

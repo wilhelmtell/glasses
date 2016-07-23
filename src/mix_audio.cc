@@ -12,7 +12,7 @@ void open_audio_or_throw(int const& frequency,
   if(Mix_OpenAudio(frequency, format, channels, chunksize) < 0)
     throw gls::mix_open_audio_error(Mix_GetError());
 }
-}
+}  // namespace
 
 namespace gls {
 mix_audio::mix_audio(int const& frequency,
@@ -23,4 +23,4 @@ mix_audio::mix_audio(int const& frequency,
           open_audio_or_throw(frequency, format, channels, chunksize);
         }),
         logical_cleanup(&Mix_CloseAudio)) {}
-}
+}  // namespace gls

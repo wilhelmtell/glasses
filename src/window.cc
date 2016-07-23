@@ -29,4 +29,4 @@ int height(SDL_Window* w) {
   SDL_GetWindowSize(w, nullptr, &value);
   return value;
 }
-}
+}  // namespace gls

@@ -19,4 +19,4 @@ ttf_font::ttf_font(otf_filename const& name, std::size_t const& size)
 : ttf_font(TTF_OpenFont(name.c_str(), size)) {}
 
 TTF_Font* ttf_font::get() const { return f.get(); }
-}
+}  // namespace gls
