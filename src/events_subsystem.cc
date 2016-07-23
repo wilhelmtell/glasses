@@ -7,4 +7,4 @@ events_subsystem::events_subsystem() {
   if(SDL_InitSubSystem(SDL_INIT_EVENTS) < 0)
     throw subsystem_init_error(SDL_GetError());
 }
-}
+}  // namespace gls

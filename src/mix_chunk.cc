@@ -14,4 +14,4 @@ mix_chunk::mix_chunk(wav_filename const& name)
 : mix_chunk(Mix_LoadWAV(name.c_str())) {}
 
 Mix_Chunk* mix_chunk::get() const { return c.get(); }
-}
+}  // namespace gls

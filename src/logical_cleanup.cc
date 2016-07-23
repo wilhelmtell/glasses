@@ -50,4 +50,4 @@ logical_cleanup& logical_cleanup::operator=(logical_cleanup&& rhs) {
 logical_cleanup::~logical_cleanup() {
   if(c) c();
 }
-}
+}  // namespace gls

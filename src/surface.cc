@@ -29,4 +29,4 @@ int surface::width() const { return s->w; }
 int surface::height() const { return s->h; }
 
 SDL_Surface* surface::get() const { return s.get(); }
-}
+}  // namespace gls

@@ -3,4 +3,4 @@
 
 namespace gls {
 minimal_system::minimal_system() : sys(0) {}
-}
+}  // namespace gls

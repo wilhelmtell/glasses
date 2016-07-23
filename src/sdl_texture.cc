@@ -16,4 +16,4 @@ int height(SDL_Texture* t) {
   assert(err == 0);  // XXX: How should I handle an error here?
   return h;
 }
-}
+}  // namespace gls

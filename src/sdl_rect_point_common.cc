@@ -42,4 +42,4 @@ bool bounding_on_bottom(SDL_Point const& p, SDL_Rect const& b) {
 bool bounding_on_left(SDL_Point const& p, SDL_Rect const& b) {
   return p.x == b.x && p.y >= b.y && p.y <= b.y + b.h;
 }
-}
+}  // namespace gls

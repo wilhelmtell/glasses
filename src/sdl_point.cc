@@ -44,4 +44,4 @@ SDL_Point shifted_up_left(SDL_Point const& p, int const& offset) {
 SDL_Point shifted_up_right(SDL_Point const& p, int const& offset) {
   return {p.x + offset, p.y - offset};
 }
-}
+}  // namespace gls
