@@ -238,14 +238,14 @@ install(
   FILES
   ${GLASSES_LIB_DETAIL_HHS}
   ${GLASSES_LIB_DETAIL_TCCS}
-  DESTINATION include/detail
+  DESTINATION include/glasses/detail
   )
 
 install(
   FILES
   ${GLASSES_LIB_HHS}
   ${GLASSES_LIB_TCCS}
-  DESTINATION include
+  DESTINATION include/glasses
   )
 
 if(PKG_CONFIG_FOUND)
