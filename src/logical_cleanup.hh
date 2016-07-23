@@ -10,8 +10,8 @@ struct logical_cleanup {
 
   logical_cleanup(logical_cleanup const&) = delete;
   logical_cleanup& operator=(logical_cleanup const&) = delete;
-  logical_cleanup(logical_cleanup&& rhs);
-  logical_cleanup& operator=(logical_cleanup&& rhs);
+  logical_cleanup(logical_cleanup&& rhs) noexcept;
+  logical_cleanup& operator=(logical_cleanup&& rhs) noexcept;
 
   ~logical_cleanup();
 
