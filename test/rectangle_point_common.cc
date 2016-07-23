@@ -1,3 +1,4 @@
+#define CATCH_CONFIG_MAIN
 #include "../src/rectangle_point_common.hh"
 #include "../src/point.hh"
 #include "../src/rectangle.hh"

@@ -1,9 +1,0 @@
-*.o
-*.dep
-*.a
-check_glasses
-glasses_*.zip
-glasses_*.tar.gz
-glasses_*.tar.xz
-src/static_config.hh
-glasses.pc
