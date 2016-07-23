@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.6)
 project(Glasses)
 
+exec_program(
+  "tools/version.bash"
+  ${PROJECT_SOURCE_DIR}
+  ARGS "major" "." "minor"
+  OUTPUT_VARIABLE PROJECT_VERSION
+  )
+
 configure_file(
   "${PROJECT_SOURCE_DIR}/src/static_config.hh.in"
   "${PROJECT_BINARY_DIR}/static_config.hh"
