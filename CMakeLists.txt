@@ -4,7 +4,6 @@ project(Glasses)
 exec_program(
   "tools/version.bash"
   ${PROJECT_SOURCE_DIR}
-  ARGS "major" "." "minor"
   OUTPUT_VARIABLE PROJECT_VERSION
   )
 
