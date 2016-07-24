@@ -254,7 +254,6 @@ if(PKG_CONFIG_FOUND)
   install(FILES "${PROJECT_BINARY_DIR}/glasses.pc" DESTINATION lib/pkgconfig)
 endif()
 
-add_dependencies(check_glasses_bin glasses_lib)
 target_link_libraries(
   check_glasses_bin
   "${Boost_LIBRARIES}"
