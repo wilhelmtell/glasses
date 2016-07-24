@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "../src/rectangle.hh"
 #include <catch/catch.hpp>
 

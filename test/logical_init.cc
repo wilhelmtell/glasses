@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "../src/logical_init.hh"
 #include <catch/catch.hpp>
 
